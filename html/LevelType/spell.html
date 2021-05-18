@@ -1,0 +1,12 @@
+<div oc-lazy-load="['js/LevelType/spell.js']">
+    <div ng-controller="spellController" layout="row" layout-wrap="" >
+        <div layout="row" flex="100" layout-wrap="" >
+            <div ng-repeat="item in current.selectedLevelItem.itemJSONObj.letterList" layout="row">
+                <div class="letter" ng-click="hideLetter(item.index)"
+                style="{{current.selectedLevelItem.itemJSONObj.letterList[item.index].hide?'color:silver;border:solid 1px silver;':''}}">
+                    {{item.letter}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+app.constant('$label',
+    {
+        nationalCode: 'شماره ملی',
+        continue: 'ادامه',
+        password: 'کلمه عبور',
+        forgetPassword: 'فراموشی کلمه عبور',
+        repeatPassword: 'تکرار کلمه عبور',
+        tokenCode: 'پیامک ارسالی',
+        phoneNo: 'تلفن همراه',
+        changePass: 'تغییر کلمه عبور',
+        createUser: 'ساخت کاربر',
+        signInSignUp: 'ورود/ثبت نام',
+        signIn: 'ورود',
+        signInSignUpHelp: 'جهت ورود یا ثبت نام کد ملی خود را وارد نمایید',
+        state:'استان',
+        county:'شهرستان',
+        city:'شهر',
+        educationDivision:'آموزش پرورش',
+        school:{
+                registerSchool:' ثبت نام مدرسه',
+                addSchoolLocation:'موقعیت جغرافیایی مدرسه را بر روی نقشه مشخص نمایید',
+                name:'نام مدرسه',
+                code:'کد مدرسه',
+                shift:'شیفت',
+                grade:'مقطع',
+                schoolGender:'جنسیت مدرسه',
+                type:'نوع مدرسه',
+                tel:'تلفن مدرسه',
+                postalCode:'کد پستی مدرسه',
+                nationalCode:'شماره ملی مدیر',
+                lastName:'نام خانوادگی مدیر',
+                gender:'جنسیت مدیر',
+                registerRequest:'ثبت درخواست',
+                address:'نشانی مدرسه',
+        }
+
+    }
+);

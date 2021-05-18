@@ -1,0 +1,43 @@
+<div oc-lazy-load="['/js/viewer/gramatic.js','/css/timelineaudio.css']">
+    <div ng-controller="gramaticController" layout="row" layout-wrap
+         style="height: 65vh" flex="100">
+
+        <div class="simpleSpacer " ng-include="'/html/viewer/header/simpleTeach.html'"></div>
+
+        <div style="height: 80vh">
+            <div ng-if="current.teach.teachId" flex="100">
+                <div class="teachDescription" flex="100" layout-padding="">
+                    <div ng-bind-html="current.teach.HTML" flex="100"></div>
+                </div>
+                <div class="teachVoice" flex="100" layout-padding="">
+                    <div flex="100" ng-if="current.teach.voiceId">
+                        <timelineAudio data-album="" data-url="{{'/doc/'+current.teach.voiceId}}" id="myAudio"
+                                       duration-data="duration"
+                                       timeline="true"
+                                       length-data="current.teach.duration"
+                                       data-title=""
+                                       data-artist=""
+                                       points-data="[]"
+                                       click-data="goToFrame"
+                                       click-frame="goToFrame"
+                                       change-frame="changeFrame">
+                        </timelineAudio>
+                    </div>
+                    <div ng-if="!current.teach.voiceId" class="red">teach has no voice !!!</div>
+                </div>
+                <div class="teachContent" flex="100">
+                    <div ng-bind-html="content" flex="100"></div>
+                </div>
+            </div>
+            <div ng-if="!current.teach.teachId">
+                <div class="red">no teach selected !!!</div>
+            </div>
+        </div>
+        <div style="height: 10vh" flex="100" layout="row" layout-align="center center">
+            <md-button
+                    ng-disabled="$index<viewerData.levelLexicalPhraseList.length-1"
+                    class="blueB checkButton" ng-click="iGotIt()">ok
+            </md-button>
+        </div>
+    </div>
+</div>

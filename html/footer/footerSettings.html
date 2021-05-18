@@ -1,0 +1,90 @@
+<style>
+    body {
+        background: url("/img/app/round.png");
+        background-repeat: no-repeat;
+    }
+    md-icon{padding-right: 10px}
+</style>
+<div layout="row"  flex="100" layout-wrap="" >
+    <div flex="20" layout-padding="">
+        <img class="nounFilter" ng-src="{{current.profile.imageUrl}}" style="height: 60px;border-radius: 60px"/>
+    </div>
+    <div flex="60"  layout-align="center center" layout-padding="">
+        <div layout="row">
+            <div>
+                <div>{{current.profile.firstName}} {{current.profile.lastName}}</div>
+                <div style="font-size: 11px">
+                    {{current.profile.email}}
+                    <md-button class="md-icon-button" ng-click="logOut()">
+                        <md-icon>logout</md-icon>
+                    </md-button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div flex="10" layout-padding="">
+        <md-button ng-click="backToList()">
+            <md-icon md-svg-src="/img/app/back.svg"></md-icon>
+        </md-button>
+    </div>
+</div>
+
+
+<md-tabs flex="100" style="min-height: calc( 100vh - 230px)">
+    <md-tab label="app">
+        <md-content>
+            <div flex="100" layout="row" layout-padding="">
+                <md-icon flex="10">language</md-icon>
+                <md-select flex="" ng-model="current.profile.langId">
+                    <md-option ng-repeat="lang in langList" ng-value="lang.langId">
+                        {{lang.title}}
+                    </md-option>
+                </md-select>
+
+                <div layout="row" layout-padding="">
+                    <md-button ng-click="clearData()">
+                        <md-icon md-svg-src="/img/app/clear.svg"></md-icon>
+                        clear cache
+                    </md-button>
+                </div>
+            </div>
+            <div flex="100" layout="row">
+                <div layout-padding="">
+                    <div layout="row" >
+                        <md-icon md-svg-src="/img/app/color.svg"></md-icon>
+                        <md-slider min="0" max="100" ng-model="current.filter.grayScale"
+                                   ng-change="saveStorage()">
+                        </md-slider>
+                    </div>
+                    <div layout="row">
+                        <md-icon md-svg-src="/img/app/contrast.svg"></md-icon>
+                        <md-slider min="100" max="200" ng-model="current.filter.contrast"
+                                                    ng-change="saveStorage()">
+                        </md-slider>
+                    </div>
+                    <div layout="row">
+                        <md-icon md-svg-src="/img/app/brightness.svg"></md-icon>
+                        <md-slider min="100" max="200" ng-model="current.filter.brightness"
+                                   ng-change="saveStorage()">
+                        </md-slider>
+                    </div>
+                    <!--                    <md-slider min="0" max="90" ng-model="current.filter.hue" ng-change="saveStorage()"></md-slider>-->
+                </div>
+                <div layout-padding="" layout-align="center center">
+                    <img src="/img/charachter/man.svg" height="100px">
+                    <md-button ng-click="filterReset()">
+                        <md-icon md-svg-src="/img/app/reset.svg"></md-icon>
+                        reset
+                    </md-button>
+                </div>
+            </div>
+        </md-content>
+    </md-tab>
+    <md-tab label="profile">
+        <md-content>
+            <div ng-include="'/html/student/studentInfo.html'"/>
+        </md-content>
+    </md-tab>
+</md-tabs>
+
+

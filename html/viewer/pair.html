@@ -1,0 +1,14 @@
+<div oc-lazy-load="['/js/viewer/pair.js']">
+    <div ng-controller="pairController" layout="row" layout-wrap="">
+
+        <div class="charachterSpacer" ng-include="'/html/viewer/header/charachter.html'"></div>
+        <div layout="row" flex-xs="100" layout-wrap>
+            <div ng-repeat="item in shuffleList" flex="50" layout="row" layout-wrap="" layout-padding="">
+                <md-button class="md-raised" flex="100" ng-click="speak(item.title);checkAnswer(item)"
+                           ng-disabled="disableList[item.lexicalId]"
+                >{{item.title}}
+                </md-button>
+            </div>
+        </div>
+    </div>
+</div>

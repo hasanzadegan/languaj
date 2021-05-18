@@ -1,0 +1,29 @@
+<div oc-lazy-load="['/js/viewer/order.js']">
+    <div ng-controller="orderController" layout="row" layout-wrap
+         style="height: 85vh">
+        <div class="charachterSpacer" style="height: 180px !important;"  ng-include="'/html/viewer/header/charachter.html'"></div>
+
+        <div layout-padding="">
+            <div flex="100" layout="row" layout-wrap="" style="min-height: 15vh" >
+                {{error}}
+                <div ng-repeat="item in orderShuffleList track by $index">
+                    <md-button class="md-raised orderBtn" ng-click="speak(item);selectWord($index)" >{{item}}</md-button>
+                </div>
+            </div>
+
+            <div flex="100" layout="row" class="selectedOrder" style="min-height: 15vh" layout-wrap="">
+                <div ng-repeat="item in answerWordList track by $index">
+                    <md-button class="md-raised orderBtn" ng-click="deSelectWord($index)">{{item}}</md-button>
+                </div>
+            </div>
+
+            <div style="height: 10vh" layout-align="center center" flex="100">
+                <div flex="100" layout="row" layout-align="center center">
+                    <md-button class="redB checkButton" ng-click="checkAnswer(true)">
+                        check
+                    </md-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

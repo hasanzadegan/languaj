@@ -1,0 +1,43 @@
+<div oc-lazy-load="['/js/viewer/spell.js']">
+    <div ng-controller="spellController" layout="row" layout-wrap="">
+        <div class="charachterSpacer" ng-include="'/html/viewer/header/charachter.html'"></div>
+        <div layout-wrap style="height: 50vh;overflow-y: auto" layout-padding="" layout-wrap="" flex="100">
+            <form>
+            <div ng-repeat="quiz in viewerData.levelLexicalPhraseList" layout="row" flex="100" layout-wrap="">
+                <div flex="100">
+                    {{quiz.itemJSONObj.lexicalPhrase.title}}
+                </div>
+                <div flex="70" layout="row" layout-wrap="">
+                    <div ng-repeat="letter in quiz.itemJSONObj.letterList" >
+                        <div ng-if="!letter.hide" style="color:gray;padding:2px">
+                            {{letter.letter}}
+                        </div>
+                        <div ng-if="letter.hide">
+                            <input style="color:gray;width:30px;font-weight: bold"
+                                   class="redC"
+                                   maxlength="1"
+                                   autocapitalize="none"
+                                   val-to-jump="1" focus-next-input
+                                   ng-model="quiz.answer[$index]">
+                        </div>
+                    </div>
+                </div>
+                <div layout="row" flex="20" style="min-height:50px">
+                    <md-button class="redB checkButton"
+                               ng-click="checkSpell($event,quiz,quiz.answer)" ng-hide="quiz.disabled">
+                        check
+                    </md-button>
+                    <div ng-show="quiz.disabled">
+                        <md-icon ng-if="quiz.result">
+                            check
+                        </md-icon>
+                        <md-icon ng-if="!quiz.result && quiz.disabled">
+                            clear
+                        </md-icon>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>

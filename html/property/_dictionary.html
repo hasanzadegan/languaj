@@ -1,0 +1,67 @@
+<div oc-lazy-load="['/js/property/_dictionary.js']">
+    <div ng-controller="dictionaryController" layout="row" layout-wrap>
+        <div class="dicSearch" layout="row" flex="100">
+            <div flex="100">
+                <div flex="100" layout-padding="" layout="row">
+                    <input flex="80" class="searchPhrase" ng-model="current.searchText" ng-keyup="findPhrase(current.searchText)">
+                    <div flex="20" layout="row" layout-wrap="">
+                        <md-button class="mini-button" flex="25" ng-repeat="letter in extraLetters" ng-click="current.searchText=current.searchText+letter">
+                            {{letter}}
+                        </md-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div flex="100" layout-padding="">
+            <b>Wie hissen Sie?</b>
+        </div>
+
+        <div flex="33" ng-class="'dictionaryPart tra_'+current.selectedLexical"
+             layout-padding="" ng-click="selectLexicalType('translate')">
+            <div>
+                <md-icon>translate</md-icon>
+                translate
+            </div>
+            <div class="lexicalResult">
+                <div>نام شما چیست؟</div>
+                <div>اسمت چیه؟</div>
+            </div>
+        </div>
+
+        <div flex="33" ng-class="'dictionaryPart syn_'+current.selectedLexical"
+             layout-padding="" ng-click="selectLexicalType('synonym')">
+            <div>
+                <md-icon>text_fields</md-icon>
+                synonym
+            </div>
+            <div class="lexicalResult">
+                <div>Wie hisst du?</div>
+                <div>Wie hisst du?</div>
+                <div>Wie hisst du?</div>
+            </div>
+        </div>
+        <div flex="33" ng-class="'dictionaryPart opo_'+current.selectedLexical"
+             layout-padding="" ng-click="selectLexicalType('opposite')">
+            <div class="opo_{{current.selectedLexical}}">
+                <md-icon>import_export</md-icon>
+                opposite
+            </div>
+                ----
+        </div>
+
+        <div flex="100" class="partOfSpeach" layout-padding="">
+
+            <div flex="100" class="examplePart" layout-padding="">
+                Wie - hissen - Sie - ?
+            </div>
+            <div layout-padding="">
+                Part Of Speech or example
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</div>

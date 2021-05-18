@@ -1,0 +1,35 @@
+<div oc-lazy-load="['/js/property/soundList.js']" layout="row" class="courseLessonPage">
+    <div ng-controller="soundListController" layout="row" layout-padding="" layout-wrap="">
+        <input type="file" id="fileSound" name="file" multiple ng-files="getTheFiles($files)" class="fileUploader"/>
+        <div>
+            <md-button ng-click="uplaodFiles()">
+<!--                <md-icon>add_circle</md-icon> add Sound-->
+                <md-icon md-svg-src="/svg/action/uploadSound.svg"></md-icon>
+            </md-button>
+        </div>
+        <div ng-repeat="soundId in current.soundList">
+            <md-menu flex="10">
+                <md-button class="md-icon-button" ng-click="$mdMenu.open()">
+                    <md-icon>play_circle_outline</md-icon>
+                </md-button>
+                <md-menu-content width="4" ng-mouseleave="$mdMenu.close()">
+                    <md-menu-item layout="row">
+                        <md-button ng-click="playSound(soundId)">
+                            <md-icon>play_circle_outline</md-icon>
+                            play voice {{soundId}}
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item layout="row">
+                        <md-button ng-click="deleteSound($event,soundId)">
+                            <md-icon class="md-accent">delete</md-icon>
+                            delete voice
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+
+        </div>
+    </div>
+</div>
+
+

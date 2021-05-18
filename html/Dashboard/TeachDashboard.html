@@ -1,0 +1,63 @@
+<div oc-lazy-load="['/js/pages/teachDashboard.js']">
+    <div ng-controller="teachDashboardController" layout-wrap flex="100" layout="row">
+<!--        {{searchText}}-->
+<!--        <div layout="row" flex="100" layout-padding="">-->
+<!--            topic teaches:-->
+<!--        </div>-->
+        <div layout="row" layout-padding="">
+            <md-icon>book</md-icon>
+            <md-autocomplete md-no-cache="true"
+                             md-search-text="current.teach.title"
+                             ng-model-options="{debounce: 200}"
+                             md-item-text="item.title"
+                             md-selected-item-change="selectTeach(item)"
+                             placeholder="add teach"
+                             md-items="item in searchTeach()"
+                             layout="row">
+                <md-item-template flex="100">
+                    <span md-highlight-text="current.teach.title" md-highlight-flags="^i">{{item.title}}</span>
+                    <md-button class="md-icon-button" ng-click="addTopicTeach(item)">
+                        <md-icon>add_box</md-icon>
+                    </md-button>
+                </md-item-template>
+                <md-not-found layout="row" layout-padding>
+                    not found
+                    <md-button class="md-icon-button" ng-click="addTeach(current.teach.title);addTopicTeach(current.teach)">
+                        <md-icon>add_box</md-icon>
+                    </md-button>
+                </md-not-found>
+            </md-autocomplete>
+        </div>
+
+
+        <div layout="row"
+             flex="100"
+             ng-click="loadTeach(item)"
+             class="md-button"
+             ng-repeat="item in current.selectedCourse.selectedLesson.selectedTopic.topicTeachList"
+             ng-class="current.selectedLevel.teachId===item.teachId?'selectedTeach':''"
+
+            >
+
+            <div layout="row" flex="90" ng-if="teachEditMode!==$index" >
+                <div flex="10" style="font-family: 'Times New Roman'">{{item.teachCode}}</div>
+                <div ng-dblclick="editTeachRow($index)">{{item.title}}</div>
+                <div flex="100"></div>
+                <div>
+                    <md-button class="md-icon-button" ng-click="deleteTopicTeach($event,item)">
+                        <md-icon>clear</md-icon>
+                    </md-button>
+                </div>
+            </div>
+            <div layout="row" flex="90" ng-if="teachEditMode===$index">
+                <div flex="10" style="font-family: 'Times New Roman'">
+                    <input  style="width: 30px;" ng-model="item.teachCode">
+                </div>
+                <div ><input ng-model="item.title" ng-blur="editTopicTeach(item)"></div>
+                <div flex="100"></div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

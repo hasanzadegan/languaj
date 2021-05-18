@@ -1,0 +1,29 @@
+<div oc-lazy-load="['/js/property/topic.js']" layout="row">
+    <div ng-controller="topicController" layout="row" layout-wrap="">
+            <div flex="100" layout-padding="" layout="row" class="headSubTitle">
+                <input flex="90"
+                       title="add ore update topic"
+                       placeholder="add ore update topic"
+                       ng-model="current.selectedCourse.selectedLesson.selectedTopic.title">
+                <md-button class="md-icon-button" ng-click="updateTopic()">
+                    <md-icon md-svg-src="/svg/action/edit.svg"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button" ng-click="addTopic(current.selectedCourse.selectedLesson.selectedTopic.title)" >
+                    <md-icon>add_box</md-icon>
+                </md-button>
+            </div>
+            <div class="cvh" flex="100">
+                <md-list flex="100" layout="row" layout-wrap="">
+                    <md-list-item ng-repeat="topic in current.topicList"
+                                  flex="100"
+                                  ng-click="setTopic(topic)"
+                                  ng-class="topic.topicId===current.selectedCourse.selectedLesson.selectedTopic.topicId?'selectedRow md-accent':''">
+                        <div flex="100">{{topic.title}}</div>
+                        <md-button class="md-icon-button" ng-click="deleteTopic(topic)">
+                            <md-icon md-svg-src="/svg/action/delete.svg">delete</md-icon>
+                        </md-button>
+                    </md-list-item>
+                </md-list>
+            </div>
+    </div>
+</div>

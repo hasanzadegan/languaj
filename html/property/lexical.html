@@ -1,0 +1,72 @@
+<div oc-lazy-load="['/js/property/lexical.js']">
+    <div ng-controller="lexicalController" layout="row" layout-wrap>
+        <div flex="50" ng-include="'html/property/soundList.html'"></div>
+
+        <div flex="100" >
+            <div layout="row" flex="100" ng-repeat="relationType in relationTypeList">
+                <div flex="100"
+                     layout="row"
+                    style="border-top: solid 1px rgba(0,0,0,0.03)"
+                     layout-padding=""
+                >
+                    <div class="title" layout="row">
+                        <md-button class="md-icon-button"
+                                   title="add {{relationType.title}}"
+                                   ng-click="showDialog('addLexical',relationType,this)">
+                            <md-icon>{{relationType.icon}}</md-icon>
+                        </md-button>
+                    </div>
+                    <div layout="row" layout-wrap >
+                        <div ng-repeat="relation in current.selectedPhrase.relationLexicalList|filter:{relationTypeId:relationType.relationTypeId}"
+                             ng-show="relation.lexicalObj.length>1"
+                             dir="rtl"
+                             layout="row">
+                            <div ng-repeat="lexicalPhrase in relation.lexicalObj" layout="row">
+                                <div ng-hide="lexicalPhrase.phraseId==current.selectedPhrase.phraseId" >
+                                    <div class="selectedLexicalItem">
+<!--                                        <md-menu layout-padding="" >-->
+                                            <md-button
+                                                    style="{{current.selectedLexical.lexicalphraseId===lexicalPhrase.lexicalphraseId?'text-decoration:underline;':''}}"
+                                                       class="mini-button" ng-click="showImage(lexicalPhrase,relation)"
+                                                       >
+                                                {{lexicalPhrase.title}}
+                                            </md-button>
+
+<!--                                        </md-menu>-->
+                                        <div ng-show="current.selectedLexicalPhrase.lexicalphraseId===lexicalPhrase.lexicalphraseId && config.showImage">
+                                            <div ng-include="'html/property/imageList.html'" ></div>
+                                            <div layout="row"
+                                                 flex="100"
+                                                 style="border-top:solid 1px rgba(0,0,0,0.1)"
+                                            >
+                                                <md-button class="md-icon-button" ng-click="deleteLexicalPhrase($event,lexicalPhrase)">
+                                                    <md-icon md-svg-src="/svg/action/delete.svg">delete</md-icon>
+
+                                                    <!--                                                <md-icon>delete</md-icon>-->
+                                                </md-button>
+                                                <div flex>
+                                                    <div>
+                                                        <input type="file" id="file1" name="file" multiple ng-files="uploadImage($files)" class="fileUploader"/>
+                                                        <md-button ng-click="uplaodFiles()">
+                                                            <md-icon md-svg-src="/svg/action/uploadImage.svg"></md-icon>
+                                                            <!--                <md-icon>add_circle</md-icon> upload Image-->
+                                                        </md-button>
+                                                    </div>
+                                                </div>
+                                                <md-button class="md-icon-button" ng-click="assignLevelLexicalPhrase(lexicalPhrase,relation.lexicalId)">
+                                                    <md-icon md-svg-src="/svg/action/insert.svg"></md-icon>
+
+                                                    <!--                                                <md-icon>arrow_back</md-icon>-->
+                                                </md-button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+</div>

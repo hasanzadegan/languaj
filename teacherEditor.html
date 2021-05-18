@@ -1,0 +1,102 @@
+﻿<html lang="fa">
+<head>
+    <title>Languaj.com - try again ... </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">-->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00ffd2">
+    <meta name="msapplication-TileColor" content="#00ffd2">
+    <meta name="theme-color" content="#00ffd2">
+
+    <meta charset="UTF-8">
+    <!--npm packages-->
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="node_modules/angular-material/angular-material.min.js"></script>
+    <script src="node_modules/angularjs-toast/angularjs-toast.min.js"></script>
+
+
+    <script src="node_modules/ngstorage/ngStorage.min.js"></script>
+
+<!--        <script src="node_modules/wavesurfer.js/dist/wavesurfer.js"></script>-->
+<!--        <script src="node_modules/wavesurfer-angular/dist/js/wavesurfer-angular.js"></script>-->
+
+<!--    <script src="node_modules/angularjs-audio/app/angularjs.audio.js"></script>-->
+
+    <script src="node_modules/oclazyload/dist/ocLazyLoad.min.js"></script>
+    <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="node_modules/ng-draggable/ngDraggable.js"></script>
+    <script src="node_modules/clipboard/dist/clipboard.js"></script>
+    <script src="node_modules/ngclipboard/dist/ngclipboard.min.js"></script>
+
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=vXDMrEll"></script>
+    <!--definition-->
+    <script src="js/app.js?v=12"></script>
+    <script src="js/main.js?v=12"></script>
+    <script src="js/path.js?v=12"></script>
+    <script src="js/label.js?v=12"></script>
+
+
+    <!-- services-->
+    <script src="service/HttpService.js"></script>
+    <script src="service/ArchiveService.js"></script>
+    <script src="service/WordService.js"></script>
+    <script src="service/LessonService.js"></script>
+    <script src="service/BaseService.js"></script>
+    <script src="service/StorageService.js"></script>
+    <script src="service/VerbService.js"></script>
+    <script src="service/LevelService.js"></script>
+    <script src="service/SoundService.js"></script>
+    <script src="service/LoginService.js"></script>
+    <script src="service/TeachService.js"></script>
+
+
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="node_modules/material-icons-font/material-icons-font.css">
+    <link rel="stylesheet" href="css/style.css?v=12">
+    <link rel="stylesheet" href="layout/flipCard/ccjmne-card-flip.css">
+    <script src="node_modules/satellizer/dist/satellizer.min.js"></script>
+    <script src="node_modules/angular-virtual-keyboard/release/angular-virtual-keyboard.min.js"></script>
+    <link rel="stylesheet" href="node_modules/angular-virtual-keyboard/css/angular-virtual-keyboard.css">
+
+</head>
+<body ng-app="myApp" ng-controller="AppCtrl">
+<div flex="100" layout-wrap>
+
+
+    <div hide-xs="true" class="toggleViewMode" layout="row" layout-align="center center">
+        <md-button class="md-button md-icon-button" ng-click="setPath('/')" title="teacher">
+            <md-icon>visibility</md-icon>
+        </md-button>
+    </div>
+
+
+    <div flex="100" layout="row" layout-wrap style="height: 100vh;width: 100vw;">
+        <div flex="35">
+            <div ng-include="'html/Lesson/header.html'"></div>
+            <div layout="row" flex="100" ng-include="'html/Dashboard/TeachDashboard.html'" ng-show="current.showTeach"></div>
+            <div layout="row" ng-show="!current.showTeach">
+                <div flex="50" ng-include="'html/Dashboard/LessonDashboard.html'"></div>
+                <div flex="50" style="border-left:solid 1px rgba(0,0,0,0.12);">
+                    <div flex="100" ng-include="'html/Dashboard/LevelDashboard.html'"></div>
+                </div>
+            </div>
+        </div>
+
+        <div flex="30" flex-xs="100" ng-show="current.propertyPage" >
+            <div ng-include="current.propertyPage" class="propertyPage"></div>
+        </div>
+
+        <div flex="{{current.mainFlex}}" class="viewerPage" >
+            <div ng-include="'html/viewer/viewer.html'"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

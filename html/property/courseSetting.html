@@ -1,0 +1,73 @@
+<div oc-lazy-load="['/js/dialog/courseSetting.js']" layout="row" class="courseLessonPage">
+    <div ng-controller="courseLessonController" layout="row" layout-padding="" layout-wrap="">
+        <div flex="100" layout="row" class="headSubTitle">
+            <input ng-model="current.selectedCourse.title"
+                   title="add ore update course"
+                   placeholder="add ore update course"
+                   flex="80">
+            <md-button class="md-icon-button" ng-click="updateCourse()">
+                <md-icon md-svg-src="/svg/action/edit.svg"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" flex="20" ng-click="addCourse(current.selectedCourse.title)">
+                <md-icon>add_box</md-icon>
+            </md-button>
+        </div>
+        <div class="cvh" flex="100" layout="row" layout-wrap="">
+            <div class="{{course.courseId===current.selectedCourse.courseId?'selectedRow':''}}"
+                 ng-repeat="course in current.courseList" layout-wrap="" flex="100">
+                <div layout="row" flex="100" layout-wrap="" >
+                    <md-button flex="" layout="start center" ng-click="setCourse(course)" flex="">
+                        {{course.title}}
+                    </md-button>
+<!--                    <md-button flex="25" layout="start center"-->
+<!--                               ngclipboard data-clipboard-text="{{course.courseCode}}"-->
+<!--                               ng-show="course.courseId===current.selectedCourse.courseId">-->
+<!--                        <md-icon md-svg-src="/img/app/clipboard.svg"></md-icon>-->
+<!--                        {{course.courseCode}}-->
+<!--                    </md-button>-->
+                    <md-button flex="10" class="md-icon-button md-accent"
+                               ng-show="course.courseId===current.selectedCourse.courseId"
+                               ng-click="deleteCourse($event,course.courseId)">
+                        <md-icon md-svg-src="/svg/action/delete.svg">delete</md-icon>
+                    </md-button>
+                </div>
+            </div>
+        </div>
+
+        <div flex="100" layout="row" class="headSubTitle">
+            <input ng-model="current.selectedCourse.selectedLesson.title"
+                   title="add ore update lesson"
+                   placeholder="add ore update lesson"
+                   flex="80">
+            <md-button class="md-icon-button" ng-click="updateLesson()">
+                <md-icon md-svg-src="/svg/action/edit.svg"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" flex="20"
+                       ng-click="addLesson(current.selectedCourse.selectedLesson.title)">
+                <md-icon>add_box</md-icon>
+            </md-button>
+        </div>
+        <div class="cvh" flex="100">
+            <md-list flex="100" layout-wrap>
+                <div layout="row" flex="100" ng-repeat="lesson in current.lessonList"
+                     class="{{lesson.lessonId===current.selectedCourse.selectedLesson.lessonId?'selectedRow':''}}">
+                    <md-list-item ng-click="setLesson(lesson)" flex="100" layout="row">
+                        <div flex="90">{{lesson.title}}</div>
+                        <md-button class="md-icon-button md-accent"
+                                   ng-show="lesson.lessonId===current.selectedCourse.selectedLesson.lessonId"
+                                   ng-click="deleteLesson(lesson.lessonId)">
+                            <md-icon md-svg-src="/svg/action/delete.svg">delete</md-icon>
+                            <!--                            <md-icon>delete</md-icon>-->
+                        </md-button>
+                    </md-list-item>
+                </div>
+            </md-list>
+        </div>
+    </div>
+    <div flex="100">
+        <div ng-include="'html/Lesson/topic.html'" flex="100"></div>
+    </div>
+</div>
+</div>
+
+

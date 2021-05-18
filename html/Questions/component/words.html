@@ -1,0 +1,33 @@
+
+<h5>Words</h5>
+<md-content flex="100">
+    <md-autocomplete
+            md-no-cache="true"
+            md-search-text="searchWord"
+            ng-model-options="{debounce: 500}"
+            md-selected-item-change="addWord(word)"
+            placeholder="add words to list"
+            md-items="word in queryWord(searchWord)"
+            md-menu-class="autocomplete-custom-template"
+            md-item-text="word.Title"
+    >
+
+        <md-item-template layout="row" >
+            <div>
+                <b>{{word.Title}}</b>
+                <br/>
+                <small>{{word.wdt}}</small>
+            </div>
+        </md-item-template>
+
+    </md-autocomplete>
+    <md-chips ng-model="selectedLevelItem.wordText" flex="100">
+        <md-chip-template>
+            <strong>{{$chip.Title}}</strong>
+        </md-chip-template>
+    </md-chips>
+
+
+
+</md-content>
+

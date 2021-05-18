@@ -1,0 +1,86 @@
+<div oc-lazy-load="['/js/viewer/multi.js']">
+    <div ng-controller="multiController" layout="row" layout-wrap="">
+        <div class="questionSpacer" ng-include="'/html/viewer/header/question.html'"></div>
+        <div flex="100" layout="row" style="height: 230px;z-index: 999" layout-align="start start">
+            <div style="width: 60px;"></div>
+            <div ng-repeat="levelLexicalPhrase in viewerData.levelLexicalPhraseList"
+                 ng-if="levelLexicalPhrase.itemJSONObj.validityTypeId===1"
+                 layout-align="center center"
+                 layout="row" layout-wrap="">
+                <div flex="100" layout-align="center center" layout="row" style="height: 100px;">
+                    <div ng-show="levelLexicalPhrase.itemJSONObj.imageId">
+                        <b title="{{levelLexicalPhrase.itemJSONObj.lexicalPhrase.title}}">
+                            {{levelLexicalPhrase.itemJSONObj.title}}
+                        </b>
+                        <img
+                                ng-src="{{'/doc/'+levelLexicalPhrase.itemJSONObj.imageId}}"
+                                ng-show="levelLexicalPhrase.itemJSONObj.imageId"
+                                style="max-width: 30vh;max-height: 80px;padding: 15px !important;"
+                                ng-click="playItem($event,levelLexicalPhrase)"
+                                class="md-button {{levelLexicalPhrase.itemJSONObj.animation}}">
+
+                    </div>
+                    <div ng-show="!levelLexicalPhrase.itemJSONObj.imageId">
+                        <b ng-show="levelLexicalPhrase.itemJSONObj.showText"
+                           title="{{levelLexicalPhrase.itemJSONObj.lexicalPhrase.title}}">
+                            {{levelLexicalPhrase.itemJSONObj.title}}
+                        </b>
+                        <md-button
+                                ng-show="levelLexicalPhrase.itemJSONObj.soundId!=-1"
+                                class="md-icon-button" ng-click="playItem($event,levelLexicalPhrase)">
+                            <md-icon>
+                                volume_down
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div flex="{{levelLexicalPhrase.itemJSONObj.itemFlex}}"
+             ng-repeat="levelLexicalPhrase in viewerData.levelLexicalPhraseList"
+             style="
+                 {{selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
+                 '#FF5454':''}}"
+             ng-if="levelLexicalPhrase.itemJSONObj.validityTypeId!==1"
+             layout-wrap=""
+             layout-padding=""
+             layout="row"
+        >
+            <md-button class="multiBtn {{levelLexicalPhrase.itemJSONObj.imageId===null ?'redS':''}}" layout-align="center center" ng-click="selectChoice($event,levelLexicalPhrase)">
+                <div flex="100" layout-align="center center" layout="row"
+                ng-hide="levelLexicalPhrase.itemJSONObj.hideText"
+                >
+                    <b title="{{levelLexicalPhrase.itemJSONObj.lexicalPhrase.title}}">
+                        <div
+                                ng-class="selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
+                        selectedLevelLexicalPhrase.itemJSONObj.animation:''">
+                            {{levelLexicalPhrase.itemJSONObj.title}}
+                        </div>
+
+                    </b>
+                </div>
+                <img
+                        ng-class="selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
+                        selectedLevelLexicalPhrase.itemJSONObj.animation:''"
+                        ng-src="{{'/doc/'+levelLexicalPhrase.itemJSONObj.imageId}}"
+                        ng-show="levelLexicalPhrase.itemJSONObj.imageId"
+                        style="height: 16vh;padding: 5px"
+                >
+                <img
+                        ng-class="selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
+                        selectedLevelLexicalPhrase.itemJSONObj.animation:''"
+                        src="/img/app/megaphone.svg"
+                        ng-show="levelLexicalPhrase.itemJSONObj.soundId!=-1 && !levelLexicalPhrase.itemJSONObj.imageId"
+                        style="height: 16vh;padding: 5px"
+                >
+            </md-button>
+        </div>
+        <div layout-align="center center" flex="100" layout="row">
+            <md-button class="{{selecteChoice?'redB':''}} md-accent md-raised checkButton"
+                       ng-disabled="!selecteChoice"
+                       ng-click="checkChoice()">check
+            </md-button>
+        </div>
+    </div>
+</div>

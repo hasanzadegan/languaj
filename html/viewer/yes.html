@@ -1,0 +1,41 @@
+<div oc-lazy-load="['/js/viewer/yes.js']">
+    <div ng-controller="yesController" layout="row" layout-wrap
+         style="height: 85vh;">
+
+        <div class="simpleSpacer" ng-include="'/html/viewer/header/simple.html'"></div>
+
+        <div style="height: 75vh" flex="100" layout="column" layout-align="center center">
+            <div flex="20" layout-align="center center" layout="row" ng-hide="answerLexicalPhrase.itemJSONObj.hideText">
+                <p style="font-size: 30px;" typewrite type-delay="100" blink-cursor="false"
+                   text="{{questionLexicalPhrase.itemJSONObj.title}}"></p>
+            </div>
+            <div flex="40" layout-align="center center" layout="row">
+                <img ng-src="{{'/doc/'+questionLexicalPhrase.itemJSONObj.imageId}}"
+                     ng-click="speak(questionLexicalPhrase.itemJSONObj.title)"
+                     class="animate-show md-button {{questionLexicalPhrase.itemJSONObj.animation}}"
+                     style="height: 100%">
+            </div>
+            <div flex="20" layout-align="center center" layout="row" ng-hide="answerLexicalPhrase.itemJSONObj.hideText">
+                <h1>
+                    <p style="font-size: 25px;" typewrite type-delay="100" blink-cursor="false"
+                       text="{{answerLexicalPhrase.itemJSONObj.lexicalPhrase.title}}"></p>
+                </h1>
+            </div>
+        </div>
+
+        <div style="height: 10vh" layout-align="center center" flex="100">
+            <div flex="100" layout="row" layout-align="center center">
+                <div flex="40" layout="row" layout-align="center cengter">
+                    <md-button class="blueC checkButton" ng-click="checkAnswer(true)">
+                        richtig
+                        <md-icon class="blueC">check</md-icon>
+                    </md-button>
+                    <md-button class="redC checkButton" ng-click="checkAnswer(false)">
+                        falsch
+                        <md-icon class="redC">clear</md-icon>
+                    </md-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

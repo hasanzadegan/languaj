@@ -1,0 +1,12 @@
+<img src="/img/app/round.png" class="appImg" style="position: absolute;top: 0px;left: 0px;z-index: -1"/>
+<div flex="100" style="height: 100px" layout="row">
+    <img ng-src="{{current.profile.imageUrl}}" class="appImg" style="border-radius: 60px;height: 60px;"/>
+    <div layout-padding="" style="font-size: 25px;font-family: Roboto" flex="100">{{current.profile.firstName +' '
+        +current.profile.lastName}}
+    </div>
+    <div>
+        <md-button ng-click="goToSetting()">
+            <md-icon md-svg-src="/img/app/settings.svg"></md-icon>
+        </md-button>
+    </div>
+</div>

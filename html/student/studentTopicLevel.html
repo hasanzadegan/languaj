@@ -1,0 +1,49 @@
+
+<div ng-show="current.student.selectedCourse" layout="row" layout-padding="" layout-wrap="">
+    <div >
+        <img class="appImg teacherCourseImage" ng-src="{{current.student.selectedCourse.imageUrl}}" width="50px" >
+    </div>
+    <div layout="row">
+        <div>
+            <div layout="row" style="font-size:1.3rem;font-weight: bolder">
+                {{current.student.selectedCourse.title}}
+            </div>
+            <div style="font-size: 0.6rem">
+                {{current.student.selectedCourse.firstName}}
+                {{current.student.selectedCourse.lastName}}
+            </div>
+        </div>
+        <md-button class="md-icon-button" ng-click="loadCourseList()">
+            <md-icon md-svg-src="/img/app/back.svg"></md-icon>
+        </md-button>
+    </div>
+    <div flex="100" layout="row">
+        <input flex="30"
+               flex-xs="90"
+               style="font-size: 14px"
+               disabled
+               value="{{__path+'/?course='+current.selectedCourse.courseCode+'&ref='+current.profile.ref}}">
+        <md-button ngclipboard data-clipboard-text="{{__path+'/?course='+current.selectedCourse.courseCode+'&ref='+current.profile.ref}}"
+        >
+            <md-icon md-svg-src="/img/app/clipboard.svg" style="min-height:16px !important;height: 16px !important;"></md-icon>
+        </md-button>
+    </div>
+</div>
+<div ng-repeat="lesson in current.student.selectedCourse.lessonList" flex="100">
+    <div>{{lesson.title}}</div>
+    <div layout="row" layout-wrap="" flex="100">
+        <div ng-repeat="topic in lesson.topicListObj" layout-wrap="" >
+            <md-button class="lessonBtn"
+                       ng-click="getTopicLevelList(topic,topic.review+1)" ng-disabled="topic.locked">
+                <div style="min-width: 100px">
+                    {{topic.title}}
+                </div>
+                <md-icon ng-show="topic.locked">lock</md-icon>
+<!--                <md-icon ng-show="topic.achievedTopicId" style="color:green">check </md-icon>-->
+                <div>
+                    <img class="appImg" src="/img/app/progress/progress_{{topic.review==null?0:topic.review}}.svg" />
+                </div>
+            </md-button>
+        </div>
+    </div>
+</div>

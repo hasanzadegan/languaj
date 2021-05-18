@@ -1,0 +1,76 @@
+<div oc-lazy-load="['/js/header/header.js']">
+    <div ng-controller="headerController" layout="row" layout-wrap="">
+        <div flex="100" layout="row" layout-align="center center">
+            <img ng-src="{{current.profile.imageUrl}}"
+                 ng-dblclick="showTeacherList=!showTeacherList"
+                 style="border-radius: 50px;height: 50px;padding: 5px"/>
+            <div layout-padding="" style="font-size: 25px;font-family: Roboto" flex="100">{{current.profile.firstName +' '
+                +current.profile.lastName}}
+            </div>
+
+<!--            <div ng-if="current.selectedLevelTypeId===12">-->
+<!--                <md-button ng-show="!current.showTeach && current.selectedCourse.selectedLesson.selectedTopic"-->
+<!--                           class="md-icon-button"-->
+<!--                           ng-click="setPropertyPage('teach');showTeach()"-->
+<!--                           title="dictionary">-->
+<!--                    <md-icon>book</md-icon>-->
+<!--                </md-button>-->
+
+<!--                <md-button ng-show="current.showTeach" class="md-icon-button" ng-click="hideTeach()"-->
+<!--                           title="teach">-->
+<!--                    <md-icon>local_library</md-icon>-->
+<!--                </md-button>-->
+<!--            </div>-->
+
+        </div>
+        <div layout="row">
+            <div layout-padding="">{{current.selectedCourse.title}}</div>
+            <md-button style="font-size: 12px;"
+                       ngclipboard data-clipboard-text="{{__path+'/?course='+current.selectedCourse.courseCode+'&ref='+current.profile.ref}}" flex=""
+            >
+                <md-icon md-svg-src="/img/app/clipboard.svg" style="max-height: 20px !important;"></md-icon>
+                {{__path+'/?course='+current.selectedCourse.courseCode+'&ref='+current.profile.ref}}
+            </md-button>
+<!--            <a href="whatsapp://send?text={{__path+'/?course='+current.selectedCourse.courseCode}}"-->
+<!--               data-action="share/whatsapp/share">Whatsapp</a>-->
+        </div>
+
+        <div class="hScroll" ng-show="showTeacherList" style="border-bottom: solid 1px rgba(0,0,0,0.12)" layout="row"
+             flex="100">
+            <div layout="row" flex="100" class="teacherList">
+                <md-button ng-repeat="teacher in current.teacherList|filter:teacherSearch"
+                           ng-click="impersonate(teacher)">
+                    <img ng-src="{{teacher.imageUrl}}"
+                         class="nounFilter"
+                         title="{{teacher.firstName}} {{teacher.lastName}}"
+                         style="height: 50px;border-radius: 50px;{{current.impersonateUser.userId===teacher.userId?'border:solid 3px #445':''}}">
+                </md-button>
+            </div>
+            <md-button class="md-icon-button" ng-click="clearImpersonate()">
+                <md-icon>clear</md-icon>
+            </md-button>
+        </div>
+        <div flex="100" layout="row" class="headTitle md-button">
+            <div>
+                <md-button ng-show="!current.showTeach" ng-click="addLevel('newLevel')">
+                    <md-icon>add_box</md-icon>
+                    add level
+                </md-button>
+            </div>
+            <div flex=""></div>
+
+            <div ng-click="setPropertyPage('courseSetting')" layout="row">
+                <div>
+                    {{current.selectedCourse.selectedLesson.title}}
+                </div>
+                <div>/</div>
+                <div>
+                    {{current.selectedCourse.selectedLesson.selectedTopic.title}}
+                </div>
+            </div>
+            <md-button class="md-icon-button" flex="10" ng-click="setPropertyPage('courseSetting')">
+                <md-icon>chevron_right</md-icon>
+            </md-button>
+        </div>
+    </div>
+</div>
