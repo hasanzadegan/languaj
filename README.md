@@ -1,12 +1,14 @@
-![languaj](https://user-images.githubusercontent.com/11706662/118620307-9fff6300-b7da-11eb-9c1a-e66989d704cc.png) 
-languaj is a platform who:
--  teachers generate and manage language content 
-- students learn and achive new languages    
-
-
 # languaj
 
-###setup
+![languaj](https://user-images.githubusercontent.com/11706662/118620307-9fff6300-b7da-11eb-9c1a-e66989d704cc.png) 
+
+languaj is a platform for:
+- teachers to generate and manage language content.
+- students to learn new language interactive.
+
+
+
+### Setup nodejs and packages
 download and install nodejs and npm 
 
 https://nodejs.org/en/download/ 
@@ -17,7 +19,7 @@ npm install in
 root and /api folders
 
 
-### setup database
+### Setup mysql
 
 install mySql 8 or above
 
@@ -32,6 +34,6 @@ and edit this file
 
 
 
-### run project
+### Run project
 goto root project and run server.bat
 
