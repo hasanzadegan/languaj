@@ -195,12 +195,7 @@ module.exports = {
             stmt = 'delete from topic where topicId=' + topicId+';'
             return query(stmt).then(function (result) {
                 return result;
-            }).catch(function (err) {
-                return error;
-            })
-
-        }).catch(function (err) {
-            return error;
+            });
         });
     },
     getLevelList: async function (topicId) {
