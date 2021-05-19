@@ -17,7 +17,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
     // change it for clear cache in clients
 
-    var currentVersion = 1015;
+    var currentVersion = 1016;
     $rootScope.extraLetters = ["Ä", "Ö", "Ü", "ẞ"]//,"ä","ö","ü","ß"];
     $rootScope.selectedLang = {"langId": 2, "title": "german", "code": "de", "isSource": 0, "isDestination": 1};
 
