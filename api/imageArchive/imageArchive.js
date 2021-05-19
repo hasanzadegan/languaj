@@ -6,7 +6,6 @@ module.exports = {
         return await query(stmt, '').then(function (result) {
             if(result.length>0)
                 return result[0];
-
         })
     },
 }
