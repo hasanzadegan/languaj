@@ -2,7 +2,6 @@ const query = require('../helpers/query');
 
 module.exports = {
     findOrCreate: async function (profile, cb) {
-        console.log("profile.emails[0].value",profile.emails[0].value)
         this.findByEmail(profile.emails[0].value).then(findResult=>{
             if(findResult.length===0){
                 this.createUser(profile).then(createResult=>{
@@ -10,10 +9,8 @@ module.exports = {
                 });
             }
             else{
-                console.log(findResult);
                 cb(null,findResult[0]);
             }
-
         })
     },
     findByEmail: async function (email) {

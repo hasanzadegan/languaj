@@ -19,13 +19,6 @@ module.exports = {
                     resolve(null);
             });
         });
-
-        //todo impersonate
-        // console.log("getUser",req.user)
-        // if(req.user)
-        //     return userId = req.session.user === undefined ? req.user.userId : req.session.user.userId;
-        // else
-        //     return null;
     },
     getBase64: function (id) {
         let formola = "" + ((id + courseParam1) * courseParam2)

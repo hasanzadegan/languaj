@@ -47,18 +47,19 @@ angular.module('myApp').controller('courseListController',
             $scope.current.student.courseList = null;
             LessonService.getUserCourseList().then(result => {
                 $scope.current.student.courseList = result;
-                console.log("***********",result);
-                var hasCourseInList = result.filter(function (course) {
-                    return course.courseCode == $scope.current.courseCode;
-                })
+                if(result.length>0){
+                    var hasCourseInList = result.filter(function (course) {
+                        return course.courseCode == $scope.current.courseCode;
+                    })
 
-                if ($scope.current.courseCode && hasCourseInList.length === 0) {
-                    LessonService.addStudentCourse($scope.current.courseCode, $scope.current.profile.ref).then(result => {
-                        localStorage.removeItem("current.courseCode");
-                        $scope.getUserCourseList();
-                    });
+                    if ($scope.current.courseCode && hasCourseInList.length === 0) {
+                        LessonService.addStudentCourse($scope.current.courseCode, $scope.current.profile.ref).then(result => {
+                            localStorage.removeItem("current.courseCode");
+                            $scope.getUserCourseList();
+                        });
+                    }
+                    StorageService.setData($scope.current);
                 }
-                StorageService.setData($scope.current);
             })
         }
 

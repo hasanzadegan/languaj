@@ -17,7 +17,6 @@ module.exports = function (app) {
             User.findOrCreate(profile, function (err, user) {
                 user.ref = global.getBase64(user.userId);
                 user.token = jwt.sign({user: user}, keys.jwt.key, {expiresIn: 60 * 60 * 24 * 30});
-                // user.token = jwt.sign({data: data}, keys.jwt.key, {expiresIn: 20});
                 return cb(err, user);
             });
         }

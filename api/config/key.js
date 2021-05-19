@@ -8,7 +8,7 @@ module.exports = {
         cookieKey:"cookie_key_set_up_by_you"
     },
     jwt:{
-        key:"languaj.com created by Shahrokh Hassanzadegan"
+        key:"languaj.com created by Shahrokh"
     }
 };
 

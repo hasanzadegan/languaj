@@ -165,8 +165,8 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     }
 
     if (localStorage.getItem("__token")) {
+        console.log("localStorage.getItem(__token)",localStorage.getItem("__token"));
         LoginService.checkJWT().then(result => {
-            console.log(result.decoded)
             if (result.decoded === undefined)
                 $window.location.href = $path.url + "/auth/google";
             else
@@ -174,6 +174,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         })
     } else {
         LoginService.getProfile().then((result) => {
+
             if (result === "") {
                 $window.location.href = $path.url + "/auth/google";
             } else {
