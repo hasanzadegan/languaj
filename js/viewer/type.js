@@ -1,11 +1,12 @@
 angular.module('myApp').controller('typeController',
     function ($rootScope, $scope, $q, $timeout, WordService, BaeService, StorageService, LessonService, SoundService) {
+        $scope.func.question = $scope.viewerData.levelLexicalPhraseList[0].itemJSONObj.lexicalPhrase.title;
 
-        $scope.checkType = function () {
+        $scope.func.checkType = function () {
             if($scope.viewerData.levelLexicalPhraseList[0].title===$scope.current.typeText){
-                $scope.isCorrect();
+                $scope.func.isCorrect();
             } else {
-                $scope.isInCorrect();
+                $scope.func.isInCorrect();
             }
         }
 

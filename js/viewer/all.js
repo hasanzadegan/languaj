@@ -11,29 +11,29 @@ angular.module('myApp').controller('allController',
         });
 
 
-        $scope.serialPlay = function ($event, cnt) {
+        $scope.func.serialPlay = function ($event, cnt) {
             if ($scope.viewerData.levelLexicalPhraseList.length > cnt) {
                 levelItem = $scope.viewerData.levelLexicalPhraseList[cnt];
                 $scope.playItem($event, levelItem,1000).then(result => {
                     $scope.current.cnt  += 1;
-                    $scope.serialPlay($event, $scope.current.cnt);
+                    $scope.func.serialPlay($event, $scope.current.cnt);
                 });
             } else {
-                $scope.toggleSelectOne();
-                $scope.played = true;
+                $scope.func.toggleSelectOne();
+                $scope.func.played = true;
             }
         }
 
         $scope.current.showOne = false;
-        $scope.toggleSelectOne = function () {
+        $scope.func.toggleSelectOne = function () {
             $scope.current.cnt = 0;
             $scope.current.showOne = !$scope.current.showOne;
             StorageService.setData($scope.current)
         }
 
-        $scope.playAll = function ($event) {
-            $scope.toggleSelectOne();
+        $scope.func.playAll = function ($event) {
+            $scope.func.toggleSelectOne();
             $scope.current.cnt = 0;
-            $scope.serialPlay($event, 0);
+            $scope.func.serialPlay($event, 0);
         }
     });

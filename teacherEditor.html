@@ -59,6 +59,8 @@
 
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="node_modules/material-icons-font/material-icons-font.css">
+
+    <link rel="stylesheet" href="css/global.css?v=12">
     <link rel="stylesheet" href="css/style.css?v=12">
     <link rel="stylesheet" href="layout/flipCard/ccjmne-card-flip.css">
     <script src="node_modules/satellizer/dist/satellizer.min.js"></script>
@@ -93,8 +95,8 @@
             <div ng-include="current.propertyPage" class="propertyPage"></div>
         </div>
 
-        <div flex="{{current.mainFlex}}" class="viewerPage" >
-            <div ng-include="'html/viewer/viewer.html'"></div>
+        <div flex="{{current.mainFlex}}" layout="row" >
+            <div ng-include="'html/viewer/viewer.html'" style="border-left:solid 1px #eaeaea" layout="column" flex="100"></div>
         </div>
     </div>
 </div>

@@ -1,7 +1,7 @@
 angular.module('myApp').controller('introduceController',
     function ($rootScope, $scope, $q, $timeout, WordService, BaeService, StorageService, LessonService, SoundService) {
         // if ($scope.current.lexicalIndex === undefined)
-
+        $scope.current.test = "salam";
         $scope.current.lexicalIndex = 0;
 
         if($scope.viewerData.levelLexicalPhraseList.length>0){
@@ -19,7 +19,8 @@ angular.module('myApp').controller('introduceController',
             }
         }
 
-        $scope.showItem = function (id) {
+
+        $scope.func.showItem = function (id) {
             $scope.current.lexicalIndex = id
             $scope.speak($scope.viewerData.levelLexicalPhraseList[id].title)
             StorageService.setData($scope.current);

@@ -14,7 +14,6 @@ app.service('LoginService', function ($rootScope, $path, $http, HttpService, Sto
         checkJWT: function () {
             const def = $q.defer();
             HttpService.get($path.url + "/api/checkJWT").then(result => {
-                console.log("jwt",result)
                     def.resolve(result);
                 },
                 error => {

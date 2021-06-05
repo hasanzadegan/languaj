@@ -64,17 +64,18 @@ angular.module('myApp').controller('courseListController',
         }
 
 
-        $scope.getTopicLevelList = function (topic,review) {
-            console.log("review",review)
+        $scope.getStudentTopicLevelList = function (topic,review) {
+            console.log(">>>>>>>>>>review",topic,review)
             $scope.current.student.selectedCourse.selectedTopic = topic;
             $scope.current.student.selectedCourse.selectedTopic.levelList = [];
 
             LessonService.getReviewLevelList(topic.topicId,review??1).then(result => {
+                console.log(result);
                 if (result.length > 0) {
                     $scope.current.student.selectedCourse.selectedTopic.levelList = result;
                     $scope.current.student.selectedCourse.selectedTopic.levelIndex = 0;
                     StorageService.setData($scope.current);
-                    $scope.config.footerIcon = 'footerStudent';
+                    $scope.config.footerIcon = 'studentLevel';
                     StorageService.setConfig($scope.config);
                     $scope.selectStudentLevel(result[0].levelId);
                 }

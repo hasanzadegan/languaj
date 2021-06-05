@@ -1,13 +1,18 @@
-<div oc-lazy-load="['/js/viewer/pair.js']">
-    <div ng-controller="pairController" layout="row" layout-wrap="">
-
-        <div class="charachterSpacer" ng-include="'/html/viewer/header/charachter.html'"></div>
-        <div layout="row" flex-xs="100" layout-wrap>
+<div oc-lazy-load="['/js/viewer/pair.js?v=11']">
+    <div ng-controller="pairController"></div>
+</div>
+<div flex="100" layout="column">
+    <div flex="20" ng-include="'/html/viewer/header/charachter.html?v='+getRand()" layout="row"></div>
+    <div layout-wrap flex="80">
+        <div layout="row" layout-wrap="" flex="100">
             <div ng-repeat="item in shuffleList" flex="50" layout="row" layout-wrap="" layout-padding="">
-                <md-button class="md-raised" flex="100" ng-click="speak(item.title);checkAnswer(item)"
-                           ng-disabled="disableList[item.lexicalId]"
+                <md-button class="roundStrockBtn" flex="100" ng-click="speak(item.title);func.checkAnswer(item)"
+                           ng-hide="func.disableList[item.lexicalId]"
                 >{{item.title}}
                 </md-button>
+                <div class="roundStrockBtnGreen" layout-align="center center" flex="100" layout="row" ng-show="func.disableList[item.lexicalId]">
+                    {{item.title}}
+                </div>
             </div>
         </div>
     </div>

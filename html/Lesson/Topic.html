@@ -1,29 +1,32 @@
 <div oc-lazy-load="['/js/property/topic.js']" layout="row">
     <div ng-controller="topicController" layout="row" layout-wrap="">
-            <div flex="100" layout-padding="" layout="row" class="headSubTitle">
-                <input flex="90"
-                       title="add ore update topic"
-                       placeholder="add ore update topic"
-                       ng-model="current.selectedCourse.selectedLesson.selectedTopic.title">
-                <md-button class="md-icon-button" ng-click="updateTopic()">
-                    <md-icon md-svg-src="/svg/action/edit.svg"></md-icon>
-                </md-button>
-                <md-button class="md-icon-button" ng-click="addTopic(current.selectedCourse.selectedLesson.selectedTopic.title)" >
+            <div flex="100" layout-padding="" layout="row" class="headSubTitle" >
+<!--                <input flex="90"-->
+<!--                       title="add or update topic"-->
+<!--                       placeholder="add ore update topic"-->
+<!--                       ng-model="current.selectedCourse.selectedLesson.selectedTopic.title">-->
+<!--                <md-button class="md-icon-button" ng-click="updateTopic()">-->
+<!--                    <md-icon md-svg-src="/svg/action/edit.svg"></md-icon>-->
+<!--                </md-button>-->
+                <md-button ng-click="addTopic('new topic')" >
                     <md-icon>add_box</md-icon>
+                    add topic
                 </md-button>
             </div>
-            <div class="cvh" flex="100">
-                <md-list flex="100" layout="row" layout-wrap="">
-                    <md-list-item ng-repeat="topic in current.topicList"
-                                  flex="100"
+            <div >
+                    <div ng-repeat="topic in current.topicList"
+                                    layout="row"
                                   ng-click="setTopic(topic)"
                                   ng-class="topic.topicId===current.selectedCourse.selectedLesson.selectedTopic.topicId?'selectedRow md-accent':''">
-                        <div flex="100">{{topic.title}}</div>
-                        <md-button class="md-icon-button" ng-click="deleteTopic(topic)">
-                            <md-icon md-svg-src="/svg/action/delete.svg">delete</md-icon>
-                        </md-button>
-                    </md-list-item>
-                </md-list>
+                        <div layout="row">
+                            <md-button flex="" title="{{topic}}" layout-wrap="">{{topic.title}}</md-button>
+                            <md-button class="md-icon-button"
+                                       ng-show="topic.topicId===current.selectedCourse.selectedLesson.selectedTopic.topicId"
+                                       ng-click="deleteTopic(topic)">
+                                <md-icon md-svg-src="/svg/action/delete.svg">delete</md-icon>
+                            </md-button>
+                        </div>
+                    </div>
             </div>
     </div>
 </div>

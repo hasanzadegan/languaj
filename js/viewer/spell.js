@@ -2,7 +2,8 @@ angular.module('myApp').controller('spellController',
     function ($rootScope, $scope, $q, $timeout, WordService, BaeService, StorageService, LessonService, SoundService) {
         // $scope.lexicalPhrase = $scope.viewerData.levelLexicalPhraseList[0];
 
-        $scope.checkSpell = function ($event,quiz, answer) {
+        $scope.func.question = "";
+        $scope.func.checkSpell = function ($event,quiz, answer) {
             $scope.playItem($event,quiz);
             if (answer === undefined)
                 return;
@@ -29,9 +30,9 @@ angular.module('myApp').controller('spellController',
             }
             if (allDone) {
                 if(allCorrect)
-                    $scope.isCorrect();
+                    $scope.func.isCorrect();
                 else
-                    $scope.isInCorrect();
+                    $scope.func.isInCorrect();
             }
         }
     });

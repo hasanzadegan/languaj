@@ -103,6 +103,7 @@ module.exports = {
     },
     deleteCourse: async function (courseId) {
         stmt = ' delete from course where courseId=' + courseId;
+        console.log(stmt);
         return await query(stmt).then(function (result) {
             return result;
         }, function (error) {

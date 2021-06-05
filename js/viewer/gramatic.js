@@ -1,5 +1,6 @@
 angular.module('myApp').controller('gramaticController',
     function ($rootScope, $scope, $q, $timeout, WordService, BaeService, StorageService, LessonService, TeachService, $interval, SoundService) {
+
         $scope.notation2HTML = function (str) {
             if (str === null)
                 return str;
@@ -22,10 +23,10 @@ angular.module('myApp').controller('gramaticController',
 
 
         $scope.$on("teachChanged", function (event, teach) {
-            // var teachCode = "<span class='teachCode'>"+teach.teachCode+"</span>"
             if (teach) {
                 teach.HTML = $scope.notation2HTML(teach.description);
                 $scope.current.teach = teach;
+                console.log("teach",teach)
                 // $rootScope.$broadcast("teachFrameChanged",1);
                 TeachService.getTeachPointList(teach.teachId).then(result => {
                     console.log("teachChanged getTeachPointList", result);
@@ -52,7 +53,7 @@ angular.module('myApp').controller('gramaticController',
         }
 
         $scope.$on("teachPointChanged", function (event, teachPoint) {
-            $scope.content = $scope.notation2HTML(teachPoint.HTML);
+            $scope.func.content = $scope.notation2HTML(teachPoint.HTML);
             TeachService.getTeachPointList(teachPoint.teachId).then(result => {
                 $scope.current.keyList = result;
                 StorageService.setData($scope.current);
@@ -65,23 +66,23 @@ angular.module('myApp').controller('gramaticController',
             $scope.changeFrame(time, $scope.current.keyList);
         });
 
-        $scope.changeFrame = function (time, keyList) {
-            $scope.content = "";
+        $scope.func.changeFrame = function (time, keyList) {
+            $scope.func.content = "";
             var keyFrameList = $scope.current.keyList.filter(second => {
                 return second.startTime <= time
             });
             if (keyFrameList.length > 0) {
                 if (keyFrameList[keyFrameList.length - 1].HTML) {
                     html = keyFrameList[keyFrameList.length - 1].HTML;
-                    $scope.content = $scope.notation2HTML(html);
+                    $scope.func.content = $scope.notation2HTML(html);
                 }
             }
             $scope.current.time = time;
             StorageService.setData($scope.current);
         }
 
-        $scope.goToFrame = function (time) {
-            $scope.content = "";
+        $scope.func.goToFrame = function (time) {
+            $scope.func.content = "";
             $scope.current.time = time;
             StorageService.setData($scope.current);
         }

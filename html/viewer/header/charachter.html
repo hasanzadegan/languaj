@@ -1,12 +1,14 @@
-<div class="charachterBack">
-    <div class="charachterBackImg" style="background: url('/img/app/charachters/{{charachter}}.svg'); background-repeat: no-repeat;">
-        <div class="charachterQuestion" layout="row" layout-align="start center">
-            <img src="/svg/levelType/{{viewerData.levelTypeId}}.svg" width="60px" class="appImg"/>
-            <div>
-                <div>{{viewerData.title}}</div>
-                <div>{{question?'('+question+')':''}}</div>
 
-            </div>
+<div layout="row" flex="100">
+    <div flex="30" layout="row">
+        <img flex="100" style="max-height: 100%" src="/img/app/charachters/{{charachter}}.svg"/>
+    </div>
+    <div flex="70" layout-padding="" layout="row" layout-wrap="">
+        <div layout="row" flex="100" layout-padding="" layout-align="start center">
+            <img src="/svg/levelType/{{viewerData.levelTypeId}}.svg" width="50px" class="appImg"/>
+            <div>{{viewerData.title}}</div>
         </div>
+
+        <div class="largeFont">{{func.question?func.question:''}}</div>
     </div>
 </div>

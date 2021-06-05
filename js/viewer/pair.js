@@ -3,12 +3,11 @@ angular.module('myApp').controller('pairController',
 
         var pair = [];
         var failCount = 0;
-        $scope.disableList = {};
+        $scope.func.disableList = {};
 
-        $scope.charachter = $scope.getRandomInt(101,102);
-
+        $scope.charachter = $scope.getRandomInt(101,103);
         var previousTitle;
-        $scope.checkAnswer = function (item) {
+        $scope.func.checkAnswer = function (item) {
             if(previousTitle===item.title){
             }
             else{
@@ -18,17 +17,17 @@ angular.module('myApp').controller('pairController',
 
                 if (pair.length % 2 === 0) {
                     if (pair[pair.length - 1] === pair[pair.length - 2]) {
-                        $scope.disableList[item.lexicalId] = true;
+                        $scope.func.disableList[item.lexicalId] = true;
                     } else {
                         failCount = failCount+1;
-                        if(failCount===3)
-                            $scope.isInCorrect();
+                        if(failCount===1)
+                            $scope.func.isInCorrect();
                         pair = pair.slice(0, pair.length - 2);
                     }
                 }
 
                 if ($scope.shuffleList.length == pair.length){
-                    $scope.isCorrect();
+                    $scope.func.isCorrect();
                 }
                 previousTitle = item.title;
             }

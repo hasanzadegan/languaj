@@ -19,20 +19,22 @@ angular.module('myApp').controller('viewerController',
         }
 
 
-        $scope.isCorrect = function () {
+        $scope.func.isCorrect = function () {
             console.log("Correct");
             $rootScope.$broadcast("nextLevel");
         }
 
-        $scope.isInCorrect = function () {
+        $scope.func.isInCorrect = function () {
             console.log("inCorrect");
             SoundService.playSoundFile("/audio/app-incorrect.mp3", true).then(result => {
                 $rootScope.$broadcast("nextLevel",{});
             })
         };
 
-        $scope.iGotIt = function () {
-            console.log("iGotIt");
+
+
+        $scope.func.iGotIt = function () {
+            console.log("iGotIt",$scope.current.student.selectedCourse.selectedTopic);
             $rootScope.$broadcast("nextLevel",{});
         }
 

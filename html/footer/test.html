@@ -1,5 +1,7 @@
-<div oc-lazy-load="['/js/viewer/introduce.js']">
-    <div ng-controller="introduceController"></div>
+<div oc-lazy-load="['/js/viewer/introduce.js']" layout="column" flex="100">
+    <div ng-controller="introduceController" flex="100" layout="column">
+
+    </div>
 </div>
 
 <div flex="100" layout="column">
@@ -8,7 +10,7 @@
              ng-show="current.lexicalIndex==$index"
              flex="100" layout="row">
             <div flex="15" layout="row" layout-align="center center">
-                <md-button class="md-icon-button redB" ng-click="func.showItem($index-1)"
+                <md-button class="md-icon-button redB" ng-click="showItem($index-1)"
                            ng-show="$index>0">
                     <md-icon>arrow_back</md-icon>
                 </md-button>
@@ -31,7 +33,7 @@
                             <div ng-repeat="rtItem in hintData">
                                 <b>{{rtItem.title}}</b>
                                 <div layout-padding="" layout="row">
-                                    <div ng-repeat="item in rtItem.lexicalObj">
+                                    <div ng-repeat="item in rtItem.lexicalObj" >
                                         {{item.title}} ,
                                     </div>
                                 </div>
@@ -61,7 +63,7 @@
                 </div>
             </div>
             <div flex="15" layout="row" layout-align="center center">
-                <md-button class="md-icon-button redB" ng-click="func.showItem($index+1)"
+                <md-button class="md-icon-button redB" ng-click="showItem($index+1)"
                            ng-show="$index<viewerData.levelLexicalPhraseList.length-1">
                     <md-icon>arrow_forward</md-icon>
                 </md-button>
@@ -69,8 +71,8 @@
         </div>
 
     </div>
-    <div flex="10" layout="row" layout-align="center center">
-        <md-button flex="90"
+    <div flex="10" layout="row">
+        <md-button flex="100"
                    ng-disabled="$index<viewerData.levelLexicalPhraseList.length-1"
                    class="redB checkButton" ng-click="func.iGotIt()">ok
         </md-button>

@@ -1,41 +1,42 @@
 angular.module('myApp').controller('orderController',
     function ($rootScope, $scope, $q, $timeout, WordService, BaeService, StorageService, LessonService, SoundService) {
-        $scope.orderShuffleList = [];
+        $scope.func.orderShuffleList = [];
         if($scope.viewerData.levelLexicalPhraseList.length<1){
             $scope.error = "Need One phrase"
         }
         else{
-            $scope.question = $scope.viewerData.levelLexicalPhraseList[0].itemJSONObj.lexicalPhrase.title;
-            $scope.answer = $scope.viewerData.levelLexicalPhraseList[0].itemJSONObj.title;
+            $scope.func.question = $scope.viewerData.levelLexicalPhraseList[0].itemJSONObj.lexicalPhrase.title;
+            $scope.func.answer = $scope.viewerData.levelLexicalPhraseList[0].itemJSONObj.title;
 
             totalWordList = [];
-            $scope.answerWordList = [];
+            $scope.func.answerWordList = [];
             for(levelLexicalPhrase of $scope.viewerData.levelLexicalPhraseList)
             {
                 var wordList = levelLexicalPhrase.title.split(" ");
                 totalWordList = totalWordList.concat(wordList);
             }
-            $scope.orderShuffleList = $scope.shuffle(totalWordList);
-            console.log($scope.orderShuffleList)
+            $scope.func.orderShuffleList = $scope.shuffle(totalWordList);
+            console.log($scope.func.orderShuffleList)
         }
 
-        $scope.selectWord = function(index){
-            $scope.answerWordList.push($scope.orderShuffleList[index]);
-            $scope.orderShuffleList.splice(index,1);
-            console.log("checkL",$scope.answer,$scope.answerWordList.join(" "),$scope.answer===$scope.answerWordList.join(" "))
+        $scope.func.selectWord = function(index){
+            $scope.func.answerWordList.push($scope.func.orderShuffleList[index]);
+            $scope.func.orderShuffleList.splice(index,1);
+            console.log("checkL",$scope.answer,$scope.func.answerWordList.join(" "),$scope.answer===$scope.func.answerWordList.join(" "))
         }
 
-        $scope.deSelectWord = function(index){
-            $scope.orderShuffleList.push($scope.answerWordList[index]);
-            $scope.answerWordList.splice(index,1);
+        $scope.func.deSelectWord = function(index){
+            $scope.func.orderShuffleList.push($scope.func.answerWordList[index]);
+            $scope.func.answerWordList.splice(index,1);
         }
 
-        $scope.checkAnswer = function (result) {
-            if($scope.answer===$scope.answerWordList.join(" ")){
-                $scope.isCorrect();
+        $scope.func.checkAnswer = function (result) {
+            console.log(result,)
+            if($scope.func.answer===$scope.func.answerWordList.join(" ")){
+                $scope.func.isCorrect();
             }
             else {
-                $scope.isInCorrect();
+                $scope.func.isInCorrect();
             }
         }
 

@@ -2,7 +2,6 @@ angular.module('myApp').controller('teachController',
     function ($rootScope, $scope, $q, WordService, BaeService, StorageService, ArchiveService, TeachService, SoundService,
               $interval, $ocLazyLoad) {
 
-
         pointList = {};
         $scope.secondList = [];
         $scope.$watch('duration', function () {

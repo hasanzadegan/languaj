@@ -22,35 +22,36 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     $rootScope.selectedLang = {"langId": 2, "title": "german", "code": "de", "isSource": 0, "isDestination": 1};
 
 
-    $scope.options = {
-        language: 'en',
-        // extraPlugins: 'imagebrowser',
-        // filebrowserBrowseUrl: '/api/v1/ckeditor/files',
-        // filebrowserUploadMethod:'form',
-        // filebrowserImageUploadUrl: '/api/saveDoc',
-        // filebrowserUploadUrl: '/api/v1/ckeditor/files',
-        allowedContent: true,
-        entities: false,
-        uiColor: '#00cad1',
-        toolbar: 'full',
-        toolbar_full: [
-            {name: 'document', items: ['NewPage', 'ExportPdf', 'Preview', 'Print',]},
-            {name: 'clipboard', items: ['Cut', 'Copy', 'Paste', 'PasteFromWord', '-']},
-            {name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'Strike',]},
-            {
-                name: 'paragraph', items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', '/',
-                    'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl']
-            },
-            '/',
-            {name: 'insert', items: ['Image', 'Table', 'Smiley', 'SpecialChar',]},
-            {name: 'styles', items: ['Styles', 'Format', 'Font', 'FontSize']},
-            {name: 'colors', items: ['TextColor', 'BGColor']},
-            {name: 'tools', items: ['Maximize']},
-        ]
-    };
-    $scope.onReady = function () {
-        // ...
-    };
+    $scope.func = {};
+    // $scope.options = {
+    //     language: 'en',
+    //     // extraPlugins: 'imagebrowser',
+    //     // filebrowserBrowseUrl: '/api/v1/ckeditor/files',
+    //     // filebrowserUploadMethod:'form',
+    //     // filebrowserImageUploadUrl: '/api/saveDoc',
+    //     // filebrowserUploadUrl: '/api/v1/ckeditor/files',
+    //     allowedContent: true,
+    //     entities: false,
+    //     uiColor: '#00cad1',
+    //     toolbar: 'full',
+    //     toolbar_full: [
+    //         {name: 'document', items: ['NewPage', 'ExportPdf', 'Preview', 'Print',]},
+    //         {name: 'clipboard', items: ['Cut', 'Copy', 'Paste', 'PasteFromWord', '-']},
+    //         {name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'Strike',]},
+    //         {
+    //             name: 'paragraph', items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', '/',
+    //                 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl']
+    //         },
+    //         '/',
+    //         {name: 'insert', items: ['Image', 'Table', 'Smiley', 'SpecialChar',]},
+    //         {name: 'styles', items: ['Styles', 'Format', 'Font', 'FontSize']},
+    //         {name: 'colors', items: ['TextColor', 'BGColor']},
+    //         {name: 'tools', items: ['Maximize']},
+    //     ]
+    // };
+    // $scope.onReady = function () {
+    //     // ...
+    // };
 
     $scope.shuffle = function (array) {
         return array.sort(() => Math.random() - 0.5);
@@ -107,7 +108,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         // {name:'person',enabled:true,path:'footerProfile'},
         // {name: 'widgets', enabled: false, path: 'footerAchivment'},
         {name: 'school', enabled: true, path: 'footerLesson'},
-        // {name: 'panorama', enabled: true, path: 'footerStudent'},
+        // {name: 'panorama', enabled: true, path: 'studentLevel'},
     ];
 
     BaeService.getLangList().then(function (data) {
@@ -164,17 +165,21 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         StorageService.setData($scope.current);
     }
 
+    $scope.current.profile = {"userId":11,"langId":1,"email":"sh.h.zadegan@gmail.com","firstName":"shahrokh","lastName":"hasanzadegan","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GjzzpyKCwdYZdCCItmmUSz01wL4W5jVW7Te__aw=s96-c","isActive":1,"credit":null,"teacherShare":null,"googleId":"107565574054469081237","firstName1":"شاهرخ","lastName1":"حسن زاده گان","ref":"NDE0"};
+    localStorage.setItem("__token","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6MTEsImxhbmdJZCI6MSwiZW1haWwiOiJzaC5oLnphZGVnYW5AZ21haWwuY29tIiwiZmlyc3ROYW1lIjoic2hhaHJva2giLCJsYXN0TmFtZSI6Imhhc2FuemFkZWdhbiIsImltYWdlVXJsIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2p6enB5S0N3ZFlaZENDSXRtbVVTejAxd0w0VzVqVlc3VGVfX2F3PXM5Ni1jIiwiaXNBY3RpdmUiOjEsImNyZWRpdCI6bnVsbCwidGVhY2hlclNoYXJlIjpudWxsLCJnb29nbGVJZCI6IjEwNzU2NTU3NDA1NDQ2OTA4MTIzNyIsImZpcnN0TmFtZTEiOiLYtNin2YfYsdiuIiwibGFzdE5hbWUxIjoi2K3Ys9mGINiy2KfYr9mHINqv2KfZhiIsInJlZiI6Ik5ERTAifSwiaWF0IjoxNjIyODkxODA1LCJleHAiOjE2MjU0ODM4MDV9.DRKUuI6KPXvQ4mh79LA5_NaVSHiQnk_5abI1-dROiPk")
+    // StorageService.clear();
+    StorageService.setData($scope.current);
+
     if (localStorage.getItem("__token")) {
-        console.log("localStorage.getItem(__token)",localStorage.getItem("__token"));
         LoginService.checkJWT().then(result => {
             if (result.decoded === undefined)
                 $window.location.href = $path.url + "/auth/google";
             else
                 $scope.current.profile = result.decoded.user;
+            console.log($scope.current.profile)
         })
     } else {
         LoginService.getProfile().then((result) => {
-
             if (result === "") {
                 $window.location.href = $path.url + "/auth/google";
             } else {
@@ -270,7 +275,11 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
     $scope.$on("nextLevel", function (event, data) {
         levelList = $scope.current.student.selectedCourse.selectedTopic.levelList;
+        console.log("nextLevel",data,$scope.current.student.selectedCourse)
+
+        console.log("nextLevel",levelList,data)
         levelIndex = $scope.current.student.selectedCourse.selectedTopic.levelIndex;
+
         levelIndex = levelIndex + 1;
         $scope.current.student.selectedCourse.selectedTopic.levelIndex = levelIndex;
 
@@ -330,7 +339,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
 
     $rootScope.playSound = function (soundId) {
-        alert("playSound")
+        // alert("playSound")
         //console.log(soundId);
         SoundService.playSound(soundId).then(result => {
         })
@@ -386,7 +395,10 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
-    $scope.charachter = $scope.getRandomInt(101, 102);
+    // $scope.getRand = function(){
+    //     return Math.random();
+    // }
+    $scope.charachter = $scope.getRandomInt(101, 103);
 
 
 });

@@ -9,9 +9,6 @@ module.exports = function(app){
         var user = await global.getUser(req);
         var courseId = global.base64ToInt(req.params.courseCode);
         var refUserId = global.base64ToInt(req.params.refUserId);
-
-
-        console.log(user.userId, courseId, refUserId);
         if (courseId < 0)
             res.send("code is incorrect")
         else {

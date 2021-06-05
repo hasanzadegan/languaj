@@ -6,7 +6,7 @@
 }
 .keyFrame{
     background: #cccccc;
-    height: 30px;
+    height: 25px;
     border-left: solid 1px white;
     position: absolute;
     cursor: pointer;

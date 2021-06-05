@@ -1,7 +1,8 @@
 <div oc-lazy-load="['/js/viewer/all.js']">
-    <div ng-controller="allController" layout="row" layout-wrap
-         style="height: 85vh" flex="100" layout-align="center center">
-        <style>
+    <div ng-controller="allController" ></div>
+</div>
+
+<style>
             .all {
                 font-size: 12px;
                 font-weight: bold;
@@ -62,11 +63,11 @@
                 background: #fff4a6;
                 border: solid 1px #ffd869;
             }
-
         </style>
+<div flex="100" layout="column">
+    <div flex="90" style="overflow-y: auto;max-height: 100%">
+        <div layout="row" flex="100">
 
-        <div style="height: 85vh;overflow-y: auto" layout="row" flex="100" layout-wrap="" layout-align="center start">
-            <div style="height: 40px" flex="100"></div>
             <div ng-repeat="levelLexicalPhrase in viewerData.levelLexicalPhraseList"
                  ng-show="!current.showOne"
                  flex="33" layout="row" class="all" layout-wrap="" layout-align="center center"
@@ -87,8 +88,6 @@
                     {{levelLexicalPhrase.itemJSONObj.lexicalPhrase.title}}
                 </div>
             </div>
-
-
             <div ng-repeat="levelLexicalPhrase in viewerData.levelLexicalPhraseList"
                  ng-show="current.showOne && $index==current.cnt"
                  flex="100" layout="row" class="all" layout-wrap="" layout-align="center start">
@@ -112,18 +111,14 @@
                     {{levelLexicalPhrase.itemJSONObj.lexicalPhrase.title}}
                 </div>
             </div>
-
         </div>
-        <div style="height: 10vh" layout-align="center center" flex="100">
-            <div flex="100" layout="row" layout-align="center center">
-                <md-button class="md-icon-button" ng-click="playAll($event)" ng-disabled="isPlaying">
-                    <md-icon ng-show="isPlaying" md-svg-src="/img/app/play.svg" class="appImg"></md-icon>
-                    <md-icon ng-show="!isPlaying" md-svg-src="/img/app/play1.svg" class="appImg"></md-icon>
-                </md-button>
-                <md-button ng-show="played"
-                           class="redB checkButton" ng-click="iGotIt()">ok
-                </md-button>
-            </div>
-        </div>
+    </div>
+    <div layout-align="center center" flex="10" layout="row">
+        <md-button flex="45"  class="blueB checkButton" ng-click="func.iGotIt()">ok
+        </md-button>
+        <md-button flex="45" class="redB checkButton" ng-click="func.playAll($event)" ng-disabled="isPlaying">
+            <div ng-show="func.played">play again</div>
+            <div ng-hide="func.played">play all</div>
+        </md-button>
     </div>
 </div>
