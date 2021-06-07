@@ -32,7 +32,6 @@ angular.module('myApp').controller('orderController',
         }
 
         $scope.func.checkAnswer = function (result) {
-            console.log(result,)
             if($scope.func.answer===$scope.func.answerWordList.join(" ")){
                 $scope.func.isCorrect();
             }
