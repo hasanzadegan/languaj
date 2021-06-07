@@ -66,7 +66,7 @@
         </style>
 <div flex="100" layout="column">
     <div flex="90" style="overflow-y: auto;max-height: 100%">
-        <div layout="row" flex="100">
+        <div layout="row" flex="100" layout-wrap="">
 
             <div ng-repeat="levelLexicalPhrase in viewerData.levelLexicalPhraseList"
                  ng-show="!current.showOne"
@@ -77,7 +77,6 @@
                      style="{{$index==current.cnt?'font-weight:bold':''}};" ng-hide="levelLexicalPhrase.itemJSONObj.hideText">
                     {{levelLexicalPhrase.itemJSONObj.title}}
                 </div>
-
                 <md-button
                         ng-click="playItem($event,levelLexicalPhrase.itemJSONObj.lexicalPhrase)"
                         class="box imgGender{{levelLexicalPhrase.itemJSONObj.wordList[0].genderId}}">
