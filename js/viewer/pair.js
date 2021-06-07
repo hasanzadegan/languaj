@@ -10,7 +10,6 @@ angular.module('myApp').controller('pairController',
             failCount = 0;
             $scope.current.answerIsCorrect = null;
             $scope.func.disableList = {};
-            $scope.charachter = $scope.getRandomInt(101, 108);
         };
 
         $scope.resetPair();

@@ -408,7 +408,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     // $scope.getRand = function(){
     //     return Math.random();
     // }
-    $scope.charachter = $scope.getRandomInt(101, 108);
+    $scope.func.charachter = $scope.getRandomInt(101, 108);
 
 
 });
