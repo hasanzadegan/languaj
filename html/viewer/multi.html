@@ -5,31 +5,35 @@
 
 <div flex="100" layout="column">
 
-    <div flex="10" layout="row" layout-align="center center">
-        <div ng-repeat="levelLexicalPhrase in viewerData.levelLexicalPhraseList"
-             ng-if="levelLexicalPhrase.itemJSONObj.validityTypeId===1"
-             layout-align="center center"
-             layout="row" layout-wrap="">
-            <div flex="100" layout-align="center center" layout="row">
-                <div flex="80" ng-show="levelLexicalPhrase.itemJSONObj.showText">
-                    {{levelLexicalPhrase.itemJSONObj.title}}
-                </div>
-                <div flex="20" ng-show="levelLexicalPhrase.itemJSONObj.soundId!=-1">
-                    <md-button
-                            class="md-icon-button" ng-click="playItem($event,levelLexicalPhrase)"
-                            ng-hide="levelLexicalPhrase.itemJSONObj.imageId">
-                        <md-icon>volume_down</md-icon>
-                    </md-button>
-                    <img
-                        style="height: 8vh"
-                            ng-src="{{'/doc/'+levelLexicalPhrase.itemJSONObj.imageId}}"
-                            ng-show="levelLexicalPhrase.itemJSONObj.imageId"
-                            ng-click="playItem($event,levelLexicalPhrase)">
+    <div flex="10" layout="row"  layout-align="center center" layout-padding="">
+        <div flex="10"></div>
+        <div  layout="row" flex="80">
+            <div flex="100" ng-repeat="levelLexicalPhrase in viewerData.levelLexicalPhraseList"
+                 ng-if="levelLexicalPhrase.itemJSONObj.validityTypeId===1"
+                 layout-align="center center"
+                 layout="row" layout-wrap="">
+                <div flex="100" layout-align="center center" layout="row">
+                    <div flex="80" ng-show="levelLexicalPhrase.itemJSONObj.showText">
+                        {{levelLexicalPhrase.itemJSONObj.title}}
+                    </div>
+                    <div flex="20" ng-show="levelLexicalPhrase.itemJSONObj.soundId!=-1">
+                        <md-button
+                                class="md-icon-button" ng-click="playItem($event,levelLexicalPhrase)"
+                                ng-hide="levelLexicalPhrase.itemJSONObj.imageId">
+                            <md-icon md-svg-src="/img/app/sound.svg"></md-icon>
+                        </md-button>
+                        <img
+                                style="height: 8vh"
+                                ng-src="{{'/doc/'+levelLexicalPhrase.itemJSONObj.imageId}}"
+                                ng-show="levelLexicalPhrase.itemJSONObj.imageId"
+                                ng-click="playItem($event,levelLexicalPhrase)">
+                    </div>
                 </div>
             </div>
         </div>
+        <div flex="10"></div>
     </div>
-    <div flex="80" layout="row" layout-wrap="" style="overflow-y: auto;max-height: 100%">
+    <div flex="90" layout="row" layout-wrap="" style="overflow-y: auto;max-height: 100%">
         <div flex="{{levelLexicalPhrase.itemJSONObj.itemFlex}}"
              ng-repeat="levelLexicalPhrase in viewerData.levelLexicalPhraseList"
              ng-if="levelLexicalPhrase.itemJSONObj.validityTypeId!==1"
@@ -69,13 +73,13 @@
         </div>
     </div>
 
-    <div layout-align="center center" flex="10" layout="row">
-        <md-button
-                ng-show="func.selecteChoice"
-                flex="90"
-                class="redB md-accent md-raised checkButton"
-                ng-disabled="!func.selecteChoice"
-                ng-click="func.checkChoice()">check
-        </md-button>
-    </div>
+<!--    <div layout-align="center center" flex="10" layout="row">-->
+<!--        <md-button-->
+<!--                ng-show="func.selecteChoice"-->
+<!--                flex="90"-->
+<!--                class="redB md-accent md-raised checkButton"-->
+<!--                ng-disabled="!func.selecteChoice"-->
+<!--                ng-click="func.checkChoice()">check-->
+<!--        </md-button>-->
+<!--    </div>-->
 </div>

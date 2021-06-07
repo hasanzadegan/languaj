@@ -18,6 +18,27 @@
             </div>
         </div>
         <div ng-include="current.viewer" flex="90" layout="row"></div>
-<!--        <div ng-include="'/html/viewer/introduce.html'" flex="90" layout="row"></div>-->
+    </div>
+</div>
+
+<div ng-show="current.answerIsCorrect===-1" flex="100" class="bottomDialog isIncorrect" layout="row" layout-wrap="">
+    <div flex="100" layout-padding="" layout-align="center center" layout="row">
+        بیشتر دقت کن پاسخ صحیح :
+        {{current.correctAnswerText}}
+    </div>
+    <div flex="100" layout="row" layout-align="center center">
+        <md-button flex="90" class="redB checkButton" flex="90" ng-click="func.nextLevel()">
+            next
+        </md-button>
+    </div>
+</div>
+<div ng-show="current.answerIsCorrect===1" flex="100" class="bottomDialog isCorrect" layout="row" layout-wrap="">
+    <div flex="100" layout-padding="" layout-align="center center" layout="row">
+        تبریک میگم درست بود
+    </div>
+    <div flex="100" layout="row" layout-align="center center">
+        <md-button flex="90" class="blueB checkButton" flex="90" ng-click="func.nextLevel()">
+            next
+        </md-button>
     </div>
 </div>

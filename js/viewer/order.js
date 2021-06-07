@@ -1,5 +1,6 @@
 angular.module('myApp').controller('orderController',
     function ($rootScope, $scope, $q, $timeout, WordService, BaeService, StorageService, LessonService, SoundService) {
+        $scope.func.question = "";
         $scope.func.orderShuffleList = [];
         if($scope.viewerData.levelLexicalPhraseList.length<1){
             $scope.error = "Need One phrase"

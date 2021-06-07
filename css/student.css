@@ -987,8 +987,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .courseBtn {
-    height: 110px;
-    width: 110px;
+    height: 110px !important;
+    width: 110px !important;
     border: solid 1px #B1B1B1;
     border-radius: 10px;
     background: url("/img/app/course.svg");

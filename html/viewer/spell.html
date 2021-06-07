@@ -8,17 +8,17 @@
     <div flex="20" ng-include="'/html/viewer/header/charachter.html'"></div>
     <div flex="80" layout-padding="">
         <form>
-            <div ng-repeat="quiz in viewerData.levelLexicalPhraseList" layout="row" flex="100" layout-wrap="">
+            <div ng-repeat="quiz in viewerData.levelLexicalPhraseList" layout="row" flex="100" layout-wrap="" >
                 <div flex="100">
                     {{quiz.itemJSONObj.lexicalPhrase.title}}
                 </div>
-                <div flex="70" layout="row" layout-wrap="">
+                <div flex="100" layout="row" layout-wrap="" layout-padding="" class="spellBack">
                     <div ng-repeat="letter in quiz.itemJSONObj.letterList">
-                        <div ng-if="!letter.hide" style="color:gray;padding:2px">
+                        <div ng-if="!letter.hide">
                             {{letter.letter}}
                         </div>
                         <div ng-if="letter.hide">
-                            <input style="color:gray;width:30px;font-weight: bold"
+                            <input style="width:30px;font-weight: bold"
                                    class="redC"
                                    maxlength="1"
                                    autocapitalize="none"
@@ -26,8 +26,7 @@
                                    ng-model="quiz.answer[$index]">
                         </div>
                     </div>
-                </div>
-                <div layout="row" flex="20" style="min-height:50px">
+                    <div flex=""></div>
                     <md-button class="redB checkButton"
                                ng-click="func.checkSpell($event,quiz,quiz.answer)" ng-hide="quiz.disabled">
                         check

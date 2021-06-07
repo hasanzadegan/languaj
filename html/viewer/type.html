@@ -4,8 +4,8 @@
 
 <div flex="100" layout="column">
     <div flex="20" ng-include="'/html/viewer/header/charachter.html?v='+getRand()" layout="row"></div>
-    <div flex="80">
-        <textarea style="width: 100%;min-height: 40%" ng-model="current.typeText"></textarea>
+    <div flex="80" layout-padding="">
+        <textarea class="typeText" ng-model="current.typeText"></textarea>
     </div>
     <div flex="10" layout-align="center center" layout="row">
         <md-button

@@ -10,7 +10,8 @@
 <!--        <div><img src="/img/app/teacher.svg" class="appImg"/></div>-->
 <!--        <div style="font-weight: bold">دوره های من</div>-->
 <!--    </div>-->
-    <div layout-padding="" layout="row" layout-wrap="" layout-align="center center" >
+
+    <div layout-padding="" layout="row" layout-wrap=""  style="max-height: 80vh;overflow-y: auto">
         <div ng-repeat="course in current.student.courseList" flex="" flex-xs="50" layout-padding="" layout="row"
              layout-wrap="">
             <div class="courseBtn md-button" ng-click="setCourse(course)">

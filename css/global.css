@@ -59,3 +59,50 @@
 .teachVoice {
     height: 15vh;
 }
+
+.bottomDialog{
+    position: absolute;
+    bottom: 0;
+    height: 20vh;
+    width: 100%;
+    animation-name: slideUp;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.isCorrect {
+    background: #b5fffa;
+}
+
+.isIncorrect {
+    background: #ffdede;
+}
+
+@keyframes slideUp {
+    0% {
+        bottom: -20vh;
+    }
+    50% {
+        bottom: -10vh;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+
+
+
+.typeText {
+    width: 100%;
+    border: solid 1px silver;
+    min-height: 40%
+}
+
+.spellBack {
+    background: white;
+    border-top:solid 1px silver;
+    border-bottom:solid 1px silver;
+    margin-bottom: 10px;
+}

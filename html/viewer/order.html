@@ -7,23 +7,19 @@
     <div flex="20" ng-include="'/html/viewer/header/charachter.html?v='+getRand()" layout="row"></div>
 
     <div flex="70" layout-padding="">
-        <div flex="100" layout="row" layout-wrap="" style="min-height: 15vh">
+        <div flex="100" layout="row" layout-wrap="" style="min-height: 15vh" >
             {{error}}
             <div ng-repeat="item in func.orderShuffleList track by $index">
                 <md-button class="md-raised roundStrockBtn" ng-click="speak(item);func.selectWord($index)">{{item}}</md-button>
             </div>
         </div>
 
-        <div flex="100" layout="row" class="selectedOrder" style="min-height: 15vh" layout-wrap="">
+        <div flex="100" layout="row" class="selectedOrder" style="min-height: 15vh" layout-wrap="" >
             <div ng-repeat="item in func.answerWordList track by $index">
                 <md-button class="md-raised roundStrockBtn" ng-click="func.deSelectWord($index)">{{item}}</md-button>
             </div>
         </div>
     </div>
 
-    <div flex="10" layout-align="center center" layout="row">
-            <md-button class="redB checkButton" flex="90" ng-click="func.checkAnswer(true)">
-                check
-            </md-button>
-    </div>
+
 </div>

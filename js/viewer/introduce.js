@@ -1,7 +1,7 @@
 angular.module('myApp').controller('introduceController',
     function ($rootScope, $scope, $q, $timeout, WordService, BaeService, StorageService, LessonService, SoundService) {
         // if ($scope.current.lexicalIndex === undefined)
-        $scope.current.test = "salam";
+        $scope.current.answerIsCorrect = null;
         $scope.current.lexicalIndex = 0;
 
         if($scope.viewerData.levelLexicalPhraseList.length>0){

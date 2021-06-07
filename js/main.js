@@ -223,11 +223,21 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
                         $rootScope.viewerData.levelLexicalPhraseList.push(item);
 
 
-                        if (!item.itemJSONObj.lexicalPhrase)
-                            item.itemJSONObj.lexicalPhrase = {title: ''};
 
                         $scope.current.selectedLevelId = levelId;
                         StorageService.setData($scope.current)
+
+
+                        console.log("item.itemJSONObj>>>>>>>>>",item.itemJSONObj)
+                        try{
+
+                            if (!item.itemJSONObj.lexicalPhrase)
+                                item.itemJSONObj.lexicalPhrase = {title: ''};
+                        }catch (e) {
+                            item.itemJSONObj ={lexicalPhrase :{title: ''}};
+                        }
+                        if (!item.itemJSONObj.lexicalPhrase)
+                            item.itemJSONObj.lexicalPhrase = {title: ''};
 
                         //pair
                         $scope.levelItemList.push({
@@ -398,7 +408,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     // $scope.getRand = function(){
     //     return Math.random();
     // }
-    $scope.charachter = $scope.getRandomInt(101, 103);
+    $scope.charachter = $scope.getRandomInt(101, 108);
 
 
 });

@@ -14,7 +14,7 @@
                 </md-button>
             </div>
             <div flex="70" layout="column" layout-align="center center">
-                <div flex="20" layout-align="center center" layout="row"
+                <div flex="20" layout-align="center center" layout="row" layout-padding=""
                      ng-hide="levelLexicalPhrase.itemJSONObj.hideText">
                     <div ng-repeat="word in levelLexicalPhrase.itemJSONObj.wordList">
                         <div style="padding:2px" ng-if="!word.showHint">{{word.title}}</div>
@@ -53,7 +53,7 @@
                          ng-click="playItem($event,levelLexicalPhrase.itemJSONObj.lexicalPhrase)"
                     >
                 </div>
-                <div flex="20" layout-align="center center" layout="row"
+                <div flex="20" layout-align="center center" layout="row" layout-padding=""
                      ng-hide="levelLexicalPhrase.itemJSONObj.hideText">
                     <h1>
                         {{levelLexicalPhrase.itemJSONObj.lexicalPhrase.title}}
