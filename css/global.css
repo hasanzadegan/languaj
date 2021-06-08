@@ -61,7 +61,7 @@
 }
 
 .bottomDialog{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     height: 20vh;
     width: 100%;
@@ -110,7 +110,6 @@
 .backHead {
     background: white;
     border-bottom: solid 1px silver;
-    margin-bottom: 10px;
 }
 
 .multiBtn {

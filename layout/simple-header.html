@@ -1,11 +1,12 @@
-<div flex="100" layout="row" class="backHead" layout-padding="">
+<div flex="100" layout="row" layout-padding="">
     <md-button flex="10" class="md-icon-button" ng-click="backToList()">
         <md-icon md-svg-src="/img/app/back.svg"></md-icon>
     </md-button>
-    <div flex>
+    <div >
         {{current.student.selectedCourse.selectedTopic.title}}
     </div>
-    <div flex="15" layout="row">
-        <img src="/svg/levelType/{{viewerData.levelTypeId}}.svg" width="50px" class="appImg"/>
-    </div>
+<!--    <div flex="15" layout="row">-->
+<!--        <img src="/svg/levelType/{{viewerData.levelTypeId}}.svg" width="50px" class="appImg"/>-->
+<!--    </div>-->
 </div>
+<md-divider></md-divider>
