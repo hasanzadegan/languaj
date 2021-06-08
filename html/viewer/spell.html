@@ -5,7 +5,7 @@
 
 
 <div flex="100" layout="column">
-    <div flex="20" ng-include="'/html/viewer/header/charachter.html'"></div>
+    <div flex="20" ng-include="'/html/viewer/header/charachter.html?v='+getRand()" layout="row"></div>
     <div flex="80" layout-padding="">
         <form>
             <div ng-repeat="quiz in viewerData.levelLexicalPhraseList" layout="row" flex="100" layout-wrap="" >
