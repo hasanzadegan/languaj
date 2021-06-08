@@ -1,3 +1,4 @@
+<md-divider></md-divider>
 <div ng-hide="current.student.selectedCourse" flex="100" layout="row" layout-align="center center" layout-wrap="" dir="rtl">
 <!--    <div layout="row" flex="30" flex-xs="100"-->
 <!--         class="studentAddCourse">-->
@@ -12,9 +13,9 @@
 <!--    </div>-->
 
     <div layout-padding="" layout="row" layout-wrap=""  style="max-height: 80vh;overflow-y: auto">
-        <div ng-repeat="course in current.student.courseList" layout-padding="" flex="50" layout="row"
+        <div ng-repeat="course in current.student.courseList" layout-padding="" flex="100" layout="row"
              layout-wrap="">
-            <div class="courseBtn md-button" ng-click="setCourse(course)">
+            <div class="md-button" ng-click="setCourse(course)" flex="100">
                 <div>{{course.title}}</div>
                 <div>
                     <img ng-src="{{course.imageUrl}}" style="width: 40px;border-radius: 50px" class="appImg" >

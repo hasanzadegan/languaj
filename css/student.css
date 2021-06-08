@@ -715,13 +715,6 @@ input {
 
 
 @media (max-width: 500px) {
-    .courseBtn {
-        width: 30vw!important;
-        border: solid 1px #B1B1B1;
-        border-radius: 10px;
-        background: url("/img/app/course.svg");
-    }
-
     .hScroll {
         width: 100vw;
         overflow: scroll;
