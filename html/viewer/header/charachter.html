@@ -1,14 +1,10 @@
-
 <div layout="row" flex="100">
-    <div flex="30" layout="row">
+    <div flex="30" layout="row" layout-padding="">
         <img flex="100" style="max-height: 100%" src="/img/app/charachters/{{func.charachter}}.svg"/>
     </div>
-    <div flex="70" layout-padding="" layout="row" layout-wrap="">
-        <div layout="row" flex="100" layout-padding="" layout-align="start center">
-            <img src="/svg/levelType/{{viewerData.levelTypeId}}.svg" width="50px" class="appImg"/>
-            <div>{{viewerData.title}}</div>
-        </div>
-
+    <div flex="70">
+        <!--            <img src="/svg/levelType/{{viewerData.levelTypeId}}.svg" width="50px" class="appImg"/>-->
+        <div layout-padding="">{{viewerData.title}}</div>
         <div class="largeFont">{{func.question?func.question:''}}</div>
     </div>
 </div>

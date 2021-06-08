@@ -1135,14 +1135,6 @@ input[type=number]::-webkit-outer-spin-button {
     height: 40px;
 }
 
-.multiBtn {
-    padding: 10px;
-    /*border:solid 1px #FF5454;*/
-    width: 100%;
-    text-align: center;
-    min-height: 10vh;
-    border-radius: 15px;
-}
 
 .questionSpacer {
     position: absolute;

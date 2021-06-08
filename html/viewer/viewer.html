@@ -6,17 +6,7 @@
 
 <div layout="row" flex="100">
     <div layout="column" flex="100">
-        <div flex="10">
-            <div flex="100" layout="row" layout-padding="">
-                <md-button flex-xs="15" class="md-icon-button" ng-click="backToList()">
-                    <md-icon md-svg-src="/img/app/back.svg"></md-icon>
-                </md-button>
-                <!--            todo progress-->
-                <div flex-xs="100" flex="100">
-                    {{current.student.selectedCourse.selectedTopic.title}}
-                </div>
-            </div>
-        </div>
+        <div flex="10" ng-include="'/layout/simple-header.html'"></div>
         <div ng-include="current.viewer" flex="90" layout="row"></div>
     </div>
 </div>

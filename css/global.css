@@ -106,3 +106,17 @@
     border-bottom:solid 1px silver;
     margin-bottom: 10px;
 }
+
+.backHead {
+    background: white;
+    border-bottom: solid 1px silver;
+    margin-bottom: 10px;
+}
+
+.multiBtn {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    min-height: 10vh;
+    border-radius: 15px;
+}

@@ -5,6 +5,7 @@
 
 <div flex="100" layout="column">
 
+<!--    question section-->
     <div flex="10" layout="row"  layout-align="center center" layout-padding="">
         <div flex="10"></div>
         <div  layout="row" flex="80">
@@ -33,53 +34,62 @@
         </div>
         <div flex="10"></div>
     </div>
-    <div flex="90" layout="row" layout-wrap="" style="overflow-y: auto;max-height: 100%">
+
+<!--    answer section-->
+
+    <div flex="90" layout="row" layout-wrap="" style="overflow-y: auto;max-height: 100%" flex="100">
         <div flex="{{levelLexicalPhrase.itemJSONObj.itemFlex}}"
              ng-repeat="levelLexicalPhrase in viewerData.levelLexicalPhraseList"
              ng-if="levelLexicalPhrase.itemJSONObj.validityTypeId!==1"
              layout-wrap=""
              layout-padding=""
+             layout-align="center center"
+             ng-click="func.selectChoice($event,levelLexicalPhrase)"
              layout="row"
-        >
-            <md-button class="multiBtn {{levelLexicalPhrase.itemJSONObj.imageId===null ?'redS':''}}"
-                       layout-align="center center" ng-click="func.selectChoice($event,levelLexicalPhrase)">
-                <div flex="100" layout-align="center center" layout="row"
-                     ng-hide="levelLexicalPhrase.itemJSONObj.hideText"
-                >
-                    <b title="{{levelLexicalPhrase.itemJSONObj.lexicalPhrase.title}}">
-                        <div
-                                ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
-                        func.selectedLevelLexicalPhrase.itemJSONObj.animation:''">
-                            {{levelLexicalPhrase.itemJSONObj.title}}
-                        </div>
+            style="height: {{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'50':'25'}}%">
 
-                    </b>
-                </div>
-                <img
-                        ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
-                        func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"
-                        ng-src="{{'/doc/'+levelLexicalPhrase.itemJSONObj.imageId}}"
-                        ng-show="levelLexicalPhrase.itemJSONObj.imageId"
-                        style="height: 16vh;padding: 5px"
-                >
-                <img
-                        ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
-                        func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"
-                        src="/img/app/megaphone.svg"
-                        ng-show="levelLexicalPhrase.itemJSONObj.soundId!=-1 && !levelLexicalPhrase.itemJSONObj.imageId"
-                        style="height: 16vh;padding: 5px"
-                >
-            </md-button>
+            <div layout="row" layout-align="center center"
+                    flex="{{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'100':'70'}}" >
+                {{levelLexicalPhrase.itemJSONObj.title}}
+            </div>
+
+            <img flex="{{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'100':'30'}}"
+                    ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
+                              func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"
+                    style="height: 80%" src="/img/app/megaphone.svg"
+                    ng-show="levelLexicalPhrase.itemJSONObj.soundId!=-1 && !levelLexicalPhrase.itemJSONObj.imageId">
+            <img flex="{{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'100':'30'}}"
+                    ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
+                              func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"
+                    style="height: 80%" ng-src="{{'/doc/'+levelLexicalPhrase.itemJSONObj.imageId}}"
+                    ng-show="levelLexicalPhrase.itemJSONObj.imageId">
         </div>
     </div>
-
-<!--    <div layout-align="center center" flex="10" layout="row">-->
-<!--        <md-button-->
-<!--                ng-show="func.selecteChoice"-->
-<!--                flex="90"-->
-<!--                class="redB md-accent md-raised checkButton"-->
-<!--                ng-disabled="!func.selecteChoice"-->
-<!--                ng-click="func.checkChoice()">check-->
-<!--        </md-button>-->
-<!--    </div>-->
 </div>
+
+<!--<md-button class="multiBtn {{levelLexicalPhrase.itemJSONObj.imageId===null ?'redS':''}}"-->
+<!--           layout-align="center center" ng-click="func.selectChoice($event,levelLexicalPhrase)">-->
+<!--    <div flex="100" layout-align="center center" layout="row"-->
+<!--         ng-hide="levelLexicalPhrase.itemJSONObj.hideText">-->
+<!--        <b title="{{levelLexicalPhrase.itemJSONObj.lexicalPhrase.title}}">-->
+<!--            <div-->
+<!--                    ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?-->
+<!--                        func.selectedLevelLexicalPhrase.itemJSONObj.animation:''">-->
+<!--                {{levelLexicalPhrase.itemJSONObj.title}}-->
+<!--            </div>-->
+
+<!--        </b>-->
+<!--    </div>-->
+<!--    <img-->
+<!--            ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?-->
+<!--                        func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"-->
+<!--            ng-src="{{'/doc/'+levelLexicalPhrase.itemJSONObj.imageId}}"-->
+<!--            ng-show="levelLexicalPhrase.itemJSONObj.imageId"-->
+<!--    >-->
+<!--    <img-->
+<!--            ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?-->
+<!--                        func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"-->
+<!--            src="/img/app/megaphone.svg"-->
+<!--            ng-show="levelLexicalPhrase.itemJSONObj.soundId!=-1 && !levelLexicalPhrase.itemJSONObj.imageId"-->
+<!--    >-->
+<!--</md-button>-->

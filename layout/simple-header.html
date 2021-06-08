@@ -1,9 +1,11 @@
-<!--<div layout="row" layout-wrap flex="100">-->
-<!--    <div flex="100" ng-include="$path.layouts.public.toolbar.html" style="height:80px"></div>-->
-<!--    <div flex="100" layout="row">-->
-<!--        <div ng-if="true" flex="100" layout="row" layout-wrap style="height:calc(100vh - 160px);width:100vw"-->
-<!--             layout-padding layout-align="center center"-->
-<!--             ng-include="basePath.html" >-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+<div flex="100" layout="row" class="backHead" layout-padding="">
+    <md-button flex="10" class="md-icon-button" ng-click="backToList()">
+        <md-icon md-svg-src="/img/app/back.svg"></md-icon>
+    </md-button>
+    <div flex>
+        {{current.student.selectedCourse.selectedTopic.title}}
+    </div>
+    <div flex="15" layout="row">
+        <img src="/svg/levelType/{{viewerData.levelTypeId}}.svg" width="50px" class="appImg"/>
+    </div>
+</div>
