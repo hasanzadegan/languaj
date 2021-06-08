@@ -715,6 +715,13 @@ input {
 
 
 @media (max-width: 500px) {
+    .courseBtn {
+        width: 30vw!important;
+        border: solid 1px #B1B1B1;
+        border-radius: 10px;
+        background: url("/img/app/course.svg");
+    }
+
     .hScroll {
         width: 100vw;
         overflow: scroll;
@@ -987,8 +994,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .courseBtn {
-    height: 110px !important;
-    width: 110px !important;
+    width: 10vw;
     border: solid 1px #B1B1B1;
     border-radius: 10px;
     background: url("/img/app/course.svg");
