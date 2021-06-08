@@ -1,4 +1,4 @@
-<div ng-hide="current.student.selectedCourse" flex="100" layout="row" layout-wrap="" dir="rtl">
+<div ng-hide="current.student.selectedCourse" flex="100" layout="row" layout-align="center center" layout-wrap="" dir="rtl">
 <!--    <div layout="row" flex="30" flex-xs="100"-->
 <!--         class="studentAddCourse">-->
 <!--        <input flex style="border:solid 0px transparent !important;padding-left: 10px" ng-model="courseCode" placeholder="کد دوره">-->
@@ -12,7 +12,7 @@
 <!--    </div>-->
 
     <div layout-padding="" layout="row" layout-wrap=""  style="max-height: 80vh;overflow-y: auto">
-        <div ng-repeat="course in current.student.courseList" flex="" flex-xs="50" layout-padding="" layout="row"
+        <div ng-repeat="course in current.student.courseList" layout-padding="" flex="50" layout="row"
              layout-wrap="">
             <div class="courseBtn md-button" ng-click="setCourse(course)">
                 <div>{{course.title}}</div>
