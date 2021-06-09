@@ -16,7 +16,6 @@ angular.module('myApp').controller('courseListController',
                 for (item of result) {
                     item.topicListObj = JSON.parse(item.topicList);
                     for (topic of item.topicListObj) {
-                        console.log(">>>>>>>>>>>>",topic.review)
                         // if (topic.achievedTopicId !== null) {
                         if (topic.review >=5) {
                             topic.locked = false;
@@ -39,6 +38,7 @@ angular.module('myApp').controller('courseListController',
         $scope.setCourse = function (course) {
             $scope.current.student = {};
             $scope.current.student.selectedCourse = course;
+
             StorageService.setData($scope.current);
             $rootScope.$broadcast("courseChanged", $scope.current.student.selectedCourse.courseId);
         }

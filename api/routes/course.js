@@ -42,7 +42,6 @@ module.exports = function(app){
                 course.courseCode = global.getBase64(course.courseId);
                 courseList.push(course);
             }
-
             res.send(courseList);
         })
     });

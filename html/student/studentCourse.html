@@ -1,27 +1,44 @@
-<md-divider></md-divider>
-<div ng-hide="current.student.selectedCourse" flex="100" layout="row" layout-align="center center" layout-wrap="" dir="rtl">
-<!--    <div layout="row" flex="30" flex-xs="100"-->
-<!--         class="studentAddCourse">-->
-<!--        <input flex style="border:solid 0px transparent !important;padding-left: 10px" ng-model="courseCode" placeholder="کد دوره">-->
-<!--        <md-button class="md-icon-button" ng-click="addStudentCourse(courseCode)">-->
-<!--            <md-icon style="color: #0FE0E0">add_circle</md-icon>-->
-<!--        </md-button>-->
-<!--    </div>-->
-<!--    <div layout="row" flex="100" layout-padding="" layout-align="start center">-->
-<!--        <div><img src="/img/app/teacher.svg" class="appImg"/></div>-->
-<!--        <div style="font-weight: bold">دوره های من</div>-->
-<!--    </div>-->
+<div ng-hide="current.student.selectedCourse" flex="100" layout="row" layout-align="center center" layout-wrap=""
+     dir="rtl">
+    <!--    <div layout="row" flex="30" flex-xs="100"-->
+    <!--         class="studentAddCourse">-->
+    <!--        <input flex style="border:solid 0px transparent !important;padding-left: 10px" ng-model="courseCode" placeholder="کد دوره">-->
+    <!--        <md-button class="md-icon-button" ng-click="addStudentCourse(courseCode)">-->
+    <!--            <md-icon style="color: #0FE0E0">add_circle</md-icon>-->
+    <!--        </md-button>-->
+    <!--    </div>-->
+    <!--    <div layout="row" flex="100" layout-padding="" layout-align="start center">-->
+    <!--        <div><img src="/img/app/teacher.svg" class="appImg"/></div>-->
+    <!--        <div style="font-weight: bold">دوره های من</div>-->
+    <!--    </div>-->
 
-    <div layout-padding="" layout="row" layout-wrap=""  style="max-height: 80vh;overflow-y: auto">
-        <div ng-repeat="course in current.student.courseList" layout-padding="" flex="100" layout="row"
+    <div layout-padding="" flex="100" layout="row" layout-wrap="" style="max-height: 80vh;overflow-y: auto">
+        <div ng-repeat="course in current.student.courseList" layout-padding=""
+             layout-align="center center"
+             flex="100" layout="row"
              layout-wrap="">
-            <div class="md-button" ng-click="setCourse(course)" flex="100">
-                <div>{{course.title}}</div>
-                <div>
-                    <img ng-src="{{course.imageUrl}}" style="width: 40px;border-radius: 50px" class="appImg" >
+            <div class="md-button courseItem" ng-click="setCourse(course)" flex="100">
+                <div layout="row" flex="100">
+                    <div layout-align="center center" layout="row" layout-padding="" layout-wrap="">
+                        <div flex="100" layout="row">
+                            <div flex="10">
+                                <md-button ngclipboard
+                                           data-clipboard-text="{{__path+'/?course='+course.courseCode+'&ref='+current.profile.ref}}">
+                                    <md-icon md-svg-src="/img/app/share.svg"></md-icon>
+                                </md-button>
+                            </div>
+                            <div flex style="font-size: 2rem">{{course.title}}</div>
+                            <div flex="10"></div>
+                        </div>
+                        <div flex="100">
+                            <img ng-src="{{course.imageUrl}}" style="border-radius: 50px" class="appImg">
+                        </div>
+                        <div>{{course.firstName}} {{course.lastName}}</div>
+                    </div>
+
                 </div>
-                <div style="font-size:8px">{{course.firstName}} {{course.lastName}}</div>
             </div>
+
         </div>
     </div>
 

@@ -7,10 +7,6 @@
                 </div>
                 <div style="padding-left: 10px">
                     {{current.student.selectedCourse.title}}
-                    <md-button ngclipboard
-                               data-clipboard-text="{{__path+'/?course='+current.selectedCourse.courseCode+'&ref='+current.profile.ref}}">
-                        <md-icon md-svg-src="/img/app/share.svg"></md-icon>
-                    </md-button>
                     <div style="font-size: 0.6rem">
                         {{current.student.selectedCourse.firstName}}
                         {{current.student.selectedCourse.lastName}}

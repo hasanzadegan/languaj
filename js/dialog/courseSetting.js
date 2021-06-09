@@ -63,6 +63,7 @@ angular.module('myApp').controller('courseLessonController', function ($rootScop
     }
 
     $scope.setCourse = function (course) {
+        console.log(course);
         if (!$scope.viewerData)
             $scope.viewerData = {}
         $scope.viewerData.levelLexicalPhraseList = [];

@@ -120,3 +120,8 @@
     border-radius: 15px;
 }
 
+.courseItem {
+    background: white;
+    border:solid 2px #00cad1;
+    border-radius: 10px;
+}
