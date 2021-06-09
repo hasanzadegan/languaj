@@ -69,7 +69,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
     $rootScope.logOut = function () {
         $scope.clearData();
-        $window.location.href = "/auth/logout";
+        $window.location.href = "/api/auth/logout";
     }
 
 
@@ -173,7 +173,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     if (localStorage.getItem("__token")) {
         LoginService.checkJWT().then(result => {
             if (result.decoded === undefined)
-                $window.location.href = $path.url + "/auth/google";
+                $window.location.href = $path.url + "/api/auth/google";
             else
                 $scope.current.profile = result.decoded.user;
             console.log($scope.current.profile)
@@ -181,7 +181,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     } else {
         LoginService.getProfile().then((result) => {
             if (result === "") {
-                $window.location.href = $path.url + "/auth/google";
+                $window.location.href = $path.url + "/api/auth/google";
             } else {
                 localStorage.setItem("__token", result.token);
                 $scope.current.profile = result;

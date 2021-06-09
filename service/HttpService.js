@@ -18,7 +18,7 @@ app.service('HttpService', function ($rootScope, $q, $http) {
                     },
                     function (error) {
                         if(error==="invalidJWT")
-                            location.href = "/auth/google";
+                            location.href = "/api/auth/google";
                         $rootScope.isHttpCalling = false;
                         def.reject(error.data);
                     });
@@ -37,7 +37,7 @@ app.service('HttpService', function ($rootScope, $q, $http) {
             })
                 .then(function (result) {
                         // if(result.message==="invalidJWT")
-                        //     location.href = "/auth/google";
+                        //     location.href = "/api/auth/google";
 
                         $rootScope.isHttpCalling = false;
                         return def.resolve(result.data);
@@ -45,7 +45,7 @@ app.service('HttpService', function ($rootScope, $q, $http) {
                     function (error) {
                         //todo error handeling
                         if(error==="invalidJWT")
-                            location.href = "/auth/google";
+                            location.href = "/api/auth/google";
                         $rootScope.isHttpCalling = false;
                         return def.reject(error.data);
                     });
@@ -68,7 +68,7 @@ app.service('HttpService', function ($rootScope, $q, $http) {
                     },
                     function (error) {
                         if(error==="invalidJWT")
-                            location.href = "/auth/google";
+                            location.href = "/api/auth/google";
                         $rootScope.isHttpCalling = false;
                         return def.reject(error.data);
                     });

@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 // const keys = require("./config/key");
 
 const app = express();
-const port = 80;
+const port = 8080;
 const cors = require('cors');
 
 app.use(cors());

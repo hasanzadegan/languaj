@@ -7,7 +7,7 @@ app = angular.module('myApp', ['ngMaterial', 'ngAnimate', 'ngStorage',]
                                   $q,
 ) {
     $scope.config =  StorageService.getConfig()
-    console.log($path.url+"/auth/google")
+    console.log($path.url+"/api/auth/google")
     if($scope.config.sso==="google")
-        $window.location.href = $path.url+"/auth/google";
+        $window.location.href = $path.url+"/api/auth/google";
 });

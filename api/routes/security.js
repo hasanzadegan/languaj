@@ -67,17 +67,17 @@ module.exports = function (app) {
         req.session.user = undefined;
         res.send("ok");
     });
-    app.get('/auth/google', passport.authenticate('google', {
+    app.get('/api/auth/google', passport.authenticate('google', {
         scope: [
             'profile',
             'email'
         ]
     }));
-    app.get('/auth/google/redirect', passport.authenticate('google', {failureRedirect: '/login'}), function (req, res) {
+    app.get('/api/auth/google/redirect', passport.authenticate('google', {failureRedirect: '/login'}), function (req, res) {
         req.session.email = req.user.email;
         res.redirect('/');
     });
-    app.get("/auth/logout", (req, res) => {
+    app.get("/api/auth/logout", (req, res) => {
         req.logout();
         res.redirect('/login');
     });
