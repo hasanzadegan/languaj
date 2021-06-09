@@ -1,9 +1,9 @@
 <div oc-lazy-load="['/js/property/imageList.js']">
     <div ng-controller="imageListController" layout="row" layout-wrap flex="100" layout-padding="">
         <div ng-repeat="imageId in current.imageList" layout="row">
-            <div style="background-image: url('/doc/{{imageId}}');" class="lexicalImage">
+            <div style="background-image: url('/api/media/{{imageId}}');" class="lexicalImage">
 <!--                <img ng-if="imageId"-->
-<!--                     ng-src="/doc/{{imageId}}"-->
+<!--                     ng-src="/api/media/{{imageId}}"-->
 <!--                     title="{{imageId}}" class="lexicalImage"/>-->
                 <md-button class="md-icon-button" ng-click="deleteDoc($event,imageId)">
                     <md-icon>close</md-icon>

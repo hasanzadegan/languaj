@@ -24,7 +24,7 @@
                         </md-button>
                         <img
                                 style="height: 8vh"
-                                ng-src="{{'/doc/'+levelLexicalPhrase.itemJSONObj.imageId}}"
+                                ng-src="{{'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId}}"
                                 ng-show="levelLexicalPhrase.itemJSONObj.imageId"
                                 ng-click="playItem($event,levelLexicalPhrase)">
                     </div>
@@ -58,7 +58,7 @@
             <img flex="{{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'100':'30'}}"
                     ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
                               func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"
-                    style="height: 80%" ng-src="{{'/doc/'+levelLexicalPhrase.itemJSONObj.imageId}}"
+                    style="height: 80%" ng-src="{{'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId}}"
                     ng-show="levelLexicalPhrase.itemJSONObj.imageId">
         </div>
     </div>

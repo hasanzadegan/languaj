@@ -136,7 +136,7 @@
                                 <md-divider></md-divider>
                                 <md-button class="md-icon-button" ng-repeat="imageId in current.LevelLexicalPhraseImageList"
                                            ng-click="setImage(imageId)">
-                                    <img ng-src="/doc/{{imageId}}" height="30px"
+                                    <img ng-src="/api/media/{{imageId}}" height="30px"
                                          ng-class="current.selectedLevelItem.itemJSONObj.imageId===imageId?'':'grayImage'">
                                 </md-button>
                                 <md-button class="md-icon-button" ng-click="setImage(null)">

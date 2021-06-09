@@ -44,7 +44,7 @@
                 <div flex="40" layout-align="center center" layout="row">
                     <img
                             ng-if="levelLexicalPhrase.itemJSONObj.imageId"
-                            ng-src="{{'/doc/'+levelLexicalPhrase.itemJSONObj.imageId}}"
+                            ng-src="{{'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId}}"
                             ng-click="playItem($event,levelLexicalPhrase.itemJSONObj.lexicalPhrase)"
                             class="animate-show md-button introImage {{levelLexicalPhrase.itemJSONObj.animation}}"/>
                     <img src="/img/app/megaphone.svg"
