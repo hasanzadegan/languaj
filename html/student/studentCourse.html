@@ -1,45 +1,46 @@
-<div ng-hide="current.student.selectedCourse" flex="100" layout="row" layout-align="center center" layout-wrap=""
+<div ng-hide="current.student.selectedCourse" flex="100" layout="row" layout-wrap=""
      dir="rtl">
-    <!--    <div layout="row" flex="30" flex-xs="100"-->
-    <!--         class="studentAddCourse">-->
-    <!--        <input flex style="border:solid 0px transparent !important;padding-left: 10px" ng-model="courseCode" placeholder="کد دوره">-->
+    <!--    <div layout="row" flex="30" flex-xs="100" layout-padding="">-->
+    <!--        <input flex ng-model="courseCode"-->
+    <!--               placeholder="کد دوره" flex="90">-->
+
     <!--        <md-button class="md-icon-button" ng-click="addStudentCourse(courseCode)">-->
     <!--            <md-icon style="color: #0FE0E0">add_circle</md-icon>-->
     <!--        </md-button>-->
     <!--    </div>-->
+
     <!--    <div layout="row" flex="100" layout-padding="" layout-align="start center">-->
-    <!--        <div><img src="/img/app/teacher.svg" class="appImg"/></div>-->
+    <!--        <div><img src="/img/app/teacher.svg" class="appImg" style="max-height: 32px"/></div>-->
     <!--        <div style="font-weight: bold">دوره های من</div>-->
     <!--    </div>-->
 
-    <div layout-padding="" flex="100" layout="row" layout-wrap="" style="max-height: 80vh;overflow-y: auto">
-        <div ng-repeat="course in current.student.courseList" layout-padding=""
-             layout-align="center center"
-             flex="100" layout="row"
-             layout-wrap="">
-            <div class="md-button courseItem" ng-click="setCourse(course)" flex="100">
-                <div layout="row" flex="100">
-                    <div layout-align="center center" layout="row" layout-padding="" layout-wrap="">
-                        <div flex="100" layout="row">
-                            <div flex="10">
-                                <md-button ngclipboard
-                                           data-clipboard-text="{{__path+'/?course='+course.courseCode+'&ref='+current.profile.ref}}">
-                                    <md-icon md-svg-src="/img/app/share.svg"></md-icon>
-                                </md-button>
-                            </div>
-                            <div flex style="font-size: 2rem">{{course.title}}</div>
-                            <div flex="10"></div>
-                        </div>
-                        <div flex="100">
-                            <img ng-src="{{course.imageUrl}}" style="border-radius: 50px" class="appImg">
-                        </div>
-                        <div>{{course.firstName}} {{course.lastName}}</div>
-                    </div>
-
-                </div>
-            </div>
-
+    <div class="firstHint" ng-hide="config.tour[1]" layout="row" layout-padding="" flex="100">
+        <div flex="20">
+            <img src="/img/app/teacher.svg" class="appImg" style="max-height: 50px"/>
+        </div>
+        <div style="font-size: 14px;font-weight: lighter !important;">
+            دوره های جدید از طریق استاد یا معرف، برای شما ارسال خواهد شد.
+            <md-button class="md-accent" ng-click="func.userTour(1)">متوجه شدم</md-button>
         </div>
     </div>
-
+    <div layout-padding="" flex="100" layout="row" layout-wrap="" style="max-height: 80vh;overflow-y: auto">
+        <div ng-repeat="course in current.student.courseList" layout-align="center center"
+             flex="25" flex-xs="100" layout="row"
+             layout-padding=""
+             layout-wrap="" class="md-button itemBox" ng-click="setCourse(course)">
+            <div flex="70" layout="row" layout-align="end center" layout-wrap="">
+                <div style="font-size: 2rem;font-family: Arial;font-weight: bold;">
+                    {{course.title}}
+                </div>
+                <div layout="row" style="font-family: Arial;font-weight: lighter;">
+                    {{course.firstName}} {{course.lastName}}
+                    <img ng-src="{{course.imageUrl}}" style="border-radius: 50px;height: 30px;padding: 5px"
+                         class="appImg">
+                </div>
+            </div>
+            <div flex="30">
+                <img src="/img/app/book.svg" style="height: 80px" class="appImg">
+            </div>
+        </div>
+    </div>
 </div>

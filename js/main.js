@@ -11,18 +11,21 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
                                     $mdDialog,
                                     // ngAudio,
                                     $location,
+                                    $window,
                                     $q,
 ) {
 
-
+    // $window.navigator.vibrate(300)
     // change it for clear cache in clients
 
-    var currentVersion = 1016;
     $rootScope.extraLetters = ["Ä", "Ö", "Ü", "ẞ"]//,"ä","ö","ü","ß"];
     $rootScope.selectedLang = {"langId": 2, "title": "german", "code": "de", "isSource": 0, "isDestination": 1};
 
 
     $scope.func = {};
+    $scope.func.currentVersion = 101965;
+    // $scope.func.currentVersion = getRand();
+
     // $scope.options = {
     //     language: 'en',
     //     // extraPlugins: 'imagebrowser',
@@ -126,9 +129,9 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     $scope.current = StorageService.getData();
 
 
-    if ($scope.current.version !== currentVersion) {
+    if ($scope.current.version !== $scope.func.currentVersion) {
         $scope.clearData();
-        $scope.current.version = currentVersion;
+        $scope.current.version = $scope.func.currentVersion;
         StorageService.setData($scope.current);
     }
 
@@ -144,12 +147,19 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     }
 
     $scope.config = StorageService.getConfig();
+    if(!$scope.config.tour)
+        $scope.config.tour = {};
 
-    $scope.responsiveVoice = responsiveVoice;
+
+    try {
+        $scope.responsiveVoice = responsiveVoice;
+    }catch (e) {}
 
     $scope.backToList = function () {
         $scope.config.footerIcon = "footerLesson";
         StorageService.setConfig($scope.config);
+        $scope.current.selectedLevelId = null;
+        StorageService.setData($scope.current);
     }
 
     if (!$scope.config.footerIcon) {
@@ -165,8 +175,8 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         StorageService.setData($scope.current);
     }
 
-    // $scope.current.profile = {"userId":11,"langId":1,"email":"sh.h.zadegan@gmail.com","firstName":"shahrokh","lastName":"hasanzadegan","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GjzzpyKCwdYZdCCItmmUSz01wL4W5jVW7Te__aw=s96-c","isActive":1,"credit":null,"teacherShare":null,"googleId":"107565574054469081237","firstName1":"شاهرخ","lastName1":"حسن زاده گان","ref":"NDE0"};
-    // localStorage.setItem("__token","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6MTEsImxhbmdJZCI6MSwiZW1haWwiOiJzaC5oLnphZGVnYW5AZ21haWwuY29tIiwiZmlyc3ROYW1lIjoic2hhaHJva2giLCJsYXN0TmFtZSI6Imhhc2FuemFkZWdhbiIsImltYWdlVXJsIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2p6enB5S0N3ZFlaZENDSXRtbVVTejAxd0w0VzVqVlc3VGVfX2F3PXM5Ni1jIiwiaXNBY3RpdmUiOjEsImNyZWRpdCI6bnVsbCwidGVhY2hlclNoYXJlIjpudWxsLCJnb29nbGVJZCI6IjEwNzU2NTU3NDA1NDQ2OTA4MTIzNyIsImZpcnN0TmFtZTEiOiLYtNin2YfYsdiuIiwibGFzdE5hbWUxIjoi2K3Ys9mGINiy2KfYr9mHINqv2KfZhiIsInJlZiI6Ik5ERTAifSwiaWF0IjoxNjIyODkxODA1LCJleHAiOjE2MjU0ODM4MDV9.DRKUuI6KPXvQ4mh79LA5_NaVSHiQnk_5abI1-dROiPk")
+    $scope.current.profile = {"userId":11,"langId":1,"email":"sh.h.zadegan@gmail.com","firstName":"shahrokh","lastName":"hasanzadegan","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GjzzpyKCwdYZdCCItmmUSz01wL4W5jVW7Te__aw=s96-c","isActive":1,"credit":null,"teacherShare":null,"googleId":"107565574054469081237","firstName1":"شاهرخ","lastName1":"حسن زاده گان","ref":"NDE0"};
+    localStorage.setItem("__token","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6MTEsImxhbmdJZCI6MSwiZW1haWwiOiJzaC5oLnphZGVnYW5AZ21haWwuY29tIiwiZmlyc3ROYW1lIjoic2hhaHJva2giLCJsYXN0TmFtZSI6Imhhc2FuemFkZWdhbiIsImltYWdlVXJsIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2p6enB5S0N3ZFlaZENDSXRtbVVTejAxd0w0VzVqVlc3VGVfX2F3PXM5Ni1jIiwiaXNBY3RpdmUiOjEsImNyZWRpdCI6bnVsbCwidGVhY2hlclNoYXJlIjpudWxsLCJnb29nbGVJZCI6IjEwNzU2NTU3NDA1NDQ2OTA4MTIzNyIsImZpcnN0TmFtZTEiOiLYtNin2YfYsdiuIiwibGFzdE5hbWUxIjoi2K3Ys9mGINiy2KfYr9mHINqv2KfZhiIsInJlZiI6Ik5ERTAifSwiaWF0IjoxNjIyODkxODA1LCJleHAiOjE2MjU0ODM4MDV9.DRKUuI6KPXvQ4mh79LA5_NaVSHiQnk_5abI1-dROiPk")
     // // StorageService.clear();
     // StorageService.setData($scope.current);
 
@@ -410,5 +420,12 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     // }
     $scope.func.charachter = $scope.getRandomInt(101, 108);
 
+    $scope.showBottomDialog = function (text,time) {
+        $scope.current.dialogText = text;
+        $timeout(function () {
+            $scope.current.dialogText = null;
+        }, time)
+        $scope.current.dialogText = text;
+    }
 
 });

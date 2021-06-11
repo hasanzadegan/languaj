@@ -6,7 +6,7 @@
 
 <div layout="row" flex="100">
     <div layout="column" flex="100">
-        <div flex="10" ng-include="'/layout/simple-header.html'"></div>
+        <div flex="10" ng-include="'/layout/simple-header.html?r='+func.version"></div>
         <div ng-include="current.viewer" flex="90" layout="row"></div>
     </div>
 </div>

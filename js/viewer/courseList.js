@@ -1,5 +1,5 @@
 angular.module('myApp').controller('courseListController',
-    function ($rootScope, $scope, $q, WordService, BaeService, StorageService, LessonService, ArchiveService) {
+    function ($rootScope, $scope, $q, WordService, BaeService, StorageService, LessonService, ArchiveService,$window) {
 
         if (!$scope.current.student) {
             $scope.current.student = {};
@@ -38,9 +38,13 @@ angular.module('myApp').controller('courseListController',
         $scope.setCourse = function (course) {
             $scope.current.student = {};
             $scope.current.student.selectedCourse = course;
-
             StorageService.setData($scope.current);
             $rootScope.$broadcast("courseChanged", $scope.current.student.selectedCourse.courseId);
+        }
+
+        $scope.func.userTour =function(id){
+            $scope.config.tour[id] = true;
+            StorageService.setConfig($scope.config);
         }
 
         $scope.getUserCourseList = function () {

@@ -23,8 +23,8 @@
 <!--            </div>-->
 
         </div>
-        <div layout="row" ng-show="current.selectedCourse.courseCode && current.profile.ref">
-            <div layout-padding="">{{current.selectedCourse.title}}</div>
+        <div layout="row" ng-show="current.selectedCourse.courseCode && current.profile.ref" >
+            <div layout-padding="" title="{{current.selectedCourse}}">{{current.selectedCourse.title}}</div>
             <md-button style="font-size: 12px;"
                        ngclipboard data-clipboard-text="{{__path+'/?course='+current.selectedCourse.courseCode+'&ref='+current.profile.ref}}" flex=""
             >

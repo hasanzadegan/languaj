@@ -32,6 +32,7 @@
     <script src="node_modules/ng-draggable/ngDraggable.js"></script>
     <script src="node_modules/clipboard/dist/clipboard.js"></script>
     <script src="node_modules/ngclipboard/dist/ngclipboard.min.js"></script>
+<!--    <script src="node_modules/angular-vibrator/src/vibrator.js"></script>-->
 
     <script src="https://code.responsivevoice.org/responsivevoice.js?key=vXDMrEll"></script>
     <!--definition-->
@@ -56,9 +57,9 @@
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="node_modules/material-icons-font/material-icons-font.css">
 
-    <link rel="stylesheet" href="css/global.css?v=19.1">
-    <link rel="stylesheet" href="css/student.css?v=19.1">
-<!--    <link rel="stylesheet" href="layout/flipCard/ccjmne-card-flip.css">-->
+    <link rel="stylesheet" href="css/global.css?v=19.2">
+    <link rel="stylesheet" href="css/student.css?v=19.2">
+    <!--    <link rel="stylesheet" href="layout/flipCard/ccjmne-card-flip.css">-->
 
     <!--        <script src="node_modules/wavesurfer-angular/dist/js/wavesurfer-angular.js"></script>-->
 
@@ -89,9 +90,10 @@
 <!--    <img src="/img/app/splash-logo.svg" class="appImg splashImage"/>-->
 <!--</div>-->
 <!--<div class="viewerBody" style="width:100vw" layout="row" flex="100">-->
+<div class="topHead" flex="100" layout="row" ng-hide="current.selectedLevelId>0"></div>
 
-<div layout="column" flex="100">
-    <div ng-show="config.footerIcon" ng-include="'html/footer/'+config.footerIcon+'.html?v=19'" layout="column" flex></div>
+<div layout="column" flex="100" style="z-index: 10">
+    <div ng-show="config.footerIcon" ng-include="'html/footer/'+config.footerIcon+'.html?v='+func.currentVersion" layout="column" flex></div>
 </div>
 
 
@@ -101,6 +103,14 @@
         <md-icon md-svg-src="/img/app/back.svg">chrome_reader_mode</md-icon>
     </md-button>
 </div>
+
+
+<div ng-show="current.dialogText"
+     layout-align="center center"
+     flex="100" class="bottomDialog isCorrect" layout="row" layout-wrap="">
+    {{current.dialogText}}
+</div>
+
 </body>
 </html>
 

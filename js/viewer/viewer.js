@@ -7,7 +7,10 @@ angular.module('myApp').controller('viewerController',
             $scope.func.charachter = $scope.getRandomInt(101, 108);
         });
 
-        $scope.current.correctAnswer = $scope.viewerData.levelLexicalPhraseList[0].itemJSONObj.title;
+        if($scope.viewerData)
+            if($scope.viewerData.levelLexicalPhraseList.length>0)
+            $scope.current.correctAnswer = $scope.viewerData.levelLexicalPhraseList[0].itemJSONObj.title;
+
         BaeService.getLevelType().then(result => {
             $scope.current.levelTypeList = result;
             StorageService.setData($scope.current);

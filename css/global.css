@@ -60,11 +60,12 @@
     height: 15vh;
 }
 
-.bottomDialog{
+.bottomDialog {
     position: fixed;
-    bottom: 0;
+    bottom: -30px;
     height: 20vh;
     width: 100%;
+    z-index: 9999;
     animation-name: slideUp;
     animation-duration: 0.2s;
     animation-iteration-count: 1;
@@ -87,11 +88,9 @@
         bottom: -10vh;
     }
     100% {
-        bottom: 0;
+        bottom: -3vh;
     }
 }
-
-
 
 
 .typeText {
@@ -102,8 +101,8 @@
 
 .spellBack {
     background: white;
-    border-top:solid 1px silver;
-    border-bottom:solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
     margin-bottom: 10px;
 }
 
@@ -122,6 +121,12 @@
 
 .courseItem {
     background: white;
-    border:solid 2px #00cad1;
+    border: solid 2px #00cad1;
     border-radius: 10px;
+}
+
+.itemBox {
+    border: solid 1px silver;
+    background: white;
+    box-shadow: 3px 3px rgba(10, 10, 10, .1);
 }

@@ -81,7 +81,7 @@
 
     <div flex="100" layout="row" layout-wrap style="height: 100vh;width: 100vw;">
         <div flex="35">
-            <div ng-include="'html/Lesson/header.html'"></div>
+            <div ng-include="'html/Lesson/header.html?r='+func.currentVersion"></div>
             <div layout="row" flex="100" ng-include="'html/Dashboard/TeachDashboard.html'" ng-show="current.showTeach"></div>
             <div layout="row" ng-show="!current.showTeach">
                 <div flex="50" ng-include="'html/Dashboard/LessonDashboard.html'"></div>

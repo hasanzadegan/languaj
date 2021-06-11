@@ -4,62 +4,57 @@
 
 
 <div flex="100" layout="column">
-<!--    question section-->
-    <div flex="10" layout="row"  layout-align="center center" layout-padding="">
-        <div flex="10"></div>
-        <div  layout="row" flex="80">
+    <!--    question section-->
+    <div flex="10" layout="row" layout-align="center center" layout-padding="">
             <div flex="100" ng-repeat="levelLexicalPhrase in viewerData.levelLexicalPhraseList"
                  ng-if="levelLexicalPhrase.itemJSONObj.validityTypeId===1"
                  layout-align="center center"
                  layout="row" layout-wrap="">
-                <div flex="100" layout-align="center center" layout="row">
-                    <div flex="80" ng-show="levelLexicalPhrase.itemJSONObj.showText">
+                    <div flex ng-show="levelLexicalPhrase.itemJSONObj.showText">
                         {{levelLexicalPhrase.itemJSONObj.title}}
                     </div>
-                    <div flex="20" ng-show="levelLexicalPhrase.itemJSONObj.soundId!=-1">
-                        <md-button
-                                class="md-icon-button" ng-click="playItem($event,levelLexicalPhrase)"
-                                ng-hide="levelLexicalPhrase.itemJSONObj.imageId">
-                            <md-icon md-svg-src="/img/app/sound.svg"></md-icon>
+                    <div ng-show="levelLexicalPhrase.itemJSONObj.soundId!=-1">
+                        <md-button ng-click="playItem($event,levelLexicalPhrase)">
+                            <md-icon
+                                    ng-show="!levelLexicalPhrase.itemJSONObj.imageId"
+                                    md-svg-src="/img/app/sound.svg"></md-icon>
+                            <img
+                                    ng-show="levelLexicalPhrase.itemJSONObj.imageId"
+                                    style="height: 8vh"
+                                    ng-src="{{'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId}}">
                         </md-button>
-                        <img
-                                style="height: 8vh"
-                                ng-src="{{'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId}}"
-                                ng-show="levelLexicalPhrase.itemJSONObj.imageId"
-                                ng-click="playItem($event,levelLexicalPhrase)">
+
+
                     </div>
-                </div>
             </div>
-        </div>
-        <div flex="10"></div>
     </div>
-<!--    answer section-->
-    <div flex="90" layout="row" layout-wrap="" style="overflow-y: auto;max-height: 100%" flex="100">
+    <!--    answer section-->
+    <div flex="80" style="overflow-y: auto;max-height: 100%;" layout="row" layout-wrap="">
         <div flex="{{levelLexicalPhrase.itemJSONObj.itemFlex}}"
              ng-repeat="levelLexicalPhrase in viewerData.levelLexicalPhraseList"
              ng-if="levelLexicalPhrase.itemJSONObj.validityTypeId!==1"
-             layout-wrap=""
-             layout-padding=""
-             layout-align="center center"
              ng-click="func.selectChoice($event,levelLexicalPhrase)"
              layout="row"
-            style="height: {{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'50':'25'}}%">
+             style="height: {{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'40':'20'}}%;" layout-padding="">
+            <div class="md-button itemBox" layout-padding="" layout="row" flex="100" layout-wrap="">
+                <div layout="row" layout-align="end center" style="font-size: 1.2rem"
+                     flex="{{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'100':'70'}}">
+                    {{levelLexicalPhrase.itemJSONObj.title}}
+                </div>
+<!--                <div flex="{{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'100':'30'}}" style="border:solid 1px red">-->
 
-            <div layout="row" layout-align="center center"
-                    flex="{{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'100':'70'}}" >
-                {{levelLexicalPhrase.itemJSONObj.title}}
+<!--                </div>-->
+                <img flex="{{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'100':'30'}}"
+                     ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
+                          func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"
+                     src="/img/app/megaphone.svg"
+                     ng-show="levelLexicalPhrase.itemJSONObj.soundId!=-1 && !levelLexicalPhrase.itemJSONObj.imageId">
+                <img flex="{{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'100':'30'}}"
+                     ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
+                          func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"
+                      ng-src="{{'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId}}"
+                     ng-show="levelLexicalPhrase.itemJSONObj.imageId">
             </div>
-
-            <img flex="{{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'100':'30'}}"
-                    ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
-                              func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"
-                    style="height: 80%" src="/img/app/megaphone.svg"
-                    ng-show="levelLexicalPhrase.itemJSONObj.soundId!=-1 && !levelLexicalPhrase.itemJSONObj.imageId">
-            <img flex="{{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'100':'30'}}"
-                    ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
-                              func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"
-                    style="height: 80%" ng-src="{{'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId}}"
-                    ng-show="levelLexicalPhrase.itemJSONObj.imageId">
         </div>
     </div>
 </div>

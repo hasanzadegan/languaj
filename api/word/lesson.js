@@ -16,13 +16,19 @@ module.exports = {
         })
     },
     getUserCourseList: async function (userId) {
-        stmt = 'select c.courseId,c.title,u.firstName,u.lastName,u.imageUrl \n' +
-            'from payedcourse p,course c,user u\n' +
+        stmt = 'select c.courseId,c.title,u.firstName,u.lastName,u.imageUrl\n' +
+            'from \n' +
+            '(\n' +
+            '\tselect COURSEID,ISACTIVE,PAYMENTDATE from payedcourse where userId = ? \n' +
+            '    union All \n' +
+            '    select COURSEID,1 ISACTIVE,1900-1-1 from globalcourse) p,\n' +
+            'course c,user u\n' +
             'where p.courseId = c.COURSEID\n' +
             'and u.userId = c.CreatorUserId\n' +
             'and p.isActive = 1\n' +
-            'and p.userId = ?';
+            'order by p.PAYMENTDATE desc';
 
+        console.log(stmt,userId);
         params = [userId];
         return await query(stmt, params).then(function (result) {
             return result;
@@ -280,9 +286,13 @@ module.exports = {
     addStudentCourse: async function (userId,courseId,refUserId) {
         stmt = ' ' +
             ' insert into ' +
-            ' PayedCourse(userId,courseId,refUserId,isActive)' +
-            ' values(?,?,?,1)';
-        params = [userId,courseId,refUserId];
+            ' PayedCourse(userId,courseId,refUserId,paymentDate,isActive)' +
+            ' values(?,?,?,?,1)';
+        today = new Date();
+
+        console.log("today",today);
+
+        params = [userId,courseId,refUserId,today];
         return await query(stmt,params).then(function (result) {
             return result;
         })
