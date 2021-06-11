@@ -90,7 +90,7 @@
 <!--    <img src="/img/app/splash-logo.svg" class="appImg splashImage"/>-->
 <!--</div>-->
 <!--<div class="viewerBody" style="width:100vw" layout="row" flex="100">-->
-<div class="topHead" flex="100" layout="row" ng-hide="current.selectedLevelId>0"></div>
+<div class="topHead" flex="100" layout="row" ng-show="!current.selectedLevelId"></div>
 
 <div layout="column" flex="100" style="z-index: 10">
     <div ng-show="config.footerIcon" ng-include="'html/footer/'+config.footerIcon+'.html?v='+func.currentVersion" layout="column" flex></div>
