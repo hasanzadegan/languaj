@@ -8,6 +8,7 @@ angular.module('myApp').controller('pairController',
             pair = [];
             failCount = 0;
             $scope.current.answerIsCorrect = null;
+            $scope.func.question = null;
             $scope.func.disableList = {};
             $scope.viewerData.title = null;
         };
