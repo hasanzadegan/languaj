@@ -1,4 +1,4 @@
-<div oc-lazy-load="['/js/viewer/pair.js?v=11']">
+<div oc-lazy-load="['/js/viewer/pair.js?v='+func.currentVersion]">
     <div ng-controller="pairController"></div>
 </div>
 <div flex="100" layout="column">
@@ -6,9 +6,9 @@
     <div layout-wrap flex="80">
         <div layout="row" layout-wrap="" flex="100">
             <div ng-repeat="item in shuffleList" flex="50" layout="row" layout-wrap="" layout-padding="">
-                <md-button class="roundStrockBtn" flex="100" ng-click="speak(item.title);func.checkAnswer(item)"
-                           ng-hide="func.disableList[item.lexicalId]"
-                >{{item.title}}
+                <md-button class="roundStrockBtn" flex="100"
+                           ng-click="speak(item.title);func.checkAnswer(item)"
+                           ng-hide="func.disableList[item.lexicalId]">{{item.title}}
                 </md-button>
                 <div class="roundStrockBtnGreen" layout-align="center center" flex="100" layout="row" ng-show="func.disableList[item.lexicalId]">
                     {{item.title}}

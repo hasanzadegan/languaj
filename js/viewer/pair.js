@@ -3,7 +3,7 @@ angular.module('myApp').controller('pairController',
 
         var pair = [];
         var failCount = 0;
-
+        $scope.current.answerIsCorrect = null;
 
         $scope.resetPair = function(){
             pair = [];
