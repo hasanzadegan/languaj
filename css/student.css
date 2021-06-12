@@ -1286,3 +1286,11 @@ input[type=number]::-webkit-outer-spin-button {
 .simpleHeader {
     background: #fff;
 }
+md-progress-linear.md-default-theme .md-bar, md-progress-linear .md-bar
+{
+    background: #00bcd4 !important;
+}
+
+md-progress-linear.md-default-theme .md-container, md-progress-linear .md-container{
+    background: #dceff2 !important;
+}
