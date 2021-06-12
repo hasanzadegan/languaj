@@ -20,9 +20,9 @@
                 <img class="appImg teacherCourseImage" ng-src="{{current.student.selectedCourse.imageUrl}}"
                      width="50px">
             </div>
-            <div style="padding-left: 10px" flex="100">
+            <div style="padding-left: 10px;font-family: Arial !important;    " flex="100">
                 {{current.student.selectedCourse.title}}
-                <div style="font-size: 0.6rem">
+                <div style="font-size: 0.6rem;font-family: Arial !important;font-weight: lighter;">
                     {{current.student.selectedCourse.firstName}}
                     {{current.student.selectedCourse.lastName}}
                 </div>
@@ -34,12 +34,12 @@
     </div>
 
     <div ng-repeat="lesson in current.student.selectedCourse.lessonList" flex="100">
-        <div>{{lesson.title}}</div>
+        <div style="font-family: Arial !important;">{{lesson.title}}</div>
         <div layout="row" layout-wrap="" flex="100">
             <div ng-repeat="topic in lesson.topicListObj" layout-wrap="" layout-padding="">
                 <md-button class="lessonBtn"
                            ng-click="getStudentTopicLevelList(topic,topic.review+1)" ng-disabled="topic.locked">
-                    <div style="min-width: 100px">
+                    <div style="min-width: 100px;font-family: Arial !important;">
                         {{topic.title}}
                     </div>
                     <md-icon ng-show="topic.locked">lock</md-icon>

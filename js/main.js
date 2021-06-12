@@ -22,7 +22,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     $rootScope.selectedLang = {"langId": 2, "title": "german", "code": "de", "isSource": 0, "isDestination": 1};
 
     $scope.func = {};
-    $scope.func.currentVersion = 101966;
+    $scope.func.currentVersion = 101967;
     // $scope.func.currentVersion = getRand();
 
     // $scope.options = {
