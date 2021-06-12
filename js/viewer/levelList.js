@@ -2,9 +2,6 @@ angular.module('myApp').controller('lessonListController',
     function ($rootScope, $scope, $q, WordService, BaeService, StorageService, LessonService, ArchiveService) {
 
         $scope.LessonTopicList = null;
-
-
-
         $scope.$on("teacherChanged", function (event, teacher) {
             $scope.LessonTopicList = null;
         });

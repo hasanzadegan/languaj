@@ -18,19 +18,20 @@
                             {{letter.letter}}
                         </div>
                         <div ng-if="letter.hide">
-                            <input style="width:30px;font-weight: bold"
-                                   class="redC"
+                            <input class="redC"
+                                   style="width:27px;font-weight: bold"
                                    maxlength="1"
+                                   ng-blur="func.checkIsLastInput($event,quiz,$index)"
                                    autocapitalize="none"
                                    val-to-jump="1" focus-next-input
                                    ng-model="quiz.answer[$index]">
                         </div>
                     </div>
-                    <div flex=""></div>
-                    <md-button class="redB checkButton"
-                               ng-click="func.checkSpell($event,quiz,quiz.answer)" ng-hide="quiz.disabled">
-                        check
-                    </md-button>
+    <!--                    <div flex=""></div>-->
+    <!--                    <md-button class="redB checkButton"-->
+    <!--                               ng-click="func.checkSpell($event,quiz,quiz.answer)" ng-hide="quiz.disabled">-->
+    <!--                        check-->
+    <!--                    </md-button>-->
                     <div ng-show="quiz.disabled">
                         <md-icon ng-if="quiz.result">
                             check

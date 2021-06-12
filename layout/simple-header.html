@@ -1,12 +1,14 @@
-<div flex="100" layout="row" layout-padding="" class="simpleHeader">
+<div flex="100" layout="row" layout-padding="" class="simpleHeader" layout-wrap="">
     <md-button flex="10" class="md-icon-button" ng-click="backToList()">
         <md-icon md-svg-src="/img/app/back.svg"></md-icon>
     </md-button>
-    <div >
+    <div flex="">
         {{current.student.selectedCourse.selectedTopic.title}}
     </div>
+    <div flex="10"></div>
 <!--    <div flex="15" layout="row">-->
 <!--        <img src="/svg/levelType/{{viewerData.levelTypeId}}.svg" width="50px" class="appImg"/>-->
 <!--    </div>-->
+    <md-progress-linear value="{{current.progress}}" ng-show="current.progress>0"></md-progress-linear>
 </div>
 <md-divider></md-divider>

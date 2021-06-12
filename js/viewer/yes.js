@@ -5,7 +5,6 @@ angular.module('myApp').controller('yesController',
             // console.log("yes or no need to element");
         }
         else{
-            $scope.func.questionLexicalPhrase = $scope.viewerData.levelLexicalPhraseList[0];
             $scope.func.rand = Math.random();
             if($scope.func.rand>0.5){
                 $scope.func.answerLexicalPhrase = $scope.viewerData.levelLexicalPhraseList[1];

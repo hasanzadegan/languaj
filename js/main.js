@@ -22,7 +22,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     $rootScope.selectedLang = {"langId": 2, "title": "german", "code": "de", "isSource": 0, "isDestination": 1};
 
     $scope.func = {};
-    $scope.func.currentVersion = 101970;
+    $scope.func.currentVersion = 101977;
     // $scope.func.currentVersion = getRand();
 
     // $scope.options = {
@@ -209,7 +209,6 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     }
 
     $scope.$on('levelChanged', function (event, levelId) {
-        $rootScope.viewerData = {};
         if (levelId !== null) {
             $scope.current.selectedLevelId = levelId;
             LessonService.getLevelById(levelId).then(levelResult => {
@@ -217,19 +216,36 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
                 $scope.current.selectedLevel = level;
                 $rootScope.viewerData = level;
 
+
                 path = level.levelTypeTitle.split(" ")[0].toLowerCase();
 
                 LevelService.getLevelLexicalPhraseList(levelId).then(result => {
                     $scope.levelItemList = [];
                     $rootScope.viewerData.levelLexicalPhraseList = [];
                     for (item of result) {
+
                         try {
                             item.itemJSONObj = JSON.parse(item.itemJSON);
-                            //replace token for viewer
                             item.itemJSONObj.title = $rootScope.replaceToken(item.itemJSONObj.title);
                             item.itemJSONObj.lexicalPhrase.title = $rootScope.replaceToken(item.itemJSONObj.lexicalPhrase.title);
                         } catch (e) {
                         }
+
+                        if([3].includes(level.levelTypeId) && item.itemJSONObj.validityTypeId==2){
+                            $scope.current.selectedLevel.correctItem = item.itemJSONObj.title;
+                            $scope.current.selectedLevel.questionItem = item.itemJSONObj.lexicalPhrase.title;
+                        }
+
+                        if([13,7].includes(level.levelTypeId)){
+                            $scope.current.selectedLevel.correctItem = item.itemJSONObj.title;
+                            $scope.current.selectedLevel.questionItem = item.itemJSONObj.lexicalPhrase.title;
+                        }
+
+                        if([2].includes(level.levelTypeId)){
+                            $scope.current.selectedLevel.correctItem = "";
+                            $scope.current.selectedLevel.questionItem = level.levelTypeTitle;
+                        }
+
                         $rootScope.viewerData.levelLexicalPhraseList.push(item);
 
 
@@ -238,7 +254,6 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
                         StorageService.setData($scope.current)
 
 
-                        console.log("item.itemJSONObj>>>>>>>>>",item.itemJSONObj)
                         try{
 
                             if (!item.itemJSONObj.lexicalPhrase)
@@ -265,8 +280,15 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
                     //pair
                     $scope.shuffleList = $scope.shuffle($scope.levelItemList)
 
+
                     $rootScope.setLevelTypePath(path);
                     $rootScope.setViewerPath(path);
+
+
+
+                    console.log("levelChanged>>>>>>>",level.levelLexicalPhraseList)
+
+
                     $rootScope.$broadcast('levelChangedWithDetail', $rootScope.viewerData.levelId)
                 })
 
@@ -300,10 +322,18 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         console.log("nextLevel",levelList,data)
         levelIndex = $scope.current.student.selectedCourse.selectedTopic.levelIndex;
 
+
         levelIndex = levelIndex + 1;
         $scope.current.student.selectedCourse.selectedTopic.levelIndex = levelIndex;
 
+
+        $scope.current.progress = levelIndex/(levelList.length)*100
+
+        StorageService.setData($scope.current);
+
+
         if (levelIndex > levelList.length - 1) {
+            $scope.current.progress = 0;
             $scope.showAchievement();
         } else {
             nextLevel = levelList[levelIndex];

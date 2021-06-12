@@ -1,14 +1,11 @@
 angular.module('myApp').controller('orderController',
     function ($rootScope, $scope, $q, $timeout, WordService, BaeService, StorageService, LessonService, SoundService) {
-        $scope.func.question = "";
         $scope.func.orderShuffleList = [];
         if($scope.viewerData.levelLexicalPhraseList.length<1){
             $scope.error = "Need One phrase"
         }
         else{
-            $scope.func.question = $scope.viewerData.levelLexicalPhraseList[0].itemJSONObj.lexicalPhrase.title;
             $scope.func.answer = $scope.viewerData.levelLexicalPhraseList[0].itemJSONObj.title;
-
             totalWordList = [];
             $scope.func.answerWordList = [];
             for(levelLexicalPhrase of $scope.viewerData.levelLexicalPhraseList)
@@ -17,7 +14,6 @@ angular.module('myApp').controller('orderController',
                 totalWordList = totalWordList.concat(wordList);
             }
             $scope.func.orderShuffleList = $scope.shuffle(totalWordList);
-            console.log($scope.func.orderShuffleList)
         }
 
         $scope.func.selectWord = function(index){

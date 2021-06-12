@@ -9,7 +9,6 @@ angular.module('myApp').controller('multiController',
         }
 
         $scope.func.checkChoice = function () {
-            console.log($scope.func)
             if ($scope.func.validityTypeId === 2) {
                 $scope.func.isCorrect();
             } else {

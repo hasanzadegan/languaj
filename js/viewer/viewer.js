@@ -2,14 +2,15 @@ angular.module('myApp').controller('viewerController',
     function ($rootScope, $scope, $q, WordService, BaeService, StorageService, SoundService, LessonService, LevelService, ArchiveService) {
 
         $scope.$on('levelChanged', function (event, levelId) {
-
-            $scope.current.answerIsCorrect = null;
             $scope.func.charachter = $scope.getRandomInt(101, 108);
+            $scope.current.answerIsCorrect = null;
         });
 
-        if($scope.viewerData)
-            if($scope.viewerData.levelLexicalPhraseList.length>0)
+        try{
             $scope.current.correctAnswer = $scope.viewerData.levelLexicalPhraseList[0].itemJSONObj.title;
+        }catch (e) {
+            $scope.current.correctAnswer = "";
+        }
 
         BaeService.getLevelType().then(result => {
             $scope.current.levelTypeList = result;

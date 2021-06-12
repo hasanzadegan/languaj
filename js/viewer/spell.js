@@ -2,9 +2,25 @@ angular.module('myApp').controller('spellController',
     function ($rootScope, $scope, $q, $timeout, WordService, BaeService, StorageService, LessonService, SoundService) {
         // $scope.lexicalPhrase = $scope.viewerData.levelLexicalPhraseList[0];
 
-        $scope.func.question = "";
-        $scope.func.checkSpell = function ($event,quiz, answer) {
-            $scope.playItem($event,quiz);
+        $scope.$on('levelChanged', function (event, levelId) {
+        });
+
+        $scope.func.checkIsLastInput = function ($event, quiz, $index) {
+            var c = 0;
+            maxIndex = 0;
+            for (letter of quiz.itemJSONObj.letterList) {
+                if (letter.hide === true) {
+                    maxIndex = c;
+                }
+                c = c + 1;
+            }
+            if(maxIndex===$index){
+                $scope.func.checkSpell($event,quiz,quiz.answer);
+            }
+        }
+
+        $scope.func.checkSpell = function ($event, quiz, answer) {
+            $scope.playItem($event, quiz);
             if (answer === undefined)
                 return;
 
@@ -29,7 +45,7 @@ angular.module('myApp').controller('spellController',
                     allDone = false;
             }
             if (allDone) {
-                if(allCorrect)
+                if (allCorrect)
                     $scope.func.isCorrect();
                 else
                     $scope.func.isInCorrect();

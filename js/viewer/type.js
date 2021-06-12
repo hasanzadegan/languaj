@@ -1,13 +1,13 @@
 angular.module('myApp').controller('typeController',
     function ($rootScope, $scope, $q, $timeout, WordService, BaeService, StorageService, LessonService, SoundService) {
 
-        console.log($scope.viewerData.levelLexicalPhraseList[0].itemJSONObj.title)
-
-        $scope.func.question = $scope.viewerData.levelLexicalPhraseList[0].itemJSONObj.lexicalPhrase.title;
-        $scope.current.typeText = "";
+        $scope.resetType = function(){
+            $scope.current.typeText = "";
+        }
+        $scope.resetType();
 
         $scope.$on('levelChanged', function (event, levelId) {
-            $scope.current.typeText = "";
+            $scope.resetType();
         });
 
         $scope.func.checkType = function () {
