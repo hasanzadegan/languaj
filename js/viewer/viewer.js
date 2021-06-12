@@ -1,8 +1,8 @@
 angular.module('myApp').controller('viewerController',
     function ($rootScope, $scope, $q, WordService, BaeService, StorageService, SoundService, LessonService, LevelService, ArchiveService) {
 
-
         $scope.$on('levelChanged', function (event, levelId) {
+
             $scope.current.answerIsCorrect = null;
             $scope.func.charachter = $scope.getRandomInt(101, 108);
         });

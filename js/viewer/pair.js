@@ -3,13 +3,13 @@ angular.module('myApp').controller('pairController',
 
         var pair = [];
         var failCount = 0;
-        $scope.current.answerIsCorrect = null;
 
         $scope.resetPair = function(){
             pair = [];
             failCount = 0;
             $scope.current.answerIsCorrect = null;
             $scope.func.disableList = {};
+            $scope.viewerData.title = null;
         };
 
         $scope.resetPair();

@@ -22,7 +22,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     $rootScope.selectedLang = {"langId": 2, "title": "german", "code": "de", "isSource": 0, "isDestination": 1};
 
     $scope.func = {};
-    $scope.func.currentVersion = 101967;
+    $scope.func.currentVersion = 101968;
     // $scope.func.currentVersion = getRand();
 
     // $scope.options = {
@@ -209,6 +209,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     }
 
     $scope.$on('levelChanged', function (event, levelId) {
+        $rootScope.viewerData = {};
         if (levelId !== null) {
             $scope.current.selectedLevelId = levelId;
             LessonService.getLevelById(levelId).then(levelResult => {
