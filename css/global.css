@@ -61,11 +61,11 @@
 }
 
 .bottomDialog {
-    position: fixed;
-    bottom: -30px;
+    position: absolute;
+    bottom: 0px;
     height: 20vh;
     width: 100%;
-    z-index: 9999;
+    z-index: 99999;
     animation-name: slideUp;
     animation-duration: 0.2s;
     animation-iteration-count: 1;
