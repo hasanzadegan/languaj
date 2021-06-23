@@ -30,7 +30,9 @@
     </div>
     <!--    answer section-->
     <div flex="80" style="overflow-y: auto;max-height: 100%;" layout="row" layout-wrap="" layout-align="center center">
-        <div flex="{{levelLexicalPhrase.itemJSONObj.itemFlex}}"
+        <div
+                flex="{{levelLexicalPhrase.itemJSONObj.itemFlex/2}}"
+                flex-xs="{{levelLexicalPhrase.itemJSONObj.itemFlex}}"
              ng-repeat="levelLexicalPhrase in viewerData.levelLexicalPhraseList"
              ng-if="levelLexicalPhrase.itemJSONObj.validityTypeId!==1"
              ng-click="func.selectChoice($event,levelLexicalPhrase)"
@@ -40,10 +42,10 @@
             <div class="itemBox"
                  layout-align="center center"
                  flex="100" layout="row" ng-show="levelLexicalPhrase.itemJSONObj.itemFlex.toString()==='100'">
-                <div flex="70">
+                <div flex>
                     {{levelLexicalPhrase.itemJSONObj.title}}
                 </div>
-                <div flex="30">
+                <div>
                     <img
                             height="100%"
                             ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
