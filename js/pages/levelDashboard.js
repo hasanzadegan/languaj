@@ -54,9 +54,16 @@ angular.module('myApp').controller('levelDashboardController', function ($rootSc
             $scope.updateLevelItemJson(levelItem);
         }
 
-        $scope.flexTypeList = [25, 33, 50, 100];
+        $scope.flexTypeList = [
+            // 25, 33,
+            50, 100];
         $scope.changeFlexType = function (levelItem) {
-            var nextFlex = {25: 33, 33: 50, 50: 100, 100: 25};
+            var nextFlex = {
+                // 25: 33, 33: 50,
+                50: 100,
+                // 100: 25
+                100: 50
+            };
             levelItem.itemJSONObj.itemFlex = nextFlex[levelItem.itemJSONObj.itemFlex];
             $scope.updateLevelItemJson(levelItem);
         }
