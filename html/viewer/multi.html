@@ -42,10 +42,12 @@
             <div class="itemBox"
                  layout-align="center center"
                  flex="100" layout="row" ng-show="levelLexicalPhrase.itemJSONObj.itemFlex.toString()==='100'">
-                <div flex>
-                    {{levelLexicalPhrase.itemJSONObj.title}}
+                <div flex="70">
+                    <div>
+                        {{levelLexicalPhrase.itemJSONObj.title}}
+                    </div>
                 </div>
-                <div>
+                <div flex="30">
                     <img
                             height="100%"
                             ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
@@ -73,30 +75,3 @@
         </div>
     </div>
 </div>
-
-<!--<div class="md-button itemBox" layout-padding="" layout="row" flex="100" layout-wrap="">-->
-<!--    <div layout="row" ng-show="levelLexicalPhrase.itemJSONObj.itemFlex.toString()==='100'"-->
-<!--         flex="70" layout-align="end center">-->
-<!--        {{levelLexicalPhrase.itemJSONObj.title}}-->
-<!--    </div>-->
-<!--    <div layout="row" ng-show="levelLexicalPhrase.itemJSONObj.itemFlex.toString()==='50'"-->
-<!--         flex="100" layout-align="center center">-->
-<!--        {{levelLexicalPhrase.itemJSONObj.title}}-->
-<!--    </div>-->
-<!--    <div flex="{{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'100':'30'}}" layout-padding="">-->
-<!--        <img-->
-<!--                flex="{{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'80':'50'}}"-->
-<!--                ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?-->
-<!--                          func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"-->
-<!--                style="max-height: 100%;border:solid 1px red"-->
-<!--                src="/img/app/megaphone.svg"-->
-<!--                ng-show="levelLexicalPhrase.itemJSONObj.soundId!=-1 && !levelLexicalPhrase.itemJSONObj.imageId">-->
-<!--        <img flex="{{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'80':'50'}}"-->
-<!--             ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?-->
-<!--                          func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"-->
-<!--             style="max-height: 100%;border:solid 1px red"-->
-<!--             ng-src="{{'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId}}"-->
-<!--             ng-show="levelLexicalPhrase.itemJSONObj.imageId">-->
-<!--    </div>-->
-
-<!--</div>-->
