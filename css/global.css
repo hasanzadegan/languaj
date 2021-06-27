@@ -3,8 +3,6 @@
     border: solid 1px #333 !important;
     border-radius: 10px;
     box-shadow: none !important;
-    padding-left: 8px !important;
-    padding-right: 8px !important;
 }
 
 .roundStrockBtnGreen {
@@ -14,8 +12,6 @@
     color: #00acb1;
     border-radius: 10px;
     box-shadow: none !important;
-    padding-left: 8px !important;
-    padding-right: 8px !important;
 }
 
 .largeFont {
