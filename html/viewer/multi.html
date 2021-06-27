@@ -42,19 +42,21 @@
             <div class="itemBox"
                  layout-align="center center"
                  flex="100" layout="row" ng-show="levelLexicalPhrase.itemJSONObj.itemFlex.toString()==='100'">
-                <div flex="70" style="border:solid 1px red">
+                <div flex style="border:solid 1px red">
                     <div>
                         {{levelLexicalPhrase.itemJSONObj.title}}
                     </div>
                 </div>
-                <div style="border:solid 1px green">
-                    <img
-                         height="70%"
-                         ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
+                <div>
+                    <div style="border:solid 1px green">
+                        <img
+                                height="70%"
+                                ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
                     func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"
-                         ng-src="{{levelLexicalPhrase.itemJSONObj.imageId?'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId:
-                    '/img/app/megaphone.svg'}}"></div>
-
+                                ng-src="{{levelLexicalPhrase.itemJSONObj.imageId?'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId:
+                    '/img/app/megaphone.svg'}}">
+                    </div>
+                </div>
             </div>
             <div class="itemBox" flex="100"
                  layout="column"
