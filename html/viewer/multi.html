@@ -33,12 +33,12 @@
         <div
                 flex="{{levelLexicalPhrase.itemJSONObj.itemFlex/2}}"
                 flex-xs="{{levelLexicalPhrase.itemJSONObj.itemFlex}}"
-             ng-repeat="levelLexicalPhrase in viewerData.levelLexicalPhraseList"
-             ng-if="levelLexicalPhrase.itemJSONObj.validityTypeId!==1"
-             ng-click="func.selectChoice($event,levelLexicalPhrase)"
-             layout="row"
-             style="height: {{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'50':'25'}}%;"
-             layout-padding="">
+                ng-repeat="levelLexicalPhrase in viewerData.levelLexicalPhraseList"
+                ng-if="levelLexicalPhrase.itemJSONObj.validityTypeId!==1"
+                ng-click="func.selectChoice($event,levelLexicalPhrase)"
+                layout="row"
+                style="height: {{levelLexicalPhrase.itemJSONObj.itemFlex.toString()!=='100'?'50':'25'}}%;"
+                layout-padding="">
             <div class="itemBox"
                  layout-align="center center"
                  flex="100" layout="row" ng-show="levelLexicalPhrase.itemJSONObj.itemFlex.toString()==='100'">
@@ -47,14 +47,15 @@
                         {{levelLexicalPhrase.itemJSONObj.title}}
                     </div>
                 </div>
-                <div flex="30">
+                <div >
                     <img
-                            height="100%"
-                            ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
-                        func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"
-                            ng-src="{{levelLexicalPhrase.itemJSONObj.imageId?'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId:
-                        '/img/app/megaphone.svg'}}">
+                         height="100%"
+                         ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
+                    func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"
+                         ng-src="{{levelLexicalPhrase.itemJSONObj.imageId?'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId:
+                    '/img/app/megaphone.svg'}}">
                 </div>
+
             </div>
             <div class="itemBox" flex="100"
                  layout="column"
@@ -65,10 +66,10 @@
                 </div>
                 <div flex="80" layout="row" layout-padding="" layout-align="center center">
                     <img
-                        height="100%"
-                        ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
+                            height="100%"
+                            ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
                         func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"
-                        ng-src="{{levelLexicalPhrase.itemJSONObj.imageId?'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId:
+                            ng-src="{{levelLexicalPhrase.itemJSONObj.imageId?'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId:
                         '/img/app/megaphone.svg'}}">
                 </div>
             </div>
