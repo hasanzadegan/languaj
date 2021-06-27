@@ -42,14 +42,15 @@
             <div class="itemBox"
                  layout-align="center center"
                  flex="100" layout="row" ng-show="levelLexicalPhrase.itemJSONObj.itemFlex.toString()==='100'">
-                <div flex="70">
+                <div flex="70" style="border:solid 1px red">
                     <div>
                         {{levelLexicalPhrase.itemJSONObj.title}}
                     </div>
                 </div>
-                <div >
+                <div layout="row" style="border:solid 1px red">
                     <img
                          height="100%"
+                         style="max-height: 100%"
                          ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
                     func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"
                          ng-src="{{levelLexicalPhrase.itemJSONObj.imageId?'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId:
