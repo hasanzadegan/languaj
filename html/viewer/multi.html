@@ -47,13 +47,13 @@
                         {{levelLexicalPhrase.itemJSONObj.title}}
                     </div>
                 </div>
-                <div layout="row" style="border:solid 1px orange">
+                <div style="border:solid 1px green">
                     <img
+                         height="70%"
                          ng-class="func.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
                     func.selectedLevelLexicalPhrase.itemJSONObj.animation:''"
                          ng-src="{{levelLexicalPhrase.itemJSONObj.imageId?'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId:
-                    '/img/app/megaphone.svg'}}">
-                </div>
+                    '/img/app/megaphone.svg'}}"></div>
 
             </div>
             <div class="itemBox" flex="100"
