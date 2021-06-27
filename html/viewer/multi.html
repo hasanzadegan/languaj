@@ -5,7 +5,7 @@
 
 <div flex="100" layout="column">
     <!--    question section-->
-    <div flex="10" layout="row" layout-align="center center" layout-padding="">
+    <div flex="20" layout="row" layout-align="center center" layout-padding="">
         <div flex="100" ng-repeat="levelLexicalPhrase in viewerData.levelLexicalPhraseList"
              ng-if="levelLexicalPhrase.itemJSONObj.validityTypeId===1"
              layout-align="center center"
@@ -29,7 +29,7 @@
         </div>
     </div>
     <!--    answer section-->
-    <div flex="80" style="overflow-y: auto;max-height: 100%;" layout="row" layout-wrap="" layout-align="center center">
+    <div flex="70" style="overflow-y: auto;max-height: 100%;" layout="row" layout-wrap="" layout-align="center center">
         <div
                 flex="{{levelLexicalPhrase.itemJSONObj.itemFlex/2}}"
                 flex-xs="{{levelLexicalPhrase.itemJSONObj.itemFlex}}"
