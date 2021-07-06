@@ -31,7 +31,9 @@ angular.module('myApp').controller('grammerController',
         });
         $rootScope.$broadcast("pluralSet");
 
+        //todo
         langId = $scope.selectedLang.langId;
+
         $scope.setGender = function (gender) {
             $scope.current.selectedPhrase.selectedPhraseWord.genderId = gender.genderId;
             $scope.current.selectedPhrase.selectedPhraseWord.genderTitle = gender.title;

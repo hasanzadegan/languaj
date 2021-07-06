@@ -23,9 +23,11 @@ angular.module('myApp').controller('lessonDashboardController', function ($rootS
 
 
     $document.bind('keyup', function (event) {
-            var selectedItemList = $scope.current.selectedCourse.selectedLesson.selectedTopic.levelList.filter(level=>{
-                return level.clipboard == true;
-            })
+
+            if($scope.current.selectedCourse)
+                var selectedItemList = $scope.current.selectedCourse.selectedLesson.selectedTopic.levelList.filter(level=>{
+                    return level.clipboard == true;
+                })
 
             if (event.keyCode == 88 && event.ctrlKey) {
                 localStorage.setItem("__clipboard", JSON.stringify($scope.current.selectedLevel));

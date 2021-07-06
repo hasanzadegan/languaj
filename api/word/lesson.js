@@ -6,8 +6,7 @@ module.exports = {
             ' select courseId,title ' +
             ' from course ' +
             ' where creatorUserId = ? ' +
-            ' and langId = ? ';
-        ;
+            ' and DestlangId = ? ';
 
         params = [userId, langId];
         console.log(stmt, params)
