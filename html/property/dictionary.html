@@ -1,23 +1,23 @@
 <div oc-lazy-load="['/js/property/dictionary.js']">
     <div ng-controller="dictionaryController" layout-wrap class="wordDashboard">
         <div layout="row" flex="100" layout-wrap>
-            <div flex="100" layout-wrap layout="row" >
+            <div flex="100" layout-wrap layout="row">
                 <div flex="100" layout="row" layout-padding class="">
-<!--                    <md-button class="md-icon-button" ng-click="toggleSearchResult()">-->
-<!--                        <md-icon ng-show="config.showSearchResult">keyboard_arrow_down</md-icon>-->
-<!--                        <md-icon ng-show="!config.showSearchResult">play_circle_filled</md-icon>-->
-<!--                    </md-button>-->
+                    <!--                    <md-button class="md-icon-button" ng-click="toggleSearchResult()">-->
+                    <!--                        <md-icon ng-show="config.showSearchResult">keyboard_arrow_down</md-icon>-->
+                    <!--                        <md-icon ng-show="!config.showSearchResult">play_circle_filled</md-icon>-->
+                    <!--                    </md-button>-->
                     <div>
-                        <div class="flags deFlag"></div>
+                        <div class="flags Flag2"></div>
                     </div>
                     <input flex="90" class="searchPhrase" ng-model="current.searchText"
                            ng-keyup="findPhrase()">
-<!--                    <div flex="20" layout="row" layout-wrap="">-->
-<!--                        <md-button class="mini-button" flex="25" ng-repeat="letter in extraLetters"-->
-<!--                                   ng-click="current.searchText=current.searchText+letter">-->
-<!--                            {{letter}}-->
-<!--                        </md-button>-->
-<!--                    </div>-->
+                    <!--                    <div flex="20" layout="row" layout-wrap="">-->
+                    <!--                        <md-button class="mini-button" flex="25" ng-repeat="letter in extraLetters"-->
+                    <!--                                   ng-click="current.searchText=current.searchText+letter">-->
+                    <!--                            {{letter}}-->
+                    <!--                        </md-button>-->
+                    <!--                    </div>-->
                 </div>
                 <div flex="100" class="searchResult" ng-show="config.showSearchResult">
                     <div layout="row">
@@ -30,35 +30,37 @@
                         <md-list-item ng-repeat="phrase in current.phraseList"
                                       ng-class="phrase.phraseId===current.selectedPhrase.phraseId?'selectedPhrase':''"
                                       layout="row">
-                                <md-button flex="80"
-                                           ng-show="!config.editMode[phrase.phraseId]"
-                                           style="text-align: left !important;"
-                                           layout-padding ng-click="selectPhrase(phrase)">
-                                    {{phrase.title}}
-                                </md-button>
-                                <div ng-show="config.editMode[phrase.phraseId]">
-                                    <input ng-model="phrase.title" ng-blur="updatePhraseTitle(phrase);">
-<!--                                    <md-button class="md-icon-button" ng-click="updatePhraseTitle(phrase);">-->
-<!--                                        <md-icon md-svg-src="/svg/action/edit.svg"></md-icon> -->
-<!--                                    </md-button>-->
-                                </div>
+                            <div class="flagBar Flag{{phrase.langId}}"></div>
+                            <md-button flex
+                                       ng-show="!config.editMode[phrase.phraseId]"
+                                       style="text-align: left !important;"
+                                       layout-padding ng-click="selectPhrase(phrase)">
+                                {{phrase.title}}
+                            </md-button>
+                            <div ng-show="config.editMode[phrase.phraseId]">
+                                <input ng-model="phrase.title" ng-blur="updatePhraseTitle(phrase);">
+                                <!--                                    <md-button class="md-icon-button" ng-click="updatePhraseTitle(phrase);">-->
+                                <!--                                        <md-icon md-svg-src="/svg/action/edit.svg"></md-icon> -->
+                                <!--                                    </md-button>-->
+                            </div>
 
-                                <md-button class="md-icon-button"
-                                           ng-show="!config.editMode[phrase.phraseId]"
-                                           ng-click="config.editMode[phrase.phraseId]=!config.editMode[phrase.phraseId]">
-                                    <md-icon md-svg-src="/svg/action/edit.svg"></md-icon>
-                                </md-button>
-                                <md-button class="md-icon-button" ng-click="extractPhrase(phrase)">
-                                    <md-icon md-svg-src="/svg/action/expand.svg"></md-icon>
-                                </md-button>
-                                <md-button class="md-icon-button" ng-click="deletePhrase($event)">
-                                    <md-icon md-svg-src="/svg/action/delete.svg"></md-icon>
-                                </md-button>
+                            <md-button class="md-icon-button"
+                                       ng-show="!config.editMode[phrase.phraseId]"
+                                       ng-click="config.editMode[phrase.phraseId]=!config.editMode[phrase.phraseId]">
+                                <md-icon md-svg-src="/svg/action/edit.svg"></md-icon>
+                            </md-button>
+                            <md-button class="md-icon-button" ng-click="extractPhrase(phrase)">
+                                <md-icon md-svg-src="/svg/action/expand.svg"></md-icon>
+                            </md-button>
+                            <md-button class="md-icon-button" ng-click="deletePhrase($event)">
+                                <md-icon md-svg-src="/svg/action/delete.svg"></md-icon>
+                            </md-button>
                         </md-list-item>
                         <md-list-item flex="100" layout="row">
                             <md-button class="md-icon-button md-accent" ng-click="addPhrase(current.searchText)">
                                 <md-icon>add_box</md-icon>
                             </md-button>
+                            <div class="flagBar Flag{{phrase.langId}}"></div>
                             <div layout-padding flex="90">
                                 <i>{{current.searchText}}</i>
                             </div>
@@ -72,14 +74,15 @@
                     <md-icon>playlist_play</md-icon>
                 </md-button>
                 <md-button ng-repeat="phraseWord in current.selectedPhrase.phraseWordList"
-                     title="{{phraseWord}}"
-                     ng-click="selectPhraseWord(phraseWord)"
-                     style="text-decoration:{{current.selectedPhrase.selectedPhraseWord.wordId===phraseWord.phraseId?'underline':''}}"
-                     class="md-small md-mini">
+                           title="{{phraseWord}}"
+                           ng-click="selectPhraseWord(phraseWord)"
+                           style="text-decoration:{{current.selectedPhrase.selectedPhraseWord.wordId===phraseWord.phraseId?'underline':''}}"
+                           class="md-small md-mini">
                     {{phraseWord.title}}
                 </md-button>
             </div>
-            <div flex="100" ng-include="'html/property/lexical.html'" ng-show="current.selectedPhrase.selectedPhraseWord==null"></div>
+            <div flex="100" ng-include="'html/property/lexical.html'"
+                 ng-show="current.selectedPhrase.selectedPhraseWord==null"></div>
 
             <div flex="100" ng-if="true" ng-include="'html/property/grammer.html'" ng-show="config.showGrammer"></div>
 

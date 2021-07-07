@@ -271,29 +271,6 @@ md-dialog {
     filter: none;
 }
 
-.flags {
-    height: 32px;
-    width: 40px;
-    background: url('/img/icon/flags.svg');
-    background-size: 40px;
-}
-
-.deFlag {
-    background-position: 0 -95.58537px;
-}
-
-.faFlag {
-    background: url('/img/icon/Iran-Flag.svg') !important;
-    background-size: 33px 28px !important;
-    border-radius: 5px;
-    height: 23px !important;
-    width: 34px !important;
-    padding: 2px;
-}
-
-.enFlag {
-    background-position: 0 0;
-}
 
 .wordDashboard {
     /*background: #e2ffdd;*/

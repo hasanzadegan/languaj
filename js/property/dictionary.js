@@ -2,6 +2,8 @@ angular.module('myApp').controller('dictionaryController',
     function ($rootScope, $scope, $q, WordService, BaeService, StorageService) {
 
         $rootScope.addPhrase = function (phrase) {
+
+
             WordService.addPhrase($rootScope.selectedLang.langId, phrase).then(result => {
                 for(item of ["?",".","!"]){
                     result.title = result.title.replace(item," "+item);

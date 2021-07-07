@@ -2,7 +2,7 @@ const query = require('../helpers/query');
 
 module.exports = {
     getLangList: async function () {
-        stmt = 'select langId,title,code,isSource,isDestination from Lang';
+        stmt = 'select langId,title,code from Lang';
         return await query(stmt, '').then(function (result) {
             return result;
         })

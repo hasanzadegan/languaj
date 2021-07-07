@@ -3,7 +3,7 @@ const query = require('../helpers/query');
 module.exports = {
     getCourseList: async function (userId, langId) {
         stmt = '' +
-            ' select courseId,title ' +
+            ' select courseId,title,sourceLangId,destlangId ' +
             ' from course ' +
             ' where creatorUserId = ? ' +
             ' and DestlangId = ? ';

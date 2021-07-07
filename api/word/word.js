@@ -379,15 +379,21 @@ module.exports = {
         })
     },
     addPhrase: async function (title, languageId,userId) {
-        stmt = 'INSERT INTO phrase(langId, title, isMultiWord,creatorUserId) ' +
-            ' VALUES (?,?,?,?)';
-        // isMultiple = title.split(" ").length>1;
         isMultiple = 1;
-        params = [languageId, title, isMultiple,userId];
+        // stmt = 'INSERT INTO phrase(langId, title, isMultiWord,creatorUserId) ' +
+        //     ' VALUES (?,?,?,?)';
+        // params = [languageId, title, isMultiple,userId];
+        stmt = ""+
+            " INSERT INTO phrase(langId, title, isMultiWord,creatorUserId) " +
+            " VALUES (isPersian('"+title+"',"+languageId+"),?,?,?)";
+
+        params = [title, isMultiple,userId];
+        console.log(stmt)
         // console.log(params)
         return await query(stmt, params).then(function (result) {
             return result;
         }, function (error) {
+            console.log(error);
             return error
         })
     },
