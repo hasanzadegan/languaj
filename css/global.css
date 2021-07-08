@@ -130,31 +130,37 @@
 .flags {
     height: 32px;
     width: 40px;
-    background: url('/img/icon/flags.svg');
+    background: url('/img/icon/flags1.svg');
     background-size: 40px;
 }
 .flagBar{
     margin: 10px;
-    zoom: 70%;
+    zoom: 50%;
     height: 32px;
     width: 40px;
-    background: url('/img/icon/flags.svg');
+    background: url('/img/icon/flags1.svg');
     background-size: 40px;
 }
 
-.Flag2 {
-    background-position: 0 -95.58537px;
-}
 
 .Flag1 {
-    background: url('/img/icon/Iran-Flag.svg') !important;
-    background-size: 33px 28px !important;
-    border-radius: 5px;
-    height: 23px !important;
-    width: 34px !important;
-    padding: 2px;
+    background-position: 0 0px;
+}
+
+.Flag2 {
+    background-position: 0 -32px;
 }
 
 .Flag3 {
-    background-position: 0 0;
+    background-position: 0 -64px;
+}
+.Flag4 {
+    background-position: 0 -96px;
+}
+.Flag5 {
+    background-position: 0 -128px;
+}
+
+.Flag6 {
+    background-position: 0 -160px;
 }

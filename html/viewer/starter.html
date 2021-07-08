@@ -66,7 +66,7 @@
         </style>
         <div style="height: 75vh;overflow-y: auto" layout="row" flex="100" layout-wrap="" layout-align="center center">
             <div flex="100" style="height:5vh"></div>
-            <div ng-repeat="levelLexicalPhrase in viewerData.levelLexicalPhraseList"
+            <div ng-repeat="levelLexicalPhrase in current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList"
                  ng-show="!current.showOne"
                  flex="33" layout="row" class="all" layout-wrap="" layout-align="center center"
                  style="{{$index==current.cnt?'background:#fff;border:solid 1px #ccc':''}}">
@@ -86,12 +86,12 @@
             </div>
             <div flex="100" layout="row" layout-padding="" layout-align="center center" ng-show="!current.showOne">
                 &nbsp;
-                {{viewerData.levelLexicalPhraseList[current.cnt].itemJSONObj.title}}
-                {{viewerData.levelLexicalPhraseList[current.cnt].itemJSONObj.lexicalPhrase.title}}
+                {{current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList[current.cnt].itemJSONObj.title}}
+                {{current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList[current.cnt].itemJSONObj.lexicalPhrase.title}}
             </div>
 
 
-            <div ng-repeat="levelLexicalPhrase in viewerData.levelLexicalPhraseList"
+            <div ng-repeat="levelLexicalPhrase in current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList"
                  ng-show="current.showOne && $index==current.cnt"
                  flex="100" layout="row" class="all" layout-wrap="" layout-align="center center">
                 <div flex="100" layout="row" layout-align="center center"

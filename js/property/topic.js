@@ -6,10 +6,10 @@ angular.module('myApp').controller('topicController',
                 $rootScope.$broadcast('lessonChanged', $scope.current.selectedCourse.selectedLesson.lessonId);
             });
         }
-        $scope.updateTopic = function updateTopic() {
-            topic = $scope.current.selectedCourse.selectedLesson.selectedTopic;
+        $scope.updateTopic = function updateTopic(topic) {
             params = [topic.title, topic.topicId];
             LevelService.updateTopic(params).then(result => {
+                topic.editMode = false;
                 $rootScope.$broadcast('lessonChanged', $scope.current.selectedCourse.selectedLesson.lessonId);
             })
         }

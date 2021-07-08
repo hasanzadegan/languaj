@@ -57,8 +57,8 @@ angular.module('myApp').controller('teachDashboardController', function ($rootSc
         $scope.loadTeach = function (teach) {
             TeachService.getTeach(teach.teachId).then(result=>{
                 // $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedTeach = result;
-                TeachService.updateLevelTeach($scope.current.selectedLevel.levelId,teach.teachId).then(result=>{
-                    $scope.current.selectedLevel.teachId = teach.teachId;
+                TeachService.updateLevelTeach($scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId,teach.teachId).then(result=>{
+                    $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.teachId = teach.teachId;
                 })
                 $rootScope.$broadcast("teachChanged",result);
             })

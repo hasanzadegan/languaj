@@ -3,9 +3,9 @@
         <img flex="100" style="max-height: 100%" src="/img/app/charachters/{{func.charachter}}.svg"/>
     </div>
     <div flex="70">
-        <!--            <img src="/svg/levelType/{{viewerData.levelTypeId}}.svg" width="50px" class="appImg"/>-->
-        <div layout-padding="">{{viewerData.title}}</div>
-        <div class="largeFont">{{current.selectedLevel.questionItem}}</div>
+        <!--            <img src="/svg/levelType/{{current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelTypeId}}.svg" width="50px" class="appImg"/>-->
+        <div layout-padding="">{{current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.title}}</div>
+        <div class="largeFont">{{current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.questionItem}}</div>
     </div>
 </div>
 

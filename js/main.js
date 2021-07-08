@@ -24,7 +24,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     $rootScope.selectedLang = {"langId": 2, "title": "german", "code": "de"};
 
     $scope.func = {};
-    $scope.func.currentVersion = 101985;
+    $scope.func.currentVersion = 101987;
     // $scope.func.currentVersion = getRand();
 
     // $scope.options = {
@@ -95,7 +95,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         $mdDialog.show({
             locals: {dataToPass: extraParam},
             controller: DialogController,
-            templateUrl: 'html/dialog/' + dialogName + '.html',
+            templateUrl: 'html/dialog/' + dialogName + '.html?r='+$scope.currentVersion,
             parent: angular.element(document.body),
             targetEvent: ev,
             clickOutsideToClose: true
@@ -120,7 +120,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     })
 
     $rootScope.setIcon = function (icon) {
-        $scope.config.footerIcon = icon.path;
+        $scope.config.studentPage = icon.path;
         StorageService.setConfig($scope.config);
     }
 
@@ -157,18 +157,18 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     }catch (e) {}
 
     $scope.backToList = function () {
-        $scope.config.footerIcon = "footerLesson";
+        $scope.config.studentPage = "footerLesson";
         StorageService.setConfig($scope.config);
-        $scope.current.selectedLevelId = null;
+        $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel= null;
         StorageService.setData($scope.current);
     }
 
-    if (!$scope.config.footerIcon) {
+    if (!$scope.config.studentPage) {
         $scope.backToList();
     }
 
     $scope.goToSetting = function () {
-        $scope.config.footerIcon = "footerSettings";
+        $scope.config.studentPage = "footerSettings";
         StorageService.setConfig($scope.config);
     }
 
@@ -212,18 +212,18 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
     $scope.$on('levelChanged', function (event, levelId) {
         if (levelId !== null) {
-            $scope.current.selectedLevelId = levelId;
             LessonService.getLevelById(levelId).then(levelResult => {
                 var level = levelResult[0];
-                $scope.current.selectedLevel = level;
-                $rootScope.viewerData = level;
+                $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel = level;
+                StorageService.setData($scope.current);
 
+                $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList = [];
+                var levelLexicalPhraseList = [];
 
                 path = level.levelTypeTitle.split(" ")[0].toLowerCase();
 
                 LevelService.getLevelLexicalPhraseList(levelId).then(result => {
                     $scope.levelItemList = [];
-                    $rootScope.viewerData.levelLexicalPhraseList = [];
                     for (item of result) {
 
                         try {
@@ -234,25 +234,22 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
                         }
 
                         if([3].includes(level.levelTypeId) && item.itemJSONObj.validityTypeId==2){
-                            $scope.current.selectedLevel.correctItem = item.itemJSONObj.title;
-                            $scope.current.selectedLevel.questionItem = item.itemJSONObj.lexicalPhrase.title;
+                            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.correctItem = item.itemJSONObj.title;
+                            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.questionItem = item.itemJSONObj.lexicalPhrase.title;
                         }
 
                         if([13,7].includes(level.levelTypeId)){
-                            $scope.current.selectedLevel.correctItem = item.itemJSONObj.title;
-                            $scope.current.selectedLevel.questionItem = item.itemJSONObj.lexicalPhrase.title;
+                            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.correctItem = item.itemJSONObj.title;
+                            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.questionItem = item.itemJSONObj.lexicalPhrase.title;
                         }
 
                         if([2].includes(level.levelTypeId)){
-                            $scope.current.selectedLevel.correctItem = "";
-                            $scope.current.selectedLevel.questionItem = level.levelTypeTitle;
+                            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.correctItem = "";
+                            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.questionItem = level.levelTypeTitle;
                         }
 
-                        $rootScope.viewerData.levelLexicalPhraseList.push(item);
+                        levelLexicalPhraseList.push(item);
 
-
-
-                        $scope.current.selectedLevelId = levelId;
                         StorageService.setData($scope.current)
 
 
@@ -277,7 +274,12 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
                             title: item.itemJSONObj.lexicalPhrase.title
                         });
                     }
+                    $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList = levelLexicalPhraseList;
 
+                    $scope.func.selectedLevel = $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel;
+
+
+                    StorageService.setData($scope.current);
 
                     //pair
                     $scope.shuffleList = $scope.shuffle($scope.levelItemList)
@@ -287,11 +289,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
                     $rootScope.setViewerPath(path);
 
 
-
-                    console.log("levelChanged>>>>>>>",level.levelLexicalPhraseList)
-
-
-                    $rootScope.$broadcast('levelChangedWithDetail', $rootScope.viewerData.levelId)
+                    $rootScope.$broadcast('levelChangedWithDetail', levelId)
                 })
 
                 StorageService.setData($scope.current);
@@ -304,7 +302,6 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
 
     $scope.showAchievement = function () {
-        // console.log("showAchiveMent");
         $scope.current.viewer = 'html/viewer/achievement.html';
     }
 
@@ -344,8 +341,8 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         }
     })
 
-    if ($scope.current.selectedLevelId !== undefined)
-        $rootScope.$broadcast('levelChanged', $scope.current.selectedLevelId);
+    // if ($scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.level.levelId !== undefined)
+    //     $rootScope.$broadcast('levelChanged', $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.level.levelId);
 
 
     $scope.saveStorage = function () {
@@ -368,7 +365,8 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         $scope.current.mainFlex = 35;
         $scope.current.viwerPage = 'html/viewer/' + path + '.html';
         StorageService.setData($scope.current);
-        $rootScope.$broadcast('levelChanged', $scope.current.selectedLevelId);
+
+        $rootScope.$broadcast('levelChanged', $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.level.levelId);
     }
 
     $rootScope.hidePropertyPage = function () {
@@ -383,9 +381,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     }
 
     $rootScope.setViewerPath = function (levelType) {
-
         $scope.current.viewer = '/html/viewer/' + levelType + '.html'
-        // console.log("setViewerPath", $scope.current.viewer)
         StorageService.setData($scope.current);
     }
 

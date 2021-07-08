@@ -194,7 +194,7 @@ md-dialog {
 
 .searchResult {
     background: #fff;
-    height: 20vh;
+    height: 25vh;
     overflow-y: auto;
     border-bottom: solid 1px rgba(0, 0, 0, 0.12);
 }
@@ -590,9 +590,9 @@ input {
 
 
 .headTitle {
-    background: rgba(0, 185, 185, 0.1);
-    border-top: solid 1px #00cccc;
-    border-bottom: solid 1px #00cccc;
+    background: rgba(185, 185, 185, 0.1);
+    border-top: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
     height: 40px;
 }
 
@@ -619,7 +619,6 @@ input {
     background: rgba(0, 185, 185, 0.1);
     border-top: solid 1px #00cccc;
     border-bottom: solid 1px #00cccc;
-    height: 50px;
 }
 
 .levelTypeCard {
@@ -1191,4 +1190,9 @@ input[type=number]::-webkit-outer-spin-button {
 
 .review {
     width: 25px;
+}
+
+.courseItemTeacher {
+    border:solid 1px gray;
+    min-height: 100px;
 }

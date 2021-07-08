@@ -2,16 +2,24 @@ angular.module('myApp').service('WordService', function ($rootScope, $path, Http
     return {
         searchPhrase: function (phrase) {
             const def = $q.defer();
-            param = {title: phrase};
+            param = {
+                title: phrase,
+                sourceLangId:sourceLangId,
+                destLangId:destLangId
+            };
 
             HttpService.post($path.url + "/api/searchPhrase", param).then(function (result) {
                 def.resolve(result);
             })
             return def.promise;
         },
-        searchSoundex: function (phrase) {
+        searchSoundex: function (phrase,sourceLangId,destLangId) {
             const def = $q.defer();
-            param = {title: phrase};
+            param = {
+                title: phrase,
+                sourceLangId:sourceLangId,
+                destLangId:destLangId
+            };
             HttpService.post($path.url + "/api/searchSoundex", param).then(function (result) {
                 def.resolve(result);
             })

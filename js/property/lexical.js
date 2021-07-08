@@ -1,13 +1,7 @@
 angular.module('myApp').controller('lexicalController',
     function ($rootScope, $scope, $q, $mdDialog, WordService, BaeService, StorageService,LevelService,ArchiveService) {
 
-        $scope.relationTypeList = {
-            1:{relationTypeId:1,title:"translate",icon:"translate"},
-            2:{relationTypeId:2,title:"synonym",icon:"text_fields"},
-            3:{relationTypeId:3,title:"opposite",icon:"import_export"},
-            4:{relationTypeId:4,title:"plural or singular",icon:"hdr_strong"},
-            // 5:{relationTypeId:5,title:"singular",icon:"hdr_weak"},
-        }
+
 
         $scope.getLexicalOtherPhraseList = function () {
             if($scope.current.selectedPhrase===undefined || $scope.current.selectedPhrase==null)
@@ -17,6 +11,40 @@ angular.module('myApp').controller('lexicalController',
             WordService.getLexicalOtherPhraseList(wordId).then(function (result) {
                 $scope.current.selectedPhrase.relationLexicalList = result;
                 StorageService.setConfig($scope.current);
+
+
+                var translateLangId;
+                var otherLangId;
+                if($scope.current.selectedCourse.sourceLangId == $scope.current.selectedPhrase.langId)
+                {
+                    translateLangId = $scope.current.selectedCourse.destLangId;
+                    otherLangId = $scope.current.selectedCourse.sourceLangId;
+                }else {
+                    translateLangId = $scope.current.selectedCourse.sourceLangId;
+                    otherLangId = $scope.current.selectedCourse.destLangId;
+                }
+
+
+
+                $scope.relationTypeList = {
+                    1:{relationTypeId:1,title:"translate",icon:"translate",
+                        langId:translateLangId
+                    },
+                    2:{relationTypeId:2,title:"synonym",icon:"text_fields",
+                        langId:otherLangId
+                    },
+                    3:{relationTypeId:3,title:"opposite",icon:"import_export",
+                        langId:otherLangId
+                    },
+                    // 4:{relationTypeId:4,title:"plural or singular",icon:"hdr_strong"},
+                    // 5:{relationTypeId:5,title:"singular",icon:"hdr_weak"},
+                }
+
+                console.log("course sourceLangId => ",$scope.current.selectedCourse.sourceLangId)
+                console.log("course destLangId => ",$scope.current.selectedCourse.destLangId)
+                console.log("phrase langId => ",$scope.current.selectedPhrase.langId)
+                console.log("phrase isSourceLang => ",$scope.isSourceLang)
+
             })
         }
 
@@ -35,7 +63,7 @@ angular.module('myApp').controller('lexicalController',
         })
 
         $scope.showImage= function(lexicalPhrase,relation){
-            $scope.current.selectedLexicalPhrase = lexicalPhrase;
+            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLexicalPhrase = lexicalPhrase;
             StorageService.setData($scope.current);
             lexicalPhrase.lexicalId = relation.lexicalId;
             $scope.toggleImageList();
@@ -69,7 +97,7 @@ angular.module('myApp').controller('lexicalController',
                 };
                 itemJSON = JSON.stringify(itemJSON);
 
-                levelId = $scope.viewerData.levelId;
+                levelId = $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId;
                 LevelService.assignLevelLexicalPhrase(levelId,baseLexicalPhraseId,itemJSON).then(result=>{
                     $rootScope.$broadcast('levelChanged', levelId);
                 });

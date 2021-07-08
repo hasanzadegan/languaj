@@ -1,20 +1,31 @@
 const query = require('../helpers/query');
 
 module.exports = {
-    searchPhrase: async function (title) {
+    searchPhrase: async function (params) {
+        title = params.title;
+        sourceLangId = params.sourceLangId;
+        destLangId = params.destLangId;
+
         stmt = 'select p.phraseId,p.langId,p.genderId,p.title,p.isMultiWord,p.isExtracted' +
             ' from phrase p where title like  \'%' + title + '%\' ' +
+            ' and p.langId in('+sourceLangId+','+destLangId+')' +
             ' order by length(title)' +
             ' limit 10';
         return await query(stmt).then(function (result) {
             return result;
         })
     },
-    searchSoundex: async function (word) {
+    searchSoundex: async function (params) {
+        word = params.title;
+        sourceLangId = params.sourceLangId;
+        destLangId = params.destLangId;
         stmt = 'select p.phraseId,p.langId,p.genderId,p.title,p.isMultiWord,p.isExtracted' +
             ' from phrase p ' +
             ' where UPPER(SOUNDEX(deutscheReplace(title)))=UPPER(SOUNDEX (deutscheReplace(?))) ' +
+            ' and p.langId in('+sourceLangId+','+destLangId+')' +
             ' limit 10';
+        console.log(stmt);
+
         return await query(stmt,word).then(function (result) {
             return result;
         })
@@ -251,7 +262,7 @@ module.exports = {
             return result;
         })
     },
-    updateLevelItemJson: async function (params) {
+    updateLevelLexicalJson: async function (params) {
         stmt = '' +
             ' update LevelLexicalPhrase set ' +
             ' ItemJSON = ? ' +

@@ -35,7 +35,7 @@
              ng-click="loadTeach(item)"
              class="md-button"
              ng-repeat="item in current.selectedCourse.selectedLesson.selectedTopic.topicTeachList"
-             ng-class="current.selectedLevel.teachId===item.teachId?'selectedTeach':''"
+             ng-class="current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.teachId===item.teachId?'selectedTeach':''"
 
             >
 

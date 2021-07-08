@@ -4,13 +4,13 @@ const word = require('../word/word');
 module.exports = function(app){
 
     app.post('/api/searchPhrase', (req, res) => {
-        word.searchPhrase(req.body.title).then(function (result) {
+        word.searchPhrase(req.body).then(function (result) {
             res.send(result);
         })
     });
 
     app.post('/api/searchSoundex', (req, res) => {
-        word.searchSoundex(req.body.title).then(function (result) {
+        word.searchSoundex(req.body).then(function (result) {
             res.send(result);
         })
     });

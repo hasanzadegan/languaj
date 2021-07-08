@@ -4,12 +4,12 @@ angular.module('myApp').controller('conjugationController',
         $scope.qustionList = {};
 
         $scope.$on('levelChangedWithDetail', function (event, levelId) {
-            if ($rootScope.viewerData.levelLexicalPhraseList.length < 1) {
+            if ($scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList.length < 1) {
                 // console.log("need to element");
             } else {
                 $scope.conjugations = {};
 
-                $scope.wordList = $rootScope.viewerData.levelLexicalPhraseList[0].itemJSONObj.wordList;
+                $scope.wordList = $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList[0].itemJSONObj.wordList;
                 var cnt = 0;
                 $scope.verbList =  $scope.wordList.filter(function (word) {
                     if(word.POSTypeId===2)
@@ -25,7 +25,7 @@ angular.module('myApp').controller('conjugationController',
             }
         });
 
-        $rootScope.$broadcast('levelChangedWithDetail', $rootScope.viewerData.levelId)
+        $rootScope.$broadcast('levelChangedWithDetail', $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId)
 
 
         $scope.setWordAnswer = function (word, conjugation, index) {

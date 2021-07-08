@@ -18,7 +18,7 @@
         <md-list flex="100" layout-wrap>
             <div flex="=100"
                  ng-repeat="level in current.selectedCourse.selectedLesson.selectedTopic.levelList | filter:{review:current.review}"
-                 style="{{level.levelId==current.selectedLevelId?'background:#ddd':''}}"
+                 class="{{level.levelId==current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId?'redC':''}}"
                  title="{{level}}" layout="row">
                 <div ng-show="current.editMode" layout="row">
                     <md-button class="md-icon-button" ng-click="addToSelectedItem(level)">
@@ -62,7 +62,8 @@
                                ng-dblclick="editMode = !editMode"
                     >{{level.title}}</md-button>
                     <div flex></div>
-                    <md-button ng-click="deleteLevel(viewerData.levelId)" ng-dblclick="deleteLevel(viewerData.levelId,1)" ng-show="level.levelId==current.selectedLevelId">
+                    <md-button ng-click="deleteLevel(current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId)" ng-dblclick="deleteLevel(current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId,1)"
+                               ng-show="level.levelId==current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId">
                         <md-icon md-svg-src="/svg/action/delete.svg">delete</md-icon>
                     </md-button>
                 </div>

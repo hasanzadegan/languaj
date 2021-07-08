@@ -9,7 +9,7 @@ angular.module('myApp').controller('pairController',
             failCount = 0;
             $scope.current.answerIsCorrect = null;
             $scope.func.disableList = {};
-            $scope.viewerData.title = null;
+            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.title = null;
         };
 
         $scope.resetPair();

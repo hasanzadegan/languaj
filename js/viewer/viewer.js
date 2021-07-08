@@ -2,12 +2,13 @@ angular.module('myApp').controller('viewerController',
     function ($rootScope, $scope, $q, WordService, BaeService, StorageService, SoundService, LessonService, LevelService, ArchiveService) {
 
         $scope.$on('levelChanged', function (event, levelId) {
+            console.log("viewer>>>>>>>>>>",$scope.func.selectedLevel)
             $scope.func.charachter = $scope.getRandomInt(101, 108);
             $scope.current.answerIsCorrect = null;
         });
 
         try{
-            $scope.current.correctAnswer = $scope.viewerData.levelLexicalPhraseList[0].itemJSONObj.title;
+            $scope.current.correctAnswer = $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList[0].itemJSONObj.title;
         }catch (e) {
             $scope.current.correctAnswer = "";
         }
@@ -41,7 +42,7 @@ angular.module('myApp').controller('viewerController',
         }
 
         $scope.func.isInCorrect = function () {
-            $scope.viewerData.levelLexicalPhraseList.filter(item => {
+            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList.filter(item => {
                 if(item.itemJSONObj.validityTypeId===1)
                 {
                     $scope.current.correctAnswerText = item.itemJSONObj.lexicalPhrase.title;

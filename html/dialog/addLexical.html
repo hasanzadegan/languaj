@@ -7,6 +7,9 @@
             </h4>
             <div layout-padding="" flex="100" class="scrollable">
                 <div flex="100" layout="row" layout-padding>
+                    <div>
+                        <div class="flags Flag{{mdDialogData.langId}}"></div>
+                    </div>
                     <input flex="100" class="searchPhrase" ng-model="current.lexical.searchText"
                            ng-keyup="findLexicalPhrase()">
                 </div>

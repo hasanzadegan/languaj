@@ -14,9 +14,9 @@ app.service('LevelService', function ($rootScope, $path, HttpService, StorageSer
             })
             return def.promise;
         },
-        updateLevelItemJson:function(params) {
+        updateLevelLexicalJson:function(params) {
             const def = $q.defer();
-            HttpService.post($path.url + "/api/updateLevelItemJson",params).then(function (result) {
+            HttpService.post($path.url + "/api/updateLevelLexicalJson",params).then(function (result) {
                 def.resolve(result);
             })
             return def.promise;

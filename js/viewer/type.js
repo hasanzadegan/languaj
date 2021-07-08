@@ -11,7 +11,7 @@ angular.module('myApp').controller('typeController',
         });
 
         $scope.func.checkType = function () {
-            if($scope.viewerData.levelLexicalPhraseList[0].title===$scope.current.typeText){
+            if($scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList[0].title===$scope.current.typeText){
                 $scope.func.isCorrect();
             } else {
                 $scope.func.isInCorrect();

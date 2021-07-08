@@ -39,10 +39,10 @@
 
     <script src="https://code.responsivevoice.org/responsivevoice.js?key=vXDMrEll"></script>
     <!--definition-->
-    <script src="js/app.js?v=22.1"></script>
-    <script src="js/main.js?v=22.1"></script>
-    <script src="js/path.js?v=22.1"></script>
-    <script src="js/label.js?v=22.1"></script>
+    <script src="js/app.js?v=24.1"></script>
+    <script src="js/main.js?v=24.1"></script>
+    <script src="js/path.js?v=24.1"></script>
+    <script src="js/label.js?v=24.1"></script>
 
     <!-- services-->
     <script src="service/HttpService.js"></script>
@@ -60,8 +60,8 @@
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="node_modules/material-icons-font/material-icons-font.css">
 
-    <link rel="stylesheet" href="css/global.css?v=22.2">
-    <link rel="stylesheet" href="css/student.css?v=22.2">
+    <link rel="stylesheet" href="css/global.css?v=24.2">
+    <link rel="stylesheet" href="css/student.css?v=24.2">
     <!--    <link rel="stylesheet" href="layout/flipCard/ccjmne-card-flip.css">-->
 
     <!--        <script src="node_modules/wavesurfer-angular/dist/js/wavesurfer-angular.js"></script>-->
@@ -93,10 +93,10 @@
 <!--    <img src="/img/app/splash-logo.svg" class="appImg splashImage"/>-->
 <!--</div>-->
 <!--<div class="viewerBody" style="width:100vw" layout="row" flex="100">-->
-<div class="topHead" flex="100" layout="row" ng-show="!current.selectedLevelId"></div>
+<div class="topHead" flex="100" layout="row" ng-show="!current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.level.levelId"></div>
 
 <div layout="column" flex="100" style="z-index: 10">
-    <div ng-show="config.footerIcon" ng-include="'html/footer/'+config.footerIcon+'.html?v='+func.currentVersion" layout="column" flex></div>
+    <div ng-show="config.studentPage" ng-include="'html/footer/'+config.studentPage+'.html?v='+func.currentVersion" layout="column" flex></div>
 </div>
 
 

@@ -5,6 +5,8 @@ const word = require('../word/word');
 module.exports = function(app){
 
     app.post('/api/updateCourse', (req, res) => {
+        console.log("/api/updateCourse",req.body)
+
         lesson.updateCourse(req.body).then(function (result) {
             res.send(result);
         })
@@ -88,7 +90,7 @@ module.exports = function(app){
 
     app.post('/api/addCourse', async (req, res) => {
         user = await global.getUser(req);
-        params = [user.userId, req.body.langId, req.body.title];
+        params = [user.userId, req.body.sourceLangId,req.body.destLangId, req.body.title];
         console.log(params)
         lesson.addCourse(params).then(function (result) {
             res.send(result);

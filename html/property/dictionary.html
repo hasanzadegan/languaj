@@ -7,9 +7,6 @@
                     <!--                        <md-icon ng-show="config.showSearchResult">keyboard_arrow_down</md-icon>-->
                     <!--                        <md-icon ng-show="!config.showSearchResult">play_circle_filled</md-icon>-->
                     <!--                    </md-button>-->
-                    <div>
-                        <div class="flags Flag2"></div>
-                    </div>
                     <input flex="90" class="searchPhrase" ng-model="current.searchText"
                            ng-keyup="findPhrase()">
                     <!--                    <div flex="20" layout="row" layout-wrap="">-->
@@ -22,8 +19,23 @@
                 <div flex="100" class="searchResult" ng-show="config.showSearchResult">
                     <div layout="row">
                         <small flex="100" class="hint" ng-if="current.didYouMean">
-                            <md-icon class="hintIcon">sentiment_dissatisfied</md-icon>
-                            {{current.searchText}} not fond did you mean
+                            <div layout-padding="" layout-wrap="">
+                                <md-icon class="hintIcon">sentiment_dissatisfied</md-icon>
+                                {{current.searchText}} not found.
+                                <div layout="row">
+                                    <md-button ng-click="addPhrase(current.searchText,current.selectedCourse.destLangId)" layout="row">
+                                        <md-icon>add_box</md-icon>
+                                        <i>{{current.searchText}}</i>
+                                        <div class="flagBar Flag{{current.selectedCourse.destLangId}}"></div>
+                                    </md-button>
+                                    <md-button ng-click="addPhrase(current.searchText,current.selectedCourse.sourceLangId)" layout="row">
+                                        <md-icon>add_box</md-icon>
+                                        <i>{{current.searchText}}</i>
+                                        <div class="flagBar Flag{{current.selectedCourse.sourceLangId}}"></div>
+                                    </md-button>
+                                </div> or maybe                                 did you mean?
+
+                            </div>
                         </small>
                     </div>
                     <md-list flex="100">
@@ -55,15 +67,6 @@
                             <md-button class="md-icon-button" ng-click="deletePhrase($event)">
                                 <md-icon md-svg-src="/svg/action/delete.svg"></md-icon>
                             </md-button>
-                        </md-list-item>
-                        <md-list-item flex="100" layout="row">
-                            <md-button class="md-icon-button md-accent" ng-click="addPhrase(current.searchText)">
-                                <md-icon>add_box</md-icon>
-                            </md-button>
-                            <div class="flagBar Flag{{phrase.langId}}"></div>
-                            <div layout-padding flex="90">
-                                <i>{{current.searchText}}</i>
-                            </div>
                         </md-list-item>
                     </md-list>
                 </div>

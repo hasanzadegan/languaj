@@ -69,7 +69,6 @@ angular.module('myApp').controller('courseListController',
 
 
         $scope.getStudentTopicLevelList = function (topic,review) {
-            console.log(">>>>>>>>>>review",topic,review)
             $scope.current.student.selectedCourse.selectedTopic = topic;
             $scope.current.student.selectedCourse.selectedTopic.levelList = [];
             $scope.current.answerIsCorrect = null;
@@ -80,9 +79,9 @@ angular.module('myApp').controller('courseListController',
                     $scope.current.student.selectedCourse.selectedTopic.levelList = result;
                     $scope.current.student.selectedCourse.selectedTopic.levelIndex = 0;
                     StorageService.setData($scope.current);
-                    $scope.config.footerIcon = 'studentLevel';
+                    $scope.config.studentPage = 'studentLevel';
                     StorageService.setConfig($scope.config);
-                    $scope.selectStudentLevel(result[0].levelId);
+                    // $scope.selectStudentLevel(result[0].levelId);
                 }
             })
         }

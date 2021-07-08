@@ -12,9 +12,9 @@ angular.module('myApp').controller('lessonDashboardController', function ($rootS
 
         var removeAfterCopy = 0;
 
-        $scope.addToSelectedItem = function(level){
+        $scope.addToSelectedItem = function (level) {
             level.clipboard = !level.clipboard;
-            if(level.clipboard){
+            if (level.clipboard) {
                 LevelService.getLevelLexicalPhraseList(level.levelId).then(result => {
                     level.levelItemList = result;
                 });
@@ -22,12 +22,16 @@ angular.module('myApp').controller('lessonDashboardController', function ($rootS
         }
 
 
-    $document.bind('keyup', function (event) {
+        $document.bind('keyup', function (event) {
 
-            if($scope.current.selectedCourse)
-                var selectedItemList = $scope.current.selectedCourse.selectedLesson.selectedTopic.levelList.filter(level=>{
+            try{
+                $scope.current.selectedCourse.selectedLesson.selectedTopic.levelList.filter(level => {
                     return level.clipboard == true;
-                })
+                });
+            }catch (e) {
+                console.log("test")
+            }
+
 
             if (event.keyCode == 88 && event.ctrlKey) {
                 localStorage.setItem("__clipboard", JSON.stringify($scope.current.selectedLevel));
@@ -50,7 +54,7 @@ angular.module('myApp').controller('lessonDashboardController', function ($rootS
             review = $scope.current.review;
             level = {
                 topicId: topicId,
-                review:review,
+                review: review,
                 levelId: clipboard.levelId,
                 title: clipboard.title,
                 teachId: clipboard.teachId,
@@ -84,17 +88,17 @@ angular.module('myApp').controller('lessonDashboardController', function ($rootS
         }
 
         $scope.deleteLevel = function (levelId, force) {
-            $scope.current.selectedLevelId = null;
             topicId = $scope.current.selectedCourse.selectedLesson.selectedTopic.topicId;
-
             if (force)
                 LessonService.forceDeleteLevel(levelId).then(result => {
                     $rootScope.$broadcast('topicChanged', topicId);
+                    $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel = null;
                     StorageService.setData($scope.current);
                 });
             else
                 LessonService.deleteLevel(levelId).then(result => {
                     $rootScope.$broadcast('topicChanged', topicId);
+                    $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel = null;
                     StorageService.setData($scope.current);
                 });
         }
@@ -115,7 +119,9 @@ angular.module('myApp').controller('lessonDashboardController', function ($rootS
 
         $scope.$on("levelDataChanged", function ($event, level) {
             $scope.current.teach = null;
-            $scope.current.selectedLevel = level;
+            StorageService.setData($scope.current);
+
+            // $scope.current.selectedLevel = level;
             if (level.levelTypeId === 12) {
                 $rootScope.setPropertyPage('teach');
                 if (level.teachId !== null) {
@@ -126,15 +132,13 @@ angular.module('myApp').controller('lessonDashboardController', function ($rootS
                     });
                 }
             } else {
+                StorageService.setData($scope.current);
                 $rootScope.setPropertyPage('dictionary');
             }
             $rootScope.$broadcast('levelChanged', level.levelId);
         })
 
-        $scope.setLevel = function ($event,level) {
-            $scope.current.selectedLevelItem = undefined;
-            $scope.current.selectedLevelId = level.levelId;
-            $scope.current.selectedLevelTypeId = level.levelTypeId;
+        $scope.setLevel = function ($event, level) {
             $rootScope.$broadcast('levelDataChanged', level);
         }
 
@@ -146,9 +150,10 @@ angular.module('myApp').controller('lessonDashboardController', function ($rootS
 
         $scope.getTopicList = function (lessonId) {
             LessonService.getTopicList(lessonId).then(result => {
-                $scope.current.topicList = result;
-                if($scope.current.student.selectedCourse)
-                    $scope.current.student.selectedCourse.selectedTopic = 0;
+                // $scope.current.topicList = result;
+                $scope.current.selectedCourse.selectedLesson.topicList = result;
+                // if ($scope.current.student.selectedCourse)
+                //     $scope.current.student.selectedCourse.selectedTopic = 0;
                 StorageService.setData($scope.current);
             })
         }
@@ -168,12 +173,12 @@ angular.module('myApp').controller('lessonDashboardController', function ($rootS
             review = $scope.current.review;
 
             level = {
-                levelTypeId:1,
+                levelTypeId: 1,
                 topicId: topicId,
-                teachId:null,
+                teachId: null,
                 title: title,
-                isActive:1,
-                review:review
+                isActive: 1,
+                review: review
             }
             console.log(level)
 
@@ -191,7 +196,7 @@ angular.module('myApp').controller('lessonDashboardController', function ($rootS
         });
 
 
-        if(!$scope.current.review)
+        if (!$scope.current.review)
             $scope.current.review = 1;
         $scope.selectReview = function (review) {
             $scope.current.review = review;

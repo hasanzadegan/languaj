@@ -184,10 +184,6 @@ md-dialog {
     border-left: solid 5px #FF4081;
 }
 
-.selectedRow {
-    background: white;
-    /*border-left: solid 5px #FF4081;*/
-}
 
 .selectedPhrase .lexical {
     /*border-right: solid 3px #bb66ff;*/
@@ -621,12 +617,6 @@ input {
     height: 100vh;
 }
 
-.headSubTitle {
-    background: rgba(0, 185, 185, 0.1);
-    border-top: solid 1px #00cccc;
-    border-bottom: solid 1px #00cccc;
-    height: 50px;
-}
 
 .levelTypeCard {
     height: 50px;

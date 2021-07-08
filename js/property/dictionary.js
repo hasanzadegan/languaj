@@ -1,10 +1,9 @@
 angular.module('myApp').controller('dictionaryController',
     function ($rootScope, $scope, $q, WordService, BaeService, StorageService) {
 
-        $rootScope.addPhrase = function (phrase) {
-
-
-            WordService.addPhrase($rootScope.selectedLang.langId, phrase).then(result => {
+        $rootScope.addPhrase = function (phrase,langId) {
+            console.log("$rootScope.addPhrase",phrase,langId)
+            WordService.addPhrase(langId, phrase).then(result => {
                 for(item of ["?",".","!"]){
                     result.title = result.title.replace(item," "+item);
                 }
@@ -15,18 +14,23 @@ angular.module('myApp').controller('dictionaryController',
         }
 
         $rootScope.findPhrase = function () {
+            sourceLangId = $scope.current.selectedCourse.sourceLangId;
+            destLangId = $scope.current.selectedCourse.destLangId;
+
             $scope.config.showSearchResult = true;
             phrase = $scope.current.searchText;
-            WordService.searchPhrase(phrase).then(result => {
+            $scope.current.didYouMean = false;
+
+            WordService.searchPhrase(phrase,sourceLangId,destLangId).then(result => {
                 $scope.current.phraseList = result;
                 if(result.length===0){
                     $scope.current.phraseList = result;
-                    WordService.searchSoundex(phrase).then(soundexResult=>{
+
+
+                    WordService.searchSoundex(phrase,sourceLangId,destLangId).then(soundexResult=>{
+                        $scope.current.didYouMean = true;
+                        console.log("soundexResult.length",soundexResult.length,$scope.current.didYouMean)
                         $scope.current.phraseList = soundexResult;
-                        if(soundexResult.length===0)
-                            $scope.current.didYouMean = false;
-                        else
-                            $scope.current.didYouMean = true;
                         StorageService.setConfig($scope.config);
                     })
                 }
@@ -40,7 +44,7 @@ angular.module('myApp').controller('dictionaryController',
 
         $rootScope.selectPhrase = function (phrase) {
             $scope.current.selectedPhrase = phrase;
-            $scope.current.selectedLexicalPhrase = null;
+            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLexicalPhrase = null;
             $rootScope.$broadcast("phraseSoundChanged",null);
 
             WordService.getPhraseWordList(phrase.phraseId).then(function (result) {

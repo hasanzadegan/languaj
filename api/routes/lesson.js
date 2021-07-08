@@ -33,8 +33,8 @@ module.exports = function(app){
         })
     });
 
-    app.post('/api/updateLevelItemJson', (req, res) => {
-        word.updateLevelItemJson(req.body).then(function (result) {
+    app.post('/api/updateLevelLexicalJson', (req, res) => {
+        word.updateLevelLexicalJson(req.body).then(function (result) {
             res.send(result);
         })
     });

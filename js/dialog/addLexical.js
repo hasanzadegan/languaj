@@ -8,6 +8,7 @@ angular.module('myApp').controller('addLexicalController',
 
 
         $scope.findLexicalPhrase = function(){
+            console.log("findLexicalPhrase",$scope.mdDialogData.langId)
             if($scope.current.lexical.searchText==undefined)
                 return;
             phrase = $scope.current.lexical.searchText;

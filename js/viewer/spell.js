@@ -1,6 +1,6 @@
 angular.module('myApp').controller('spellController',
     function ($rootScope, $scope, $q, $timeout, WordService, BaeService, StorageService, LessonService, SoundService) {
-        // $scope.lexicalPhrase = $scope.viewerData.levelLexicalPhraseList[0];
+        // $scope.lexicalPhrase = $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList[0];
 
         $scope.$on('levelChanged', function (event, levelId) {
         });
@@ -38,7 +38,7 @@ angular.module('myApp').controller('spellController',
             allCorrect = true;
             allDone = true;
 
-            for (item of $scope.viewerData.levelLexicalPhraseList) {
+            for (item of $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList) {
                 if (item.result === false)
                     allCorrect = false;
                 if (item.result === undefined)

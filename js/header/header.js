@@ -2,6 +2,7 @@ angular.module('myApp').controller('headerController', function ($rootScope, $sc
                                                                  TeachService,
                                                                  StorageService,
                                                                  LessonService,
+                                                                 LevelService,
                                                                  $q, $path) {
 
     $scope.impersonate = function (teacher) {
@@ -19,6 +20,24 @@ angular.module('myApp').controller('headerController', function ($rootScope, $sc
         })
     }
 
+
+
+    $scope.updateCourseLang = function (course,sourceLangId,destLangId) {
+        params = [
+            $scope.current.selectedCourse.title,
+            sourceLangId,
+            destLangId,
+            $scope.current.selectedCourse.courseId,
+        ];
+        console.log(params)
+        LevelService.updateCourse(params).then(result => {
+            $scope.current.selectedCourse.sourceLangId = sourceLangId;
+            $scope.current.selectedCourse.destLangId = destLangId;
+            StorageService.setData($scope.current);
+            course.editMode = false;
+        });
+    }
+
     // $scope.showTeach = function () {
     //     $scope.current.showTeach = false;
     //
@@ -32,7 +51,7 @@ angular.module('myApp').controller('headerController', function ($rootScope, $sc
 
     $scope.hideTeach = function () {
         $scope.current.teachIsShow = false;
-        path = $scope.current.selectedLevel.levelTypeTitle;
+        path = $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelTypeTitle;
         $rootScope.setLevelTypePath(path);
         $rootScope.setViewerPath(path);
 

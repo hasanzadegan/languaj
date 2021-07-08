@@ -1,11 +1,11 @@
 angular.module('myApp').controller('commicController', function ($rootScope, $scope, $path,StorageService) {
     $scope.saveItem = function () {
-        $scope.updateLevelItemJson($scope.current.selectedLevelItem);
+        $scope.updateLevelLexicalJson($scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLevelLexicalPhrase);
     }
 
     $scope.saveCharacter = function(id){
-        $scope.current.selectedLevelItem.itemJSONObj.character = id;
-        $scope.updateLevelItemJson($scope.current.selectedLevelItem);
+        $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLevelLexicalPhrase.itemJSONObj.character = id;
+        $scope.updateLevelLexicalJson($scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLevelLexicalPhrase);
     }
 
     $scope.number = 30;

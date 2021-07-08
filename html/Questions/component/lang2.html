@@ -1,7 +1,7 @@
 <h5>second lang</h5>
 <div layout="row" flex="100">
-    <div ng-init="selectedLevelItem.langsStr=selectedLevelItem.langs.join()"></div>
-    <md-select ng-model="selectedLevelItem.langsStr" ng-change="changeLang()">
+    <div ng-init="selectedLevelLexicalPhrase.langsStr=selectedLevelLexicalPhrase.langs.join()"></div>
+    <md-select ng-model="selectedLevelLexicalPhrase.langsStr" ng-change="changeLang()">
         <md-option ng-repeat="item in queryLang()" value="{{item}}" >
             {{item}}
         </md-option>

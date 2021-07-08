@@ -14,12 +14,12 @@ angular.module('myApp').controller('articleController',
             });
 
 
-            if ($rootScope.viewerData.levelLexicalPhraseList.length < 1) {
+            if ($scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList.length < 1) {
                 console.log("need to element");
             } else {
                 $scope.conjugations = {};
 
-                $scope.wordList = $rootScope.viewerData.levelLexicalPhraseList[0].itemJSONObj.wordList;
+                $scope.wordList = $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList[0].itemJSONObj.wordList;
                 var cnt = 0;
                 $scope.articleList =  $scope.wordList.filter(function (word) {
                     if(word.POSTypeId===5)
@@ -31,10 +31,10 @@ angular.module('myApp').controller('articleController',
                 })
             }
             //
-            // if ($rootScope.viewerData.levelLexicalPhraseList.length >= 1) {
+            // if ($scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList.length >= 1) {
             //     console.log(">>>>>", $scope.current.kasusList)
             //     $scope.pronounList = {};
-            //     $scope.wordList = $rootScope.viewerData.levelLexicalPhraseList[0].itemJSONObj.wordList;
+            //     $scope.wordList = $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList[0].itemJSONObj.wordList;
             //
             //
             //     for (word of $scope.wordList) {
@@ -47,7 +47,7 @@ angular.module('myApp').controller('articleController',
             // }
         });
 
-        $rootScope.$broadcast('levelChangedWithDetail', $rootScope.viewerData.levelId)
+        $rootScope.$broadcast('levelChangedWithDetail', $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId)
 
 
         $scope.setWordAnswer = function (word, pronoun, index) {

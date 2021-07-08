@@ -1,15 +1,16 @@
+const global = require('../routes/_global');
 const query = require('../helpers/query');
 
 module.exports = {
     getCourseList: async function (userId, langId) {
         stmt = '' +
-            ' select courseId,title,sourceLangId,destlangId ' +
+            ' select courseId,title,sourceLangId,destLangId ' +
             ' from course ' +
-            ' where creatorUserId = ? ' +
-            ' and DestlangId = ? ';
+            ' where creatorUserId = ? '
+            // +' and DestlangId = ? ';
 
-        params = [userId, langId];
-        console.log(stmt, params)
+        // params = [userId, langId];
+        params = [userId];
         return await query(stmt, params).then(function (result) {
             return result;
         })
@@ -56,15 +57,15 @@ module.exports = {
     },
     addCourse: async function (params) {
         stmt = '' +
-            ' insert into course(creatorUserId,langId,title)' +
-            ' values(?,?,?)';
+            ' insert into course(creatorUserId,sourceLangId,destLangId,title)' +
+            ' values(?,?,?,?)';
         return await query(stmt, params).then(function (result) {
             return result;
         })
     },
     updateCourse: async function (params) {
         stmt = '' +
-            ' update course set title = ? ' +
+            ' update course set title = ?,sourceLangId = ?, destLangId=?  ' +
             ' where  courseId = ?';
         return await query(stmt, params).then(function (result) {
             return result;
@@ -72,7 +73,7 @@ module.exports = {
     },
     updateLesson: async function (params) {
         stmt = '' +
-            ' update lesson set title = ? ' +
+            ' update lesson set title = ?' +
             ' where  lessonId = ?';
         return await query(stmt, params).then(function (result) {
             return result;
@@ -106,7 +107,10 @@ module.exports = {
             return result;
         })
     },
-    deleteCourse: async function (courseId) {
+    deleteCourse: async function (courseCode) {
+        var courseId = global.base64ToInt(courseCode);
+        console.log("deleteCourse",courseCode,courseId)
+
         stmt = ' delete from course where courseId=' + courseId;
         console.log(stmt);
         return await query(stmt).then(function (result) {

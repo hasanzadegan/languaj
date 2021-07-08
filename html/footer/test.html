@@ -6,7 +6,7 @@
 
 <div flex="100" layout="column">
     <div flex="90" layout-align="center center" layout="row">
-        <div ng-repeat="levelLexicalPhrase in viewerData.levelLexicalPhraseList"
+        <div ng-repeat="levelLexicalPhrase in current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList"
              ng-show="current.lexicalIndex==$index"
              flex="100" layout="row">
             <div flex="15" layout="row" layout-align="center center">
@@ -64,7 +64,7 @@
             </div>
             <div flex="15" layout="row" layout-align="center center">
                 <md-button class="md-icon-button redB" ng-click="showItem($index+1)"
-                           ng-show="$index<viewerData.levelLexicalPhraseList.length-1">
+                           ng-show="$index<current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList.length-1">
                     <md-icon>arrow_forward</md-icon>
                 </md-button>
             </div>
@@ -73,7 +73,7 @@
     </div>
     <div flex="10" layout="row">
         <md-button flex="100"
-                   ng-disabled="$index<viewerData.levelLexicalPhraseList.length-1"
+                   ng-disabled="$index<current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList.length-1"
                    class="redB checkButton" ng-click="func.iGotIt()">ok
         </md-button>
     </div>

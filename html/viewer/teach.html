@@ -35,7 +35,7 @@
     <div layout-align="center center" flex="10" layout="row">
         <md-button
                 flex="90"
-                ng-disabled="$index<viewerData.levelLexicalPhraseList.length-1"
+                ng-disabled="$index<current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList.length-1"
                 class="blueB checkButton" ng-click="func.iGotIt()">ok
         </md-button>
     </div>

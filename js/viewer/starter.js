@@ -11,12 +11,12 @@ angular.module('myApp').controller('starterController',
 
 
         $scope.serialPlay = function ($event, soundId, cnt) {
-            if ($scope.viewerData.levelLexicalPhraseList.length > cnt) {
+            if ($scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList.length > cnt) {
                 SoundService.playSound(soundId, true).then(result => {
                     $scope.current.cnt = cnt + 1;
                     // $timeout(function () {
-                    if ($scope.viewerData.levelLexicalPhraseList[$scope.current.cnt])
-                        $scope.serialPlay($event, $scope.viewerData.levelLexicalPhraseList[$scope.current.cnt].itemJSONObj.soundId, $scope.current.cnt)
+                    if ($scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList[$scope.current.cnt])
+                        $scope.serialPlay($event, $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList[$scope.current.cnt].itemJSONObj.soundId, $scope.current.cnt)
                     // }, 1000);
                 }).catch(error => {
                 })
@@ -32,6 +32,6 @@ angular.module('myApp').controller('starterController',
 
         $scope.playAll = function ($event) {
             $scope.current.cnt = 0;
-            $scope.serialPlay($event, $scope.viewerData.levelLexicalPhraseList[$scope.current.cnt].itemJSONObj.soundId, $scope.current.cnt);
+            $scope.serialPlay($event, $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList[$scope.current.cnt].itemJSONObj.soundId, $scope.current.cnt);
         }
     });

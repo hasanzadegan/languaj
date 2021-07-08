@@ -64,7 +64,7 @@ angular.module('myApp').controller('lessonListController',
                 $scope.current.levelList = result;
                 $scope.current.student.selectedCourse.selectedTopic = 0;
                 StorageService.setData($scope.current);
-                $scope.config.footerIcon='studentLevel';
+                $scope.config.studentPage='studentLevel';
                 if ($scope.current.levelList.length > 0) {
                     $scope.selectStudentLevel($scope.current.levelList[$scope.current.student.selectedCourse.selectedTopic].levelId);
                 }
