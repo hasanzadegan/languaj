@@ -7,7 +7,7 @@
     <div flex="20" ng-include="'/html/viewer/header/charachter.html?v='+getRand()" layout="row"></div>
     <div flex="80" layout-padding="">
         <form>
-            <div ng-repeat="quiz in current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList" layout="row" flex="100" layout-wrap="" >
+            <div ng-repeat="quiz in current.viewerData.levelLexicalPhraseList" layout="row" flex="100" layout-wrap="" >
                 <div flex="100">
                     {{quiz.itemJSONObj.lexicalPhrase.title}}
                 </div>

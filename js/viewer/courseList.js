@@ -1,5 +1,5 @@
 angular.module('myApp').controller('courseListController',
-    function ($rootScope, $scope, $q, WordService, BaeService, StorageService, LessonService, ArchiveService,$window) {
+    function ($rootScope, $scope, $q, WordService, BaeService, StorageService, LessonService, ArchiveService,$window,$timeout) {
 
         if (!$scope.current.student) {
             $scope.current.student = {};
@@ -69,19 +69,20 @@ angular.module('myApp').controller('courseListController',
 
 
         $scope.getStudentTopicLevelList = function (topic,review) {
+            $scope.current.answerIsCorrect = null;
             $scope.current.student.selectedCourse.selectedTopic = topic;
             $scope.current.student.selectedCourse.selectedTopic.levelList = [];
-            $scope.current.answerIsCorrect = null;
 
             LessonService.getReviewLevelList(topic.topicId,review??1).then(result => {
-                console.log(result);
                 if (result.length > 0) {
                     $scope.current.student.selectedCourse.selectedTopic.levelList = result;
                     $scope.current.student.selectedCourse.selectedTopic.levelIndex = 0;
+
                     StorageService.setData($scope.current);
-                    $scope.config.studentPage = 'studentLevel';
-                    StorageService.setConfig($scope.config);
-                    // $scope.selectStudentLevel(result[0].levelId);
+
+                    $scope.selectStudentLevel(result[0].levelId);
+
+
                 }
             })
         }

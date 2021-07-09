@@ -25,26 +25,25 @@ angular.module('myApp').controller('lexicalController',
                 }
 
 
-
                 $scope.relationTypeList = {
                     1:{relationTypeId:1,title:"translate",icon:"translate",
-                        langId:translateLangId
+                        langId:translateLangId,
+                        sourceLangId:$scope.current.selectedCourse.sourceLangId,
+                        destLangId:$scope.current.selectedCourse.destLangId,
                     },
                     2:{relationTypeId:2,title:"synonym",icon:"text_fields",
-                        langId:otherLangId
+                        langId:otherLangId,
+                        sourceLangId:$scope.current.selectedCourse.sourceLangId,
+                        destLangId:$scope.current.selectedCourse.destLangId,
                     },
                     3:{relationTypeId:3,title:"opposite",icon:"import_export",
-                        langId:otherLangId
+                        langId:otherLangId,
+                        sourceLangId:$scope.current.selectedCourse.sourceLangId,
+                        destLangId:$scope.current.selectedCourse.destLangId,
                     },
-                    // 4:{relationTypeId:4,title:"plural or singular",icon:"hdr_strong"},
-                    // 5:{relationTypeId:5,title:"singular",icon:"hdr_weak"},
                 }
 
-                console.log("course sourceLangId => ",$scope.current.selectedCourse.sourceLangId)
-                console.log("course destLangId => ",$scope.current.selectedCourse.destLangId)
-                console.log("phrase langId => ",$scope.current.selectedPhrase.langId)
-                console.log("phrase isSourceLang => ",$scope.isSourceLang)
-
+                console.log("relationTypeList",$scope.relationTypeList  )
             })
         }
 
@@ -63,7 +62,7 @@ angular.module('myApp').controller('lexicalController',
         })
 
         $scope.showImage= function(lexicalPhrase,relation){
-            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLexicalPhrase = lexicalPhrase;
+            $scope.current.viewerData.selectedLexicalPhrase = lexicalPhrase;
             StorageService.setData($scope.current);
             lexicalPhrase.lexicalId = relation.lexicalId;
             $scope.toggleImageList();
@@ -97,7 +96,7 @@ angular.module('myApp').controller('lexicalController',
                 };
                 itemJSON = JSON.stringify(itemJSON);
 
-                levelId = $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId;
+                levelId = $scope.current.viewerData.levelId;
                 LevelService.assignLevelLexicalPhrase(levelId,baseLexicalPhraseId,itemJSON).then(result=>{
                     $rootScope.$broadcast('levelChanged', levelId);
                 });

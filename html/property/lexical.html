@@ -22,7 +22,12 @@
                              dir="rtl"
                              layout="row">
                             <div ng-repeat="lexicalPhrase in relation.lexicalObj" layout="row">
-                                <div ng-hide="lexicalPhrase.phraseId==current.selectedPhrase.phraseId" >
+                                <div
+                                        ng-show="[current.selectedCourse.sourceLangId,current.selectedCourse.destLangId].includes(lexicalPhrase.langId)
+&& lexicalPhrase.phraseId!=current.selectedPhrase.phraseId"
+                                         >
+
+
                                     <div class="selectedLexicalItem">
 <!--                                        <md-menu layout-padding="" >-->
                                             <md-button
@@ -33,7 +38,7 @@
                                             </md-button>
 
 <!--                                        </md-menu>-->
-                                        <div ng-show="current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLexicalPhrase.lexicalphraseId===lexicalPhrase.lexicalphraseId && config.showImage">
+                                        <div ng-show="current.viewerData.selectedLexicalPhrase.lexicalphraseId===lexicalPhrase.lexicalphraseId && config.showImage">
                                             <div ng-include="'html/property/imageList.html'" ></div>
                                             <div layout="row"
                                                  flex="100"

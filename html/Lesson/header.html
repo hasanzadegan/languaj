@@ -74,11 +74,16 @@
                 <md-icon>clear</md-icon>
             </md-button>
         </div>
-        <div flex="100" layout="row" class="headTitle md-button">
+        <div flex="100" layout="row" class="headTitle md-button" ng-click="showCourseList('courseSetting')">
+
+            <md-button class="md-icon-button" flex="10" >
+                <md-icon>chevron_left</md-icon>
+            </md-button>
             <div title="{{current.selectedCourse}}">{{current.selectedCourse.title}}</div>
             <div layout-padding="">/</div>
 
-            <div ng-click="setPropertyPage('courseSetting')" layout="row">
+<!--            <div ng-click="setPropertyPage('courseSetting')" layout="row">-->
+            <div layout="row">
                 <div>
                     {{current.selectedCourse.selectedLesson.title}}
                 </div>
@@ -87,9 +92,6 @@
                     {{current.selectedCourse.selectedLesson.selectedTopic.title}}
                 </div>
             </div>
-            <md-button class="md-icon-button" flex="10" ng-click="setPropertyPage('courseSetting')">
-                <md-icon>chevron_right</md-icon>
-            </md-button>
         </div>
 
         <div>

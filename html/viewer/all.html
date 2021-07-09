@@ -68,7 +68,7 @@
     <div flex="90" style="overflow-y: auto;max-height: 100%">
         <div layout="row" flex="100" layout-wrap="">
 
-            <div ng-repeat="levelLexicalPhrase in current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList"
+            <div ng-repeat="levelLexicalPhrase in current.viewerData.levelLexicalPhraseList"
                  ng-show="!current.showOne"
                  flex="33" layout="row" class="all" layout-wrap="" layout-align="center center"
                  style="{{$index==current.cnt?'background:#fff;':''}}">
@@ -87,7 +87,7 @@
                     {{levelLexicalPhrase.itemJSONObj.lexicalPhrase.title}}
                 </div>
             </div>
-            <div ng-repeat="levelLexicalPhrase in current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList"
+            <div ng-repeat="levelLexicalPhrase in current.viewerData.levelLexicalPhraseList"
                  ng-show="current.showOne && $index==current.cnt"
                  flex="100" layout="row" class="all" layout-wrap="" layout-align="center start">
                 <div flex="100" layout="row" layout-align="center center"

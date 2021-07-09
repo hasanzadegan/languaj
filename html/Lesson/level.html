@@ -15,10 +15,11 @@
                 </div>
             </div>
         </div>
+
         <md-list flex="100" layout-wrap>
             <div flex="=100"
                  ng-repeat="level in current.selectedCourse.selectedLesson.selectedTopic.levelList | filter:{review:current.review}"
-                 class="{{level.levelId==current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId?'redC':''}}"
+                 class="{{level.levelId==current.viewerData.levelId?'redC':''}}"
                  title="{{level}}" layout="row">
                 <div ng-show="current.editMode" layout="row">
                     <md-button class="md-icon-button" ng-click="addToSelectedItem(level)">
@@ -35,8 +36,9 @@
                             <md-icon md-svg-src="/svg/levelType/{{level.levelTypeId}}.svg"></md-icon>
                         </md-button>
                         <md-menu-content width="4" ng-mouseleave="$mdMenu.close()" style="max-height: 90vh;">
+                            {{current.selectedCourse.selectedLesson.selectedTopic.selectedLevel}}
                             <md-menu-item layout="row" ng-repeat="levelType in current.levelTypeList">
-                                <md-button flex="70" class="{{level.levelTypeId===levelType.levelTypeId?'md-accent':' '}}"
+                                <md-button flex="70" class="{{current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelTypeId===levelType.levelTypeId?'md-accent':' '}}"
                                            ng-click="setLevelType(levelType,levelType.title,level)">
                                     <md-icon md-svg-src="/svg/levelType/{{levelType.levelTypeId}}.svg"></md-icon>
                                     {{levelType.title}}
@@ -62,14 +64,15 @@
                                ng-dblclick="editMode = !editMode"
                     >{{level.title}}</md-button>
                     <div flex></div>
-                    <md-button ng-click="deleteLevel(current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId)" ng-dblclick="deleteLevel(current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId,1)"
-                               ng-show="level.levelId==current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId">
-                        <md-icon md-svg-src="/svg/action/delete.svg">delete</md-icon>
-                    </md-button>
                 </div>
                 <div flex="100" layout="row" ng-show="editMode" class="{{level.levelTypeId===12?'teachBack':''}}">
                     <div flex="100" layout-padding="" layout="row">
                         <input flex="90" ng-model="level.title" ng-blur="updateLevel(level)">
+
+                        <md-button ng-click="deleteLevel(current.viewerData.levelId)" ng-dblclick="deleteLevel(current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId,1)"
+                                   ng-show="level.levelId==current.viewerData.levelId">
+                            <md-icon md-svg-src="/svg/action/delete.svg">delete</md-icon>
+                        </md-button>
                     </div>
                 </div>
             </div>

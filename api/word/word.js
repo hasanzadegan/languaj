@@ -7,10 +7,11 @@ module.exports = {
         destLangId = params.destLangId;
 
         stmt = 'select p.phraseId,p.langId,p.genderId,p.title,p.isMultiWord,p.isExtracted' +
-            ' from phrase p where title like  \'%' + title + '%\' ' +
+            ' from phrase p where Upper(title) like  \'%' + title.toUpperCase() + '%\' ' +
             ' and p.langId in('+sourceLangId+','+destLangId+')' +
             ' order by length(title)' +
             ' limit 10';
+        console.log(stmt);
         return await query(stmt).then(function (result) {
             return result;
         })
@@ -130,6 +131,7 @@ module.exports = {
             '  CONCAT(\'[\',GROUP_CONCAT(JSON_OBJECT(\'title\', p.title,' +
             '\'phraseId\',p.phraseId,' +
             '\'genderId\',p.genderId,' +
+            '\'langId\',p.langId,' +
             '\'lexicalphraseId\',lp.lexicalphraseId' +
             ')),\']\') lexicalList \n' +
             ' from relationtype rt,lexical l,lexicalphrase lp ,phrase p ' +
@@ -396,9 +398,10 @@ module.exports = {
         // params = [languageId, title, isMultiple,userId];
         stmt = ""+
             " INSERT INTO phrase(langId, title, isMultiWord,creatorUserId) " +
-            " VALUES (isPersian('"+title+"',"+languageId+"),?,?,?)";
+            // " VALUES (isPersian('"+title+"',"+languageId+"),?,?,?)";
+            " VALUES (?,?,?,?)";
 
-        params = [title, isMultiple,userId];
+        params = [languageId,title, isMultiple,userId];
         console.log(stmt)
         // console.log(params)
         return await query(stmt, params).then(function (result) {

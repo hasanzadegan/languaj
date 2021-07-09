@@ -4,6 +4,9 @@
     border-radius: 10px;
     box-shadow: none !important;
 }
+.md-button{
+    min-width: 40px !important;
+}
 
 .roundStrockBtnGreen {
     min-width: 60px !important;

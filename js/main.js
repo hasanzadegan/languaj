@@ -23,8 +23,9 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
     $rootScope.selectedLang = {"langId": 2, "title": "german", "code": "de"};
 
-    $scope.func = {};
-    $scope.func.currentVersion = 101987;
+    if (!$scope.func)
+        $scope.func = {};
+    $scope.func.currentVersion = 101999;
     // $scope.func.currentVersion = getRand();
 
     // $scope.options = {
@@ -95,7 +96,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         $mdDialog.show({
             locals: {dataToPass: extraParam},
             controller: DialogController,
-            templateUrl: 'html/dialog/' + dialogName + '.html?r='+$scope.currentVersion,
+            templateUrl: 'html/dialog/' + dialogName + '.html?v=' + $scope.currentVersion,
             parent: angular.element(document.body),
             targetEvent: ev,
             clickOutsideToClose: true
@@ -148,24 +149,21 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     }
 
     $scope.config = StorageService.getConfig();
-    if(!$scope.config.tour)
+    if (!$scope.config.tour)
         $scope.config.tour = {};
 
 
     try {
         $scope.responsiveVoice = responsiveVoice;
-    }catch (e) {}
+    } catch (e) {
+    }
 
     $scope.backToList = function () {
         $scope.config.studentPage = "footerLesson";
         StorageService.setConfig($scope.config);
-        $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel= null;
-        StorageService.setData($scope.current);
     }
-
-    if (!$scope.config.studentPage) {
-        $scope.backToList();
-    }
+    if(!$scope.config.studentPage)
+    $scope.backToList();
 
     $scope.goToSetting = function () {
         $scope.config.studentPage = "footerSettings";
@@ -210,22 +208,26 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         return title;
     }
 
+
+    $scope.createViewerData = function (levelId) {
+
+    }
     $scope.$on('levelChanged', function (event, levelId) {
         if (levelId !== null) {
             LessonService.getLevelById(levelId).then(levelResult => {
                 var level = levelResult[0];
-                $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel = level;
+
+                $scope.current.viewerData = level;
                 StorageService.setData($scope.current);
 
-                $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList = [];
                 var levelLexicalPhraseList = [];
 
                 path = level.levelTypeTitle.split(" ")[0].toLowerCase();
 
+
                 LevelService.getLevelLexicalPhraseList(levelId).then(result => {
                     $scope.levelItemList = [];
                     for (item of result) {
-
                         try {
                             item.itemJSONObj = JSON.parse(item.itemJSON);
                             item.itemJSONObj.title = $rootScope.replaceToken(item.itemJSONObj.title);
@@ -233,19 +235,20 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
                         } catch (e) {
                         }
 
-                        if([3].includes(level.levelTypeId) && item.itemJSONObj.validityTypeId==2){
-                            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.correctItem = item.itemJSONObj.title;
-                            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.questionItem = item.itemJSONObj.lexicalPhrase.title;
+                        console.log("item",level.levelTypeId,result,item.itemJSONObj.title)
+
+                        if ([3].includes(level.levelTypeId) && item.itemJSONObj.validityTypeId == 2) {
+                            $scope.current.viewerData.correctItem = item.itemJSONObj.lexicalPhrase.title;
+                         }
+
+                        if ([13, 7].includes(level.levelTypeId)) {
+                            $scope.current.viewerData.correctItem = item.itemJSONObj.title;
+                            $scope.current.viewerData.questionItem = item.itemJSONObj.lexicalPhrase.title;
                         }
 
-                        if([13,7].includes(level.levelTypeId)){
-                            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.correctItem = item.itemJSONObj.title;
-                            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.questionItem = item.itemJSONObj.lexicalPhrase.title;
-                        }
-
-                        if([2].includes(level.levelTypeId)){
-                            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.correctItem = "";
-                            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.questionItem = level.levelTypeTitle;
+                        if ([2].includes(level.levelTypeId)) {
+                            $scope.current.viewerData.correctItem = "";
+                            $scope.current.viewerData.questionItem = level.levelTypeTitle;
                         }
 
                         levelLexicalPhraseList.push(item);
@@ -253,12 +256,12 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
                         StorageService.setData($scope.current)
 
 
-                        try{
+                        try {
 
                             if (!item.itemJSONObj.lexicalPhrase)
                                 item.itemJSONObj.lexicalPhrase = {title: ''};
-                        }catch (e) {
-                            item.itemJSONObj ={lexicalPhrase :{title: ''}};
+                        } catch (e) {
+                            item.itemJSONObj = {lexicalPhrase: {title: ''}};
                         }
                         if (!item.itemJSONObj.lexicalPhrase)
                             item.itemJSONObj.lexicalPhrase = {title: ''};
@@ -274,30 +277,30 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
                             title: item.itemJSONObj.lexicalPhrase.title
                         });
                     }
-                    $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList = levelLexicalPhraseList;
 
-                    $scope.func.selectedLevel = $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel;
+                    $scope.current.viewerData.levelLexicalPhraseList = levelLexicalPhraseList;
 
+
+
+                    //pair
+                    $scope.current.viewerData.shuffleList = $scope.shuffle($scope.levelItemList)
+                    console.log("current.viewerData.shuffleList",$scope.current.viewerData.shuffleList)
+
+                    try {
+                        $scope.func.createLevelData();
+
+                    }catch (e) {
+                    }
 
                     StorageService.setData($scope.current);
 
-                    //pair
-                    $scope.shuffleList = $scope.shuffle($scope.levelItemList)
-
-
                     $rootScope.setLevelTypePath(path);
                     $rootScope.setViewerPath(path);
-
-
                     $rootScope.$broadcast('levelChangedWithDetail', levelId)
                 })
-
                 StorageService.setData($scope.current);
             })
-
         }
-
-        $scope.config.showPartConfig = {};
     });
 
 
@@ -308,25 +311,26 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
     $scope.selectStudentLevel = function (levelId) {
         // console.log(levelId)
+
         $rootScope.$broadcast('levelChanged', levelId);
-        $scope.config.showLevel = true;
-        StorageService.setConfig($scope.config);
+
+        $timeout(function () {
+            $scope.config.studentPage = 'studentLevel';
+            StorageService.setConfig($scope.config);
+            $scope.config.showLevel = true;
+            StorageService.setConfig($scope.config);
+        }, 300)
     }
 
 
     $scope.$on("nextLevel", function (event, data) {
         levelList = $scope.current.student.selectedCourse.selectedTopic.levelList;
-        console.log("nextLevel",data,$scope.current.student.selectedCourse)
-
-        console.log("nextLevel",levelList,data)
         levelIndex = $scope.current.student.selectedCourse.selectedTopic.levelIndex;
-
-
         levelIndex = levelIndex + 1;
+
         $scope.current.student.selectedCourse.selectedTopic.levelIndex = levelIndex;
 
-
-        $scope.current.progress = levelIndex/(levelList.length)*100
+        $scope.current.progress = levelIndex / (levelList.length) * 100
 
         StorageService.setData($scope.current);
 
@@ -354,6 +358,10 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     }
     $scope.filterReset();
 
+    $rootScope.showCourseList = function(){
+        $scope.current.showCourseSetting = true;
+        StorageService.setData($scope.current);
+    }
     $rootScope.setPropertyPage = function (path) {
         $scope.current.mainFlex = 35;
         $scope.current.propertyPage = 'html/property/' + path + '.html'
@@ -402,7 +410,6 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     }
 
 
-
     $scope.playItem = function ($event, item, wait) {
         function func() {
             $timeout(function () {
@@ -411,16 +418,11 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         }
 
         const def = $q.defer();
-        if (item.soundId === -1)
-         {
-             func();
-         }
-        else if (!item.soundId)
-        {
+        if (item.soundId === -1) {
+            func();
+        } else if (!item.soundId) {
             responsiveVoice.speak(item.title, "Deutsch Male", {onend: func});
-        }
-        else
-        {
+        } else {
             SoundService.playSound(item.soundId).then(result => {
                 func()
             });
@@ -430,7 +432,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
     LessonService.getTeacherList().then(result => {
         $scope.current.teacherList = result;
-        console.log("$scope.current.teacherList",$scope.current.teacherList)
+        console.log("$scope.current.teacherList", $scope.current.teacherList)
         for (teacher of result) {
             teacher.courseListObj = JSON.parse(teacher.courseList);
         }
@@ -448,7 +450,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     // }
     $scope.func.charachter = $scope.getRandomInt(101, 108);
 
-    $scope.showBottomDialog = function (text,time) {
+    $scope.showBottomDialog = function (text, time) {
         $scope.current.dialogText = text;
         $timeout(function () {
             $scope.current.dialogText = null;

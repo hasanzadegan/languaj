@@ -4,7 +4,7 @@
 <div layout="column" flex="100">
 
     <div flex="90" style="overflow-y: auto;max-height: 100%">
-        <div ng-repeat="levelLexicalPhrase in current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList"
+        <div ng-repeat="levelLexicalPhrase in current.viewerData.levelLexicalPhraseList"
              layout-align="center center"
              layout="row" layout-wrap="">
             <div flex="100" layout="row" layout-padding=""
@@ -42,7 +42,7 @@
     <div layout-align="center center" flex="10" layout="row">
         <md-button
                 flex="90"
-                ng-disabled="$index<current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList.length-1"
+                ng-disabled="$index<current.viewerData.levelLexicalPhraseList.length-1"
                 class="redB checkButton" ng-click="func.checkAnswer()">ok
         </md-button>
     </div>

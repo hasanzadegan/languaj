@@ -29,5 +29,7 @@ angular.module('myApp').controller('topicController',
             $scope.current.selectedCourse.selectedLesson.selectedTopic = topic;
             $rootScope.$broadcast("topicChanged", topic.topicId);
             StorageService.setConfig($scope.config);
+            $scope.current.showCourseSetting = false;
+            StorageService.setData($scope.current);
         }
     });

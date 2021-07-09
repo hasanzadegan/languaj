@@ -12,7 +12,8 @@ angular.module('myApp').controller('addLexicalController',
             if($scope.current.lexical.searchText==undefined)
                 return;
             phrase = $scope.current.lexical.searchText;
-            WordService.searchPhrase(phrase).then(result => {
+
+            WordService.searchPhrase(phrase,$scope.mdDialogData.sourceLangId,$scope.mdDialogData.destLangId).then(result => {
                 $scope.current.lexical.phraseList = result;
                 StorageService.setData($scope.current);
             });

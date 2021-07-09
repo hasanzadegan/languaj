@@ -45,6 +45,7 @@
                             <div class="flagBar Flag{{phrase.langId}}"></div>
                             <md-button flex
                                        ng-show="!config.editMode[phrase.phraseId]"
+                                       ng-dblclick="config.editMode[phrase.phraseId]=!config.editMode[phrase.phraseId]"
                                        style="text-align: left !important;"
                                        layout-padding ng-click="selectPhrase(phrase)">
                                 {{phrase.title}}
@@ -56,15 +57,15 @@
                                 <!--                                    </md-button>-->
                             </div>
 
-                            <md-button class="md-icon-button"
-                                       ng-show="!config.editMode[phrase.phraseId]"
-                                       ng-click="config.editMode[phrase.phraseId]=!config.editMode[phrase.phraseId]">
-                                <md-icon md-svg-src="/svg/action/edit.svg"></md-icon>
-                            </md-button>
-                            <md-button class="md-icon-button" ng-click="extractPhrase(phrase)">
+<!--                            <md-button class="md-icon-button"-->
+<!--                                       ng-show="!config.editMode[phrase.phraseId]"-->
+<!--                                       ng-click="config.editMode[phrase.phraseId]=!config.editMode[phrase.phraseId]">-->
+<!--                                <md-icon md-svg-src="/svg/action/edit.svg"></md-icon>-->
+<!--                            </md-button>-->
+                            <md-button  ng-show="config.editMode[phrase.phraseId]" class="md-icon-button" ng-click="extractPhrase(phrase)">
                                 <md-icon md-svg-src="/svg/action/expand.svg"></md-icon>
                             </md-button>
-                            <md-button class="md-icon-button" ng-click="deletePhrase($event)">
+                            <md-button ng-show="config.editMode[phrase.phraseId]" class="md-icon-button" ng-click="deletePhrase($event)">
                                 <md-icon md-svg-src="/svg/action/delete.svg"></md-icon>
                             </md-button>
                         </md-list-item>

@@ -12,8 +12,8 @@ angular.module('myApp').controller('allController',
 
 
         $scope.func.serialPlay = function ($event, cnt) {
-            if ($scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList.length > cnt) {
-                levelItem = $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList[cnt];
+            if ($scope.current.viewerData.levelLexicalPhraseList.length > cnt) {
+                levelItem = $scope.current.viewerData.levelLexicalPhraseList[cnt];
                 $scope.playItem($event, levelItem,1000).then(result => {
                     $scope.current.cnt  += 1;
                     $scope.func.serialPlay($event, $scope.current.cnt);

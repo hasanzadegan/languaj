@@ -3,10 +3,10 @@
 </div>
 <div flex="100" layout="column">
     <div flex="90" layout="column" layout-align="center center">
-        <div>{{func.questionLexicalPhrase.itemJSONObj.title}}</div>
+        <div>{{current.viewerData.levelLexicalPhraseList[0].itemJSONObj.title}}</div>
         <div layout="row" flex="50" layout-align="center center" layout-padding="">
-            <img ng-src="{{'/api/media/'+func.questionLexicalPhrase.itemJSONObj.imageId}}"
-                 ng-click="speak(func.questionLexicalPhrase.itemJSONObj.title)"
+            <img ng-src="{{'/api/media/'+current.viewerData.levelLexicalPhraseList[0].itemJSONObj.imageId}}"
+                 ng-click="speak(current.viewerData.levelLexicalPhraseList[0].itemJSONObj.title)"
                  style="max-height:100%"
                  class="animate-show md-button {{func.questionLexicalPhrase.itemJSONObj.animation}}">
         </div>

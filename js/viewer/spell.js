@@ -1,9 +1,6 @@
 angular.module('myApp').controller('spellController',
     function ($rootScope, $scope, $q, $timeout, WordService, BaeService, StorageService, LessonService, SoundService) {
-        // $scope.lexicalPhrase = $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList[0];
-
-        $scope.$on('levelChanged', function (event, levelId) {
-        });
+        // $scope.lexicalPhrase = $scope.current.viewerData.levelLexicalPhraseList[0];
 
         $scope.func.checkIsLastInput = function ($event, quiz, $index) {
             var c = 0;
@@ -38,7 +35,7 @@ angular.module('myApp').controller('spellController',
             allCorrect = true;
             allDone = true;
 
-            for (item of $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList) {
+            for (item of $scope.current.viewerData.levelLexicalPhraseList) {
                 if (item.result === false)
                     allCorrect = false;
                 if (item.result === undefined)

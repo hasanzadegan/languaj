@@ -1,6 +1,6 @@
 angular.module('myApp').service('WordService', function ($rootScope, $path, HttpService, $q) {
     return {
-        searchPhrase: function (phrase) {
+        searchPhrase: function (phrase,sourceLangId,destLangId) {
             const def = $q.defer();
             param = {
                 title: phrase,

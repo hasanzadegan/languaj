@@ -44,7 +44,7 @@ angular.module('myApp').controller('dictionaryController',
 
         $rootScope.selectPhrase = function (phrase) {
             $scope.current.selectedPhrase = phrase;
-            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLexicalPhrase = null;
+            $scope.current.viewerData.selectedLexicalPhrase = null;
             $rootScope.$broadcast("phraseSoundChanged",null);
 
             WordService.getPhraseWordList(phrase.phraseId).then(function (result) {

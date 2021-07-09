@@ -779,7 +779,7 @@ input {
 .md-button {
     padding: 2px !important;
     text-transform: none !important;
-    min-width: 10px !important;
+    min-width: 40px !important;
     margin: 1px !important;
 }
 
@@ -1242,8 +1242,7 @@ input[type=number]::-webkit-outer-spin-button {
 .topHead {
     /*background: #FFCC00;*/
     background: #FFCC00;
-
-    height: 90px;
+    height: 60px;
     top: 0px;
     position: absolute;
     width: 100%;
@@ -1251,7 +1250,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .simpleHeader {
-    background: #fff;
+    /*background: #fff;*/
 }
 md-progress-linear.md-default-theme .md-bar, md-progress-linear .md-bar
 {

@@ -37,31 +37,31 @@
 
     <script src="https://code.responsivevoice.org/responsivevoice.js?key=vXDMrEll"></script>
     <!--definition-->
-    <script src="js/app.js?v=24"></script>
-    <script src="js/main.js?v=24"></script>
-    <script src="js/path.js?v=24"></script>
-    <script src="js/label.js?v=24"></script>
+    <script src="js/app.js?v=26"></script>
+    <script src="js/main.js?v=26"></script>
+    <script src="js/path.js?v=26"></script>
+    <script src="js/label.js?v=26"></script>
 
 
     <!-- services-->
-    <script src="service/HttpService.js"></script>
-    <script src="service/ArchiveService.js"></script>
-    <script src="service/WordService.js"></script>
-    <script src="service/LessonService.js"></script>
-    <script src="service/BaseService.js"></script>
-    <script src="service/StorageService.js"></script>
-    <script src="service/VerbService.js"></script>
-    <script src="service/LevelService.js"></script>
-    <script src="service/SoundService.js"></script>
-    <script src="service/LoginService.js"></script>
-    <script src="service/TeachService.js"></script>
+    <script src="service/HttpService.js?v=26"></script>
+    <script src="service/ArchiveService.js?v=26"></script>
+    <script src="service/WordService.js?v=26"></script>
+    <script src="service/LessonService.js?v=26"></script>
+    <script src="service/BaseService.js?v=26"></script>
+    <script src="service/StorageService.js?v=26"></script>
+    <script src="service/VerbService.js?v=26"></script>
+    <script src="service/LevelService.js?v=26"></script>
+    <script src="service/SoundService.js?v=26"></script>
+    <script src="service/LoginService.js?v=26"></script>
+    <script src="service/TeachService.js?v=26"></script>
 
 
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="node_modules/material-icons-font/material-icons-font.css">
 
-    <link rel="stylesheet" href="css/global.css?v=24">
-    <link rel="stylesheet" href="css/style.css?v=24">
+    <link rel="stylesheet" href="css/global.css?v=26">
+    <link rel="stylesheet" href="css/style.css?v=26">
     <link rel="stylesheet" href="layout/flipCard/ccjmne-card-flip.css">
     <script src="node_modules/satellizer/dist/satellizer.min.js"></script>
     <script src="node_modules/angular-virtual-keyboard/release/angular-virtual-keyboard.min.js"></script>
@@ -80,6 +80,9 @@
 
 
     <div flex="100" layout="row" layout-wrap style="height: 100vh;width: 100vw;">
+        <div ng-show="current.showCourseSetting" style="background: rgba(185, 185, 185, 0.1)">
+            <div ng-include="'html/property/courseSetting.html?v=26'" class="propertyPage"></div>
+        </div>
         <div flex="35">
             <div ng-include="'html/Lesson/header.html?r='+func.currentVersion"></div>
             <div layout="row" flex="100" ng-include="'html/Dashboard/TeachDashboard.html'" ng-show="current.showTeach"></div>
@@ -91,8 +94,8 @@
             </div>
         </div>
 
-        <div flex="30" flex-xs="100" ng-show="current.propertyPage" >
-            <div ng-include="current.propertyPage" class="propertyPage"></div>
+        <div flex="30" flex-xs="100" ng-show="!current.showCourseSetting" >
+            <div ng-include="'html/property/dictionary.html?v=26'" class="propertyPage"></div>
         </div>
 
         <div flex="{{current.mainFlex}}" layout="row" >

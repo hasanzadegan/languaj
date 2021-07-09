@@ -7,9 +7,8 @@ angular.module('myApp').controller('pairController',
         $scope.resetPair = function(){
             pair = [];
             failCount = 0;
-            $scope.current.answerIsCorrect = null;
             $scope.func.disableList = {};
-            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.title = null;
+            $scope.current.viewerData.title = null;
         };
 
         $scope.resetPair();
@@ -42,7 +41,7 @@ angular.module('myApp').controller('pairController',
                     }
                 }
 
-                if ($scope.shuffleList.length == pair.length) {
+                if ($scope.current.viewerData.shuffleList.length == pair.length) {
                     $scope.func.isCorrect();
                     $scope.func.nextLevel();
                 }

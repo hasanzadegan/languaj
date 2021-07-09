@@ -3,7 +3,7 @@ angular.module('myApp').controller('multiController',
 
         $scope.func.selectChoice = function ($event,levelLexicalPhrase) {
             $scope.playItem($event,levelLexicalPhrase.itemJSONObj);
-            $scope.func.selectedLevelLexicalPhrase = levelLexicalPhrase;
+            $scope.current.viewer.selectedLevelLexicalPhrase = levelLexicalPhrase;
             $scope.func.validityTypeId = levelLexicalPhrase.itemJSONObj.validityTypeId;
             $scope.func.checkChoice();
         }
