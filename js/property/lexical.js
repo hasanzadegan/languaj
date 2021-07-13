@@ -10,6 +10,8 @@ angular.module('myApp').controller('lexicalController',
             $scope.current.selectedPhrase.phraseWordLexicalList = [];
             WordService.getLexicalOtherPhraseList(wordId).then(function (result) {
                 $scope.current.selectedPhrase.relationLexicalList = result;
+
+                console.log("$scope.current.selectedPhrase.relationLexicalList",$scope.current.selectedPhrase.relationLexicalList)
                 StorageService.setConfig($scope.current);
 
 

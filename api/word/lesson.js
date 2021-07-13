@@ -16,7 +16,7 @@ module.exports = {
         })
     },
     getUserCourseList: async function (userId) {
-        stmt = 'select c.courseId,c.title,u.firstName,u.lastName,u.imageUrl\n' +
+        stmt = 'select c.courseId,c.title,c.sourceLangId,c.destLangId,u.firstName,u.lastName,u.imageUrl\n' +
             'from \n' +
             '(\n' +
             '\tselect COURSEID,ISACTIVE,PAYMENTDATE from payedcourse where userId = ? \n' +

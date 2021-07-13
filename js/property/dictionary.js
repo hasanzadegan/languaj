@@ -1,6 +1,5 @@
 angular.module('myApp').controller('dictionaryController',
     function ($rootScope, $scope, $q, WordService, BaeService, StorageService) {
-
         $rootScope.addPhrase = function (phrase,langId) {
             console.log("$rootScope.addPhrase",phrase,langId)
             WordService.addPhrase(langId, phrase).then(result => {
@@ -54,6 +53,8 @@ angular.module('myApp').controller('dictionaryController',
             WordService.getLexicalOtherPhraseList(phrase.phraseId).then(function (result) {
                 // $scope.current.selectedPhrase.relationLexicalList[0].lexicalObj
                 $scope.current.selectedPhrase.relationLexicalList = result;
+
+                console.log("getLexicalOtherPhraseList",result)
 
                 if(result.length>0) {
                     lexicalListObj = JSON.parse(result[0].lexicalList);

@@ -25,7 +25,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
     if (!$scope.func)
         $scope.func = {};
-    $scope.func.currentVersion = 101999;
+    $scope.func.currentVersion = 102001;
     // $scope.func.currentVersion = getRand();
 
     // $scope.options = {

@@ -29,7 +29,7 @@
              layout-padding=""
              layout-wrap="" class="md-button itemBox" ng-click="setCourse(course)">
             <div flex="70" layout="row" layout-align="end center" layout-wrap="">
-                <div style="font-size: 1rem;font-family: Arial;font-weight: bold;">
+                <div style="font-size: 1rem;font-family: Arial;font-weight: bold;width: 100%">
                     {{course.title}}
                 </div>
                 <div layout="row" style="font-family: Arial;font-weight: lighter;">
@@ -39,7 +39,10 @@
                 </div>
             </div>
             <div flex="30">
-                <img src="/img/app/book.svg" style="height: 80px" class="appImg">
+                <img src="/img/app/book.svg" style="height: 80px" class="appImg" style="position: absolute">
+                <div style="position: relative;top:-65px;left:-20px;">
+                    <div class="flags Flag{{course.destLangId}}"></div>
+                </div>
             </div>
         </div>
     </div>

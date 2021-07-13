@@ -1,7 +1,6 @@
 <div oc-lazy-load="['/js/property/lexical.js']">
     <div ng-controller="lexicalController" layout="row" layout-wrap>
         <div flex="50" ng-include="'html/property/soundList.html'"></div>
-
         <div flex="100" >
             <div layout="row" flex="100" ng-repeat="relationType in relationTypeList">
                 <div flex="100"
@@ -22,12 +21,7 @@
                              dir="rtl"
                              layout="row">
                             <div ng-repeat="lexicalPhrase in relation.lexicalObj" layout="row">
-                                <div
-                                        ng-show="[current.selectedCourse.sourceLangId,current.selectedCourse.destLangId].includes(lexicalPhrase.langId)
-&& lexicalPhrase.phraseId!=current.selectedPhrase.phraseId"
-                                         >
-
-
+                                <div ng-show="lexicalPhrase.phraseId!=current.selectedPhrase.phraseId">
                                     <div class="selectedLexicalItem">
 <!--                                        <md-menu layout-padding="" >-->
                                             <md-button

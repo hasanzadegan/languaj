@@ -1,4 +1,4 @@
-<div oc-lazy-load="['/js/property/dictionary.js']">
+<div oc-lazy-load="['/js/property/dictionary.js?v=26']">
     <div ng-controller="dictionaryController" layout-wrap class="wordDashboard">
         <div layout="row" flex="100" layout-wrap>
             <div flex="100" layout-wrap layout="row">
@@ -85,7 +85,7 @@
                     {{phraseWord.title}}
                 </md-button>
             </div>
-            <div flex="100" ng-include="'html/property/lexical.html'"
+            <div flex="100" ng-include="'html/property/lexical.html?v=26.1'"
                  ng-show="current.selectedPhrase.selectedPhraseWord==null"></div>
 
             <div flex="100" ng-if="true" ng-include="'html/property/grammer.html'" ng-show="config.showGrammer"></div>
