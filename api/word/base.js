@@ -35,7 +35,8 @@ module.exports = {
         stmt = 'select l.levelTypeId,l.title,l.icon,GROUP_CONCAT(ld.Title) levelTypeList \n' +
             ' from levelType l\n' +
             ' left join leveltypedefault ld \n' +
-            ' \ton l.levelTypeId = ld.levelTypeId \n' +
+            ' \ton l.levelTypeId = ld.levelTypeId ' +
+            ' where l.isActive=true \n' +
             ' group by l.LEVELTYPEID\n';
         return await query(stmt, '').then(function (result) {
             return result;
