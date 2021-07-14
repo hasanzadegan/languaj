@@ -1,7 +1,6 @@
 ﻿<html lang="fa">
 <head style="height: 100%">
     <title>Languaj.com - Learn like children</title>
-<!--    <meta name="viewport" content="height=device-height,width=device-width, initial-scale=1.0, initial-scale=1.0, user-scalable=no" />-->
     <meta name="viewport" content="height=device-height, initial-scale=1, width=device-width, initial-scale=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0,  viewport-fit=cover">
 
@@ -26,94 +25,80 @@
     <script src="node_modules/angular-aria/angular-aria.min.js"></script>
     <script src="node_modules/angular-material/angular-material.min.js"></script>
     <script src="node_modules/angularjs-toast/angularjs-toast.min.js"></script>
-
-
     <script src="node_modules/ngstorage/ngStorage.min.js"></script>
-
-    <script src="node_modules/oclazyload/dist/ocLazyLoad.min.js"></script>
-    <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
-    <script src="node_modules/ng-draggable/ngDraggable.js"></script>
-    <script src="node_modules/clipboard/dist/clipboard.js"></script>
-    <script src="node_modules/ngclipboard/dist/ngclipboard.min.js"></script>
-<!--    <script src="node_modules/angular-vibrator/src/vibrator.js"></script>-->
-
-    <script src="https://code.responsivevoice.org/responsivevoice.js?key=vXDMrEll"></script>
-    <!--definition-->
-    <script src="js/app.js?v=27.1"></script>
-    <script src="js/main.js?v=27.1"></script>
-    <script src="js/path.js?v=27.1"></script>
-    <script src="js/label.js?v=27.1"></script>
-
-    <!-- services-->
-    <script src="service/HttpService.js"></script>
-    <script src="service/ArchiveService.js"></script>
-    <script src="service/WordService.js"></script>
-    <script src="service/LessonService.js"></script>
-    <script src="service/BaseService.js"></script>
-    <script src="service/StorageService.js"></script>
-    <script src="service/VerbService.js"></script>
-    <script src="service/LevelService.js"></script>
-    <script src="service/SoundService.js"></script>
-    <script src="service/LoginService.js"></script>
-    <script src="service/TeachService.js"></script>
 
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="node_modules/material-icons-font/material-icons-font.css">
 
-    <link rel="stylesheet" href="css/global.css?v=27.2">
-    <link rel="stylesheet" href="css/student.css?v=27.2">
-    <!--    <link rel="stylesheet" href="layout/flipCard/ccjmne-card-flip.css">-->
+    <script src="js/home.js?v=27.11"></script>
+    <script src="js/path.js?v=27.1"></script>
 
-    <!--        <script src="node_modules/wavesurfer-angular/dist/js/wavesurfer-angular.js"></script>-->
-
-    <!--    <script src="node_modules/satellizer/dist/satellizer.min.js"></script>-->
-
-
-
-    <!--    <script src="node_modules/angular-virtual-keyboard/release/angular-virtual-keyboard.min.js"></script>-->
-<!--    <link rel="stylesheet" href="node_modules/angular-virtual-keyboard/css/angular-virtual-keyboard.css">-->
+    <script src="service/StorageService.js"></script>
+    <link rel="stylesheet" href="css/home.css?v=27.3">
 
 
 </head>
-<body ng-app="myApp" ng-controller="AppCtrl" layout="column" ng-cloak="" style="height: 100%">
+<body ng-app="myApp" ng-controller="HomeCtrl" >
 
-<style>
-    img
-    {
-    filter:grayscale({{current.filter.grayScale}}%)
-    contrast({{current.filter.contrast}}%)
-    brightness({{current.filter.brightness}}%)
-    hue-rotate({{current.filter.hue}}deg)
-    drop-shadow(2px 2px 1px rgba(0,0,0,0.5));
-    }
-</style>
-
-
-<!--<div class="splash" layout="row" layout-align="center center">-->
-<!--    <img src="/img/app/splash-logo.svg" class="appImg splashImage"/>-->
-<!--</div>-->
-<!--<div class="viewerBody" style="width:100vw" layout="row" flex="100">-->
-<div class="topHead" flex="100" layout="row" ng-show="!current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.level.levelId"></div>
-
-<div layout="column" flex="100" style="z-index: 10">
-    <div ng-show="config.studentPage" ng-include="'html/footer/'+config.studentPage+'.html?v='+func.currentVersion" layout="column" flex></div>
-</div>
-
-
-<!--</div>-->
-<div hide-xs="true" class="toggleViewMode" >
-    <md-button class="md-button md-icon-button"  ng-click="setPath('teacherEditor.html')" title="teacher">
-        <md-icon md-svg-src="/img/app/back.svg">chrome_reader_mode</md-icon>
-    </md-button>
-</div>
-
-
-<div ng-show="current.dialogText"
-     layout-align="center center"
-     flex="100" class="bottomDialog isCorrect" layout="row" layout-wrap="">
-    {{current.dialogText}}
-</div>
-
+    <div layout="row" class="header" flex="100" style="background: {{colors[current.site.page]}}">
+        <div flex="10" class="header1"></div>
+        <div flex="20" class="header1" layout="row" layout-padding="" >
+            <img src="/site/img/logo.svg" >
+        </div>
+        <div flex="70" class="header2" >
+            <div layout="row" layout-padding="" layout-align="start center">
+                <div ng-repeat="page in pages">
+                    <md-button ng-click="setPage(page)"
+                    class="{{current.site.page==page?'selected':''}}"
+                    >
+                        {{page}}
+                    </md-button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="overflow-y: auto;height: calc(100vh - 100px)">
+        <div layout="row" class="banner" style="background: {{colors[current.site.page]}}" layout-padding="">
+            <div flex="50" layout="column" layout-padding="">
+                <div flex="20"></div>
+                <div flex="15" class="slogon1" layout="row">
+                    <div flex="10"></div>
+                    <div>{{lable.slogon[1]}}</div>
+                </div>
+                <div flex="20" class="slogon2" layout="row">
+                    <div flex="10"></div>
+                    <div>{{lable.slogon[2]}}</div>
+                </div>
+                <div flex="15"></div>
+                <div flex="10" layout="row">
+                    <div flex="10"></div>
+                    <button class="signIn" href="student.html" ng-click="signIn()">Sign with google</button>
+                </div>
+            </div>
+            <div flex="50" layout="row" layout-padding="">
+                <img src="{{'/site/img/'+current.site.page+'.svg'}}">
+            </div>
+        </div>
+        <div class="benefit" layout="row" layout-padding="" layout-wrap="">
+            <div flex="100" layout="row" layout-padding="">
+                <div flex="5"></div>
+                <li class="itemTitle">
+                    {{lable.benefit.title}}
+                </li>
+            </div>
+            <div flex="100" layout="row" layout-padding="" style="text-align: center">
+                <div flex="10"></div>
+                <div ng-repeat="benefit in lable.benefit.list" flex="33">
+                    <div class="bTitle" >{{benefit.title}}</div>
+                    <div class="bDesc" layout-padding="">{{benefit.desc}}</div>
+                </div>
+                <div flex="10"></div>
+            </div>
+        </div>
+        <div layout="row" layout-padding="">
+            <div layout="row" layout-wrap="" ng-include="'/site/'+current.site.page+'.html?v=27'"></div>
+        </div>
+    </div>
 </body>
 </html>
 

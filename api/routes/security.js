@@ -75,7 +75,7 @@ module.exports = function (app) {
     }));
     app.get('/api/auth/google/redirect', passport.authenticate('google', {failureRedirect: '/login'}), function (req, res) {
         req.session.email = req.user.email;
-        res.redirect('/');
+        res.redirect('/student.html');
     });
     app.get("/api/auth/logout", (req, res) => {
         req.logout();

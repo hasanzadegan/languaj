@@ -1,0 +1,46 @@
+<div layout="row" layout-padding="" layout-wrap="">
+    <div flex="100" layout="row" flex="100">
+        <div flex="5"></div>
+        <li class="itemTitle" layout-padding="">
+            {{lable.why.title}}
+        </li>
+    </div>
+    <div class="itemDesc" layout="row">
+        <div flex="10"></div>
+        <div class="itemDesc">{{lable.why.desc}}</div>
+        <div flex="10"></div>
+    </div>
+</div>
+<div layout="row" layout-padding="" layout-wrap="">
+    <div flex="100" layout="row" flex="100">
+        <div flex="5"></div>
+        <li class="itemTitle" layout-padding="">
+            {{lable.how.title}}
+        </li>
+    </div>
+    <div class="itemDesc" layout="row">
+        <div flex="10"></div>
+        <div layout="row" flex="80" >
+            <div ng-repeat="how in lable.how.list" flex="33" layout-padding="" >
+                <div flex="80" layout-padding="" layout="row" style="height: 300px" layout-align="center center">
+                    <img src="{{how.img}}" flex="90"/>
+                </div>
+                <div>{{how.title}}</div>
+            </div>
+        </div>
+        <div flex="10"></div>
+    </div>
+</div>
+<div layout="row" layout-padding="" layout-wrap="">
+    <div flex="100" layout="row" flex="100">
+        <div flex="5"></div>
+        <li class="itemTitle" layout-padding="">
+            {{lable.quality.title}}
+        </li>
+    </div>
+    <div class="itemDesc" layout="row">
+        <div flex="10"></div>
+        <div class="itemDesc">{{lable.quality.desc}}</div>
+        <div flex="10"></div>
+    </div>
+</div>

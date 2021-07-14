@@ -1,7 +1,7 @@
 app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyLoad, $path,
                                     StorageService,
                                     WordService,
-                                    $label,
+                                    // $label,
                                     $timeout,
                                     SoundService,
                                     LessonService,
@@ -11,7 +11,6 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
                                     $mdDialog,
                                     // ngAudio,
                                     $location,
-                                    $window,
                                     $q,
 ) {
 
