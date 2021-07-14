@@ -1,10 +1,11 @@
 ﻿<html lang="fa">
 <head style="height: 100%">
     <title>Languaj.com - Learn like children</title>
-    <meta name="viewport" content="height=device-height, initial-scale=1, width=device-width, initial-scale=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0,  viewport-fit=cover">
+    <meta name="viewport" content="height=device-height, initial-scale=1, width=device-width, initial-scale=1"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0,  viewport-fit=cover">
 
-    <meta name="HandheldFriendly" content="true" />
+    <meta name="HandheldFriendly" content="true"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <link rel="manifest" href="/manifest.json">
@@ -38,67 +39,77 @@
 
 
 </head>
-<body ng-app="myApp" ng-controller="HomeCtrl" >
+<body ng-app="myApp" ng-controller="HomeCtrl">
 
-    <div layout="row" class="header" flex="100" style="background: {{colors[current.site.page]}}">
-        <div flex="10" class="header1"></div>
-        <div flex="20" class="header1" layout="row" layout-padding="" >
+<div layout="row" class="header" flex="100" style="background: {{colors[current.site.page]}}">
+    <div flex="10" class="header1"></div>
+    <div flex="20" flex-xs="70" class="header1" layout="row" layout-padding="">
+        <md-button ng-click="setPage('home')" layout="row" layout-align="center center">
             <img src="/site/img/logo.svg" >
-        </div>
-        <div flex="70" class="header2" >
-            <div layout="row" layout-padding="" layout-align="start center">
-                <div ng-repeat="page in pages">
-                    <md-button ng-click="setPage(page)"
-                    class="{{current.site.page==page?'selected':''}}"
-                    >
-                        {{page}}
-                    </md-button>
-                </div>
+        </md-button>
+    </div>
+    <div flex-xs="20" class="header1" hide-gt-xs layout="row" layout-align="center center">
+        <md-button class="md-icon-button"  ng-click="showMenu=!showMenu">
+            <md-icon md-svg-src="/site/img/hamburger.svg"></md-icon>
+        </md-button>
+    </div>
+    <div flex="70"  class="header2" hide-xs>
+        <div layout="row"  layout-padding="" layout-align="start center" >
+            <div ng-repeat="page in pages">
+                <md-button ng-click="setPage(page)"
+                           class="{{current.site.page==page?'selected':''}}">
+                    {{page}}
+                </md-button>
             </div>
         </div>
     </div>
-    <div style="overflow-y: auto;height: calc(100vh - 100px)">
-        <div layout="row" class="banner" style="background: {{colors[current.site.page]}}" layout-padding="">
-            <div flex="50" layout="column" layout-padding="">
-                <div flex="20"></div>
-                <div flex="15" class="slogon1" layout="row">
-                    <div flex="10"></div>
-                    <div>{{lable.slogon[1]}}</div>
-                </div>
-                <div flex="20" class="slogon2" layout="row">
-                    <div flex="10"></div>
-                    <div>{{lable.slogon[2]}}</div>
-                </div>
-                <div flex="15"></div>
-                <div flex="10" layout="row">
-                    <div flex="10"></div>
-                    <button class="signIn" href="student.html" ng-click="signIn()">Sign with google</button>
-                </div>
-            </div>
-            <div flex="50" layout="row" layout-padding="">
-                <img src="{{'/site/img/'+current.site.page+'.svg'}}">
-            </div>
+</div>
+<div ng-show="showMenu">
+    <div ng-repeat="page in pages">
+        <md-button ng-click="setPage(page)"
+                   class="{{current.site.page==page?'selected':''}}"
+        >
+            {{page}}
+        </md-button>
+    </div>
+</div>
+<div layout="row" class="banner" style="background: {{colors[current.site.page]}}" layout-padding="">
+    <div flex="50" layout="column" layout-padding="" flex-xs="100">
+        <div flex="20" flex-xs="5"></div>
+        <div class="slogon1" layout="row">
+            <div flex="10"></div>
+            <div>{{lable.slogon[1]}}</div>
         </div>
-        <div class="benefit" layout="row" layout-padding="" layout-wrap="">
-            <div flex="100" layout="row" layout-padding="">
-                <div flex="5"></div>
-                <li class="itemTitle">
-                    {{lable.benefit.title}}
-                </li>
-            </div>
-            <div flex="100" layout="row" layout-padding="" style="text-align: center">
-                <div flex="10"></div>
-                <div ng-repeat="benefit in lable.benefit.list" flex="33">
-                    <div class="bTitle" >{{benefit.title}}</div>
-                    <div class="bDesc" layout-padding="">{{benefit.desc}}</div>
-                </div>
-                <div flex="10"></div>
-            </div>
+        <div flex="20" flex-xs="30" class="slogon2" layout="row">
+            <div flex="10"></div>
+            <div>{{lable.slogon[2]}}</div>
         </div>
-        <div layout="row" layout-padding="">
-            <div layout="row" layout-wrap="" ng-include="'/site/'+current.site.page+'.html?v=27'"></div>
+        <div flex="15" flex-xs="0"></div>
+        <div flex="10" layout="row" layout-align-xs="center center">
+            <div flex="10" flex-xs="0"></div>
+            <button class="signIn" href="student.html" ng-click="signIn()">Sign with google</button>
         </div>
     </div>
+    <div flex="50" layout="row" layout-padding="" hide-xs>
+        <img src="{{'/site/img/'+current.site.page+'.svg'}}">
+    </div>
+</div>
+<div class="benefit" layout="row" layout-padding="" layout-wrap="">
+    <div flex="100" layout="row" layout-padding="">
+        <li class="itemTitle">
+            {{lable.benefit.title}}
+        </li>
+    </div>
+    <div flex="100" layout="row" layout-padding="" layout-wrap="" layout-align="center center">
+        <div layout="row" flex="70" style="text-align: center" layout-wrap="" layout-padding="">
+            <div ng-repeat="benefit in lable.benefit.list" flex="30" flex-xs="100" layout-padding="">
+                <div class="bTitle">{{benefit.title}}</div>
+                <div class="itemDesc" layout-padding="">{{benefit.desc}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="'/site/'+current.site.page+'.html?v=27'" layout="row" layout-wrap=""></div>
 </body>
 </html>
 

@@ -63,13 +63,13 @@ app.controller('HomeCtrl', function ($rootScope, $scope, $http, $window,
                     title: "How to courses created and published?",
                     list: [
                         {
-                            img: "/site/img/teacher.svg",
+                            img: "teacher",
                             title: "A producer collect needs for creating a course"
                         }, {
-                            img: "/site/img/producer.svg",
+                            img: "producer",
                             title: "A teacher create content for ordered course."
                         }, {
-                            img: "/site/img/marketer.svg",
+                            img: "marketer",
                             title: "marketers can find suitable target market."
                         },
                     ]
@@ -111,8 +111,8 @@ app.controller('HomeCtrl', function ($rootScope, $scope, $http, $window,
                     title: "What is benefit for a producer?",
                     list: [
                         {
-                            title: "Help people to learn",
-                            desc: "more courses means more choice, invest to help people for learning."
+                            title: "Create network",
+                            desc: "know teachers and marketers in platform and develop your network."
                         },
                         {
                             title: "Invest smarter",
@@ -173,6 +173,7 @@ app.controller('HomeCtrl', function ($rootScope, $scope, $http, $window,
 
     $scope.setPage = function (page) {
         $scope.current.site.page = page;
+        $scope.showMenu = false;
         StorageService.setData($scope.current);
         $scope.refreshLable();
     }
