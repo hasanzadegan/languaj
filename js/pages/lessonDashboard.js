@@ -139,6 +139,7 @@ angular.module('myApp').controller('lessonDashboardController', function ($rootS
         })
 
         $scope.setLevel = function ($event, level) {
+            $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel = level;
             $rootScope.$broadcast('levelDataChanged', level);
         }
 

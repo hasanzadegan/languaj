@@ -36,7 +36,6 @@
                             <md-icon md-svg-src="/svg/levelType/{{level.levelTypeId}}.svg"></md-icon>
                         </md-button>
                         <md-menu-content width="4" ng-mouseleave="$mdMenu.close()" style="max-height: 90vh;">
-                            {{current.selectedCourse.selectedLesson.selectedTopic.selectedLevel}}
                             <md-menu-item layout="row" ng-repeat="levelType in current.levelTypeList">
                                 <md-button flex="70" class="{{current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelTypeId===levelType.levelTypeId?'md-accent':' '}}"
                                            ng-click="setLevelType(levelType,levelType.title,level)">
