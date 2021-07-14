@@ -64,9 +64,9 @@
         </div>
     </div>
 </div>
-<div ng-show="showMenu">
+<div ng-show="showMenu" flex-xs="100">
     <div ng-repeat="page in pages">
-        <md-button ng-click="setPage(page)"
+        <md-button ng-click="setPage(page)" flex-xs="100"
                    class="{{current.site.page==page?'selected':''}}"
         >
             {{page}}
