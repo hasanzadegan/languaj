@@ -227,7 +227,8 @@ module.exports = {
             ' where topicId = ? ' +
             ' and review=? ' +
             ' order by IFNULL(orderr,99999999),levelId';
-        params = [topicId,review];
+        params = [topicId,review%5==0?5:review%5];
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>review%5",topicId,review)
         return await query(stmt, params).then(function (result) {
             return result;
         })

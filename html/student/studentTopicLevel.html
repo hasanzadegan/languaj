@@ -15,7 +15,7 @@
         </md-button>
     </div>
     <div layout="row" flex="100" class="courseHead">
-        <div layout="row" flex="100" style="font-size:1.3rem;font-weight: bolder" >
+        <div layout="row" flex="100" style="font-size:1.3rem;font-weight: bolder">
             <div>
                 <img class="appImg teacherCourseImage" ng-src="{{current.student.selectedCourse.imageUrl}}"
                      width="50px">
@@ -27,7 +27,7 @@
                     {{current.student.selectedCourse.lastName}}
                 </div>
             </div>
-            <div >
+            <div>
                 <img src="/img/app/book.svg" style="height: 50px" class="appImg">
             </div>
         </div>
@@ -39,14 +39,19 @@
             <div ng-repeat="topic in lesson.topicListObj" layout-wrap="" layout-padding="">
                 <md-button class="lessonBtn"
                            ng-click="getStudentTopicLevelList(topic,topic.review+1)" ng-disabled="topic.locked">
-                    <div style="min-width: 100px;font-family: Arial !important;">
-                        {{topic.title}}
+                    <div flex="100" layout="row" layout-align="center center">
+                        <div>{{topic.title}}</div>
+                        <div
+                                ng-if="Math.floor(topic.review/5)>0"
+                                layout-align="center center" layout="row"
+                        style="color:white;background: #00acb1;width: 15px;height: 15px;margin: 2px;border-radius: 5px"
+                        >{{Math.floor(topic.review/5)>0?Math.floor(topic.review/5):''}}</div>
                     </div>
                     <md-icon ng-show="topic.locked">lock</md-icon>
                     <!--                <md-icon ng-show="topic.achievedTopicId" style="color:green">check </md-icon>-->
-                    <div>
+                    <div layout="row" layout-align="center center">
                         <img class="appImg"
-                             src="/img/app/progress/progress_{{topic.review==null?0:topic.review}}.svg"/>
+                             src="/img/app/progress/progress_{{topic.review==null?0:topic.review%5}}.svg"/>
                     </div>
                 </md-button>
             </div>

@@ -68,12 +68,14 @@ angular.module('myApp').controller('courseListController',
         }
 
 
+
         $scope.getStudentTopicLevelList = function (topic,review) {
             $scope.current.answerIsCorrect = null;
             $scope.current.student.selectedCourse.selectedTopic = topic;
             $scope.current.student.selectedCourse.selectedTopic.levelList = [];
 
             LessonService.getReviewLevelList(topic.topicId,review??1).then(result => {
+                console.log("getStudentTopicLevelList",result)
                 if (result.length > 0) {
                     $scope.current.student.selectedCourse.selectedTopic.levelList = result;
                     $scope.current.student.selectedCourse.selectedTopic.levelIndex = 0;

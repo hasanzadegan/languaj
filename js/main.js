@@ -16,7 +16,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
     // $window.navigator.vibrate(300)
     // change it for clear cache in clients
-
+    $scope.Math = window.Math;
     $rootScope.extraLetters = ["Ä", "Ö", "Ü", "ẞ"]//,"ä","ö","ü","ß"];
 
 
