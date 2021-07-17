@@ -18,13 +18,11 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     // change it for clear cache in clients
     $scope.Math = window.Math;
     $rootScope.extraLetters = ["Ä", "Ö", "Ü", "ẞ"]//,"ä","ö","ü","ß"];
-
-
     $rootScope.selectedLang = {"langId": 2, "title": "german", "code": "de"};
 
     if (!$scope.func)
         $scope.func = {};
-    $scope.func.currentVersion = 102001;
+    $scope.func.currentVersion = 102002;
     // $scope.func.currentVersion = getRand();
 
     // $scope.options = {
