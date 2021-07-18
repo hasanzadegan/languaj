@@ -65,18 +65,22 @@
         </div>
     </div>
     <div flex="20" layout="row" hide-xs class="header2">
-        <div ng-repeat="lang in langList" layout="row">
-            <div class="flagBar Flag{{lang.id}}" ng-click="setLang(lang)"></div>
+        <div ng-repeat="lang in langList" layout="row" layout-padding="">
+            <div>
+                <div class="flags Flag{{lang.id}}" ng-click="setLang(lang)"></div>
+            </div>
         </div>
-<!--        {{current.site.lang}}-->
     </div>
 </div>
 <div ng-show="showMenu" flex-xs="100">
-    <div layout="row">
+    <div layout="row" layout-padding="">
         <div ng-repeat="lang in langList" layout="row">
-            <div class="flagBar Flag{{lang.id}}" ng-click="setLang(lang)"></div>
+            <div>
+                <div class="flags Flag{{lang.id}}" ng-click="setLang(lang)"></div>
+            </div>
         </div>
     </div>
+    <md-divider ng-show="showMenu" ></md-divider>
     <div ng-repeat="page in langLable.pages">
         <md-button ng-click="setPage(page.item)" flex-xs="100"
                    class="{{current.site.page==page?'selected':''}}"

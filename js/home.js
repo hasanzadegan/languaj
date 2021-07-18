@@ -10,9 +10,20 @@ app.controller('HomeCtrl', function ($rootScope, $scope, $http, $window,
                                      $location,
                                      $q,
 ) {
+
+    $scope.func = {currentVersion :102002};
+
+
     $scope.current = StorageService.getData();
     if (!$scope.current)
         $scope.current = {};
+
+
+    if ($scope.current.version !== $scope.func.currentVersion) {
+        $scope.current = {};
+        $scope.current.version = $scope.func.currentVersion;
+        StorageService.setData($scope.current);
+    }
 
     $scope.langList = [
         {id:1,title:"fa",dir:"rtl"},
