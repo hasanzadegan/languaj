@@ -30,16 +30,17 @@
 
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="node_modules/material-icons-font/material-icons-font.css">
+    <link rel="stylesheet" href="css/global.css?v=28">
 
     <script src="js/home.js?v=28.11"></script>
     <script src="js/path.js?v=28.1"></script>
 
     <script src="service/StorageService.js"></script>
-    <link rel="stylesheet" href="css/home.css?v=28.3">
-
-
 </head>
-<body ng-app="myApp" ng-controller="HomeCtrl">
+<body ng-app="myApp" ng-controller="HomeCtrl" dir="{{current.site.dir}}">
+
+<link ng-if="current.site.dir=='rtl'" rel="stylesheet" href="css/home_rtl.css?v=28">
+<link ng-if="current.site.dir=='ltr'" rel="stylesheet" href="css/home_ltr.css?v=28">
 
 <div layout="row" class="header" flex="100" style="background: {{colors[current.site.page]}}">
     <div flex="10" class="header1"></div>
@@ -53,23 +54,34 @@
             <md-icon md-svg-src="/site/img/hamburger.svg"></md-icon>
         </md-button>
     </div>
-    <div flex="70"  class="header2" hide-xs>
+    <div flex="50"  class="header2" hide-xs>
         <div layout="row"  layout-padding="" layout-align="start center" >
-            <div ng-repeat="page in pages">
-                <md-button ng-click="setPage(page)"
+            <div ng-repeat="page in langLable.pages">
+                <md-button ng-click="setPage(page.item)"
                            class="{{current.site.page==page?'selected':''}}">
-                    {{page}}
+                    {{page.title}}
                 </md-button>
             </div>
         </div>
     </div>
+    <div flex="20" layout="row" hide-xs class="header2">
+        <div ng-repeat="lang in langList" layout="row">
+            <div class="flagBar Flag{{lang.id}}" ng-click="setLang(lang)"></div>
+        </div>
+<!--        {{current.site.lang}}-->
+    </div>
 </div>
 <div ng-show="showMenu" flex-xs="100">
-    <div ng-repeat="page in pages">
-        <md-button ng-click="setPage(page)" flex-xs="100"
+    <div layout="row">
+        <div ng-repeat="lang in langList" layout="row">
+            <div class="flagBar Flag{{lang.id}}" ng-click="setLang(lang)"></div>
+        </div>
+    </div>
+    <div ng-repeat="page in langLable.pages">
+        <md-button ng-click="setPage(page.item)" flex-xs="100"
                    class="{{current.site.page==page?'selected':''}}"
         >
-            {{page}}
+            {{page.title}}
         </md-button>
     </div>
 </div>
