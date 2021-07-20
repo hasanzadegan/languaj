@@ -16,7 +16,7 @@ app.controller('HomeCtrl', function ($rootScope, $scope, $http, $window,
     if (!$scope.current)
         $scope.current = {};
 
-    $scope.currentVersion = 102003;
+    $scope.currentVersion = 102004;
 
     if ($scope.current.version !== $scope.currentVersion) {
         $scope.current = {};

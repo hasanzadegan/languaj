@@ -30,17 +30,17 @@
 
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="node_modules/material-icons-font/material-icons-font.css">
-    <link rel="stylesheet" href="css/global.css?v=28">
+    <link rel="stylesheet" href="css/global.css?v=29">
 
-    <script src="js/home.js?v=28"></script>
-    <script src="js/path.js?v=28"></script>
+    <script src="js/home.js?v=29"></script>
+    <script src="js/path.js?v=29"></script>
 
     <script src="service/StorageService.js"></script>
 </head>
 <body ng-app="myApp" ng-controller="HomeCtrl" dir="{{current.site.dir}}">
 
-<link ng-if="current.site.dir=='rtl'" rel="stylesheet" href="css/home_rtl.css?v=28">
-<link ng-if="current.site.dir=='ltr'" rel="stylesheet" href="css/home_ltr.css?v=28">
+<link ng-if="current.site.dir=='rtl'" rel="stylesheet" href="css/home_rtl.css?v=29">
+<link ng-if="current.site.dir=='ltr'" rel="stylesheet" href="css/home_ltr.css?v=29">
 
 <div layout="row" class="header" flex="100" style="background: {{colors[current.site.page]}}">
     <div flex="10" class="header1"></div>
@@ -125,7 +125,7 @@
         </div>
     </div>
 </div>
-<div ng-include="'/site/'+current.site.page+'.html?v=28'" layout="row" layout-wrap=""></div>
+<div ng-include="'/site/'+current.site.page+'.html?v=29'" layout="row" layout-wrap=""></div>
 </body>
 </html>
 
