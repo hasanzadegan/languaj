@@ -1,4 +1,4 @@
-<div oc-lazy-load="['/js/viewer/type.js?v='+func.currentVersion]">
+<div oc-lazy-load="['/js/viewer/type.js?v=28']">
     <div ng-controller="typeController"></div>
 </div>
 
@@ -15,49 +15,3 @@
         </md-button>
     </div>
 </div>
-
-<!--        <div flex="100" layout="row" style="height: 230px;z-index: 999" layout-align="start start">-->
-<!--            <div ng-repeat="levelLexicalPhrase in current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList"-->
-<!--                 layout-align="center center"-->
-<!--                 layout="row" layout-wrap="">-->
-
-<!--                <div flex="100" layout-align="center center" layout="row" style="height: 100px;">-->
-<!--                    <div ng-show="levelLexicalPhrase.itemJSONObj.imageId">-->
-<!--                        <b title="{{levelLexicalPhrase.itemJSONObj.lexicalPhrase.title}}">-->
-<!--                            {{levelLexicalPhrase.itemJSONObj.lexicalPhrase.title}}-->
-<!--                        </b>-->
-<!--                        <img-->
-<!--                                ng-src="{{'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId}}"-->
-<!--                                ng-show="levelLexicalPhrase.itemJSONObj.imageId"-->
-<!--                                style="max-width: 30vh;max-height: 80px;padding: 15px !important;"-->
-<!--                                ng-click="playItem($event,levelLexicalPhrase)"-->
-<!--                                class="md-button {{levelLexicalPhrase.itemJSONObj.animation}}">-->
-
-<!--                    </div>-->
-<!--                    <div ng-show="!levelLexicalPhrase.itemJSONObj.imageId">-->
-<!--                        <b ng-show="levelLexicalPhrase.itemJSONObj.showText"-->
-<!--                           title="{{levelLexicalPhrase.itemJSONObj.lexicalPhrase.title}}">-->
-<!--                            {{levelLexicalPhrase.itemJSONObj.lexicalPhrase.title}}-->
-<!--                        </b>-->
-<!--                        <md-button-->
-<!--                                ng-show="levelLexicalPhrase.itemJSONObj.soundId!=-1"-->
-<!--                                class="md-icon-button" ng-click="playItem($event,levelLexicalPhrase)">-->
-<!--                            <md-icon>-->
-<!--                                volume_down-->
-<!--                            </md-icon>-->
-<!--                        </md-button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div flex-xs="100" flex="30" layout-padding="" ng-if="current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList.length===0">-->
-<!--            select one item-->
-<!--        </div>-->
-<!--        <div flex="100" layout-padding="" ng-if="current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelLexicalPhraseList.length>0">-->
-<!--        </div>-->
-
-<!--        <div layout-align="center center" flex="100" layout="row">-->
-
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
