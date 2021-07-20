@@ -77,19 +77,14 @@
     }
 </style>
 
-
-<!--<div class="splash" layout="row" layout-align="center center">-->
-<!--    <img src="/img/app/splash-logo.svg" class="appImg splashImage"/>-->
-<!--</div>-->
-<!--<div class="viewerBody" style="width:100vw" layout="row" flex="100">-->
-<div class="topHead" flex="100" layout="row" ng-show="!current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.level.levelId"></div>
+<div class="topHead" flex="100" layout="row"
+     ng-show="!current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.level.levelId"></div>
 
 <div layout="column" flex="100" style="z-index: 10">
     <div ng-show="config.studentPage" ng-include="'html/footer/'+config.studentPage+'.html?v='+func.currentVersion" layout="column" flex></div>
 </div>
 
 
-<!--</div>-->
 <div hide-xs="true" class="toggleViewMode" >
     <md-button class="md-button md-icon-button"  ng-click="setPath('teacherEditor.html')" title="teacher">
         <md-icon md-svg-src="/img/app/back.svg">chrome_reader_mode</md-icon>
