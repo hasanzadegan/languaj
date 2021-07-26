@@ -100,7 +100,8 @@
         </div>
 
         <div flex="30" flex-xs="100" ng-show="!current.showCourseSetting" >
-            <div ng-include="'html/property/dictionary.html?v='+currentVersion" class="propertyPage"></div>
+            {{current.propertyPage}}
+            <div ng-include="current.propertyPage+'?v='+currentVersion" class="propertyPage"></div>
         </div>
 
         <div flex="{{current.mainFlex}}" layout="row" >

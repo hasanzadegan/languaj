@@ -67,10 +67,14 @@ angular.module('myApp').controller('teachDashboardController', function ($rootSc
             $rootScope.setPropertyPage('teach');
         }
 
+
         $scope.addTeach = function (title) {
             param = {title:title};
             // console.log(param)
             TeachService.addTeach(param).then(function (result){
+                $scope.searchTeach().then(result=>{
+                    $scope.addTopicTeach(result[0]);
+                })
             });
             $rootScope.setPropertyPage('teach');
         }
@@ -85,9 +89,11 @@ angular.module('myApp').controller('teachDashboardController', function ($rootSc
             })
         }
 
-        $scope.searchTeach = function () {
+
+    $scope.searchTeach = function () {
             const def = $q.defer();
             TeachService.searchTeach($scope.current.teach.title).then(function (result) {
+                $scope.teachList = result;
                 def.resolve(result);
             })
             return def.promise;

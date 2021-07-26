@@ -14,19 +14,27 @@
                              placeholder="add teach"
                              md-items="item in searchTeach()"
                              layout="row">
-                <md-item-template flex="100">
-                    <span md-highlight-text="current.teach.title" md-highlight-flags="^i">{{item.title}}</span>
-                    <md-button class="md-icon-button" ng-click="addTopicTeach(item)">
-                        <md-icon>add_box</md-icon>
+                <md-item-template flex="100" layout="row">
+                    <md-button ng-click="addTopicTeach(item)" flex="100">
+                        <span md-highlight-text="current.teach.title" md-highlight-flags="^i">{{item.title}}</span>
                     </md-button>
                 </md-item-template>
-                <md-not-found layout="row" layout-padding>
-                    not found
-                    <md-button class="md-icon-button" ng-click="addTeach(current.teach.title);addTopicTeach(current.teach)">
-                        <md-icon>add_box</md-icon>
-                    </md-button>
-                </md-not-found>
+<!--                <md-not-found layout="row" layout-padding>-->
+<!--                    <div>-->
+<!--                        not found-->
+<!--                        <md-button class="md-icon-button" ng-click="addTeach(current.teach.title);">-->
+<!--                            <md-icon>add_box</md-icon>-->
+<!--                        </md-button>-->
+<!--                    </div>-->
+<!--                </md-not-found>-->
             </md-autocomplete>
+        </div>
+        <div ng-show="teachList.length==0" layout-padding="" class="hint">
+            there is not any teach named <i>{{current.teach.title}}</i> do you want to create
+            this teach and add it to this topic?
+            <md-button class="md-icon-button" ng-click="addTeach(current.teach.title);">
+                <md-icon>add_box</md-icon>
+            </md-button>
         </div>
 
 

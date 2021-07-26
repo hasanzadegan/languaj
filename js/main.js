@@ -326,6 +326,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         $scope.current.showCourseSetting = !$scope.current.showCourseSetting;
         StorageService.setData($scope.current);
     }
+
     $rootScope.setPropertyPage = function (path) {
         $scope.current.mainFlex = 35;
         $scope.current.propertyPage = 'html/property/' + path + '.html'

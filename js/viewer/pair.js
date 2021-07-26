@@ -8,8 +8,9 @@ angular.module('myApp').controller('pairController',
             pair = [];
             failCount = 0;
             $scope.func.disableList = {};
-            $scope.current.viewerData.title = null;
         };
+
+
 
         $scope.resetPair();
 

@@ -2,7 +2,7 @@
     <div ng-controller="orderController"></div>
 </div>
 <div flex="100" layout="column">
-    <div flex="20" ng-include="'/html/viewer/header/charachter.html?v='+getRand()" layout="row"></div>
+    <div flex="20" ng-include="'/html/viewer/header/charachter.html?v='+currentVersion" layout="row"></div>
     <div flex="70" layout-padding="" layout="column" flex="100">
         {{error}}
         <div flex layout="row" class="selectedOrder"  layout-wrap="" >
