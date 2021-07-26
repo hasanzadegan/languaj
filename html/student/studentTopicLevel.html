@@ -1,4 +1,4 @@
-<div ng-show="current.student.selectedCourse" layout-padding="">
+<div ng-if="current.student.selectedCourse" layout-padding="">
     <div layout="row" flex="100">
         <md-button
                 ng-click="showBottomDialog('لینک این دوره در کلیپ بورد کپی شد',1000)"
@@ -51,7 +51,7 @@
                     <!--                <md-icon ng-show="topic.achievedTopicId" style="color:green">check </md-icon>-->
                     <div layout="row" layout-align="center center">
                         <img class="appImg"
-                             src="/img/app/progress/progress_{{topic.review==null?0:topic.review%5}}.svg"/>
+                             ng-src="/img/app/progress/progress_{{topic.review==null?0:topic.review%5}}.svg"/>
                     </div>
                 </md-button>
             </div>
