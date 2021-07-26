@@ -1,3 +1,4 @@
+
 app = angular.module('myApp', [
     'ngMaterial',
     'ngAnimate',
@@ -11,12 +12,10 @@ app.controller('HomeCtrl', function ($rootScope, $scope, $http, $window,
                                      $q,
 ) {
 
-
+    $scope.currentVersion = currentVersion;
     $scope.current = StorageService.getData();
     if (!$scope.current)
         $scope.current = {};
-
-    $scope.currentVersion = 102004;
 
     if ($scope.current.version !== $scope.currentVersion) {
         $scope.current = {};

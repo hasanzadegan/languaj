@@ -4,31 +4,19 @@
 }
 
 
-@font-face {
-    font-family: Roboto;
-    font-style: normal;
-    /*font-weight: bold;*/
-    src: url('fonts/roboto/Roboto-black.ttf'),
-    url('fonts/roboto/Roboto-bold.ttf'),
-    url('fonts/roboto/Roboto-light.ttf'),
-    url('fonts/roboto/Roboto-medium.ttf'),
-    url('fonts/roboto/Roboto-Thin.ttf');
-    /*src: url('fonts/eot/IRANSansWeb(FaNum)_Bold.eot?#iefix') format('embedded-opentype'),  !* IE6-8 *!*/
-    /*	 url('fonts/woff2/IRANSansWeb(FaNum)_Bold.woff2') format('woff2'),  !* FF39+,Chrome36+, Opera24+*!*/
-    /*	 url('fonts/woff/IRANSansWeb(FaNum)_Bold.woff') format('woff'),  !* FF3.6+, IE9, Chrome6+, Saf5.1+*!*/
-    /*	 url('fonts/ttf/IRANSansWeb(FaNum)_Bold.ttf') format('truetype');*/
+@font-face{
+    font-family: 'sahel';
+    src: url('/css/fonts/sahel/Sahel.ttf'),
+    url('/css/fonts/sahel/Sahel-Light.ttf'),
+    url('/css/fonts/sahel/Sahel-Bold.ttf'),
+    url('/css/fonts/sahel/Sahel-SemiBold.ttf'),
+    url('/css/fonts/sahel/Sahel-SemiBold-FD-WOL.ttf');
+    font-display: block;
 }
 
-@font-face {
-    font-family: IRANSansWeb;
-    font-style: normal;
-    /*font-weight: 500;*/
-    src: url('/css/fonts/eot/IRANSansWeb(FaNum)_Medium.eot');
-    src: url('/css/fonts/eot/IRANSansWeb(FaNum)_Medium.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('/css/fonts/woff2/IRANSansWeb(FaNum)_Medium.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('/css/fonts/woff/IRANSansWeb(FaNum)_Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('/css/fonts/ttf/IRANSansWeb(FaNum)_Medium.ttf') format('truetype');
-}
 
 body {
-    font-family: IRANSansWeb;
+    font-family: 'sahel', Arial;
     /*font-family: "Helvetica Neue";*/
     /*font-size: 15px;*/
     color: rgba(0, 0, 0, 90);

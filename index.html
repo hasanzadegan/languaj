@@ -20,6 +20,11 @@
     <meta name="theme-color" content="#00ffd2">
 
     <meta charset="UTF-8">
+
+    <script type="text/javascript">
+        document.write('<scr'+'ipt src="/js/version.js?v='+Math.random()+'" type="text/javascript"></scr'+'ipt>');
+    </script>
+
     <!--npm packages-->
     <script src="node_modules/angular/angular.js"></script>
     <script src="node_modules/angular-animate/angular-animate.min.js"></script>
@@ -30,20 +35,19 @@
 
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="node_modules/material-icons-font/material-icons-font.css">
-    <link rel="stylesheet" href="css/global.css?v=29">
+    <link rel="stylesheet" href="css/global.css?v={{currentVersion}}">
 
-    <script src="js/home.js?v=29"></script>
-    <script src="js/path.js?v=29"></script>
+    <script src="js/home.js?v={{currentVersion}}"></script>
+    <script src="js/path.js?v={{currentVersion}}"></script>
 
     <script src="service/StorageService.js"></script>
 </head>
 <body ng-app="myApp" ng-controller="HomeCtrl" dir="{{current.site.dir}}">
-
-<link ng-if="current.site.dir=='rtl'" rel="stylesheet" href="css/home_rtl.css?v=29">
-<link ng-if="current.site.dir=='ltr'" rel="stylesheet" href="css/home_ltr.css?v=29">
+<link ng-if="current.site.dir=='rtl'" rel="stylesheet" href="css/home_rtl.css?v={{currentVersion}}">
+<link ng-if="current.site.dir=='ltr'" rel="stylesheet" href="css/home_ltr.css?v={{currentVersion}}">
 
 <div layout="row" class="header" flex="100" style="background: {{colors[current.site.page]}}">
-    <div flex="10" class="header1"></div>
+    <div flex="10" class="header1" title="languaj.com version {{currentVersion}}"></div>
     <div flex="20" flex-xs="70" class="header1" layout="row" layout-padding="">
         <md-button ng-click="setPage('home')" layout="row" layout-align="center center">
             <img src="/site/img/logo.svg" >
@@ -125,7 +129,7 @@
         </div>
     </div>
 </div>
-<div ng-include="'/site/'+current.site.page+'.html?v=29'" layout="row" layout-wrap=""></div>
+<div ng-include="'/site/'+current.site.page+'.html?v='+currentVersion" layout="row" layout-wrap=""></div>
 </body>
 </html>
 

@@ -1,3 +1,4 @@
+
 app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyLoad, $path,
                                     StorageService,
                                     WordService,
@@ -16,44 +17,14 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
     // $window.navigator.vibrate(300)
     // change it for clear cache in clients
+    $scope.currentVersion = currentVersion;
+
     $scope.Math = window.Math;
     $rootScope.extraLetters = ["Ä", "Ö", "Ü", "ẞ"]//,"ä","ö","ü","ß"];
     $rootScope.selectedLang = {"langId": 2, "title": "german", "code": "de"};
 
     if (!$scope.func)
         $scope.func = {};
-    $scope.func.currentVersion = 102004;
-    // $scope.func.currentVersion = getRand();
-
-    // $scope.options = {
-    //     language: 'en',
-    //     // extraPlugins: 'imagebrowser',
-    //     // filebrowserBrowseUrl: '/api/v1/ckeditor/files',
-    //     // filebrowserUploadMethod:'form',
-    //     // filebrowserImageUploadUrl: '/api/saveDoc',
-    //     // filebrowserUploadUrl: '/api/v1/ckeditor/files',
-    //     allowedContent: true,
-    //     entities: false,
-    //     uiColor: '#00cad1',
-    //     toolbar: 'full',
-    //     toolbar_full: [
-    //         {name: 'document', items: ['NewPage', 'ExportPdf', 'Preview', 'Print',]},
-    //         {name: 'clipboard', items: ['Cut', 'Copy', 'Paste', 'PasteFromWord', '-']},
-    //         {name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'Strike',]},
-    //         {
-    //             name: 'paragraph', items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', '/',
-    //                 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl']
-    //         },
-    //         '/',
-    //         {name: 'insert', items: ['Image', 'Table', 'Smiley', 'SpecialChar',]},
-    //         {name: 'styles', items: ['Styles', 'Format', 'Font', 'FontSize']},
-    //         {name: 'colors', items: ['TextColor', 'BGColor']},
-    //         {name: 'tools', items: ['Maximize']},
-    //     ]
-    // };
-    // $scope.onReady = function () {
-    //     // ...
-    // };
 
     $scope.shuffle = function (array) {
         return array.sort(() => Math.random() - 0.5);
@@ -127,10 +98,9 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
     $scope.current = StorageService.getData();
 
-
-    if ($scope.current.version !== $scope.func.currentVersion) {
+    if ($scope.current.version !== $scope.currentVersion) {
         $scope.clearData();
-        $scope.current.version = $scope.func.currentVersion;
+        $scope.current.version = $scope.currentVersion;
         StorageService.setData($scope.current);
     }
 
@@ -232,8 +202,6 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
                         } catch (e) {
                         }
 
-                        console.log("item",level.levelTypeId,result,item.itemJSONObj.title)
-
                         if ([3].includes(level.levelTypeId) && item.itemJSONObj.validityTypeId == 2) {
                             $scope.current.viewerData.correctItem = item.itemJSONObj.lexicalPhrase.title;
                          }
@@ -281,7 +249,6 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
                     //pair
                     $scope.current.viewerData.shuffleList = $scope.shuffle($scope.levelItemList)
-                    console.log("current.viewerData.shuffleList",$scope.current.viewerData.shuffleList)
 
                     try {
                         $scope.func.createLevelData();
@@ -356,7 +323,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     $scope.filterReset();
 
     $rootScope.showCourseList = function(){
-        $scope.current.showCourseSetting = true;
+        $scope.current.showCourseSetting = !$scope.current.showCourseSetting;
         StorageService.setData($scope.current);
     }
     $rootScope.setPropertyPage = function (path) {
