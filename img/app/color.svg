@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20">
-  <g id="color" transform="translate(-98 -670)">
-    <path id="color-2" data-name="color" d="M68.558,0s-7.5,7.143-7.5,12.857a7.509,7.509,0,0,0,15,0C76.058,7.143,68.558,0,68.558,0Zm-5,12.9c0-2.658,2.62-6.467,5-9.151V17.5A4.818,4.818,0,0,1,63.558,12.9Z" transform="translate(36.942 670)"/>
-    <path id="color-3" data-name="color" d="M64.641,0Zm5,12.9c0-2.658-2.62-6.467-5-9.151V17.5A4.818,4.818,0,0,0,69.641,12.9Z" transform="translate(40.942 670)" fill="red"/>
-  </g>
-</svg>
