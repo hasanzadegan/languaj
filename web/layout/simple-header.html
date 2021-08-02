@@ -1,0 +1,10 @@
+<div flex="100" layout="row" layout-padding="" class="simpleHeader" layout-wrap="">
+    <md-button flex="10" class="md-icon-button" ng-click="backToList()">
+        <md-icon md-svg-src="img/app/back.svg"></md-icon>
+    </md-button>
+    <div flex="">
+        {{current.student.selectedCourse.selectedTopic.title}}
+    </div>
+    <div flex="10"></div>
+    <md-progress-linear value="{{current.progress}}" ng-show="current.progress>0"></md-progress-linear>
+</div>

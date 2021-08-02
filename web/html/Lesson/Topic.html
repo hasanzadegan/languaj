@@ -1,0 +1,33 @@
+<div oc-lazy-load="['js/property/topic.js']" layout="row">
+    <div ng-controller="topicController" layout="row" layout-wrap="">
+            <div flex="100" layout-padding="" layout="row" >
+                <md-button ng-click="addTopic('new topic')" >
+                    <md-icon>add_box</md-icon>
+                    add topic
+                </md-button>
+            </div>
+            <div class="cvh" flex="100">
+                    <div ng-repeat="topic in current.selectedCourse.selectedLesson.topicList"
+                                  ng-click="setTopic(topic)"
+                                  ng-class="topic.topicId===current.selectedCourse.selectedLesson.selectedTopic.topicId?'selectedRow redC':''">
+                            <div flex="100" layout-padding=""
+                                 ng-show="!topic.editMode"
+                                 ng-dblclick="topic.editMode=!topic.editMode"
+                                 title="{{topic}}" layout-wrap="">
+                                {{topic.title}}
+                            </div>
+                            <div flex="100"
+                                 layout-padding=""
+                                 ng-show="topic.editMode"
+                            >
+                                <input ng-model="topic.title" flex="80" ng-blur="updateTopic(topic)">
+                                <md-button class="md-icon-button"
+                                           ng-show="topic.topicId===current.selectedCourse.selectedLesson.selectedTopic.topicId"
+                                           ng-click="deleteTopic(topic)">
+                                    <md-icon md-svg-src="svg/action/delete.svg">delete</md-icon>
+                                </md-button>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>

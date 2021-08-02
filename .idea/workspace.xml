@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="student in angular" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/student/src/app/app.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/student/src/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/routes/security.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="77" column="27" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="442" column="37" selection-start-line="442" selection-start-column="37" selection-end-line="442" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="115" column="44" lean-forward="true" selection-start-line="115" selection-start-column="44" selection-end-line="115" selection-end-column="44" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/role/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/student.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="92" column="75" selection-start-line="92" selection-start-column="75" selection-end-line="92" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/teacher.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="89" column="14" lean-forward="true" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/js/version.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>html/viewer/</find>
+      <find>woff2</find>
+      <find>/css/fo</find>
+      <find>img</find>
+      <find>[[[</find>
+      <find>index.html</find>
+      <find>index</find>
+      <find>level</find>
+      <find>index.ht</find>
+      <find>import { BrowserModule } from '@angular/platform-browser';</find>
+      <find>import { NgModule } from '@angular/core';</find>
+      <find>const routes: Routes = [</find>
+      <find>spell.html</find>
+      <find>md-svg-src=&quot;img/app/setting/private.svg&quot;</find>
+      <find>$scope.current.selectedPhrase.relation</find>
+      <find>// spell</find>
+      <find>spell</find>
+      <find>hideLetter</find>
+      <find>directA</find>
+      <find>levelId =</find>
+      <find>&lt;app-</find>
+      <find>router.</find>
+      <find>factory</find>
+      <find>app.co</find>
+      <find>CourseListComponent</find>
+      <find>import { CourseListComponent }</find>
+      <find>app-course-list</find>
+      <find>student.ht</find>
+      <find>teacherEditor</find>
+      <find>ng-click=&quot;setPath('/')&quot;</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>?v=23</replace>
+      <replace>current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLevelItem</replace>
+      <replace>$scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel</replace>
+      <replace>current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLexicalPhrase</replace>
+      <replace>current.selectedCourse.selectedLesson.selectedTopic.selectedLevel</replace>
+      <replace>?v=24</replace>
+      <replace>selectedRow redC</replace>
+      <replace>selectedLevelLexicalPhrase</replace>
+      <replace>updateLevelLexicalJson</replace>
+      <replace>config.studentPage</replace>
+      <replace>levelLexicalPhrase</replace>
+      <replace>func.selectedLevel</replace>
+      <replace>?v=25</replace>
+      <replace>$scope.current.viewerData</replace>
+      <replace>?v=26</replace>
+      <replace>current.viewerData</replace>
+      <replace>?v=27</replace>
+      <replace>?v=28</replace>
+      <replace>= 102003</replace>
+      <replace>?v=29</replace>
+      <replace>= 102004</replace>
+      <replace>currentVersion</replace>
+      <replace>v='+currentVersion</replace>
+      <replace>v=&quot;+currentVersion</replace>
+      <replace>v={{currentVersion}}</replace>
+      <replace>v=21</replace>
+      <replace>&lt;div oc-lazy-load=&quot;['js/</replace>
+      <replace>ng-include=&quot;'</replace>
+      <replace>md-svg-src=&quot;</replace>
+      <replace>&lt;img src=&quot;img/</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\server\html\app\languaj\languaj-student\e2e</dir>
+      <dir>D:\server\html\app\languaj\languaj-student</dir>
+      <dir>D:\server\html\app\languaj</dir>
+      <dir>D:\server\html\app\languaj\student</dir>
+      <dir>D:\server\html\app\languaj\student\src\app</dir>
+      <dir>D:\server\html\app\languaj\student\src</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/api/routes/lesson.js" />
+        <option value="$PROJECT_DIR$/html/property/teach.html" />
+        <option value="$PROJECT_DIR$/js/pages/teachDashboard.js" />
+        <option value="$PROJECT_DIR$/html/Dashboard/TeachDashboard.html" />
+        <option value="$PROJECT_DIR$/api/word/lesson.js" />
+        <option value="$PROJECT_DIR$/html/student/studentTopicLevel.html" />
+        <option value="$PROJECT_DIR$/js/version.js" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/teacherEditor.html" />
+        <option value="$PROJECT_DIR$/html/property/dictionary.html" />
+        <option value="$PROJECT_DIR$/js/property/lexical.js" />
+        <option value="$PROJECT_DIR$/languaj-student/tsconfig.spec.json" />
+        <option value="$PROJECT_DIR$/languaj-student/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/languaj-student/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/languaj-student/src/index.html" />
+        <option value="$PROJECT_DIR$/teacher/index.js" />
+        <option value="$PROJECT_DIR$/teacher/student.html" />
+        <option value="$PROJECT_DIR$/teacher/teacherEditor.html" />
+        <option value="$PROJECT_DIR$/teacher/index.html" />
+        <option value="$PROJECT_DIR$/../../../conf/nginx.conf" />
+        <option value="$PROJECT_DIR$/web/html/viewer/commic.html" />
+        <option value="$PROJECT_DIR$/web/html/footer/footerSettings.html" />
+        <option value="$PROJECT_DIR$/web/html/LevelType/commic.html" />
+        <option value="$PROJECT_DIR$/web/js/main.js" />
+        <option value="$PROJECT_DIR$/web/css/global.css" />
+        <option value="$PROJECT_DIR$/web/css/student.css" />
+        <option value="$PROJECT_DIR$/web/css/style.css" />
+        <option value="$PROJECT_DIR$/student/src/level.html" />
+        <option value="$PROJECT_DIR$/web/html/viewer/spell.html" />
+        <option value="$PROJECT_DIR$/web/js/property/lexical.js" />
+        <option value="$PROJECT_DIR$/web/js/LevelType/spell.js" />
+        <option value="$PROJECT_DIR$/web/html/LevelType/spell.html" />
+        <option value="$PROJECT_DIR$/web/js/pages/levelDashboard.js" />
+        <option value="$PROJECT_DIR$/web/html/Dashboard/LevelDashboard.html" />
+        <option value="$PROJECT_DIR$/student/src/app/level/level.component.html" />
+        <option value="$PROJECT_DIR$/student/src/app/level/level.component.ts" />
+        <option value="$PROJECT_DIR$/student/src/app/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/student/src/app/course-list/course-list.component.ts" />
+        <option value="$PROJECT_DIR$/student/src/app/course-list/course-list.component.html" />
+        <option value="$PROJECT_DIR$/student/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/student/src/app/app.component.spec.ts" />
+        <option value="$PROJECT_DIR$/student/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/student/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/student/src/index.html" />
+        <option value="$PROJECT_DIR$/api/routes/security.js" />
+        <option value="$PROJECT_DIR$/web/js/home.js" />
+        <option value="$PROJECT_DIR$/web/index.html" />
+        <option value="$PROJECT_DIR$/web/role/index.html" />
+        <option value="$PROJECT_DIR$/web/student.html" />
+        <option value="$PROJECT_DIR$/web/teacher.html" />
+        <option value="$PROJECT_DIR$/web/js/version.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="5" />
+    <option name="width" value="1000" />
+    <option name="height" value="690" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="languaj" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="languaj" type="462c0819:PsiDirectoryNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="languaj" type="462c0819:PsiDirectoryNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="languaj" type="462c0819:PsiDirectoryNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="languaj" type="462c0819:PsiDirectoryNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="level" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="languaj" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="languaj" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="languaj" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+              <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="languaj" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+              <item name="LevelType" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="languaj" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TF_FMT" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="ts.external.directory.path" value="D:\server\html\app\languaj\student\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\server\html\app\languaj\student\src\app\level-type" />
+      <recent name="D:\server\html\app\languaj\teacher" />
+      <recent name="D:\server\html\app\languaj" />
+      <recent name="D:\server\html\app\languaj\site\img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\server\html\app\languaj\web" />
+      <recent name="D:\server\html\app\languaj\student\src" />
+      <recent name="D:\server\html\app\languaj\teacher" />
+      <recent name="D:\server\html\app\languaj\css\fonts\sahel" />
+      <recent name="D:\server\html\app\languaj\css" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="" />
+      <created>1623228600857</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623228600857</updated>
+      <workItem from="1623228603673" duration="44422000" />
+      <workItem from="1623487624980" duration="19104000" />
+      <workItem from="1623577108006" duration="1790000" />
+      <workItem from="1623743825737" duration="9270000" />
+      <workItem from="1624775071976" duration="7523000" />
+      <workItem from="1625558186864" duration="4682000" />
+      <workItem from="1625673832284" duration="74912000" />
+      <workItem from="1626171699679" duration="10000" />
+      <workItem from="1626195516042" duration="46689000" />
+      <workItem from="1626671948100" duration="20000" />
+      <workItem from="1626778583227" duration="4485000" />
+      <workItem from="1626978530037" duration="782000" />
+      <workItem from="1627106520400" duration="38000" />
+      <workItem from="1627297207748" duration="9723000" />
+      <workItem from="1627553954663" duration="5865000" />
+      <workItem from="1627560476572" duration="18168000" />
+      <workItem from="1627901515859" duration="437000" />
+    </task>
+    <task id="LOCAL-00014" summary="Bugfix: cache all level titles&#10;spell without check bottom">
+      <created>1623520984699</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1623520984699</updated>
+    </task>
+    <task id="LOCAL-00015" summary="level progressBar">
+      <created>1623521770959</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1623521770959</updated>
+    </task>
+    <task id="LOCAL-00016" summary="bottomDialog">
+      <created>1623577190996</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1623577190996</updated>
+    </task>
+    <task id="LOCAL-00017" summary="bugfix: viewport">
+      <created>1623577802310</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1623577802310</updated>
+    </task>
+    <task id="LOCAL-00018" summary="bugfix: viewport">
+      <created>1623577948811</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1623577948812</updated>
+    </task>
+    <task id="LOCAL-00019" summary="bugfix: multi">
+      <created>1624437967751</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1624437967751</updated>
+    </task>
+    <task id="LOCAL-00020" summary="bugfix: multi">
+      <created>1624439046891</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1624439046891</updated>
+    </task>
+    <task id="LOCAL-00021" summary="bugfix: multi">
+      <created>1624440270360</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1624440270360</updated>
+    </task>
+    <task id="LOCAL-00022" summary="bugfix: bug multi for wrap title in flex 100">
+      <created>1624776197476</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1624776197476</updated>
+    </task>
+    <task id="LOCAL-00023" summary="bugfix: bug multi for wrap title in flex 100">
+      <created>1624776870349</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1624776870349</updated>
+    </task>
+    <task id="LOCAL-00024" summary="bugfix: bug multi for wrap title in flex 100">
+      <created>1624777174619</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1624777174619</updated>
+    </task>
+    <task id="LOCAL-00025" summary="bugfix: bug multi for wrap title in flex 100">
+      <created>1624777235083</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1624777235083</updated>
+    </task>
+    <task id="LOCAL-00026" summary="bugfix: bug multi for wrap title in flex 100">
+      <created>1624777311109</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1624777311109</updated>
+    </task>
+    <task id="LOCAL-00027" summary="bugfix: bug multi for wrap title in flex 100">
+      <created>1624777723329</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1624777723330</updated>
+    </task>
+    <task id="LOCAL-00028" summary="bugfix: bug multi for wrap title in flex 100">
+      <created>1624778077589</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1624778077589</updated>
+    </task>
+    <task id="LOCAL-00029" summary="bugfix: bug multi for wrap title in flex 100">
+      <created>1624778319358</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1624778319358</updated>
+    </task>
+    <task id="LOCAL-00030" summary="bugfix: bug multi for wrap title in flex 100">
+      <created>1624778400234</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1624778400234</updated>
+    </task>
+    <task id="LOCAL-00031" summary="bugfix: bug multi size of question">
+      <created>1624779187888</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1624779187888</updated>
+    </task>
+    <task id="LOCAL-00032" summary="bugfix: bug multi size of question">
+      <created>1624779697920</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1624779697920</updated>
+    </task>
+    <task id="LOCAL-00033" summary="bugfix: bug sort">
+      <created>1624781331428</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1624781331429</updated>
+    </task>
+    <task id="LOCAL-00034" summary="bugfix: cache problem for levelTypes">
+      <created>1624782322582</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1624782322582</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Multilingual Course DestLangLid">
+      <created>1625565512382</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1625565512382</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Multilingual Course DestLangLid">
+      <created>1625567433093</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1625567433093</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Multilingual Course DestLangLid">
+      <created>1625676471544</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1625676471545</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Multilingual Course DestLangLid&#10;&#10;CourseSetting">
+      <created>1625781484210</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1625781484210</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Multilingual Course DestLangLid&#10;&#10;CourseSetting">
+      <created>1625862863289</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1625862863289</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Multilingual Course DestLangLid&#10;&#10;CourseSetting">
+      <created>1626197709693</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1626197709693</updated>
+    </task>
+    <task id="LOCAL-00041" summary="bug: lexical cache">
+      <created>1626197985065</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1626197985065</updated>
+    </task>
+    <task id="LOCAL-00042" summary="website">
+      <created>1626282807993</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1626282807993</updated>
+    </task>
+    <task id="LOCAL-00043" summary="bugfix:show levelItem and config">
+      <created>1626283732244</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1626283732244</updated>
+    </task>
+    <task id="LOCAL-00044" summary="bugfix:show levelItem and config">
+      <created>1626284164765</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1626284164765</updated>
+    </task>
+    <task id="LOCAL-00045" summary="responsive website">
+      <created>1626289509690</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1626289509690</updated>
+    </task>
+    <task id="LOCAL-00046" summary="responsive website">
+      <created>1626289659341</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1626289659341</updated>
+    </task>
+    <task id="LOCAL-00047" summary="review count">
+      <created>1626521558714</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1626521558714</updated>
+    </task>
+    <task id="LOCAL-00048" summary="review count cache">
+      <created>1626521916435</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1626521916435</updated>
+    </task>
+    <task id="LOCAL-00049" summary="site multilingual">
+      <created>1626607752726</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1626607752726</updated>
+    </task>
+    <task id="LOCAL-00050" summary="site multilingual: clear cache">
+      <created>1626608737374</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1626608737375</updated>
+    </task>
+    <task id="LOCAL-00051" summary="site multilingual: clear cache">
+      <created>1626609357514</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1626609357514</updated>
+    </task>
+    <task id="LOCAL-00052" summary="site multilingual: clear cache">
+      <created>1626609397593</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1626609397593</updated>
+    </task>
+    <task id="LOCAL-00053" summary="site multilingual: clear cache">
+      <created>1626609535225</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1626609535225</updated>
+    </task>
+    <task id="LOCAL-00054" summary="site multilingual: clear cache">
+      <created>1626779107252</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1626779107253</updated>
+    </task>
+    <task id="LOCAL-00055" summary="site multilingual: clear cache">
+      <created>1626779215746</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1626779215746</updated>
+    </task>
+    <task id="LOCAL-00056" summary="site multilingual: clear cache">
+      <created>1626779562964</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1626779562964</updated>
+    </task>
+    <task id="LOCAL-00057" summary="site multilingual: clear cache">
+      <created>1626780038277</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1626780038277</updated>
+    </task>
+    <task id="LOCAL-00058" summary="site multilingual: cache problem">
+      <created>1627299155572</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1627299155573</updated>
+    </task>
+    <task id="LOCAL-00059" summary="bugfix:teach">
+      <created>1627304303949</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1627304303949</updated>
+    </task>
+    <task id="LOCAL-00060" summary="bugfix:reload">
+      <created>1627305820673</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1627305820674</updated>
+    </task>
+    <task id="LOCAL-00061" summary="bugfix:reload">
+      <created>1627306009277</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1627306009277</updated>
+    </task>
+    <task id="LOCAL-00062" summary="bugfix:reload">
+      <created>1627901862597</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1627901862598</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="247920000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28486452" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49966952" visible="true" weight="0.25070822" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50033045" side_tool="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="TypeScript" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21348314" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Bugfix: persian number in course titles" />
+    <MESSAGE value="Bugfix: cache course title" />
+    <MESSAGE value="Bugfix: cache pair title" />
+    <MESSAGE value="Bugfix: cache all level titles&#10;spell without check bottom" />
+    <MESSAGE value="level progressBar" />
+    <MESSAGE value="bottomDialog" />
+    <MESSAGE value="bugfix: viewport" />
+    <MESSAGE value="bugfix: multi" />
+    <MESSAGE value="bugfix: bug multi for wrap title in flex 100" />
+    <MESSAGE value="bugfix: bug multi size of question" />
+    <MESSAGE value="bugfix: bug sort" />
+    <MESSAGE value="bugfix: cache problem for levelTypes" />
+    <MESSAGE value="Multilingual Course DestLangLid" />
+    <MESSAGE value="Multilingual Course DestLangLid&#10;&#10;CourseSetting" />
+    <MESSAGE value="bug: lexical cache" />
+    <MESSAGE value="website" />
+    <MESSAGE value="bugfix:show levelItem and config" />
+    <MESSAGE value="responsive website" />
+    <MESSAGE value="review count" />
+    <MESSAGE value="review count cache" />
+    <MESSAGE value="site multilingual" />
+    <MESSAGE value="site multilingual: clear cache" />
+    <MESSAGE value="site multilingual: cache problem" />
+    <MESSAGE value="bugfix:teach" />
+    <MESSAGE value="bugfix:reload" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix:reload" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="NONE" type="javascript">
+          <url>file://$PROJECT_DIR$/js/property/lexical.js</url>
+          <line>63</line>
+          <log-expression expression="         }" language="JavaScript" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointLogExpression">
+      <expression>
+        <expression-string>}</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../../logs/access.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="136">
+          <caret line="8" column="67" selection-end-line="297" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teacher/index.js" />
+    <entry file="file://$PROJECT_DIR$/web/site/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../conf/nginx.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/viewer/commic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/property/courseSetting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/routes/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/viewer/viewer.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/footer/footerSettings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="28" column="57" lean-forward="true" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/viewer/viewer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/student.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/LevelType/commic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/global.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="135" column="29" selection-start-line="135" selection-start-column="26" selection-end-line="135" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/level.html" />
+    <entry file="file://$PROJECT_DIR$/student/src/app/level-type/multi/multi.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/app/level-type/multi/multi.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/property/lexical.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/viewer/spell.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/Dashboard/LevelDashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/LevelType/spell.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/pages/levelDashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="208" selection-start-line="208" selection-end-line="208" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/LevelType/spell.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/app/level/level.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/node_modules/rxjs/src/internal/Observable.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="258" column="2" selection-start-line="258" selection-start-column="2" selection-end-line="258" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/app/level/level.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/app/level/level.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/node_modules/@angular/router/router.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="2784" column="21" selection-start-line="2784" selection-start-column="21" selection-end-line="2784" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/node_modules/@angular/core/core.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="2330" column="24" selection-start-line="2330" selection-start-column="24" selection-end-line="2330" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/app/app.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/app/course-list/course-list.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/node_modules/@angular/router/testing/testing.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/app/course-list/course-list.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/app/app.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="39" lean-forward="true" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/app/course-list/course-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="355" column="33" selection-start-line="355" selection-start-column="33" selection-end-line="355" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/routes/security.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="77" column="27" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="442" column="37" selection-start-line="442" selection-start-column="37" selection-end-line="442" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="115" column="44" lean-forward="true" selection-start-line="115" selection-start-column="44" selection-end-line="115" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/role/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="92" column="75" selection-start-line="92" selection-start-column="75" selection-end-line="92" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/teacher.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="89" column="14" lean-forward="true" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/version.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
