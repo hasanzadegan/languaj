@@ -33,7 +33,6 @@ require('./routes/student')(app);
 app.listen(port);
 
 
-
 console.log("languaj.com started in "+new Date()+" ...");
 
 
