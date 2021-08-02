@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="student in angular" />
+    <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="student in angular">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -13,15 +15,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/student/src/app/app.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/student/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -88,11 +81,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/version.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../conf/nginx.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../conf/localnginx.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="53">
+              <caret line="43" selection-start-line="43" selection-end-line="61" />
             </state>
           </provider>
         </entry>
@@ -205,7 +216,6 @@
         <option value="$PROJECT_DIR$/teacher/student.html" />
         <option value="$PROJECT_DIR$/teacher/teacherEditor.html" />
         <option value="$PROJECT_DIR$/teacher/index.html" />
-        <option value="$PROJECT_DIR$/../../../conf/nginx.conf" />
         <option value="$PROJECT_DIR$/web/html/viewer/commic.html" />
         <option value="$PROJECT_DIR$/web/html/footer/footerSettings.html" />
         <option value="$PROJECT_DIR$/web/html/LevelType/commic.html" />
@@ -237,6 +247,7 @@
         <option value="$PROJECT_DIR$/web/student.html" />
         <option value="$PROJECT_DIR$/web/teacher.html" />
         <option value="$PROJECT_DIR$/web/js/version.js" />
+        <option value="$PROJECT_DIR$/../../../conf/nginx.conf" />
       </list>
     </option>
   </component>
@@ -385,14 +396,7 @@
       <workItem from="1627297207748" duration="9723000" />
       <workItem from="1627553954663" duration="5865000" />
       <workItem from="1627560476572" duration="18168000" />
-      <workItem from="1627901515859" duration="437000" />
-    </task>
-    <task id="LOCAL-00014" summary="Bugfix: cache all level titles&#10;spell without check bottom">
-      <created>1623520984699</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1623520984699</updated>
+      <workItem from="1627901515859" duration="1626000" />
     </task>
     <task id="LOCAL-00015" summary="level progressBar">
       <created>1623521770959</created>
@@ -730,11 +734,18 @@
       <option name="project" value="LOCAL" />
       <updated>1627901862598</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="student in angular">
+      <created>1627902357749</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1627902357749</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247920000" />
+    <option name="totallyTimeSpent" value="249109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -783,7 +794,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Bugfix: persian number in course titles" />
     <MESSAGE value="Bugfix: cache course title" />
     <MESSAGE value="Bugfix: cache pair title" />
     <MESSAGE value="Bugfix: cache all level titles&#10;spell without check bottom" />
@@ -808,7 +818,8 @@
     <MESSAGE value="site multilingual: cache problem" />
     <MESSAGE value="bugfix:teach" />
     <MESSAGE value="bugfix:reload" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix:reload" />
+    <MESSAGE value="student in angular" />
+    <option name="LAST_COMMIT_MESSAGE" value="student in angular" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -832,13 +843,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../logs/access.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="136">
-          <caret line="8" column="67" selection-end-line="297" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/teacher/index.js" />
     <entry file="file://$PROJECT_DIR$/web/site/home.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -851,13 +855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../conf/nginx.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1171,7 +1168,21 @@
     <entry file="file://$PROJECT_DIR$/web/js/version.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../conf/localnginx.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="43" selection-start-line="43" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../conf/nginx.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
