@@ -1,6 +1,11 @@
-var http = require('http');
+const express = require('express');
+const app = express();
+const port = 4200;
 
-http.createServer(function (req, res) {
-    res.write("<a href='/web'>old site</a>");
-    res.end(); //end the response
-}).listen(4200); //the server object listens on port 8080
+app.use(express.static( './'));
+app.listen(port);
+
+console.log("languaj.com started in "+new Date()+" ...");
+
+
+
