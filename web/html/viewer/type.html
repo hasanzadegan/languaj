@@ -1,0 +1,17 @@
+<div oc-lazy-load="['js/viewer/type.js?v='+currentVersion]">
+    <div ng-controller="typeController"></div>
+</div>
+
+<div flex="100" layout="column">
+    <div flex="20" ng-include="'html/viewer/header/charachter.html?v='+currentVersion" layout="row"></div>
+    <div flex="80" layout-padding="">
+        <textarea class="typeText" ng-model="current.typeText"></textarea>
+    </div>
+    <div flex="10" layout-align="center center" layout="row">
+        <md-button
+                flex="90"
+                class="redB checkButton"
+                   ng-click="func.checkType()">check
+        </md-button>
+    </div>
+</div>

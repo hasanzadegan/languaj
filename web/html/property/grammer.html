@@ -1,0 +1,62 @@
+<div oc-lazy-load="['js/property/grammer.js']">
+    <div ng-controller="grammerController" layout="row" layout-wrap>
+        <div layout="row" ng-show="current.selectedPhrase.selectedPhraseWord" flex="100"
+             layout-wrap=""
+        >
+            <div layout-padding class="pagetitle" flex="100">
+                <b>{{current.selectedPhrase.selectedPhraseWord.title}}</b>
+            </div>
+            <div flex="10">
+                <md-menu>
+                    <md-button class="md-icon-button" ng-click="$mdMenu.open()">
+                        <md-icon>book</md-icon>
+                    </md-button>
+                    <md-menu-content width="4" ng-mouseleave="$mdMenu.close()">
+                        <md-menu-item layout="row" ng-repeat="POSType in POSTypeList">
+                            <md-button ng-click="setPOSType(POSType)">
+                                {{POSType.title}}
+                            </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+            <div flex="30" layout-padding>
+                {{current.selectedPhrase.selectedPhraseWord.POSTitle}}
+            </div>
+            <div flex="10" ng-if="[1].includes(current.selectedPhrase.selectedPhraseWord.POSTypeId)">
+                <md-menu>
+                    <md-button class="md-icon-button" ng-click="$mdMenu.open()">
+                        <md-icon>wc</md-icon>
+                    </md-button>
+                    <md-menu-content width="4" ng-mouseleave="$mdMenu.close()">
+                        <md-menu-item layout="row" ng-repeat="gender in genderList">
+                            <md-button ng-click="setGender(gender)">
+                                {{gender.title}}
+                            </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+            <div flex="40" layout-padding ng-if="[1,9].includes(current.selectedPhrase.selectedPhraseWord.POSTypeId)">
+                {{current.selectedPhrase.selectedPhraseWord.genderTitle}}
+            </div>
+            <div flex="100"></div>
+        </div>
+        <div ng-repeat="relation in current.selectedPhrase.phraseWordLexicalList" layout="row">
+            <i ng-if="relation.title">{{relation.title}}: </i>
+            <div>
+                {{relation.phraseList}}
+            </div>
+        </div>
+        {{current.singlarItem}}
+<!--        <div layout="row" layout-padding="" >-->
+<!--            <md-icon>hdr_strong</md-icon>-->
+<!--            <div ng-if="current.selectedPhrase.selectedPhraseWord.genderId===4">singular is {{current.singlarItem.title}}</div>-->
+<!--            <div ng-if="current.selectedPhrase.selectedPhraseWord.genderId!==4">plural is {{current.singlarItem.title}}</div>-->
+<!--        </div>-->
+        <div flex="100" layout-padding ng-if="current.selectedPhrase.selectedPhraseWord.POSTitle">
+            <div flex="100" ng-if="true" ng-include="'html/POSType/'+current.selectedPhrase.selectedPhraseWord.POSTitle+'.html'"></div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<div oc-lazy-load="['js/viewer/commic.js']">
+    <div ng-controller="commicController"></div>
+</div>
+<div layout="column" flex="100">
+
+    <div flex="90" style="overflow-y: auto;max-height: 100%">
+        <div ng-repeat="levelLexicalPhrase in current.viewerData.levelLexicalPhraseList"
+             layout-align="center center"
+             layout="row" layout-wrap="">
+            <div flex="100" layout="row" layout-padding=""
+                 dir="{{levelLexicalPhrase.itemJSONObj.isRight?'RTL':'LTR'}}">
+
+                <div flex="50">
+                    <img ng-src="img/charachter/{{levelLexicalPhrase.itemJSONObj.character}}.svg"
+                         style="max-height: 70px"
+                         ng-click="playItem($event,levelLexicalPhrase.itemJSONObj.lexicalPhrase)"
+                         class="md-button">
+                </div>
+
+                <div flex="50" class="comicText">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 13" width="11" height="13"
+                         class="comicArrow{{levelLexicalPhrase.itemJSONObj.isRight?'RTL':'LTR'}}">
+                        <path fill="#aaaaaa" opacity="1"
+                              d="M1.533 3.568L8 12.193V1H2.812C1.042 1 .474 2.156 1.533 3.568z"></path>
+                        <path fill="#fff" d="M1.533 2.568L8 11.193V0H2.812C1.042 0 .474 1.156 1.533 2.568z"></path>
+                    </svg>
+                    <div>{{levelLexicalPhrase.itemJSONObj.title}}
+                        <md-button class="md-icon-button "
+                                   ng-click="levelLexicalPhrase.itemJSONObj.lexicalPhrase.translate =!levelLexicalPhrase.itemJSONObj.lexicalPhrase.translate">
+                            <md-icon class="redC">live_help</md-icon>
+                        </md-button>
+                    </div>
+
+                    <div ng-show="levelLexicalPhrase.itemJSONObj.lexicalPhrase.translate" class="redC">
+                        {{levelLexicalPhrase.itemJSONObj.lexicalPhrase.title}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div layout-align="center center" flex="10" layout="row">
+        <md-button
+                flex="90"
+                ng-disabled="$index<current.viewerData.levelLexicalPhraseList.length-1"
+                class="redB checkButton" ng-click="func.checkAnswer()">ok
+        </md-button>
+    </div>
+
+</div>

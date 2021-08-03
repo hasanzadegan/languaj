@@ -1,0 +1,28 @@
+{
+  "name": "languaj",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "^1.7.9",
+    "angular-animate": "^1.7.9",
+    "angular-aria": "^1.7.9",
+    "angular-material": "^1.1.21",
+    "angular-sanitize": "^1.7.9",
+    "angular-vibrator": "^0.2.0",
+    "angular-virtual-keyboard": "^0.4.3",
+    "angularjs": "0.0.1",
+    "angularjs-oauth2": "^1.2.1",
+    "angularjs-toast": "^4.0.0",
+    "body-parser": "^1.19.0",
+    "express-jwt": "^6.0.0",
+    "http-server": "^0.12.1",
+    "jsonwebtoken": "^8.5.1",
+    "material-icons-font": "^2.0.0",
+    "ng-animate": "^0.3.4",
+    "ng-draggable": "^1.0.0",
+    "ngclipboard": "^2.0.0",
+    "ngstorage": "^0.3.11",
+    "oclazyload": "^1.1.0",
+    "q": "^1.5.1",
+    "satellizer": "^0.15.5"
+  }
+}
