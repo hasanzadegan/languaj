@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/languaj.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/index4200.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/index4200.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/Lesson/Topic.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/Lesson/Topic.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,26 +25,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="30" selection-end-line="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/index4200.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="238">
+              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/index.html">
+        <entry file="file://$PROJECT_DIR$/api/index4200.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+            <state relative-caret-position="102">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/html/Lesson/Topic.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -55,7 +60,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>level</find>
       <find>index.ht</find>
       <find>import { BrowserModule } from '@angular/platform-browser';</find>
       <find>import { NgModule } from '@angular/core';</find>
@@ -85,6 +89,7 @@
       <find>img/</find>
       <find>img/app/charachters</find>
       <find>__dirname</find>
+      <find>ng-show=&quot;!topic.editMode&quot;</find>
     </findStrings>
     <replaceStrings>
       <replace>current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLevelItem</replace>
@@ -138,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/version.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/teacherEditor.html" />
         <option value="$PROJECT_DIR$/html/property/dictionary.html" />
@@ -189,6 +193,7 @@
         <option value="$PROJECT_DIR$/api/index.js" />
         <option value="$PROJECT_DIR$/api/index4200.html" />
         <option value="$PROJECT_DIR$/api/index4200.js" />
+        <option value="$PROJECT_DIR$/web/html/Lesson/Topic.html" />
       </list>
     </option>
   </component>
@@ -198,22 +203,35 @@
     <option name="height" value="690" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
+      <pane id="ProjectPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
-              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="languaj" type="462c0819:PsiDirectoryNode" />
+              <item name="languaj" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\server\html\app\languaj" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
             <path>
-              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="languaj" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="languaj" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\server\html\app\languaj" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="languaj" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\server\html\app\languaj" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="svg" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="languaj" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\server\html\app\languaj" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="svg" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="action" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -227,25 +245,28 @@
     <property name="TF_FMT" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/svg/action" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="ts.external.directory.path" value="D:\server\html\app\languaj\student\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\server\html\app\languaj\api" />
-      <recent name="D:\server\html\app\languaj\web" />
-      <recent name="D:\server\html\app\languaj\student\src" />
-      <recent name="D:\server\html\app\languaj\teacher" />
-      <recent name="D:\server\html\app\languaj\css\fonts\sahel" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\server\html\app\languaj\student\src\app\level-type" />
       <recent name="D:\server\html\app\languaj\teacher" />
       <recent name="D:\server\html\app\languaj" />
       <recent name="D:\server\html\app\languaj\site\img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\server\html\app\languaj\web\svg\action" />
+      <recent name="D:\server\html\app\languaj\api" />
+      <recent name="D:\server\html\app\languaj\web" />
+      <recent name="D:\server\html\app\languaj\student\src" />
+      <recent name="D:\server\html\app\languaj\teacher" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -288,21 +309,10 @@
       <workItem from="1627560476572" duration="18168000" />
       <workItem from="1627901515859" duration="4649000" />
       <workItem from="1627910269745" duration="4612000" />
-      <workItem from="1627994235963" duration="2218000" />
-    </task>
-    <task id="LOCAL-00025" summary="bugfix: bug multi for wrap title in flex 100">
-      <created>1624777235083</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1624777235083</updated>
-    </task>
-    <task id="LOCAL-00026" summary="bugfix: bug multi for wrap title in flex 100">
-      <created>1624777311109</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1624777311109</updated>
+      <workItem from="1627994235963" duration="2323000" />
+      <workItem from="1627997531672" duration="730000" />
+      <workItem from="1628009801725" duration="1383000" />
+      <workItem from="1628337281947" duration="707000" />
     </task>
     <task id="LOCAL-00027" summary="bugfix: bug multi for wrap title in flex 100">
       <created>1624777723329</created>
@@ -633,11 +643,25 @@
       <option name="project" value="LOCAL" />
       <updated>1627918915606</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="student in angular">
+      <created>1627996742865</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1627996742866</updated>
+    </task>
+    <task id="LOCAL-00075" summary="student in angular">
+      <created>1627997806537</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1627997806538</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259643000" />
+    <option name="totallyTimeSpent" value="262568000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -735,6 +759,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
     <MESSAGE value="Bugfix: cache course title" />
     <MESSAGE value="Bugfix: cache pair title" />
@@ -785,13 +810,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/html/footer/footerSettings.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -1076,7 +1094,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/index.html" />
     <entry file="file://$PROJECT_DIR$/../../../conf/nginx.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
@@ -1117,15 +1134,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="30" selection-end-line="39" />
+        <state relative-caret-position="238">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/index4200.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="102">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/svg/action/editTopic.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/Lesson/Topic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
         </state>
       </provider>
     </entry>
