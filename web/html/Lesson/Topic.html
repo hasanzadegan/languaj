@@ -8,12 +8,16 @@
             </div>
             <div class="cvh" flex="100">
                     <div ng-repeat="topic in current.selectedCourse.selectedLesson.topicList"
-                                  ng-click="setTopic(topic)"
                                   ng-class="topic.topicId===current.selectedCourse.selectedLesson.selectedTopic.topicId?'selectedRow redC':''">
                             <div flex="100" layout-padding=""
                                  ng-show="!topic.editMode"
                                  ng-dblclick="topic.editMode=!topic.editMode"
                                  title="{{topic}}" layout-wrap="">
+
+                                <md-button class="md-icon-button"
+                                           ng-click="setTopic(topic)">
+                                    <md-icon md-svg-src="svg/action/editTopic.svg"></md-icon>
+                                </md-button>
                                 {{topic.title}}
                             </div>
                             <div flex="100"
@@ -22,7 +26,6 @@
                             >
                                 <input ng-model="topic.title" flex="80" ng-blur="updateTopic(topic)">
                                 <md-button class="md-icon-button"
-                                           ng-show="topic.topicId===current.selectedCourse.selectedLesson.selectedTopic.topicId"
                                            ng-click="deleteTopic(topic)">
                                     <md-icon md-svg-src="svg/action/delete.svg">delete</md-icon>
                                 </md-button>
