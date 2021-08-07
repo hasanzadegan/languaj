@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/languaj.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/index4200.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/index4200.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/Lesson/Topic.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/Lesson/Topic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/Lesson/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/Lesson/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/student/studentTopicLevel.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/student/studentTopicLevel.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,11 +35,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/html/Lesson/Topic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+            <state relative-caret-position="150">
+              <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/version.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/html/student/studentTopicLevel.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="74" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/html/Lesson/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -60,9 +82,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>index.ht</find>
-      <find>import { BrowserModule } from '@angular/platform-browser';</find>
-      <find>import { NgModule } from '@angular/core';</find>
       <find>const routes: Routes = [</find>
       <find>spell.html</find>
       <find>md-svg-src=&quot;img/app/setting/private.svg&quot;</find>
@@ -90,6 +109,9 @@
       <find>img/app/charachters</find>
       <find>__dirname</find>
       <find>ng-show=&quot;!topic.editMode&quot;</find>
+      <find>?course</find>
+      <find>/web/student.html</find>
+      <find>?course='+</find>
     </findStrings>
     <replaceStrings>
       <replace>current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLevelItem</replace>
@@ -143,7 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/teacherEditor.html" />
         <option value="$PROJECT_DIR$/html/property/dictionary.html" />
         <option value="$PROJECT_DIR$/js/property/lexical.js" />
@@ -186,14 +207,15 @@
         <option value="$PROJECT_DIR$/web/student.html" />
         <option value="$PROJECT_DIR$/web/teacher.html" />
         <option value="$PROJECT_DIR$/../../../conf/nginx.conf" />
-        <option value="$PROJECT_DIR$/web/js/version.js" />
         <option value="$PROJECT_DIR$/api/index.html" />
-        <option value="$PROJECT_DIR$/web/html/student/studentTopicLevel.html" />
         <option value="$PROJECT_DIR$/web/site/home.html" />
         <option value="$PROJECT_DIR$/api/index.js" />
         <option value="$PROJECT_DIR$/api/index4200.html" />
         <option value="$PROJECT_DIR$/api/index4200.js" />
         <option value="$PROJECT_DIR$/web/html/Lesson/Topic.html" />
+        <option value="$PROJECT_DIR$/web/js/version.js" />
+        <option value="$PROJECT_DIR$/web/html/student/studentTopicLevel.html" />
+        <option value="$PROJECT_DIR$/web/html/Lesson/header.html" />
       </list>
     </option>
   </component>
@@ -312,28 +334,7 @@
       <workItem from="1627994235963" duration="2323000" />
       <workItem from="1627997531672" duration="730000" />
       <workItem from="1628009801725" duration="1383000" />
-      <workItem from="1628337281947" duration="707000" />
-    </task>
-    <task id="LOCAL-00027" summary="bugfix: bug multi for wrap title in flex 100">
-      <created>1624777723329</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1624777723330</updated>
-    </task>
-    <task id="LOCAL-00028" summary="bugfix: bug multi for wrap title in flex 100">
-      <created>1624778077589</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1624778077589</updated>
-    </task>
-    <task id="LOCAL-00029" summary="bugfix: bug multi for wrap title in flex 100">
-      <created>1624778319358</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1624778319358</updated>
+      <workItem from="1628337281947" duration="1858000" />
     </task>
     <task id="LOCAL-00030" summary="bugfix: bug multi for wrap title in flex 100">
       <created>1624778400234</created>
@@ -657,11 +658,32 @@
       <option name="project" value="LOCAL" />
       <updated>1627997806538</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="bugFix : setTopic">
+      <created>1628338088090</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1628338088092</updated>
+    </task>
+    <task id="LOCAL-00077" summary="bugFix : setTopic">
+      <created>1628338192372</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1628338192372</updated>
+    </task>
+    <task id="LOCAL-00078" summary="bugFix : setTopic">
+      <created>1628338268001</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1628338268001</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="262568000" />
+    <option name="totallyTimeSpent" value="263719000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -676,7 +698,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28486452" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28486452" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -688,7 +710,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4976867" weight="0.4490085" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49966952" visible="true" weight="0.25070822" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49966952" visible="true" weight="0.25070822" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50231326" side_tool="true" weight="0.4490085" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -761,7 +783,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
-    <MESSAGE value="Bugfix: cache course title" />
     <MESSAGE value="Bugfix: cache pair title" />
     <MESSAGE value="Bugfix: cache all level titles&#10;spell without check bottom" />
     <MESSAGE value="level progressBar" />
@@ -786,7 +807,8 @@
     <MESSAGE value="bugfix:teach" />
     <MESSAGE value="bugfix:reload" />
     <MESSAGE value="student in angular" />
-    <option name="LAST_COMMIT_MESSAGE" value="student in angular" />
+    <MESSAGE value="bugFix : setTopic" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugFix : setTopic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -810,13 +832,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/html/footer/footerSettings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="28" column="57" lean-forward="true" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/html/viewer/viewer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1087,24 +1102,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../conf/localnginx.conf" />
-    <entry file="file://$PROJECT_DIR$/web/js/version.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../conf/nginx.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
           <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/student/studentTopicLevel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="50" column="51" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -1151,8 +1152,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/html/Lesson/Topic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        <state relative-caret-position="150">
+          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/version.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/student/studentTopicLevel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="74" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/Lesson/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
         </state>
       </provider>
     </entry>

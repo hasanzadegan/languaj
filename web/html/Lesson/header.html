@@ -52,11 +52,11 @@
             </div>
             <md-button flex style="font-size: 12px;"
                        ngclipboard
-                       data-clipboard-text="{{__path+'/?course='+current.selectedCourse.courseCode+'&ref='+current.profile.ref}}"
+                       data-clipboard-text="{{__path+'/web/student.html?course='+current.selectedCourse.courseCode+'&ref='+current.profile.ref}}"
                        flex=""
             >
                 <md-icon md-svg-src="img/app/clipboard.svg" style="max-height: 20px !important;"></md-icon>
-                {{__path+'/?course='+current.selectedCourse.courseCode+'&ref='+current.profile.ref}}
+                {{__path+'/web/student.html?course='+current.selectedCourse.courseCode+'&ref='+current.profile.ref}}
             </md-button>
         </small>
         <div class="hScroll" ng-show="showTeacherList" style="border-bottom: solid 1px rgba(0,0,0,0.12)" layout="row"
