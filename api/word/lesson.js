@@ -82,7 +82,7 @@ module.exports = {
     updateTopic: async function (params) {
         console.log(params);
         stmt = '' +
-            ' update topic set title = ? ' +
+            ' update topic set title = ?, orderr = ?' +
             ' where  topicId = ?';
         return await query(stmt, params).then(function (result) {
             return result;
@@ -174,9 +174,10 @@ module.exports = {
     },
     getTopicList: async function (lessonId) {
         stmt = '' +
-            ' select topicId,title,isActive ' +
+            ' select topicId,title,isActive,orderr ' +
             ' from topic ' +
-            ' where lessonId = ? ';
+            ' where lessonId = ? ' +
+            ' order by IFNULL(orderr,99999999)';
         params = [lessonId];
         return await query(stmt, params).then(function (result) {
             return result;

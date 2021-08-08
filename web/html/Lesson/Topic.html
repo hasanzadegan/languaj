@@ -13,7 +13,6 @@
                                  ng-show="!topic.editMode"
                                  ng-dblclick="topic.editMode=!topic.editMode"
                                  title="{{topic}}" layout-wrap="">
-
                                 <md-button class="md-icon-button"
                                            ng-click="setTopic(topic)">
                                     <md-icon md-svg-src="svg/action/editTopic.svg"></md-icon>
@@ -24,6 +23,7 @@
                                  layout-padding=""
                                  ng-show="topic.editMode"
                             >
+                                <input ng-model="topic.orderr" maxlength="2" flex="10" type="number" ng-blur="updateTopic(topic)">
                                 <input ng-model="topic.title" flex="80" ng-blur="updateTopic(topic)">
                                 <md-button class="md-icon-button"
                                            ng-click="deleteTopic(topic)">

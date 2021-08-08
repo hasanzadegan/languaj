@@ -7,7 +7,8 @@ angular.module('myApp').controller('topicController',
             });
         }
         $scope.updateTopic = function updateTopic(topic) {
-            params = [topic.title, topic.topicId];
+            params = [topic.title, topic.orderr,topic.topicId];
+            console.log(params)
             LevelService.updateTopic(params).then(result => {
                 topic.editMode = false;
                 $rootScope.$broadcast('lessonChanged', $scope.current.selectedCourse.selectedLesson.lessonId);
