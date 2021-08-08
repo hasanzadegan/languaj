@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/index4200.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/index4200.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/html/Lesson/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/Lesson/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/student/studentTopicLevel.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/student/studentTopicLevel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/property/courseSetting.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/property/courseSetting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/pages/lessonDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/pages/lessonDashboard.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/index4200.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -62,11 +64,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/html/Lesson/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+            <state relative-caret-position="277">
+              <caret line="99" column="17" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/pages/lessonDashboard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="55" column="43" lean-forward="true" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/html/property/courseSetting.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="46" column="51" lean-forward="true" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -82,9 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>const routes: Routes = [</find>
-      <find>spell.html</find>
-      <find>md-svg-src=&quot;img/app/setting/private.svg&quot;</find>
       <find>$scope.current.selectedPhrase.relation</find>
       <find>// spell</find>
       <find>spell</find>
@@ -112,6 +129,9 @@
       <find>?course</find>
       <find>/web/student.html</find>
       <find>?course='+</find>
+      <find>__clipboard</find>
+      <find>add co</find>
+      <find>add level</find>
     </findStrings>
     <replaceStrings>
       <replace>current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLevelItem</replace>
@@ -165,8 +185,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/teacherEditor.html" />
-        <option value="$PROJECT_DIR$/html/property/dictionary.html" />
         <option value="$PROJECT_DIR$/js/property/lexical.js" />
         <option value="$PROJECT_DIR$/languaj-student/tsconfig.spec.json" />
         <option value="$PROJECT_DIR$/languaj-student/src/app/app.component.html" />
@@ -211,11 +229,13 @@
         <option value="$PROJECT_DIR$/web/site/home.html" />
         <option value="$PROJECT_DIR$/api/index.js" />
         <option value="$PROJECT_DIR$/api/index4200.html" />
-        <option value="$PROJECT_DIR$/api/index4200.js" />
         <option value="$PROJECT_DIR$/web/html/Lesson/Topic.html" />
         <option value="$PROJECT_DIR$/web/js/version.js" />
         <option value="$PROJECT_DIR$/web/html/student/studentTopicLevel.html" />
+        <option value="$PROJECT_DIR$/web/js/pages/lessonDashboard.js" />
+        <option value="$PROJECT_DIR$/web/html/property/courseSetting.html" />
         <option value="$PROJECT_DIR$/web/html/Lesson/header.html" />
+        <option value="$PROJECT_DIR$/api/index4200.js" />
       </list>
     </option>
   </component>
@@ -334,14 +354,7 @@
       <workItem from="1627994235963" duration="2323000" />
       <workItem from="1627997531672" duration="730000" />
       <workItem from="1628009801725" duration="1383000" />
-      <workItem from="1628337281947" duration="1858000" />
-    </task>
-    <task id="LOCAL-00030" summary="bugfix: bug multi for wrap title in flex 100">
-      <created>1624778400234</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1624778400234</updated>
+      <workItem from="1628337281947" duration="4491000" />
     </task>
     <task id="LOCAL-00031" summary="bugfix: bug multi size of question">
       <created>1624779187888</created>
@@ -679,11 +692,18 @@
       <option name="project" value="LOCAL" />
       <updated>1628338268001</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="bugFix : course link">
+      <created>1628339221634</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1628339221635</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263719000" />
+    <option name="totallyTimeSpent" value="266352000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -783,7 +803,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
-    <MESSAGE value="Bugfix: cache pair title" />
     <MESSAGE value="Bugfix: cache all level titles&#10;spell without check bottom" />
     <MESSAGE value="level progressBar" />
     <MESSAGE value="bottomDialog" />
@@ -808,7 +827,8 @@
     <MESSAGE value="bugfix:reload" />
     <MESSAGE value="student in angular" />
     <MESSAGE value="bugFix : setTopic" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugFix : setTopic" />
+    <MESSAGE value="bugFix : course link" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugFix : course link" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -832,20 +852,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/html/viewer/viewer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/student.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/html/LevelType/commic.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -1140,13 +1146,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/index4200.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/svg/action/editTopic.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1171,10 +1170,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/pages/lessonDashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="55" column="43" lean-forward="true" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/property/courseSetting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="46" column="51" lean-forward="true" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/html/Lesson/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+        <state relative-caret-position="277">
+          <caret line="99" column="17" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/index4200.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>

@@ -34,16 +34,18 @@ angular.module('myApp').controller('lessonDashboardController', function ($rootS
 
 
             if (event.keyCode == 88 && event.ctrlKey) {
-                localStorage.setItem("__clipboard", JSON.stringify($scope.current.selectedLevel));
+                localStorage.setItem("__clipboard", JSON.stringify($scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel));
                 removeAfterCopy = 1;
             }
             if (event.keyCode == 67 && event.ctrlKey) {
-                localStorage.setItem("__clipboard", JSON.stringify($scope.current.selectedLevel))
+                console.log(JSON.stringify($scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel))
+                localStorage.setItem("__clipboard", JSON.stringify($scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel))
                 removeAfterCopy = 0;
             }
             if (event.keyCode == 86 && event.ctrlKey) {
                 var clipboard = localStorage.getItem("__clipboard");
                 if (clipboard) {
+                    console.log("clipboard",clipboard)
                     $scope.pasteLevel(JSON.parse(clipboard), removeAfterCopy);
                 }
             }
