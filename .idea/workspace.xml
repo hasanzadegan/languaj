@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="bugFix : course link">
+    <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/word/lesson.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/word/lesson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/Lesson/Topic.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/Lesson/Topic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/property/topic.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/property/topic.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,20 +51,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/html/Lesson/Topic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="342">
+              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/version.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state>
+              <caret column="27" selection-start-column="27" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -244,7 +241,6 @@
         <option value="$PROJECT_DIR$/web/site/home.html" />
         <option value="$PROJECT_DIR$/api/index.js" />
         <option value="$PROJECT_DIR$/api/index4200.html" />
-        <option value="$PROJECT_DIR$/web/js/version.js" />
         <option value="$PROJECT_DIR$/web/html/student/studentTopicLevel.html" />
         <option value="$PROJECT_DIR$/web/js/pages/lessonDashboard.js" />
         <option value="$PROJECT_DIR$/web/html/property/courseSetting.html" />
@@ -253,6 +249,7 @@
         <option value="$PROJECT_DIR$/api/word/lesson.js" />
         <option value="$PROJECT_DIR$/web/js/property/topic.js" />
         <option value="$PROJECT_DIR$/web/html/Lesson/Topic.html" />
+        <option value="$PROJECT_DIR$/web/js/version.js" />
       </list>
     </option>
   </component>
@@ -371,14 +368,7 @@
       <workItem from="1627994235963" duration="2323000" />
       <workItem from="1627997531672" duration="730000" />
       <workItem from="1628009801725" duration="1383000" />
-      <workItem from="1628337281947" duration="6363000" />
-    </task>
-    <task id="LOCAL-00032" summary="bugfix: bug multi size of question">
-      <created>1624779697920</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1624779697920</updated>
+      <workItem from="1628337281947" duration="6449000" />
     </task>
     <task id="LOCAL-00033" summary="bugfix: bug sort">
       <created>1624781331428</created>
@@ -716,11 +706,18 @@
       <option name="project" value="LOCAL" />
       <updated>1628413526593</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="order for topic">
+      <created>1628416207855</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1628416207856</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268224000" />
+    <option name="totallyTimeSpent" value="268310000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -820,7 +817,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
-    <MESSAGE value="Bugfix: cache all level titles&#10;spell without check bottom" />
     <MESSAGE value="level progressBar" />
     <MESSAGE value="bottomDialog" />
     <MESSAGE value="bugfix: viewport" />
@@ -845,7 +841,8 @@
     <MESSAGE value="student in angular" />
     <MESSAGE value="bugFix : setTopic" />
     <MESSAGE value="bugFix : course link" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugFix : course link" />
+    <MESSAGE value="order for topic" />
+    <option name="LAST_COMMIT_MESSAGE" value="order for topic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1152,13 +1149,6 @@
     <entry file="file://$PROJECT_DIR$/web/svg/action/editTopic.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/version.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/html/student/studentTopicLevel.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1210,8 +1200,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/html/Lesson/Topic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="342">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/version.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
         </state>
       </provider>
     </entry>
