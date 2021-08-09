@@ -44,7 +44,6 @@ angular.module('myApp').controller('lexicalController',
                     },
                 }
 
-                console.log("relationTypeList",$scope.relationTypeList  )
             })
         }
 

@@ -50,21 +50,7 @@ angular.module('myApp').controller('dictionaryController',
                 $scope.current.selectedPhrase.phraseWordList = result;
                 StorageService.setData($scope.current);
             })
-            WordService.getLexicalOtherPhraseList(phrase.phraseId).then(function (result) {
-                // $scope.current.selectedPhrase.relationLexicalList[0].lexicalObj
-                $scope.current.selectedPhrase.relationLexicalList = result;
-
-                console.log("getLexicalOtherPhraseList",result)
-
-                if(result.length>0) {
-                    lexicalListObj = JSON.parse(result[0].lexicalList);
-                    $rootScope.$broadcast("lexicalImageChanged", {lexicalId: result[0].lexicalId});
-                }
-                else {
-                    // $scope.extractPhrase(phrase).then(result=>{})
-                }
-                StorageService.setData($scope.current);
-            });
+            $scope.$broadcast("lexicalChanged",null);
         }
 
         $scope.deletePhrase = function ($event) {

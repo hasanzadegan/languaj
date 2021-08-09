@@ -76,8 +76,8 @@
                     {{phraseWord.title}}
                 </md-button>
             </div>
-            <div flex="100" ng-include="'html/property/lexical.html?v={{currentVersion}}.1'"
-                 ng-show="current.selectedPhrase.selectedPhraseWord==null"></div>
+
+            <div flex="100" ng-include="'html/property/lexical.html?v='+currentVersion"></div>
 
             <div flex="100" ng-if="true" ng-include="'html/property/grammer.html'" ng-show="config.showGrammer"></div>
 
