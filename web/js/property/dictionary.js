@@ -1,6 +1,6 @@
 angular.module('myApp').controller('dictionaryController',
-    function ($rootScope, $scope, $q, WordService, BaeService, StorageService) {
-        $rootScope.addPhrase = function (phrase,langId) {
+    function ($rootScope, $scope, $q, WordService, BaeService, StorageService,$timeout,$interval) {
+            $rootScope.addPhrase = function (phrase,langId) {
             console.log("$rootScope.addPhrase",phrase,langId)
             WordService.addPhrase(langId, phrase).then(result => {
                 for(item of ["?",".","!"]){
@@ -12,7 +12,7 @@ angular.module('myApp').controller('dictionaryController',
             })
         }
 
-        $rootScope.findPhrase = function () {
+        $rootScope.delayFindPhrase = function(){
             sourceLangId = $scope.current.selectedCourse.sourceLangId;
             destLangId = $scope.current.selectedCourse.destLangId;
 
@@ -39,6 +39,25 @@ angular.module('myApp').controller('dictionaryController',
                 StorageService.setData($scope.current);
             });
             StorageService.setConfig($scope.config);
+        }
+
+        var interval;
+        $rootScope.findPhrase = function () {
+            $rootScope.searchingPhrase = true;
+            var c = 0;
+            if(interval)
+                $interval.cancel(interval);
+            interval = $interval(function () {
+                console.log("searching ...")
+                if(c>3){
+                    $interval.cancel(interval);
+                    $rootScope.delayFindPhrase();
+                    $rootScope.searchingPhrase = false;
+                    console.log("search done ")
+                }
+                c++;
+            },100);
+
         };
 
         $rootScope.selectPhrase = function (phrase) {

@@ -3,18 +3,10 @@
         <div layout="row" flex="100" layout-wrap>
             <div flex="100" layout-wrap layout="row">
                 <div flex="100" layout="row" layout-padding class="">
-                    <!--                    <md-button class="md-icon-button" ng-click="toggleSearchResult()">-->
-                    <!--                        <md-icon ng-show="config.showSearchResult">keyboard_arrow_down</md-icon>-->
-                    <!--                        <md-icon ng-show="!config.showSearchResult">play_circle_filled</md-icon>-->
-                    <!--                    </md-button>-->
+
                     <input flex="90" class="searchPhrase" ng-model="current.searchText"
                            ng-keyup="findPhrase()">
-                    <!--                    <div flex="20" layout="row" layout-wrap="">-->
-                    <!--                        <md-button class="mini-button" flex="25" ng-repeat="letter in extraLetters"-->
-                    <!--                                   ng-click="current.searchText=current.searchText+letter">-->
-                    <!--                            {{letter}}-->
-                    <!--                        </md-button>-->
-                    <!--                    </div>-->
+                    <img  flex="10" src="/web/img/app/search.svg" ng-show="searchingPhrase" style="height:40px ">
                 </div>
                 <div flex="100" class="searchResult" ng-show="config.showSearchResult">
                     <div layout="row">
