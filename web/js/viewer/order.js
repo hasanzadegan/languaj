@@ -4,6 +4,7 @@ angular.module('myApp').controller('orderController',
         $scope.func.orderShuffleList = [];
 
 
+
         $scope.func.createLevelData = function(){
             if($scope.current.viewerData.levelLexicalPhraseList.length<1){
                 $scope.error = "Need One phrase"
@@ -21,6 +22,12 @@ angular.module('myApp').controller('orderController',
             }
         }
         $scope.func.createLevelData();
+
+
+        // $scope.$on('levelChanged', function (event, levelId) {
+        //     alert(1)
+        //     $scope.func.createLevelData();
+        // });
 
         $scope.func.selectWord = function(index){
             $scope.func.answerWordList.push($scope.func.orderShuffleList[index]);

@@ -1,6 +1,7 @@
 <div oc-lazy-load="['js/property/level.js']">
     <div ng-controller="levelController" layout="row" layout-wrap
          ng-show="current.selectedCourse.selectedLesson.selectedTopic.selectedLevel">
+        <div ng-include="'/web/html/levelType/'+current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelTypeTitle+'.html'"></div>
 <!--        <div flex="100" class="levelLegend" layout-padding="" layout="row">-->
 <!--            <input flex="90" ng-model="current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.title">-->
 <!--            <md-button class="md-icon-button" ng-click="updateLevel()">-->
