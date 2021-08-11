@@ -37,7 +37,8 @@ module.exports = function(app){
 
     app.get('/api/courseList/:langId',  async (req, res) => {
         var user = await global.getUser(req);
-
+        if(!user)
+            res.send([]);
         lesson.getCourseList(user.userId, req.params.langId).then(function (result) {
             courseList = [];
             for (course of result) {
@@ -56,6 +57,8 @@ module.exports = function(app){
 
     app.get('/api/lessonTopicList/:courseId',  async (req, res) => {
         var user = await global.getUser(req)
+        if(!user)
+            res.send([]);
         lesson.getLessonTopicList(user.userId, req.params.courseId).then(function (result) {
             res.send(result);
         })
@@ -63,6 +66,8 @@ module.exports = function(app){
 
     app.get('/api/teacherLessonTopicList/:courseId/:teacherId',  async (req, res) => {
         var user = await global.getUser(req);
+        if(!user)
+            res.send([]);
         teacherId = req.params.teacherId;
         lesson.getLessonTopicList(user.userId, req.params.courseId, teacherId).then(function (result) {
             res.send(result);
@@ -90,6 +95,8 @@ module.exports = function(app){
 
     app.post('/api/addCourse', async (req, res) => {
         user = await global.getUser(req);
+        if(!user)
+            res.send(null);
         params = [user.userId, req.body.sourceLangId,req.body.destLangId, req.body.title];
         console.log(params)
         lesson.addCourse(params).then(function (result) {
