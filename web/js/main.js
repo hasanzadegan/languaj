@@ -29,10 +29,6 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         return array.sort(() => Math.random() - 0.5);
     }
 
-    $scope.setPath = function (path) {
-        StorageService.setPath('../' + path);
-        $window.location.href = path;
-    }
 
     $scope.clearData = function () {
         $scope.current = {};
@@ -103,6 +99,14 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         StorageService.setData($scope.current);
     }
 
+
+    $scope.setPath = function (path,viewMode,viewModeId) {
+        StorageService.setPath('../' + path);
+        $scope.current.viewMode = viewMode;
+        $scope.current.viewModeId= viewModeId;
+        StorageService.setData($scope.current);
+        $window.location.href = path;
+    }
 
     try {
         courseCode = $window.location.search.split("?")[1].split("course=")[1].split("&")[0];

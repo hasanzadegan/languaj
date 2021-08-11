@@ -60,6 +60,7 @@ angular.module('myApp').controller('dictionaryController',
 
         };
 
+
         $rootScope.selectPhrase = function (phrase) {
             $scope.current.selectedPhrase = phrase;
             $scope.current.viewerData.selectedLexicalPhrase = null;

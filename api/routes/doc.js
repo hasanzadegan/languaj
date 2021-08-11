@@ -45,6 +45,21 @@ module.exports = function(app){
             res.send(result);
         })
     });
+    app.get('/api/UnreviewDoc', (req, res) => {
+        docArchive.getUnreviewDoc().then(function (result) {
+            res.send(result);
+        })
+    });
+    app.post('/api/updateDocData', (req, res) => {
+        docArchive.updateDocData(req.body).then(function (result) {
+            res.send(result);
+        })
+    });
+    app.post('/api/updateDocReview', (req, res) => {
+        docArchive.updateDocReview(req.body).then(function (result) {
+            res.send(result);
+        })
+    });
 
     app.post('/api/imageList', (req, res) => {
         docArchive.getImageList(req.body).then(function (result) {

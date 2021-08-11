@@ -40,22 +40,21 @@
                                             >
                                                 <md-button class="md-icon-button" ng-click="deleteLexicalPhrase($event,lexicalPhrase)">
                                                     <md-icon md-svg-src="svg/action/delete.svg">delete</md-icon>
-
-                                                    <!--                                                <md-icon>delete</md-icon>-->
                                                 </md-button>
                                                 <div flex>
                                                     <div>
                                                         <input type="file" id="file1" name="file" multiple ng-files="uploadImage($files)" class="fileUploader"/>
                                                         <md-button ng-click="uplaodFiles()">
                                                             <md-icon md-svg-src="svg/action/uploadImage.svg"></md-icon>
-                                                            <!--                <md-icon>add_circle</md-icon> upload Image-->
                                                         </md-button>
                                                     </div>
                                                 </div>
                                                 <md-button class="md-icon-button" ng-click="assignLevelLexicalPhrase(lexicalPhrase,relation.lexicalId)">
                                                     <md-icon md-svg-src="svg/action/insert.svg"></md-icon>
-
-                                                    <!--                                                <md-icon>arrow_back</md-icon>-->
+                                                </md-button>
+                                                <md-button class="md-icon-button"
+                                                           ng-click="setPath('teacher.html','gallery')">
+                                                    <md-icon md-svg-src="svg/action/edit.svg"></md-icon>
                                                 </md-button>
                                             </div>
                                         </div>

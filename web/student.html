@@ -89,11 +89,7 @@
 </div>
 
 
-<div hide-xs="true" class="toggleViewMode" >
-    <md-button class="md-button md-icon-button"  ng-click="setPath('teacher.html')" title="teacher">
-        <md-icon md-svg-src="img/app/back.svg">chrome_reader_mode</md-icon>
-    </md-button>
-</div>
+<div ng-include="'html/Dashboard/sideMenu.html?v='+currentVersion"></div>
 
 
 <div ng-show="current.dialogText"

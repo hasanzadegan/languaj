@@ -62,11 +62,16 @@ angular.module('myApp').controller('lexicalController',
         })
 
         $scope.showImage= function(lexicalPhrase,relation){
+
+            WordService.getLexicalImageList(relation.lexicalId).then(imageListResult => {
+                $scope.current.imageList = imageListResult;
+            });
+
             $scope.current.viewerData.selectedLexicalPhrase = lexicalPhrase;
             StorageService.setData($scope.current);
-            lexicalPhrase.lexicalId = relation.lexicalId;
+            // lexicalPhrase.lexicalId = relation.lexicalId;
             $scope.toggleImageList();
-            $rootScope.$broadcast("lexicalImageChanged",lexicalPhrase);
+            // $rootScope.$broadcast("lexicalImageChanged",lexicalPhrase);
             StorageService.setConfig($scope.config);
         }
 
