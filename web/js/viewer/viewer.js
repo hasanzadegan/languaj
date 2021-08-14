@@ -63,6 +63,10 @@ angular.module('myApp').controller('viewerController',
 
         $scope.func.nextLevel = function () {
             $scope.current.answerIsCorrect = null;
+
+            levelList = $scope.current.student.selectedCourse.selectedTopic.levelList;
+            levelIndex = $scope.current.student.selectedCourse.selectedTopic.levelIndex;
+            console.log("log event for mistake >>>>> levelId:"+levelList[levelIndex].levelId+" review:0")
             $rootScope.$broadcast("nextLevel", {});
         }
 

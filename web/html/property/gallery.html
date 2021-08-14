@@ -38,25 +38,35 @@
 
                     <div style="text-align: center;" ng-if="current.galleryImagePath">
 
-                        <div layout="row" flex="100">
+                        <div layout="row" flex="100" layout-align="center center">
                             <div ng-repeat="lex in current.checkLexicalImage.lexicalListObj" layout="row">
-                                <div ng-hide="$index==0"> - </div>
-                                {{lex.title}}
+                                <div ng-hide="$index==0"  layout-padding=""> - </div>
+                                <div  layout-padding="">{{lex.title}}</div>
                             </div>
                         </div>
-                        <div >
+                        <div style="min-height: 240px;" layout="row" layout-align="center center">
                             <input type="file" id="file1" name="file" multiple ng-files="uploadImage($files)"
                                    class="fileUploader"/>
                             <img
                                     src="{{current.galleryImagePath}}"
                                  ng-click="uplaodFiles(current.checkLexicalImage.documentId)" height="200px"/>
                         </div>
-                        <md-button
-                                class="md-raised"
-                                ng-click="acceptDoc($event,current.checkLexicalImage)">accept</md-button>
-                        <md-button
-                                class="md-raised"
-                                ng-click="rejectDoc($event,current.checkLexicalImage)">reject</md-button>
+                        <div layout-padding="" layout="row" layout-align="center center">
+                            <div>
+                                <md-button
+                                        ng-click="acceptDoc($event,current.checkLexicalImage)">
+                                    <md-icon md-svg-src="img/app/accept.svg"></md-icon>
+                                    accept
+                                </md-button>
+                            </div>
+                            <div>
+                                <md-button
+                                        ng-click="rejectDoc($event,current.checkLexicalImage)">
+                                    <md-icon md-svg-src="img/app/reject.svg"></md-icon>
+                                    reject
+                                </md-button>
+                            </div>
+                        </div>
                     </div>
             </div>
 

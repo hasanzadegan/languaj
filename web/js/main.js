@@ -108,6 +108,12 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         $window.location.href = path;
     }
 
+    try{
+        loadLevelId = $window.location.search.split("levelId=")[1].split("&")[0];
+        alert(loadLevelId)
+        //todo load level
+    }catch (e) {}
+
     try {
         courseCode = $window.location.search.split("?")[1].split("course=")[1].split("&")[0];
         refUserId = $window.location.search.split("&ref=")[1].split("&")[0];
@@ -182,6 +188,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     $scope.createViewerData = function (levelId) {
 
     }
+
     $scope.$on('levelChanged', function (event, levelId) {
         if (levelId !== null) {
             LessonService.getLevelById(levelId).then(levelResult => {
@@ -191,9 +198,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
                 StorageService.setData($scope.current);
 
                 var levelLexicalPhraseList = [];
-
                 path = level.levelTypeTitle.split(" ")[0].toLowerCase();
-
 
                 LevelService.getLevelLexicalPhraseList(levelId).then(result => {
                     $scope.levelItemList = [];
