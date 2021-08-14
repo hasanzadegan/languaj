@@ -119,7 +119,7 @@ angular.module('myApp').controller('lexicalController',
 
 
         $scope.uplaodFiles = function(){
-            document.getElementById("fileLexical").click()
+            document.getElementById("file1").click()
         }
 
         $scope.uploadImage = function ($files,lexicalId) {
