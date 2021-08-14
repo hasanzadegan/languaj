@@ -16,9 +16,13 @@
         <div ng-if="current.unreviewList.length>0" layout="row" style="border:solid 1px rgba(0,0,0,.12)"
              layout-padding="" layout-wrap="">
             <div flex="30" flex-xs="100">
-                <div layout="row">
-                    <md-button ng-click="reviewIndex=[null,1,2,3,4,5,6,7,8,9,10]">all</md-button>
-                    <md-button ng-click="reviewIndex=[99]">rejected</md-button>
+                <div layout="row" layout-padding="">
+                    <md-button class="{{allMode?'redC':''}}" ng-click="allMode=!allMode;reviewIndex=[null,1,2,3,4,5]">
+                        all
+                    </md-button>
+                    <md-button class="{{!allMode?'redC':''}}" ng-click="allMode=!allMode;reviewIndex=[99]">
+                        rejected
+                    </md-button>
                 </div>
                 <div style="overflow-y: auto;max-height: 40vh" >
                     <div ng-repeat="item in current.unreviewList"

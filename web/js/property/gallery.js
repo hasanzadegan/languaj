@@ -21,6 +21,7 @@ angular.module('myApp').controller('galleryController',
             document.getElementById("file1").click();
         }
 
+        $scope.allMode =  true;
 
         $scope.getLexicalImageList = function (lexical) {
             WordService.getLexicalImageList(lexical.lexicalId).then(imageListResult => {

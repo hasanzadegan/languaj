@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/img/app/accept.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/app/reject.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/html/property/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/property/gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/viewer/viewer.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/viewer/viewer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/property/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/property/gallery.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,11 +35,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/property/lexical.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="143" column="10" lean-forward="true" selection-start-line="143" selection-start-column="10" selection-end-line="143" selection-end-column="10" />
+            <state relative-caret-position="355">
+              <caret line="70" column="51" lean-forward="true" selection-start-line="70" selection-start-column="51" selection-end-line="70" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/html/property/gallery.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/property/gallery.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/html/property/lexical.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="45" column="160" selection-start-line="45" selection-start-column="160" selection-end-line="45" selection-end-column="160" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,12 +100,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lexicalImageChanged</find>
-      <find>he</find>
-      <find>current.imageList</find>
-      <find>getLexicalImageList</find>
-      <find>butt</find>
-      <find>reje</find>
       <find>md-sv</find>
       <find>levelList</find>
       <find>$scope.getLevelList</find>
@@ -97,6 +124,12 @@
       <find>split(&quot;</find>
       <find>in</find>
       <find>select p.phraseId,p.langId,p.genderId,p.title,p.isMultiWord,p.isExtracted,</find>
+      <find>file</find>
+      <find>file1</find>
+      <find>uplo</find>
+      <find>showIma</find>
+      <find>show</find>
+      <find>acce</find>
     </findStrings>
     <replaceStrings>
       <replace>current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLevelItem</replace>
@@ -187,7 +220,6 @@
         <option value="$PROJECT_DIR$/web/js/property/dictionary.js" />
         <option value="$PROJECT_DIR$/web/teacher.html" />
         <option value="$PROJECT_DIR$/web/html/property/imageList.html" />
-        <option value="$PROJECT_DIR$/web/html/property/lexical.html" />
         <option value="$PROJECT_DIR$/web/js/property/imageList.js" />
         <option value="$PROJECT_DIR$/web/img/app/gallary.svg" />
         <option value="$PROJECT_DIR$/web/css/global.css" />
@@ -196,11 +228,12 @@
         <option value="$PROJECT_DIR$/web/service/ArchiveService.js" />
         <option value="$PROJECT_DIR$/api/docArchive/docArchive.js" />
         <option value="$PROJECT_DIR$/web/html/Dashboard/sideMenu.html" />
+        <option value="$PROJECT_DIR$/web/js/viewer/viewer.js" />
+        <option value="$PROJECT_DIR$/web/js/main.js" />
+        <option value="$PROJECT_DIR$/web/html/property/lexical.html" />
         <option value="$PROJECT_DIR$/web/js/property/lexical.js" />
         <option value="$PROJECT_DIR$/web/js/property/gallery.js" />
         <option value="$PROJECT_DIR$/web/html/property/gallery.html" />
-        <option value="$PROJECT_DIR$/web/js/viewer/viewer.js" />
-        <option value="$PROJECT_DIR$/web/js/main.js" />
       </list>
     </option>
   </component>
@@ -351,21 +384,7 @@
       <workItem from="1628678889958" duration="28135000" />
       <workItem from="1628838981370" duration="9000" />
       <workItem from="1628858758884" duration="4035000" />
-      <workItem from="1628918537166" duration="1456000" />
-    </task>
-    <task id="LOCAL-00040" summary="Multilingual Course DestLangLid&#10;&#10;CourseSetting">
-      <created>1626197709693</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1626197709693</updated>
-    </task>
-    <task id="LOCAL-00041" summary="bug: lexical cache">
-      <created>1626197985065</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1626197985065</updated>
+      <workItem from="1628918537166" duration="2702000" />
     </task>
     <task id="LOCAL-00042" summary="website">
       <created>1626282807993</created>
@@ -696,11 +715,25 @@
       <option name="project" value="LOCAL" />
       <updated>1628720517435</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="add gallery&#10;better sideMenu&#10;better load lexical image">
+      <created>1628921038991</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1628921038991</updated>
+    </task>
+    <task id="LOCAL-00090" summary="bugfix:lexical image">
+      <created>1628921996474</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1628921996474</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="308631000" />
+    <option name="totallyTimeSpent" value="309877000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -727,7 +760,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4976867" weight="0.4490085" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49966952" visible="true" weight="0.25070822" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49966952" weight="0.25070822" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50231326" side_tool="true" weight="0.4490085" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -800,7 +833,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
-    <MESSAGE value="bugfix: bug multi size of question" />
     <MESSAGE value="bugfix: bug sort" />
     <MESSAGE value="bugfix: cache problem for levelTypes" />
     <MESSAGE value="Multilingual Course DestLangLid" />
@@ -825,7 +857,8 @@
     <MESSAGE value="Order:&#10;hide direct&#10;load problem" />
     <MESSAGE value="bugfix: null user" />
     <MESSAGE value="add gallery&#10;better sideMenu&#10;better load lexical image" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gallery&#10;better sideMenu&#10;better load lexical image" />
+    <MESSAGE value="bugfix:lexical image" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix:lexical image" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1087,28 +1120,8 @@
     <entry file="file://$PROJECT_DIR$/web/img/app/accept.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/property/gallery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="48" column="57" lean-forward="true" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/img/app/reject.svg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/property/gallery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/service/ArchiveService.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1140,16 +1153,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="44" column="36" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/property/lexical.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="89" selection-start-line="28" selection-start-column="89" selection-end-line="28" selection-end-column="89" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1223,10 +1226,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/property/lexical.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="45" column="160" selection-start-line="45" selection-start-column="160" selection-end-line="45" selection-end-column="160" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/property/lexical.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="143" column="10" lean-forward="true" selection-start-line="143" selection-start-column="10" selection-end-line="143" selection-end-column="10" />
+        <state relative-caret-position="355">
+          <caret line="70" column="51" lean-forward="true" selection-start-line="70" selection-start-column="51" selection-end-line="70" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/property/gallery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/property/gallery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
