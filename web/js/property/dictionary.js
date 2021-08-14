@@ -25,7 +25,6 @@ angular.module('myApp').controller('dictionaryController',
                 if(result.length===0){
                     $scope.current.phraseList = result;
 
-
                     WordService.searchSoundex(phrase,sourceLangId,destLangId).then(soundexResult=>{
                         $scope.current.didYouMean = true;
                         console.log("soundexResult.length",soundexResult.length,$scope.current.didYouMean)

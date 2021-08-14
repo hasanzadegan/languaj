@@ -20,14 +20,15 @@ module.exports = {
         word = params.title;
         sourceLangId = params.sourceLangId;
         destLangId = params.destLangId;
-        stmt = 'select p.phraseId,p.langId,p.genderId,p.title,p.isMultiWord,p.isExtracted' +
+        stmt = 'select p.phraseId,p.langId,p.genderId,p.title,p.isMultiWord,p.isExtracted,' +
+            ' levenshtein(\''+word+'\',title) similarity' +
             ' from phrase p ' +
-            ' where UPPER(SOUNDEX(deutscheReplace(title)))=UPPER(SOUNDEX (deutscheReplace(?))) ' +
+            ' where UPPER(SOUNDEX(deutscheReplace(title)))=UPPER(SOUNDEX (deutscheReplace(\''+word+'\'))) ' +
             ' and p.langId in('+sourceLangId+','+destLangId+')' +
-            ' limit 10';
+            ' order by similarity limit 10 ';
         console.log(stmt);
 
-        return await query(stmt,word).then(function (result) {
+        return await query(stmt).then(function (result) {
             return result;
         })
     },
