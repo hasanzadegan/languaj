@@ -11,7 +11,8 @@ module.exports = {
             ' and p.langId in('+sourceLangId+','+destLangId+')' +
             ' order by length(title)' +
             ' limit 10';
-        console.log(stmt);
+
+
         return await query(stmt).then(function (result) {
             return result;
         })
