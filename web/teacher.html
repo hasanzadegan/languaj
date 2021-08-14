@@ -76,7 +76,7 @@
 <body ng-app="myApp" ng-controller="AppCtrl" >
 <div ng-include="'html/Dashboard/sideMenu.html?v='+currentVersion"></div>
 
-<div flex="100" ng-if="current.viewMode=='gallery'" ng-include="'html/property/gallery.html'" ng-cloak=""></div>
+<div flex="100" ng-if="current.viewMode=='gallery'" ng-include="'html/property/gallery.html?v='+currentVersion" ng-cloak=""></div>
 
 <div ng-show="current.viewMode=='teacher' || current.viewMode==null">
 
