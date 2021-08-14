@@ -69,9 +69,9 @@ angular.module('myApp').controller('lexicalController',
 
             $scope.current.viewerData.selectedLexicalPhrase = lexicalPhrase;
             StorageService.setData($scope.current);
-            // lexicalPhrase.lexicalId = relation.lexicalId;
+            lexicalPhrase.lexicalId = relation.lexicalId;
             $scope.toggleImageList();
-            // $rootScope.$broadcast("lexicalImageChanged",lexicalPhrase);
+            $rootScope.$broadcast("lexicalImageChanged",lexicalPhrase);
             StorageService.setConfig($scope.config);
         }
 
@@ -119,10 +119,10 @@ angular.module('myApp').controller('lexicalController',
 
 
         $scope.uplaodFiles = function(){
-            document.getElementById("file1").click()
+            document.getElementById("fileLexical").click()
         }
 
-        $scope.uploadImage = function ($files) {
+        $scope.uploadImage = function ($files,lexicalId) {
             var f = $files[0];
             var reader = new FileReader();
             reader.onload = (function(theFile) {
