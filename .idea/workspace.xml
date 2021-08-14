@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="">
+    <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="bugfix:lexical image">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/property/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/property/gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/property/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/property/gallery.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -44,17 +42,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/html/property/gallery.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+            <state relative-caret-position="170">
+              <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/js/version.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="27" selection-start-column="27" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -223,7 +230,6 @@
         <option value="$PROJECT_DIR$/web/js/property/imageList.js" />
         <option value="$PROJECT_DIR$/web/img/app/gallary.svg" />
         <option value="$PROJECT_DIR$/web/css/global.css" />
-        <option value="$PROJECT_DIR$/web/js/version.js" />
         <option value="$PROJECT_DIR$/api/routes/doc.js" />
         <option value="$PROJECT_DIR$/web/service/ArchiveService.js" />
         <option value="$PROJECT_DIR$/api/docArchive/docArchive.js" />
@@ -234,6 +240,7 @@
         <option value="$PROJECT_DIR$/web/js/property/lexical.js" />
         <option value="$PROJECT_DIR$/web/js/property/gallery.js" />
         <option value="$PROJECT_DIR$/web/html/property/gallery.html" />
+        <option value="$PROJECT_DIR$/web/js/version.js" />
       </list>
     </option>
   </component>
@@ -384,14 +391,7 @@
       <workItem from="1628678889958" duration="28135000" />
       <workItem from="1628838981370" duration="9000" />
       <workItem from="1628858758884" duration="4035000" />
-      <workItem from="1628918537166" duration="2702000" />
-    </task>
-    <task id="LOCAL-00042" summary="website">
-      <created>1626282807993</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1626282807993</updated>
+      <workItem from="1628918537166" duration="2762000" />
     </task>
     <task id="LOCAL-00043" summary="bugfix:show levelItem and config">
       <created>1626283732244</created>
@@ -729,11 +729,18 @@
       <option name="project" value="LOCAL" />
       <updated>1628921996474</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="bugfix:lexical image">
+      <created>1628922306118</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1628922306119</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309877000" />
+    <option name="totallyTimeSpent" value="309937000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1066,13 +1073,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/version.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="27" selection-start-column="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/teach/teach.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1252,14 +1252,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/html/property/gallery.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        <state relative-caret-position="170">
+          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/version.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
         </state>
       </provider>
     </entry>
