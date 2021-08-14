@@ -1,22 +1,23 @@
-CREATE DEFINER=`root`@`localhost` FUNCTION `isPersian`(
-title varchar(400),
-secondLangId int
-) RETURNS int
-    DETERMINISTIC
-BEGIN
+drop table if exists USERMISTAKE;
 
+/*==============================================================*/
+/* Table: USERMISTAKE                                           */
+/*==============================================================*/
+create table USERMISTAKE
+(
+   USERMISTAKEID        int not null auto_increment,
+   USERID               int,
+   LEVELID              int,
+   MISTAKEDATE          datetime,
+   REVIEW               int,
+   SOLVED               bit,
+   MISTAKEJSON          varchar(4000),
+   primary key (USERMISTAKEID),
+   key AK_KEY_1 (USERMISTAKEID)
+);
 
-SELECT title regexp '[ابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی]' into @isPersianValue;
+alter table USERMISTAKE add constraint FK_REFERENCE_72 foreign key (USERID)
+      references USER (USERID) on delete restrict on update restrict;
 
-IF @isPersianValue = 0 then
-	set @isPersianValue = secondLangId;
-END IF;
-
-RETURN @isPersianValue;
-END
-
-
-
-ALTER TABLE `languaj_db`.`phrase`
-DROP INDEX `TITLE_UNIQUE` ;
-ALTER TABLE `languaj_db`.`phrase` ALTER INDEX `AK_KEY_3` INVISIBLE;
+alter table USERMISTAKE add constraint FK_REFERENCE_73 foreign key (LEVELID)
+      references LEVEL (LEVELID) on delete restrict on update restrict;
