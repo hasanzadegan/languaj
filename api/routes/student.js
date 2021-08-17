@@ -49,9 +49,6 @@ module.exports = function(app){
         })
     });
 
-
-
-
     app.get('/api/addAchievement/:topicId/:review',  async (req, res) => {
         user = await global.getUser(req)
 
@@ -73,13 +70,11 @@ module.exports = function(app){
 
     });
 
-
     app.get('/api/topicTeachList/:topicId', (req, res) => {
         teach.getTopicTeachList(req.params.topicId).then(function (result) {
             res.send(result);
         });
     });
-
 
     app.get('/api/topicTeachListWithLevelId/:levelId', (req, res) => {
         teach.getTopicTeachWithLevelId(req.params.levelId).then(function (result) {
@@ -122,6 +117,43 @@ module.exports = function(app){
             res.send(result);
         })
     });
+
+    app.post('/api/addUserMistake', async (req, res) => {
+        user = await global.getUser(req);
+        if (user) {
+            lesson.addUserMistake(user.userId, req.body).then(resultPhrase1 => {
+                res.send({remainMistake: 1});
+            })
+        } else {
+            res.send(null);
+        }
+    });
+
+
+    app.get('/api/getUserMistakeStatus', async (req, res) => {
+        user = await global.getUser(req);
+        if (user) {
+            lesson.getUserMistakeStatus(user.userId).then(result => {
+                if(result.length>0){
+                    console.log(result[0])
+                    if(result[0].remainLife<=0){
+                        if(result[0].diff<=0){
+                            lesson.giveNewChance(user.userId).then(result=>{
+                                res.send(result[0]);
+                            })
+                        }
+                    }
+                    res.send(result[0]);
+                }
+                else {
+                    res.send(null);
+                }
+            })
+        } else {
+            res.send(null);
+        }
+    });
+
 
 
 }

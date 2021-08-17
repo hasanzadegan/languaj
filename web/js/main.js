@@ -4,6 +4,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
                                     WordService,
                                     // $label,
                                     $timeout,
+                                    $interval,
                                     SoundService,
                                     LessonService,
                                     LevelService,
@@ -317,8 +318,29 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         }
     })
 
-    // if ($scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.level.levelId !== undefined)
-    //     $rootScope.$broadcast('levelChanged', $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.level.levelId);
+
+    $scope.getUserMistakeStatus = function(){
+        LessonService.getUserMistakeStatus().then(result=>{
+            $scope.userMistake = result;
+            console.log("getUserMistakeStatus",result);
+
+            if(result.remainLife <=0 && result.diff>0){
+                $scope.backToList();
+                $scope.stopStudy = true;
+                // timer =
+                $scope.remainTime = result.diff;
+
+                let interval = $interval(function () {
+                    $scope.remainTime= $scope.remainTime - 1;
+                    if($scope.remainTime<=0){
+                        $scope.stopStudy = false;
+                        $interval.cancel(interval);
+                    }
+                }, 1000);
+            }
+        })
+    }
+    $scope.getUserMistakeStatus();
 
 
     $scope.saveStorage = function () {

@@ -10,25 +10,29 @@ angular.module('myApp').controller('courseListController',
             $scope.current.student.selectedCourse = null;
         }
 
+
+
         $scope.$on("courseChanged", function (event, courseId) {
             firstTopic = true;
             LessonService.getViewerLessonTopicList(courseId).then(result => {
                 for (item of result) {
-                    item.topicListObj = JSON.parse(item.topicList);
-                    for (topic of item.topicListObj) {
-                        // if (topic.achievedTopicId !== null) {
-                        if (topic.review >=5) {
-                            topic.locked = false;
-                            topic.achieved = true;
-                        } else {
-                            if (firstTopic) {
+                    try{
+                        item.topicListObj = JSON.parse(item.topicList);
+                        for (topic of item.topicListObj) {
+                            // if (topic.achievedTopicId !== null) {
+                            if (topic.review >=5) {
                                 topic.locked = false;
-                                firstTopic = false;
+                                topic.achieved = true;
                             } else {
-                                topic.locked = true;
+                                if (firstTopic) {
+                                    topic.locked = false;
+                                    firstTopic = false;
+                                } else {
+                                    topic.locked = true;
+                                }
                             }
                         }
-                    }
+                    }catch (e) {}
                 }
                 $scope.current.student.selectedCourse.lessonList = result;
                 StorageService.setData($scope.current);
@@ -66,7 +70,6 @@ angular.module('myApp').controller('courseListController',
                 }
             })
         }
-
 
 
         $scope.getStudentTopicLevelList = function (topic,review) {

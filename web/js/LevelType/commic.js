@@ -4,8 +4,8 @@ angular.module('myApp').controller('commicController', function ($rootScope, $sc
     }
 
     $scope.saveCharacter = function(id){
-        $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLevelLexicalPhrase.itemJSONObj.character = id;
-        $scope.updateLevelLexicalJson($scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLevelLexicalPhrase);
+        $scope.current.viewerData.selectedLevelLexicalPhrase.itemJSONObj.character = id;
+        $scope.updateLevelLexicalJson($scope.current.viewerData.selectedLevelLexicalPhrase);
     }
 
     $scope.number = 30;

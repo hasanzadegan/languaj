@@ -23,7 +23,7 @@
                  style="border-bottom:solid 1px rgba(0,0,0,0.1)">
                 <div flex="100" ng-repeat="levelItem in current.viewerData.levelLexicalPhraseList">
                     <div flex="100" class="partRow" layout="row">
-                        <div flex="5" style="max-width:4px" class="redB00e0e8"
+                        <div flex="5" style="max-width:4px" class="redB"
                              ng-show="current.viewerData.selectedLevelLexicalPhrase.levelLexicalPhraseId===levelItem.levelLexicalPhraseId"></div>
 
                         <md-button class="md-icon-button characterIcon">
@@ -173,7 +173,7 @@
                     <md-tab>
                         <md-tab-label><md-icon md-svg-src="img/app/setting/private.svg"></md-tab-label>
                         <md-tab-body>
-                            <div flex="100" ng-include="current.levelType"></div>
+                            <div flex="100" ng-include="current.levelType+'?v='+currentVersion"></div>
                             <div ng-repeat="item in letterList" layout-padding="" layout="row" layout-wrap="">
                                 <md-button class="md-icon-button md-raised" ng-click="hideLetter(item.index)"
                                            style="{{hideList[item.index]?'color:silver;':''}}">

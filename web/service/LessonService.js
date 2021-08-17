@@ -162,6 +162,20 @@ app.service('LessonService', function ($rootScope, $path, HttpService, StorageSe
             })
             return def.promise;
         },
+        addUserMistake:function(mistake){
+            const def = $q.defer();
+            HttpService.post($path.url + "/api/addUserMistake",mistake).then(function (result) {
+                def.resolve(result);
+            })
+            return def.promise;
+        },
+        getUserMistakeStatus:function(mistake){
+            const def = $q.defer();
+            HttpService.get($path.url + "/api/getUserMistakeStatus").then(function (result) {
+                def.resolve(result);
+            })
+            return def.promise;
+        },
         addStudentCourse:function (courseCode,refUserId) {
             const def = $q.defer();
             HttpService.get($path.url + "/api/addStudentCourse/"+courseCode+"/"+refUserId).then(function (result) {

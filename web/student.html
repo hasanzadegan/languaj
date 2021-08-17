@@ -81,11 +81,13 @@
     }
 </style>
 
+
 <div class="topHead" flex="100" layout="row"
      ng-show="!current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.level.levelId"></div>
 
 <div layout="column" flex="100" style="z-index: 10">
-    <div ng-show="config.studentPage" ng-include="'html/footer/'+config.studentPage+'.html?v='+currentVersion" layout="column" flex></div>
+<!--    ******{{userMistake}}****{{remainTime}}***{{stopStudy}}-->
+    <div ng-show="config.studentPage && !stopStudy" ng-include="'html/footer/'+config.studentPage+'.html?v='+currentVersion" layout="column" flex></div>
 </div>
 
 

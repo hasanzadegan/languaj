@@ -15,7 +15,7 @@
                 }
             </style>
             <div layout="row" flex="100" layout-wrap="">
-                <md-button flex="18" ng-repeat="i in getNumber(number) track by $index" style="padding: 5" ng-click="saveCharacter($index+1)">
+                <md-button flex="18" ng-repeat="i in getNumber(number) track by $index" style="padding:5px" ng-click="saveCharacter($index+1)">
                     <img src="img/charachter/{{$index+1}}.svg" width="20px">
                 </md-button>
             </div>
@@ -26,7 +26,7 @@
 <!--                <md-radio-button value="people">people</md-radio-button>-->
 <!--            </md-radio-group>-->
 
-            <md-checkbox ng-model="current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLevelLexicalPhrase.itemJSONObj.isRight" flex="100" ng-change="saveItem()">
+            <md-checkbox ng-model="current.viewerData.selectedLevelLexicalPhrase.itemJSONObj.isRight" flex="100" ng-change="saveItem()">
                 Right side
             </md-checkbox>
 

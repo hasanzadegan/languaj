@@ -2,6 +2,7 @@ angular.module('myApp').controller('viewerController',
     function ($rootScope, $scope, $q, WordService, BaeService, StorageService, SoundService, LessonService, LevelService, ArchiveService) {
 
 
+
         try{
             $scope.current.correctAnswer = $scope.current.viewerData.levelLexicalPhraseList[0].itemJSONObj.title;
         }catch (e) {
@@ -48,6 +49,8 @@ angular.module('myApp').controller('viewerController',
             if($scope.current.answerIsCorrect)
                 return;
             console.log("inCorrect");
+            $scope.func.logMistake({});
+
             $scope.current.answerIsCorrect = -1;
             StorageService.setData($scope.current);
             SoundService.playSoundFile("/audio/app-incorrect.mp3", true).then(result => {
@@ -63,11 +66,19 @@ angular.module('myApp').controller('viewerController',
 
         $scope.func.nextLevel = function () {
             $scope.current.answerIsCorrect = null;
+            $rootScope.$broadcast("nextLevel", {});
 
+        }
+
+        $scope.func.logMistake = function(mistakeJSON){
             levelList = $scope.current.student.selectedCourse.selectedTopic.levelList;
             levelIndex = $scope.current.student.selectedCourse.selectedTopic.levelIndex;
-            console.log("log event for mistake >>>>> levelId:"+levelList[levelIndex].levelId+" review:0")
-            $rootScope.$broadcast("nextLevel", {});
+            console.log("log event for mistake >>>>> levelId:"+levelList[levelIndex].levelId+" review:0");
+            let levelId = levelList[levelIndex].levelId;
+            let mistake = {levelId :levelId,mistakeJSON:mistakeJSON};
+            LessonService.addUserMistake(mistake).then(result=>{
+                $scope.getUserMistakeStatus();
+            });
         }
 
         $scope.showHint = function ($event, word) {

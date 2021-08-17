@@ -7,7 +7,7 @@ module.exports = {
             ' select courseId,title,sourceLangId,destLangId ' +
             ' from course ' +
             ' where creatorUserId = ? '
-            // +' and DestlangId = ? ';
+        // +' and DestlangId = ? ';
 
         // params = [userId, langId];
         params = [userId];
@@ -27,8 +27,7 @@ module.exports = {
             'and u.userId = c.CreatorUserId\n' +
             'and p.isActive = 1\n' +
             'order by p.PAYMENTDATE desc';
-
-        console.log(stmt,userId);
+        console.log(">>>>>>>>>", stmt);
         params = [userId];
         return await query(stmt, params).then(function (result) {
             return result;
@@ -109,7 +108,7 @@ module.exports = {
     },
     deleteCourse: async function (courseCode) {
         var courseId = global.base64ToInt(courseCode);
-        console.log("deleteCourse",courseCode,courseId)
+        console.log("deleteCourse", courseCode, courseId)
 
         stmt = ' delete from course where courseId=' + courseId;
         console.log(stmt);
@@ -129,7 +128,7 @@ module.exports = {
             return result;
         })
     },
-    getLessonTopicList: async function (userId,courseId,teacherId) {
+    getLessonTopicList: async function (userId, courseId, teacherId) {
         var teacherCondition = "";
         // if(teacherId)
         //     teacherCondition = ' and c.creatorUserId ='+teacherId;
@@ -145,11 +144,11 @@ module.exports = {
             ')),\']\')topicList \n' +
             ' from \n' +
             ' course c,lesson l ,' +
-            ' topic t left join achievedTopic atp on t.topicId = atp.topicId  and atp.userId='+userId+
+            ' topic t left join achievedTopic atp on t.topicId = atp.topicId  and atp.userId=' + userId +
             ' where ' +
             ' c.courseId=l.courseId and ' +
             ' l.lessonId = t.lessonId' +
-            ' and l.courseId='+courseId +
+            ' and l.courseId=' + courseId +
             teacherCondition +
             ' group by l.lessonId';
         console.log(stmt);
@@ -183,8 +182,8 @@ module.exports = {
             return result;
         })
     },
-    changeLevelTopic:async function(levelId,topicId){
-        params = [topicId,levelId]
+    changeLevelTopic: async function (levelId, topicId) {
+        params = [topicId, levelId]
         stmt = '' +
             ' update level set topicId = ? ' +
             ' where  levelId = ?';
@@ -201,9 +200,9 @@ module.exports = {
         })
     },
     deleteTopic: async function (topicId) {
-        stmt = 'delete from achievedTopic where topicId=' + topicId+';'
+        stmt = 'delete from achievedTopic where topicId=' + topicId + ';'
         return await query(stmt).then(function (result) {
-            stmt = 'delete from topic where topicId=' + topicId+';'
+            stmt = 'delete from topic where topicId=' + topicId + ';'
             return query(stmt).then(function (result) {
                 return result;
             });
@@ -220,7 +219,7 @@ module.exports = {
             return result;
         })
     },
-    getReviewLevelList: async function (topicId,review) {
+    getReviewLevelList: async function (topicId, review) {
         stmt = '' +
             ' select l.levelId,l.title,lt.icon,lt.levelTypeId,lt.title levelTypeTitle,l.teachId teachId,l.orderr,l.review   ' +
             ' from level l' +
@@ -228,7 +227,7 @@ module.exports = {
             ' where topicId = ? ' +
             ' and review=? ' +
             ' order by IFNULL(orderr,99999999),levelId';
-        params = [topicId,review%5==0?5:review%5];
+        params = [topicId, review % 5 == 0 ? 5 : review % 5];
         return await query(stmt, params).then(function (result) {
             return result;
         })
@@ -260,45 +259,77 @@ module.exports = {
             return result;
         })
     },
-    addAchievement: async function (userId,topicId,review) {
+    addAchievement: async function (userId, topicId, review) {
         stmt = ' ' +
             ' insert into ' +
             ' achievedTopic(userId,topicId,review)' +
             ' values(?,?,?)';
-        params = [userId,topicId,review];
-        return await query(stmt,params).then(function (result) {
+        params = [userId, topicId, review];
+        return await query(stmt, params).then(function (result) {
             return result;
         })
     },
-    getAchievement: async function (userId,topicId) {
+    getAchievement: async function (userId, topicId) {
         stmt = ' ' +
             ' select achievedTopicId from achievedTopic' +
-            ' where userId = '+userId+"" +
-            ' and topicId = '+topicId;
+            ' where userId = ' + userId + "" +
+            ' and topicId = ' + topicId;
         return await query(stmt).then(function (result) {
             return result;
         })
     },
-    updateAchievement: async function (achievedTopicId,review) {
+    updateAchievement: async function (achievedTopicId, review) {
         stmt = ' ' +
-            ' update achievedTopic set review = '+review+' ' +
+            ' update achievedTopic set review = ' + review + ' ' +
             ' where achievedTopicId = ' + achievedTopicId;
         return await query(stmt).then(function (result) {
             return result;
         })
     },
-    addStudentCourse: async function (userId,courseId,refUserId) {
+    addStudentCourse: async function (userId, courseId, refUserId) {
         stmt = ' ' +
             ' insert into ' +
             ' PayedCourse(userId,courseId,refUserId,paymentDate,isActive)' +
             ' values(?,?,?,?,1)';
         today = new Date();
 
-        console.log("today",today);
+        console.log("today", today);
 
-        params = [userId,courseId,refUserId,today];
-        return await query(stmt,params).then(function (result) {
+        params = [userId, courseId, refUserId, today];
+        return await query(stmt, params).then(function (result) {
             return result;
         })
     },
+    addUserMistake: async function (userId, mistake) {
+        stmt = ' ' +
+            ' insert into ' +
+            ' userMistake(userId,levelId,mistakeDate,mistakeJSON)' +
+            ' values(?,?,?,?)';
+        let today = new Date();
+        let mistakeJSON = JSON.stringify(mistake.mistakeJSON);
+        let levelId = mistake.levelId;
+        params = [userId, levelId, today, mistakeJSON];
+        return await query(stmt, params).then(function (result) {
+            return result;
+        })
+    },
+    getUserMistakeStatus: async function (userId) {
+        // todo 2 Minute -> calc from user behaviour
+        stmt = 'SELECT ' +
+            ' 10-count(1) remainLife ,' +
+            '    max(mistakeDate) lastMistakeDate,' +
+            '    TIMESTAMPDIFF(second,Now(),DATE_SUB(max(mistakeDate), INTERVAL 2 Minute )) diff' +
+            '    FROM usermistake' +
+            ' where SOLVED is not True and userId = ' + userId;
+        console.log("getUserMistakeStatus>>> ",stmt)
+        return await query(stmt).then(function (result) {
+            return result;
+        })
+    },
+    giveNewChance: async function (userId) {
+        stmt = 'update usermistake set solved = True where userId = ' + userId;
+        return await query(stmt).then(function (result) {
+            return result;
+        })
+    }
 }
