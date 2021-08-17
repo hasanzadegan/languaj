@@ -14,6 +14,7 @@ angular.module('myApp').controller('courseListController',
 
         $scope.$on("courseChanged", function (event, courseId) {
             firstTopic = true;
+
             LessonService.getViewerLessonTopicList(courseId).then(result => {
                 for (item of result) {
                     try{
