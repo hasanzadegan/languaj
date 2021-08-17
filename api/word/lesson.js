@@ -309,6 +309,7 @@ module.exports = {
         let mistakeJSON = JSON.stringify(mistake.mistakeJSON);
         let levelId = mistake.levelId;
         params = [userId, levelId, today, mistakeJSON];
+        console.log("\n\n",params,stmt);
         return await query(stmt, params).then(function (result) {
             return result;
         })
