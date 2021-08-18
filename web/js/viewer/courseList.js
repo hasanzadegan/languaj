@@ -17,7 +17,8 @@ angular.module('myApp').controller('courseListController',
 
             LessonService.getViewerLessonTopicList(courseId).then(result => {
                 for (item of result) {
-                    try{
+                    console.log("getViewerLessonTopicList",item.topicList)
+
                         item.topicListObj = JSON.parse(item.topicList);
                         for (topic of item.topicListObj) {
                             // if (topic.achievedTopicId !== null) {
@@ -33,7 +34,6 @@ angular.module('myApp').controller('courseListController',
                                 }
                             }
                         }
-                    }catch (e) {}
                 }
                 $scope.current.student.selectedCourse.lessonList = result;
                 StorageService.setData($scope.current);
@@ -78,8 +78,10 @@ angular.module('myApp').controller('courseListController',
             $scope.current.student.selectedCourse.selectedTopic = topic;
             $scope.current.student.selectedCourse.selectedTopic.levelList = [];
 
+            console.log("getStudentTopicLevelList",topic.topicId,review)
+
             LessonService.getReviewLevelList(topic.topicId,review??1).then(result => {
-                console.log("getStudentTopicLevelList",result)
+                console.log("getStudentTopicLevelList",topic.topicId,result)
                 if (result.length > 0) {
                     $scope.current.student.selectedCourse.selectedTopic.levelList = result;
                     $scope.current.student.selectedCourse.selectedTopic.levelIndex = 0;

@@ -151,7 +151,7 @@ module.exports = {
             ' and l.courseId=' + courseId +
             teacherCondition +
             ' group by l.lessonId';
-        console.log(stmt);
+        console.log(params,stmt);
         return await query(stmt).then(function (result) {
             return result;
         })
@@ -228,6 +228,9 @@ module.exports = {
             ' and review=? ' +
             ' order by IFNULL(orderr,99999999),levelId';
         params = [topicId, review % 5 == 0 ? 5 : review % 5];
+
+        console.log(params,stmt);
+
         return await query(stmt, params).then(function (result) {
             return result;
         })
