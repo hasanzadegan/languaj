@@ -195,6 +195,7 @@ angular.module('myApp').controller('lessonDashboardController', function ($rootS
         });
 
         $scope.$on('lessonChanged', function (event, lessonId) {
+            console.log("on lessonChanged",lessonId)
             $scope.getTopicList(lessonId);
         });
 
