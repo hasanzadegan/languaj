@@ -17,8 +17,6 @@ angular.module('myApp').controller('courseListController',
 
             LessonService.getViewerLessonTopicList(courseId).then(result => {
                 for (item of result) {
-                    console.log("getViewerLessonTopicList",item.topicList)
-
                         item.topicListObj = JSON.parse(item.topicList);
                         for (topic of item.topicListObj) {
                             // if (topic.achievedTopicId !== null) {
