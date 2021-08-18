@@ -1,8 +1,6 @@
-console.log("salam")
 angular.module('myApp').controller('teachPropertyController',
     function ($rootScope, $scope, $q, WordService, BaeService, StorageService, ArchiveService, TeachService, SoundService,
               $interval, $ocLazyLoad) {
-        console.log("salam")
 
         pointList = {};
         $scope.secondList = [];
