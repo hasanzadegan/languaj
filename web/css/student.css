@@ -1,3 +1,21 @@
+.life{
+    height: 24px;
+    width: 125px;
+    float: left;
+    background: url("/web/life/life.svg");
+    zoom: 60%;
+}
+.life0{background-position-y: 25px;}
+.life10{background-position-y: 54px}
+.life20{background-position-y: 84px}
+.life30{background-position-y: 114px}
+.life40{background-position-y: 145px}
+.life50{background-position-y: 174px}
+.life60{background-position-y: 204px}
+.life70{background-position-y: 234px}
+.life80{background-position-y: 264px}
+.life90{background-position-y: 294px}
+.life100{background-position-y: 324px}
 
 .phraseTranslate, .wordList {
     border: solid 1px #bbbbbb;

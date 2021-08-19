@@ -322,7 +322,7 @@ module.exports = {
         stmt = 'SELECT ' +
             ' 10-count(1) remainLife ,' +
             '    max(mistakeDate) lastMistakeDate,' +
-            '    TIMESTAMPDIFF(second,Now(),DATE_SUB(max(mistakeDate), INTERVAL 2 Minute )) diff' +
+            '    TIMESTAMPDIFF(second,Now(),DATE_SUB(max(mistakeDate), INTERVAL -20 Second )) diff' +
             '    FROM usermistake' +
             ' where SOLVED is not True and userId = ' + userId;
         console.log("getUserMistakeStatus>>> ",stmt)
