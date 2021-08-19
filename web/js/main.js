@@ -278,7 +278,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
 
     $scope.showAchievement = function () {
-        $scope.current.viewer = 'html/viewer/achievement.html';
+        $scope.current.viewer = 'html/viewer/achievement.html?v='+currentVersion;
     }
 
 

@@ -1,19 +1,20 @@
-<div oc-lazy-load="['js/viewer/achievement.js']" >
+<div oc-lazy-load="['js/viewer/achievement.js?v='+currentVersion]">
     <div ng-controller="achievementController" layout="row" layout-wrap
-         style="height: 85vh">
-        <div class="simpleSpacer" ng-include="'html/viewer/header/simple.html'"></div>
-        <div class="itemBody" layout="row" layout-align="center center" flex="100" style="height: 80vh" layout-wrap="">
-            <div style="text-align: center;width: 100%">
-                <img src="img/app/success.svg" width="20%">
-            </div>
+         layout-align="center center">
             <div>
-                you achieved {{current.selectedCourse.selectedLesson.selectedTopic.title}} topic
+                <h1>Horray</h1>
+                <h3>
+                    you achieved {{current.selectedCourse.selectedLesson.selectedTopic.title}} topic
+                </h3>
             </div>
-        </div>
-        <div style="height: 10vh" layout-align="center center" flex="100">
-            <div flex="100" layout="row" layout-align="center center">
-                <md-button class="redB checkButton" ng-click="backToList()">ok</md-button>
+            <div layout-padding="">
+                <img src="img/cartoon/horray.svg" width="90%">
             </div>
-        </div>
+            <div style="height: 10vh" layout-align="center center" flex="100" layout-padding="">
+                <div flex="100" layout="row" layout-align="center center">
+                    <md-button class="redB checkButton" ng-click="backToList()">ok</md-button>
+                </div>
+            </div>
     </div>
 </div>
+
