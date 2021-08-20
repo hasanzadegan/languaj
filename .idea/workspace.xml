@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/html/singleLevel/singleLevel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/singleLevel/singleLevel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/word/word.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/word/word.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/student.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/student.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/viewer/multi.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/viewer/multi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/viewer/viewer.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/viewer/viewer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/pages/lessonDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/pages/lessonDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/pages/levelDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/pages/levelDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/version.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/version.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/viewer/courseList.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/viewer/courseList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/viewer/multi.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/viewer/multi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/viewer/pair.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/viewer/pair.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/viewer/teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/viewer/teacher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/viewer/viewer.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/viewer/viewer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/student.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/student.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/teacher.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -76,8 +57,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="202" column="50" lean-forward="true" selection-start-line="202" selection-start-column="50" selection-end-line="202" selection-end-column="50" />
+            <state relative-caret-position="425">
+              <caret line="214" column="25" lean-forward="true" selection-start-line="214" selection-start-column="25" selection-end-line="214" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -429,14 +410,7 @@
       <workItem from="1629193588644" duration="2805000" />
       <workItem from="1629282993397" duration="5402000" />
       <workItem from="1629312789581" duration="11917000" />
-      <workItem from="1629379697171" duration="13310000" />
-    </task>
-    <task id="LOCAL-00069" summary="student in angular">
-      <created>1627910635708</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1627910635708</updated>
+      <workItem from="1629379697171" duration="13845000" />
     </task>
     <task id="LOCAL-00070" summary="student in angular">
       <created>1627911632558</created>
@@ -774,11 +748,18 @@
       <option name="project" value="LOCAL" />
       <updated>1629375310490</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="singleLevel and teacher Iframe viewer">
+      <created>1629483586493</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1629483586493</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="366071000" />
+    <option name="totallyTimeSpent" value="366606000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -879,7 +860,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
-    <MESSAGE value="review count" />
     <MESSAGE value="review count cache" />
     <MESSAGE value="site multilingual" />
     <MESSAGE value="site multilingual: clear cache" />
@@ -904,7 +884,8 @@
     <MESSAGE value="bugfix:teach" />
     <MESSAGE value="remainLife visualised" />
     <MESSAGE value="achievement visualised" />
-    <option name="LAST_COMMIT_MESSAGE" value="achievement visualised" />
+    <MESSAGE value="singleLevel and teacher Iframe viewer" />
+    <option name="LAST_COMMIT_MESSAGE" value="singleLevel and teacher Iframe viewer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1320,8 +1301,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="202" column="50" lean-forward="true" selection-start-line="202" selection-start-column="50" selection-end-line="202" selection-end-column="50" />
+        <state relative-caret-position="425">
+          <caret line="214" column="25" lean-forward="true" selection-start-line="214" selection-start-column="25" selection-end-line="214" selection-end-column="25" />
         </state>
       </provider>
     </entry>
