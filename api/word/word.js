@@ -245,14 +245,7 @@ module.exports = {
         })
     },
     getLevelLexicalPhraseList: async function (levelId) {
-        // stmt = ' ' +
-        //     ' SELECT \n' +
-        //     ' p.phraseId,lp.lexicalId,llp.levelLexicalPhraseId,llp.levelId,llp.lexicalPhraseId,' +
-        //     ' llp.itemJSON,p.title\n' +
-        //     ' FROM levelLexicalPhrase llp,lexicalPhrase lp,phrase p' +
-        //     ' where llp.lexicalPhraseId = lp.lexicalPhraseId' +
-        //     ' and lp.phraseId = p.phraseId' +
-        //     ' and llp.levelId = ' + levelId;
+
 
         stmt = '' +
             'SELECT lp.lexicalId,llp.levelLexicalPhraseId,llp.levelId,llp.lexicalPhraseId,llp.itemJSON,p.phraseId,p.title \n' +
@@ -262,6 +255,7 @@ module.exports = {
             '             left join level l on l.LEVELID = llp.LEVELID \n' +
             '             where llp.levelId = ' + levelId;
 
+        console.log(stmt);
         return await query(stmt).then(function (result) {
             return result;
         })

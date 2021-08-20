@@ -44,6 +44,7 @@ angular.module('myApp').controller('levelDashboardController', function ($rootSc
             LevelService.updateLevelLexicalJson(params).then(result => {
                 StorageService.setData($scope.current)
             });
+            $scope.refreshIFrame();
         }
 
         $scope.changeValidityType = function (levelItem) {

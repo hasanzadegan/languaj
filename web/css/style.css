@@ -275,10 +275,6 @@ md-dialog {
 }
 
 
-.wordDashboard {
-    /*background: #e2ffdd;*/
-    height: 100vh;
-}
 
 .wordDashboard md-list-item {
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);

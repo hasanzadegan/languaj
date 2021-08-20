@@ -70,25 +70,18 @@ angular.module('myApp').controller('courseListController',
             })
         }
 
-
+    // after clicking a topic
         $scope.getStudentTopicLevelList = function (topic,review) {
             $scope.current.answerIsCorrect = null;
             $scope.current.student.selectedCourse.selectedTopic = topic;
             $scope.current.student.selectedCourse.selectedTopic.levelList = [];
 
-            console.log("getStudentTopicLevelList",topic.topicId,review)
-
             LessonService.getReviewLevelList(topic.topicId,review??1).then(result => {
-                console.log("getStudentTopicLevelList",topic.topicId,result)
                 if (result.length > 0) {
                     $scope.current.student.selectedCourse.selectedTopic.levelList = result;
                     $scope.current.student.selectedCourse.selectedTopic.levelIndex = 0;
-
                     StorageService.setData($scope.current);
-
                     $scope.selectStudentLevel(result[0].levelId);
-
-
                 }
             })
         }

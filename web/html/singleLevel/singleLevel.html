@@ -1,0 +1,26 @@
+<div oc-lazy-load="['js/singleLevel/singleLevel.js']">
+    <div ng-controller="singleController">
+        <div ng-if="true" ng-include="'html/viewer/viewer.html?v='+currentVersion"></div>
+    </div>
+</div>
+<div ng-show="current.answerIsCorrect===-1" flex="100" class="bottomDialog isIncorrect" layout="row" layout-wrap="">
+    <div flex="100" layout-padding="" layout-align="center center" layout="row">
+        بیشتر دقت کن!!!
+        <!--        {{current.correctAnswerText}}-->
+    </div>
+<!--    <div flex="100" layout="row" layout-align="center center">-->
+<!--        <md-button flex="90" class="redB checkButton" flex="90" ng-click="func.nextLevel()">-->
+<!--            next-->
+<!--        </md-button>-->
+<!--    </div>-->
+</div>
+<div ng-show="current.answerIsCorrect===1" flex="100" class="bottomDialog isCorrect" layout="row" layout-wrap="">
+    <div flex="100" layout-padding="" layout-align="center center" layout="row">
+        تبریک میگم درست بود
+    </div>
+<!--    <div flex="100" layout="row" layout-align="center center">-->
+<!--        <md-button flex="90" class="blueB checkButton" flex="90" ng-click="func.nextLevel()">-->
+<!--            next-->
+<!--        </md-button>-->
+<!--    </div>-->
+</div>

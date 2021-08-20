@@ -49,13 +49,18 @@ angular.module('myApp').controller('viewerController',
             if($scope.current.answerIsCorrect)
                 return;
             console.log("inCorrect");
-            $scope.func.logMistake({});
+
 
             $scope.current.answerIsCorrect = -1;
             StorageService.setData($scope.current);
             SoundService.playSoundFile("/audio/app-incorrect.mp3", true).then(result => {
                 // $rootScope.$broadcast("nextLevel",{});
             })
+            try {
+                $scope.func.logMistake({});
+            }catch (e) {
+
+            }
         };
 
 
@@ -67,7 +72,6 @@ angular.module('myApp').controller('viewerController',
         $scope.func.nextLevel = function () {
             $scope.current.answerIsCorrect = null;
             $rootScope.$broadcast("nextLevel", {});
-
         }
 
         $scope.func.logMistake = function(mistakeJSON){

@@ -81,23 +81,29 @@
     }
 </style>
 
+<!--single level-->
+<div ng-if="loadLevelId">
+    <div ng-include="'html/singleLevel/singleLevel.html?v='+currentVersion"></div>
+</div>
 
-<div class="topHead" flex="100" layout="row"
-     ng-show="!current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.level.levelId && !stopStudy"></div>
+<!--multipleLevel-->
+<div ng-if="!loadLevelId">
+    <div class="topHead" flex="100" layout="row"
+         ng-show="!current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.level.levelId && !stopStudy"></div>
 
-<div layout="column" flex="100" style="z-index: 10">
-    <div ng-show="stopStudy" layout="row" flex="100" layout-align="center center">
-        <div ng-include="'html/student/stopStudy.html'"></div>
+    <div layout="column" flex="100" style="z-index: 10">
+        <div ng-show="stopStudy" layout="row" flex="100" layout-align="center center">
+            <div ng-include="'html/student/stopStudy.html'"></div>
+        </div>
+        <div ng-show="config.studentPage && !stopStudy" ng-include="'html/footer/'+config.studentPage+'.html?v='+currentVersion" layout="column" flex></div>
     </div>
-    <div ng-show="config.studentPage && !stopStudy" ng-include="'html/footer/'+config.studentPage+'.html?v='+currentVersion" layout="column" flex></div>
+    <div ng-include="'html/Dashboard/sideMenu.html?v='+currentVersion"></div>
 </div>
 
 
-<div ng-include="'html/Dashboard/sideMenu.html?v='+currentVersion"></div>
 
-
-<div ng-show="current.dialogText"
-     layout-align="center center"
+<div ng-if="current.dialogText"
+     layout-alfunc.selectChoice($event,levelLexicalPhrase)ign="center center"
      flex="100" class="bottomDialog isCorrect" layout="row" layout-wrap="">
     {{current.dialogText}}
 </div>

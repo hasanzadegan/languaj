@@ -1,4 +1,3 @@
-
 app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyLoad, $path,
                                     StorageService,
                                     WordService,
@@ -101,19 +100,19 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     }
 
 
-    $scope.setPath = function (path,viewMode,viewModeId) {
-        StorageService.setPath('../' + path);
+    $scope.setPath = function (path, viewMode, viewModeId) {
+        StorageService.setPath('../' + path+'?v='+currentVersion);
         $scope.current.viewMode = viewMode;
-        $scope.current.viewModeId= viewModeId;
+        $scope.current.viewModeId = viewModeId;
         StorageService.setData($scope.current);
         $window.location.href = path;
     }
 
-    try{
-        loadLevelId = $window.location.search.split("levelId=")[1].split("&")[0];
-        alert(loadLevelId)
-        //todo load level
-    }catch (e) {}
+    try {
+        $scope.loadLevelId = $window.location.search.split("levelId=")[1].split("&")[0];
+    } catch (e) {
+    }
+
 
     try {
         courseCode = $window.location.search.split("?")[1].split("course=")[1].split("&")[0];
@@ -139,8 +138,8 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         $scope.config.studentPage = "footerLesson";
         StorageService.setConfig($scope.config);
     }
-    if(!$scope.config.studentPage)
-    $scope.backToList();
+    if (!$scope.config.studentPage)
+        $scope.backToList();
 
     $scope.goToSetting = function () {
         $scope.config.studentPage = "footerSettings";
@@ -213,7 +212,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
                         if ([3].includes(level.levelTypeId) && item.itemJSONObj.validityTypeId == 2) {
                             $scope.current.viewerData.correctItem = item.itemJSONObj.lexicalPhrase.title;
-                         }
+                        }
 
                         if ([13, 7].includes(level.levelTypeId)) {
                             $scope.current.viewerData.correctItem = item.itemJSONObj.title;
@@ -255,14 +254,13 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
                     $scope.current.viewerData.levelLexicalPhraseList = levelLexicalPhraseList;
 
 
-
                     //pair
                     $scope.current.viewerData.shuffleList = $scope.shuffle($scope.levelItemList)
 
                     try {
                         $scope.func.createLevelData();
 
-                    }catch (e) {
+                    } catch (e) {
                     }
 
                     StorageService.setData($scope.current);
@@ -273,12 +271,15 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
                 })
                 StorageService.setData($scope.current);
             })
+            $scope.refreshIFrame();
+
         }
+
     });
 
 
     $scope.showAchievement = function () {
-        $scope.current.viewer = 'html/viewer/achievement.html?v='+currentVersion;
+        $scope.current.viewer = 'html/viewer/achievement.html?v=' + currentVersion;
     }
 
 
@@ -319,20 +320,20 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     })
 
 
-    $scope.getUserMistakeStatus = function(){
-        LessonService.getUserMistakeStatus().then(result=>{
+    $scope.getUserMistakeStatus = function () {
+        LessonService.getUserMistakeStatus().then(result => {
             $scope.userMistake = result;
-            console.log("getUserMistakeStatus",result);
+            console.log("getUserMistakeStatus", result);
 
-            if(result.remainLife <=0 && result.diff>0){
+            if (result.remainLife <= 0 && result.diff > 0) {
                 $scope.backToList();
                 $scope.stopStudy = true;
                 // timer =
                 $scope.remainTime = result.diff;
 
                 let interval = $interval(function () {
-                    $scope.remainTime= $scope.remainTime - 1;
-                    if($scope.remainTime<=0){
+                    $scope.remainTime = $scope.remainTime - 1;
+                    if ($scope.remainTime <= 0) {
                         $scope.stopStudy = false;
                         $interval.cancel(interval);
                     }
@@ -352,7 +353,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     }
     $scope.filterReset();
 
-    $rootScope.showCourseList = function(){
+    $rootScope.showCourseList = function () {
         $scope.current.showCourseSetting = !$scope.current.showCourseSetting;
         StorageService.setData($scope.current);
     }
@@ -416,7 +417,11 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         if (item.soundId === -1) {
             func();
         } else if (!item.soundId) {
-            responsiveVoice.speak(item.title, "Deutsch Male", {onend: func});
+            try {
+                responsiveVoice.speak(item.title, "Deutsch Male", {onend: func});
+            } catch (e) {
+                console.log("responsiveVoice error")
+            }
         } else {
             SoundService.playSound(item.soundId).then(result => {
                 func()
@@ -450,7 +455,17 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         $timeout(function () {
             $scope.current.dialogText = null;
         }, time)
-        $scope.current.dialogText = text;
     }
 
+    $scope.refreshIFrame = function () {
+        $scope.iframeSrc = null;
+        console.log("refreshIFrame")
+        $timeout(function () {
+            if($scope.current.selectedCourse){
+                levelId = $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId;
+                $scope.iframeSrc = '/web/student.html?levelId=' + levelId;
+            }
+        }, 100)
+    }
+    $scope.refreshIFrame();
 });

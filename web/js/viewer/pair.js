@@ -16,6 +16,7 @@ angular.module('myApp').controller('pairController',
 
         $scope.$on('levelChanged', function (event, levelId) {
             $scope.resetPair();
+
         });
 
         var previousTitle;
