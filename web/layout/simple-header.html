@@ -1,18 +1,19 @@
+<md-progress-linear style="height: 3px" value="{{current.progress}}" ng-show="current.progress>0"></md-progress-linear>
+
 <div flex="100" layout="row" layout-padding="" class="simpleHeader" layout-wrap="">
-    <md-button flex="10" class="md-icon-button" ng-click="backToList()">
+    <md-button  ng-click="backToList()" flex="25" style="color:#314867">
         <md-icon md-svg-src="img/app/back.svg"></md-icon>
+        back
     </md-button>
-    <div flex="">
-        {{current.student.selectedCourse.selectedTopic.title}}
+    <div flex="" layout-align="center center" layout="row">
+        <div style="font-size: 1.2rem;font-weight: bold;color:#314867 ">
+            {{current.student.selectedCourse.selectedTopic.title}}
+        </div>
     </div>
-    <div flex="10"></div>
-    <div flex="25">
+    <div flex="25" layout-padding="">
         <div>
             <div class="life life{{userMistake.remainLife*10}}"></div>
         </div>
-<!--        {{userMistake.remainLife}}-->
-        <!--        {{remainTime}}-->
     </div>
-    <md-progress-linear value="{{current.progress}}" ng-show="current.progress>0"></md-progress-linear>
 
 </div>

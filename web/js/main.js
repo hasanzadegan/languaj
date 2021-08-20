@@ -459,11 +459,11 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
     $scope.refreshIFrame = function () {
         $scope.iframeSrc = null;
-        console.log("refreshIFrame")
         $timeout(function () {
             if($scope.current.selectedCourse){
                 levelId = $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId;
-                $scope.iframeSrc = '/web/student.html?levelId=' + levelId;
+                $scope.iframeSrc = 'student.html?levelId=' + levelId+'&r='+Math.random();
+                console.log("refreshIFrame",$scope.iframeSrc)
             }
         }, 100)
     }

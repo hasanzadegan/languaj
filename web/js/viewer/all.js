@@ -1,5 +1,7 @@
 angular.module('myApp').controller('allController',
     function ($rootScope, $scope, $q, $timeout, WordService, BaeService, StorageService, LessonService, SoundService) {
+        $scope.current.showOne = false;
+
         BaeService.getArticleList(2).then(function (result) {
             $scope.current.nominativeArticleList = {};
             articleObj = JSON.parse(result[0].articleList);
@@ -24,7 +26,6 @@ angular.module('myApp').controller('allController',
             }
         }
 
-        $scope.current.showOne = false;
         $scope.func.toggleSelectOne = function () {
             $scope.current.cnt = 0;
             $scope.current.showOne = !$scope.current.showOne;

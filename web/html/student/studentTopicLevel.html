@@ -1,24 +1,14 @@
-<div ng-if="current.student.selectedCourse" layout-padding="">
-    <div layout="row" flex="100">
-        <md-button
-                ng-click="showBottomDialog('لینک این دوره در کلیپ بورد کپی شد',1000)"
-                ngclipboard
-                data-clipboard-text="{{__path+'/web/student.html?course='+current.student.selectedCourse.courseCode+'&ref='+current.profile.ref}}">
-            <md-icon md-svg-src="img/app/send.svg"></md-icon>
-            همرسانی دوره
-        </md-button>
+<div ng-if="current.student.selectedCourse" layout-padding="" class="itemBox">
 
-        <div flex=""></div>
-        <md-button ng-click="loadCourseList()">
-            <md-icon md-svg-src="img/app/list1.svg"></md-icon>
-            دوره ها
-        </md-button>
-    </div>
     <div layout="row" flex="100" class="courseHead">
         <div layout="row" flex="100" style="font-size:1.3rem;font-weight: bolder">
+            <div flex="10">
+                <div style="position: relative;left: -10px;width: 20px;zoom:1.6;background-position-x: 20px"
+                     class="flags Flag{{current.student.selectedCourse.destLangId}}"></div>
+            </div>
             <div>
                 <img class="appImg teacherCourseImage" ng-src="{{current.student.selectedCourse.imageUrl}}"
-                     width="50px">
+                     width="50px" style="border-radius: 50px">
             </div>
             <div style="padding-left: 10px;font-family: Arial !important;    " flex="100">
                 {{current.student.selectedCourse.title}}
@@ -28,16 +18,23 @@
                 </div>
             </div>
             <div>
-                <img src="img/app/book.svg" style="height: 50px" class="appImg">
+                <md-button
+                        ng-click="showBottomDialog('لینک این دوره در کلیپ بورد کپی شد',1000)"
+                        ngclipboard
+                        data-clipboard-text="{{__path+'/web/student.html?course='+current.student.selectedCourse.courseCode+'&ref='+current.profile.ref}}">
+                    <md-icon md-svg-src="img/app/share.svg"></md-icon>
+                    share
+                </md-button>
+<!--                <img src="img/app/book.svg" style="height: 50px" class="appImg">-->
             </div>
         </div>
     </div>
 
     <div ng-repeat="lesson in current.student.selectedCourse.lessonList" flex="100">
-        <div style="font-family: Arial !important;">{{lesson.title}}</div>
+        <div style="font-size: 1.4rem;color:#314867 !important;">{{lesson.title}}</div>
         <div layout="row" layout-wrap="" flex="100">
-            <div ng-repeat="topic in lesson.topicListObj" layout-wrap="" layout-padding="">
-                <md-button class="lessonBtn"
+            <div ng-repeat="topic in lesson.topicListObj" layout-wrap="" layout="row" layout-padding="" flex="50">
+                <md-button class="topicBox{{topic.locked}}"
                            ng-click="getStudentTopicLevelList(topic,topic.review+1)" ng-disabled="topic.locked">
                     <div flex="100" layout="row" layout-align="center center">
                         <div>{{topic.title}}</div>

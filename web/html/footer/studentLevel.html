@@ -2,10 +2,10 @@
     <div ng-controller="viewerController" layout="row" layout-wrap flex="100"></div>
 </div>
 
-<div layout="row" flex="100">
+<div layout="row" flex="100" class="gradientViewer">
     <div layout="column" flex="100">
-        <div flex="10" ng-include="'layout/simple-header.html?r='+func.version"></div>
-        <div ng-include="current.viewer+'?v='+currentVersion" flex="90" layout="row"></div>
+        <div style="min-height: 80px" ng-include="'layout/simple-header.html?r='+currentVersion"></div>
+        <div style="min-height: calc(100vh - 80px)" ng-include="current.viewer+'?v='+currentVersion" flex="90" layout="row"></div>
     </div>
 </div>
 

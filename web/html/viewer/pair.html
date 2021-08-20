@@ -6,7 +6,7 @@
     <div layout-wrap flex="80">
         <div layout="row" layout-wrap="" flex="100">
             <div ng-repeat="item in current.viewerData.shuffleList" flex="50" layout="row" layout-wrap="" layout-padding="">
-                <md-button class="roundStrockBtn" flex="100"
+                <md-button class="itemBox" flex="100"
                            ng-click="speak(item.title);func.checkAnswer(item)"
                            ng-hide="func.disableList[item.lexicalId]">{{item.title}}
                 </md-button>

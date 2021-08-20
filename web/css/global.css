@@ -1,3 +1,33 @@
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    /*font-weight: bold;*/
+    src: url('/web/css/fonts/roboto/Roboto-black.ttf'),
+    url('/web/css/fonts/roboto/Roboto-bold.ttf'),
+    url('/web/css/fonts/roboto/Roboto-light.ttf'),
+    url('/web/css/fonts/roboto/Roboto-medium.ttf'),
+    url('/web/css/fonts/roboto/Roboto-Thin.ttf');
+    /*src: url('fonts/eot/IRANSansWeb(FaNum)_Bold.eot?#iefix') format('embedded-opentype'),  !* IE6-8 *!*/
+    /*	 url('fonts/woff2/IRANSansWeb(FaNum)_Bold.woff2') format('woff2'),  !* FF39+,Chrome36+, Opera24+*!*/
+    /*	 url('fonts/woff/IRANSansWeb(FaNum)_Bold.woff') format('woff'),  !* FF3.6+, IE9, Chrome6+, Saf5.1+*!*/
+    /*	 url('fonts/ttf/IRANSansWeb(FaNum)_Bold.ttf') format('truetype');*/
+}
+
+@font-face {
+    font-family: IRANSansWeb;
+    font-style: normal;
+    /*font-weight: 500;*/
+    src: url('/web/css/fonts/eot/IRANSansWeb(FaNum)_Medium.eot');
+    src: url('/web/css/fonts/eot/IRANSansWeb(FaNum)_Medium.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('/web/css/fonts/woff2/IRANSansWeb(FaNum)_Medium.woff2') format('woff2'),/* FF39+,Chrome36+, Opera24+*/
+    url('/web/css/fonts/woff/IRANSansWeb(FaNum)_Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/web/css/fonts/ttf/IRANSansWeb(FaNum)_Medium.ttf') format('truetype');
+}
+body{
+    /*background: linear-gradient(#EDEDED,#fff);*/
+    color:#314867;
+}
+
 .toggleViewMode {
     position: absolute;
     right: 1px;
@@ -137,9 +167,24 @@
 }
 
 .itemBox {
-    border: solid 1px silver;
-    background: white;
-    box-shadow: 3px 3px rgba(10, 10, 10, .1);
+    padding: 10px;
+    background: white !important;
+    border-radius: 10px;
+    box-shadow:0 3px 3px rgba(10, 10, 10, .1);
+}
+
+.topicBoxfalse{
+    background: #E4FFF8;
+    border:solid 1px #27FFCE;
+    border-radius: 10px;
+    width: 100%;min-height: 180px
+}
+.topicBoxtrue{
+    background: #F8F8F8;
+    border:solid 1px #B0AFAF;
+    border-radius: 10px;
+    box-shadow:0 3px 3px rgba(10, 10, 10, .1);
+    width: 100%;min-height: 180px
 }
 
 .flags {
@@ -178,4 +223,8 @@
 
 .Flag6 {
     background-position: 0 -160px;
+}
+
+.gradientViewer {
+    background: linear-gradient(#e8e8e8,#fff);
 }
