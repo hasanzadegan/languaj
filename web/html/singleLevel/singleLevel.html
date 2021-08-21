@@ -3,7 +3,7 @@
         <div ng-if="true" ng-include="'html/viewer/viewer.html?v='+currentVersion"></div>
     </div>
 </div>
-<div ng-show="current.answerIsCorrect===-1" flex="100" class="bottomDialog isIncorrect" layout="row" layout-wrap="">
+<div ng-show="current.answerIsCorrect===-1" flex="50" class="bottomDialog isIncorrect" layout="row" layout-wrap="">
     <div flex="100" layout-padding="" layout-align="center center" layout="row">
         بیشتر دقت کن!!!
         <!--        {{current.correctAnswerText}}-->
@@ -14,7 +14,7 @@
 <!--        </md-button>-->
 <!--    </div>-->
 </div>
-<div ng-show="current.answerIsCorrect===1" flex="100" class="bottomDialog isCorrect" layout="row" layout-wrap="">
+<div ng-show="current.answerIsCorrect===1" flex="50" class="bottomDialog isCorrect" layout="row" layout-wrap="">
     <div flex="100" layout-padding="" layout-align="center center" layout="row">
         تبریک میگم درست بود
     </div>

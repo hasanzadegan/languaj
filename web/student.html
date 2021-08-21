@@ -1,11 +1,13 @@
 ﻿<html lang="fa">
 <head style="height: 100%">
+    <link rel="stylesheet" type="text/css" href="css/global.css"/>
     <title>Languaj.com - Learn like children</title>
-<!--    <meta name="viewport" content="height=device-height,width=device-width, initial-scale=1.0, initial-scale=1.0, user-scalable=no" />-->
-    <meta name="viewport" content="height=device-height, initial-scale=1, width=device-width, initial-scale=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0,  viewport-fit=cover">
+    <!--    <meta name="viewport" content="height=device-height,width=device-width, initial-scale=1.0, initial-scale=1.0, user-scalable=no" />-->
+    <meta name="viewport" content="height=device-height, initial-scale=1, width=device-width, initial-scale=1"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0,  viewport-fit=cover">
 
-    <meta name="HandheldFriendly" content="true" />
+    <meta name="HandheldFriendly" content="true"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <link rel="manifest" href="/manifest.json">
@@ -21,7 +23,7 @@
 
     <meta charset="UTF-8">
     <script type="text/javascript">
-        document.write('<scr'+'ipt src="js/version.js?v='+Math.random()+'" type="text/javascript"></scr'+'ipt>');
+        document.write('<scr' + 'ipt src="js/version.js?v=' + Math.random() + '" type="text/javascript"></scr' + 'ipt>');
     </script>
 
     <!--npm packages-->
@@ -39,7 +41,7 @@
     <script src="node_modules/ng-draggable/ngDraggable.js"></script>
     <script src="node_modules/clipboard/dist/clipboard.js"></script>
     <script src="node_modules/ngclipboard/dist/ngclipboard.min.js"></script>
-<!--    <script src="node_modules/angular-vibrator/src/vibrator.js"></script>-->
+    <!--    <script src="node_modules/angular-vibrator/src/vibrator.js"></script>-->
 
     <script src="https://code.responsivevoice.org/responsivevoice.js?key=vXDMrEll"></script>
     <!--definition-->
@@ -81,29 +83,35 @@
     }
 </style>
 
-<!--single level-->
-<div ng-if="loadLevelId">
-    <div ng-include="'html/singleLevel/singleLevel.html?v='+currentVersion"></div>
-</div>
 
-<!--multipleLevel-->
-<div ng-if="!loadLevelId">
-    <div class="topHead" flex="100" layout="row"
-         ng-show="!current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.level.levelId && !stopStudy"></div>
-
-    <div layout="column" flex="100" style="z-index: 10">
-        <div ng-show="stopStudy" layout="row" flex="100" layout-align="center center">
-            <div ng-include="'html/student/stopStudy.html'"></div>
-        </div>
-        <div ng-show="config.studentPage && !stopStudy" ng-include="'html/footer/'+config.studentPage+'.html?v='+currentVersion" layout="column" flex></div>
+<div layout="row" flex="100">
+    <!--single level-->
+    <div ng-if="loadLevelId" flex="100" layout-align="center center" layout="row">
+        <div flex="50" flex-xs="100" ng-include="'html/singleLevel/singleLevel.html?v='+currentVersion"></div>
     </div>
-    <div ng-include="'html/Dashboard/sideMenu.html?v='+currentVersion"></div>
+
+    <!--multipleLevel-->
+    <div ng-if="!loadLevelId" flex="100" layout-wrap="" layout="column">
+        <div layout="row" flex="100" layout-align="center center" >
+            <div class="topHead" flex="50" flex-xs="100" flex-sm="100" layout="row"
+                 ng-show="!current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.level.levelId && !stopStudy"></div>
+
+            <div layout="column" flex="50" flex-xs="100" flex-sm="100" style="z-index: 10;height: 100vh">
+                <div ng-show="stopStudy" layout="row" flex="100" layout-align="center center">
+                    <div ng-include="'html/student/stopStudy.html'"></div>
+                </div>
+                <div flex="100" ng-show="config.studentPage && !stopStudy"
+                     ng-include="'html/footer/'+config.studentPage+'.html?v='+currentVersion" layout="column" flex></div>
+            </div>
+        </div>
+    </div>
 </div>
 
+<div ng-include="'html/Dashboard/sideMenu.html?v='+currentVersion"></div>
 
 
 <div ng-if="current.dialogText"
-     layout-alfunc.selectChoice($event,levelLexicalPhrase)ign="center center"
+     layout-align="center center"
      flex="100" class="bottomDialog isCorrect" layout="row" layout-wrap="">
     {{current.dialogText}}
 </div>
