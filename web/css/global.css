@@ -59,9 +59,6 @@ body{
     box-shadow: none !important;
 }
 
-.largeFont {
-    font-size: 1.3rem;
-}
 
 .redB {
     background: #FF5454 !important;
@@ -225,6 +222,15 @@ body{
     background-position: 0 -160px;
 }
 
+.lang1{
+    text-align: right;
+    direction: rtl;
+}
+
+.lang2,.lang3,.lang4,.lang5,.lang6{
+    text-align: left;
+    direction: ltr;
+}
 .gradientViewer {
     background: linear-gradient(#e8e8e8,#fff);
 }
@@ -233,3 +239,4 @@ body{
     position: fixed;
     top:200px;
 }
+

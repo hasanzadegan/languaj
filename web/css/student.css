@@ -34,12 +34,9 @@
 
 
 body {
-    font-family: 'sahel', Arial;
-    /*font-family: "Helvetica Neue";*/
-    /*font-size: 15px;*/
-    color: rgba(0, 0, 0, 90);
-    /*position: fixed;*/
-    /*font-weight: bolder;*/
+    font-family: 'sahel', Arial, serif;
+    /*color: rgba(0, 0, 0, 90);*/
+    color:#314867;
 }
 
 .en {
@@ -1140,6 +1137,14 @@ input[type=number]::-webkit-outer-spin-button {
 
 }
 
+.topBold {
+    font-size: 1.3rem;font-weight: bold;
+}
+
+.topNormal {
+    font-size: 1.4rem;color:#314867;
+}
+
 
 @keyframes heartbeat {
     0% {
@@ -1238,4 +1243,9 @@ md-progress-linear.md-default-theme .md-bar, md-progress-linear .md-bar
 
 md-progress-linear.md-default-theme .md-container, md-progress-linear .md-container{
     background: #dceff2 !important;
+}
+
+.middleLight {
+    font-size: 0.8rem;
+    font-weight: lighter;
 }

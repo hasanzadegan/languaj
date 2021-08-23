@@ -8,7 +8,7 @@
              ng-if="levelLexicalPhrase.itemJSONObj.validityTypeId===1"
              layout-align="center center"
              layout="row" layout-wrap="">
-            <div flex ng-hide="levelLexicalPhrase.itemJSONObj.hideText" style="font-size: 1.3rem !important;">
+            <div flex ng-hide="levelLexicalPhrase.itemJSONObj.hideText" class="topBold">
                 {{levelLexicalPhrase.itemJSONObj.title}}
             </div>
             <div ng-show="levelLexicalPhrase.itemJSONObj.soundId!=-1">
@@ -41,7 +41,7 @@
                  layout-align="center center"
                  flex="100" layout="row" ng-show="levelLexicalPhrase.itemJSONObj.itemFlex.toString()==='100'">
                 <div flex >
-                    <div ng-hide="levelLexicalPhrase.itemJSONObj.hideText">
+                    <div ng-hide="levelLexicalPhrase.itemJSONObj.hideText" class="topBold">
                         {{levelLexicalPhrase.itemJSONObj.title}}
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                  layout="column"
                  layout-align="center center"
                  ng-show="levelLexicalPhrase.itemJSONObj.itemFlex.toString()==='50'">
-                <div flex="20" ng-hide="levelLexicalPhrase.itemJSONObj.hideText">
+                <div flex="20" ng-hide="levelLexicalPhrase.itemJSONObj.hideText" class="topBold">
                     {{levelLexicalPhrase.itemJSONObj.title}}
                 </div>
                 <div flex="80" layout="row" layout-padding="" layout-align="center center">

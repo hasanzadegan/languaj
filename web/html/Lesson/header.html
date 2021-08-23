@@ -4,7 +4,7 @@
             <img ng-src="{{current.profile.imageUrl}}"
                  ng-dblclick="showTeacherList=!showTeacherList"
                  style="border-radius: 50px;height: 50px;padding: 5px"/>
-            <div layout-padding="" style="font-size: 1.4rem;font-family: Roboto" flex="">
+            <div layout-padding="" flex="">
                 {{current.profile.firstName +' '
                 +current.profile.lastName}}
             </div>
@@ -49,7 +49,7 @@
                     </md-menu>
                 </div>
             </div>
-            <md-button flex style="font-size: 12px;"
+            <md-button flex
                        ngclipboard
                        data-clipboard-text="{{__path+'/web/student.html?course='+current.selectedCourse.courseCode+'&ref='+current.profile.ref}}"
                        flex=""

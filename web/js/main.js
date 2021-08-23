@@ -138,6 +138,8 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         $scope.config.studentPage = "footerLesson";
         StorageService.setConfig($scope.config);
     }
+
+
     if (!$scope.config.studentPage)
         $scope.backToList();
 

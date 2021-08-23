@@ -36,7 +36,7 @@
             >
 
             <div layout="row" flex="90" ng-if="teachEditMode!==$index" >
-                <div flex="10" style="font-family: 'Times New Roman'">{{item.teachCode}}</div>
+                <div flex="10">{{item.teachCode}}</div>
                 <div ng-dblclick="editTeachRow($index)">{{item.title}}</div>
                 <div flex="100"></div>
                 <div>
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div layout="row" flex="90" ng-if="teachEditMode===$index">
-                <div flex="10" style="font-family: 'Times New Roman'">
+                <div flex="10">
                     <input  style="width: 30px;" ng-model="item.teachCode">
                 </div>
                 <div ><input ng-model="item.title" ng-blur="editTopicTeach(item)"></div>
