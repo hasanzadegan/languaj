@@ -151,8 +151,6 @@ angular.module('myApp').controller('levelDashboardController', function ($rootSc
         }
 
         $scope.setWordGender = function (genderId) {
-            if ($scope.current.viewerData.itemJSONObj.wordList.length != 1)
-                return null;
             $scope.current.viewerData.selectedLevelLexicalPhrase.itemJSONObj.wordList[0].genderId = genderId;
             $scope.updateLevelLexicalJson($scope.current.viewerData.selectedLevelLexicalPhrase);
         }

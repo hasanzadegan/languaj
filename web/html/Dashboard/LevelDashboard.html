@@ -90,7 +90,7 @@
                                     <md-icon>title</md-icon>
                                 </md-checkbox>
                             </div>
-                            <div layout="row" ng-show="current.viewerData.selectedLevelLexicalPhrase.itemJSONObj.wordList.length===1">
+                            <div layout="row" ng-show="(1,2).includes(current.viewerData.selectedLevelLexicalPhrase.itemJSONObj.wordList.length)">
                                 <div ng-repeat="genderItem in genderList" >
                                     <div>
                                         <md-button class="md-icon-button"
