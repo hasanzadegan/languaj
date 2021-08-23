@@ -26,8 +26,7 @@
                     <div style="position: absolute;z-index: 99999;" ng-click="hideHint($event)">
                         <div class="hintData"
                              layout-padding=""
-                             ng-show="hintData"
-                        >
+                             ng-show="hintData">
                             <div ng-repeat="rtItem in hintData">
                                 <b>{{rtItem.title}}</b>
                                 <div layout-padding="" layout="row">
@@ -39,8 +38,6 @@
                         </div>
                     </div>
                 </div>
-
-
                 <div flex="40" layout-align="center center" layout="row">
                     <img
                             ng-if="levelLexicalPhrase.itemJSONObj.imageId"

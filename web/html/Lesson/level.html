@@ -59,8 +59,9 @@
                     </md-menu>
 
                     <md-button layout-padding="" layout-align="start center"
-                               ng-dblclick="editMode = !editMode"
-                    >{{level.title}}</md-button>
+                               ng-dblclick="editMode = !editMode" layout="row">
+                        <div style="font-size: 10px;color:silver">{{level.levelId}}</div>
+                        {{level.title}}</md-button>
                     <div flex></div>
                 </div>
                 <div flex="100" layout="row" ng-show="editMode" class="{{level.levelTypeId===12?'teachBack':''}}">

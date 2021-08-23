@@ -303,11 +303,9 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
         levelIndex = levelIndex + 1;
 
         $scope.current.student.selectedCourse.selectedTopic.levelIndex = levelIndex;
-
         $scope.current.progress = levelIndex / (levelList.length) * 100
 
         StorageService.setData($scope.current);
-
 
         if (levelIndex > levelList.length - 1) {
             $scope.current.progress = 0;
