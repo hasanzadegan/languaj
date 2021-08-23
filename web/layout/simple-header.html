@@ -5,12 +5,16 @@
         back
     </md-button>
     <div flex="" layout-align="center center" layout="row">
-        <div ng-click="func.nextLevel()">
+        <md-button ng-click="func.prvLevel()">
+            <md-icon md-svg-src="img/app/smallLeftArrow.svg"></md-icon>
+        </md-button>
+        <div class="topBold">
             {{current.student.selectedCourse.selectedTopic.title}}
         </div>
-        <div layout-padding="">
-            {{current.viewerData.levelId}}
-        </div>
+        <div layout-padding="" style="color:gray" layout="row">{{current.viewerData.levelId}}</div>
+        <md-button ng-click="func.nextLevel()">
+            <md-icon md-svg-src="img/app/smallRightArrow.svg"></md-icon>
+        </md-button>
     </div>
     <div flex="25" layout-padding="">
         <div>

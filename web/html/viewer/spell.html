@@ -4,39 +4,37 @@
 </div>
 <div flex="100" layout="column">
     <div flex="20" ng-include="'html/viewer/header/charachter.html?v='+currentVersion" layout="row"></div>
-    <div flex="80" layout-padding="">
+    <div flex="80" layout-padding="" style="overflow-y: auto;height: 85vh">
         <form>
-            <div ng-repeat="quiz in current.viewerData.levelLexicalPhraseList" layout="row" flex="100" layout-wrap="" >
-                <div flex="100">
-                    {{quiz.itemJSONObj.lexicalPhrase.title}}
-                </div>
-                <div flex="100" layout="row" layout-wrap="" layout-padding="" class="spellBack">
-                    <div ng-repeat="letter in quiz.itemJSONObj.letterList">
-                        <div ng-if="!letter.hide">
-                            {{letter.letter}}
-                        </div>
-                        <div ng-if="letter.hide">
-                            <input class="redC"
-                                   style="width:27px;font-weight: bold"
-                                   maxlength="1"
-                                   ng-blur="func.checkIsLastInput($event,quiz,$index)"
-                                   autocapitalize="none"
-                                   val-to-jump="1" focus-next-input
-                                   ng-model="quiz.answer[$index]">
-                        </div>
+            <div ng-repeat="quiz in current.viewerData.levelLexicalPhraseList" layout="row" flex="100" layout-wrap="" layout-padding="">
+                <div class="itemBox">
+
+                    <div flex="100">
+                        {{quiz.itemJSONObj.lexicalPhrase.title}}
                     </div>
-    <!--                    <div flex=""></div>-->
-    <!--                    <md-button class="redB checkButton"-->
-    <!--                               ng-click="func.checkSpell($event,quiz,quiz.answer)" ng-hide="quiz.disabled">-->
-    <!--                        check-->
-    <!--                    </md-button>-->
-                    <div ng-show="quiz.disabled">
-                        <md-icon ng-if="quiz.result">
-                            check
-                        </md-icon>
-                        <md-icon ng-if="!quiz.result && quiz.disabled">
-                            clear
-                        </md-icon>
+                    <div flex="100" layout="row" layout-wrap="" layout-padding="">
+                        <div ng-repeat="letter in quiz.itemJSONObj.letterList">
+                            <div ng-if="!letter.hide">
+                                {{letter.letter}}
+                            </div>
+                            <div ng-if="letter.hide">
+                                <input class="redC"
+                                       style="width:25px;font-weight: bold"
+                                       maxlength="1"
+                                       ng-blur="func.checkIsLastInput($event,quiz,$index)"
+                                       autocapitalize="none"
+                                       val-to-jump="1" focus-next-input
+                                       ng-model="quiz.answer[$index]">
+                            </div>
+                        </div>
+                        <div ng-show="quiz.disabled">
+                            <md-icon ng-if="quiz.result">
+                                check
+                            </md-icon>
+                            <md-icon ng-if="!quiz.result && quiz.disabled">
+                                clear
+                            </md-icon>
+                        </div>
                     </div>
                 </div>
             </div>

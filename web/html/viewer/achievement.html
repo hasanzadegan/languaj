@@ -1,13 +1,13 @@
 <div oc-lazy-load="['js/viewer/achievement.js?v='+currentVersion]">
     <div ng-controller="achievementController" layout="row" layout-wrap
-         layout-align="center center">
-            <div>
-                <h1>Horray</h1>
-                <h3>
-                    you achieved {{current.selectedCourse.selectedLesson.selectedTopic.title}} topic
-                </h3>
+         layout-align="center center" style="height: 85vh">
+            <div flex="100" layout="row" layout-wrap="">
+                <div class="topBold" layout-align="center center" layout="row" flex="100">Horray</div>
+                <div class="topNormal" layout-align="center center" layout="row" flex="100">
+                    {{current.selectedCourse.selectedLesson.selectedTopic.title}} topic achieved.
+                </div>
             </div>
-            <div layout-padding="">
+            <div layout-padding="" flex="100">
                 <img src="img/cartoon/horray.svg" width="90%">
             </div>
             <div style="height: 10vh" layout-align="center center" flex="100" layout-padding="">

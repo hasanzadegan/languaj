@@ -1137,13 +1137,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 }
 
-.topBold {
-    font-size: 1.3rem;font-weight: bold;
-}
 
-.topNormal {
-    font-size: 1.4rem;color:#314867;
-}
 
 
 @keyframes heartbeat {
@@ -1248,4 +1242,11 @@ md-progress-linear.md-default-theme .md-container, md-progress-linear .md-contai
 .middleLight {
     font-size: 0.8rem;
     font-weight: lighter;
+}
+.topBold {
+    font-size: 1.3rem;font-weight: bold;
+}
+
+.topNormal {
+    font-size: 1.4rem;color:#314867;
 }

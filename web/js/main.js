@@ -101,7 +101,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
 
     $scope.setPath = function (path, viewMode, viewModeId) {
-        StorageService.setPath('../' + path+'?v='+currentVersion);
+        StorageService.setPath('../' + path + '?v=' + currentVersion);
         $scope.current.viewMode = viewMode;
         $scope.current.viewModeId = viewModeId;
         StorageService.setData($scope.current);
@@ -299,6 +299,17 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     }
 
 
+    $scope.$on("prvLevel", function (event, data) {
+        levelList = $scope.current.student.selectedCourse.selectedTopic.levelList;
+        levelIndex = $scope.current.student.selectedCourse.selectedTopic.levelIndex;
+        levelIndex = levelIndex - 1;
+        $scope.current.student.selectedCourse.selectedTopic.levelIndex = levelIndex;
+        $scope.current.progress = levelIndex / (levelList.length) * 100
+        nextLevel = levelList[levelIndex];
+        $scope.selectStudentLevel(nextLevel.levelId);
+        StorageService.setData($scope.current);
+    });
+
     $scope.$on("nextLevel", function (event, data) {
         levelList = $scope.current.student.selectedCourse.selectedTopic.levelList;
         levelIndex = $scope.current.student.selectedCourse.selectedTopic.levelIndex;
@@ -306,7 +317,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
 
         $scope.current.student.selectedCourse.selectedTopic.levelIndex = levelIndex;
         $scope.current.progress = levelIndex / (levelList.length) * 100
-
+        $scope.current.charachter = $scope.getRandomInt(101, 108);
         StorageService.setData($scope.current);
 
         if (levelIndex > levelList.length - 1) {
@@ -448,7 +459,6 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     // $scope.getRand = function(){
     //     return Math.random();
     // }
-    $scope.func.charachter = $scope.getRandomInt(101, 108);
 
     $scope.showBottomDialog = function (text, time) {
         $scope.current.dialogText = text;
@@ -460,10 +470,10 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     $scope.refreshIFrame = function () {
         $scope.iframeSrc = null;
         $timeout(function () {
-            if($scope.current.selectedCourse){
+            if ($scope.current.selectedCourse) {
                 levelId = $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId;
-                $scope.iframeSrc = 'student.html?levelId=' + levelId+'&r='+Math.random();
-                console.log("refreshIFrame",$scope.iframeSrc)
+                $scope.iframeSrc = 'student.html?levelId=' + levelId + '&r=' + Math.random();
+                console.log("refreshIFrame", $scope.iframeSrc)
             }
         }, 100)
     }
