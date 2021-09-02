@@ -99,6 +99,8 @@ angular.module('myApp').controller('lexicalController',
                     wordList:$scope.current.selectedPhrase.phraseWordList,
                     lexicalPhrase:lexicalPhrase,
                 };
+
+                console.log("assignLevelLexicalPhrase",itemJSON,$scope.current.soundList);
                 itemJSON = JSON.stringify(itemJSON);
 
                 levelId = $scope.current.viewerData.levelId;

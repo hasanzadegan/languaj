@@ -1,17 +1,11 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { LevelComponent} from './level/level.component';
-import { CourseListComponent} from './course-list/course-list.component';
-import { TopicListComponent} from './topic-list/topic-list.component';
-import { LevelListComponent} from './level-list/level-list.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
-import { MultiComponent } from './level-type/multi/multi.component';
 const routes: Routes = [
-  { path: 'courseList', component: CourseListComponent },
-  { path: 'topicList', component: TopicListComponent },
-  { path: 'levelList', component: LevelListComponent },
-  { path: 'level', component: LevelComponent},
-  { path: 'multi', component: MultiComponent },
+  {path: '', loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule)},
+  {path: 'courses', loadChildren: () => import('./modules/course-list/course-list.module').then(m => m.CourseListModule)},
+  {path: 'topics', loadChildren: () => import('./modules/topic-list/topic-list.module').then(m => m.TopicListModule)},
+  {path: 'topic', loadChildren: () => import('./modules/topic-view/topic-view.module').then(m => m.TopicViewModule)},
 ];
 
 @NgModule({
@@ -19,5 +13,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {
-
 }

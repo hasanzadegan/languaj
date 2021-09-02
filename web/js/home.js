@@ -12,6 +12,7 @@ app.controller('HomeCtrl', function ($rootScope, $scope, $http, $window,
                                      $q,
 ) {
 
+
     $scope.currentVersion = currentVersion;
     $scope.current = StorageService.getData();
     if (!$scope.current)

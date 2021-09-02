@@ -7,6 +7,13 @@ app.service('LevelService', function ($rootScope, $path, HttpService, StorageSer
             })
             return def.promise;
         },
+        getLevelLexicalPhraseSoundList:function(levelId) {
+            const def = $q.defer();
+            HttpService.get($path.url + "/api/levelLexicalPhraseSoundList/"+levelId).then(function (result) {
+                def.resolve(result);
+            })
+            return def.promise;
+        },
         getLevelLexicalPhraseById:function(levelLexicalPhraseId){
             const def = $q.defer();
             HttpService.get($path.url + "/api/levelLexicalPhrase/"+levelLexicalPhraseId).then(function (result) {

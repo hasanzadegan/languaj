@@ -1,5 +1,5 @@
 angular.module('myApp').controller('allController',
-    function ($rootScope, $scope, $q, $timeout, WordService, BaeService, StorageService, LessonService, SoundService) {
+    function ($rootScope, $scope, $q, $timeout, WordService, BaeService, StorageService, LessonService, SoundService, LevelService) {
         $scope.current.showOne = false;
 
         BaeService.getArticleList(2).then(function (result) {
@@ -16,10 +16,18 @@ angular.module('myApp').controller('allController',
         $scope.func.serialPlay = function ($event, cnt) {
             if ($scope.current.viewerData.levelLexicalPhraseList.length > cnt) {
                 levelItem = $scope.current.viewerData.levelLexicalPhraseList[cnt];
-                $scope.playItem($event, levelItem,1000).then(result => {
-                    $scope.current.cnt  += 1;
-                    $scope.func.serialPlay($event, $scope.current.cnt);
-                });
+                $scope.playItem($event, levelItem, 200).then(result => {
+                    soundList = $scope.soundList[levelItem.lexicalId];
+                    console.log("soundList",soundList)
+                    if (soundList.length> 0) {
+                        $scope.playItem($event, {soundId: soundList[0]}).then(result => {
+                            $scope.current.cnt += 1;
+                            $scope.func.serialPlay($event, $scope.current.cnt);
+                        })
+                    } else {
+                        $scope.current.cnt += 1;
+                        $scope.func.serialPlay($event, $scope.current.cnt);                    }
+                })
             } else {
                 $scope.func.toggleSelectOne();
                 $scope.func.played = true;
@@ -33,8 +41,18 @@ angular.module('myApp').controller('allController',
         }
 
         $scope.func.playAll = function ($event) {
-            $scope.func.toggleSelectOne();
-            $scope.current.cnt = 0;
-            $scope.func.serialPlay($event, 0);
+            LevelService.getLevelLexicalPhraseSoundList($scope.loadLevelId).then(result => {
+
+                $scope.soundList = {};
+                for (item of result) {
+                    $scope.soundList[item.lexicalId] = JSON.parse(item.soundList);
+                }
+                console.log("$scope.soundList",$scope.soundList)
+                $scope.func.toggleSelectOne();
+                $scope.current.cnt = 0;
+                $scope.func.serialPlay($event, 0);
+            })
+
+
         }
     });

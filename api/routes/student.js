@@ -117,6 +117,11 @@ module.exports = function(app){
             res.send(result);
         })
     });
+    app.get('/api/levelLexicalPhraseSoundList/:levelId', (req, res) => {
+        word.getLevelLexicalPhraseSoundList(req.params.levelId).then(function (result) {
+            res.send(result);
+        })
+    });
 
     app.post('/api/addUserMistake', async (req, res) => {
         user = await global.getUser(req);

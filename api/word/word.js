@@ -8,7 +8,7 @@ module.exports = {
 
         stmt = 'select p.phraseId,p.langId,p.genderId,p.title,p.isMultiWord,p.isExtracted' +
             ' from phrase p where Upper(title) like  \'%' + title.toUpperCase() + '%\' ' +
-            ' and p.langId in('+sourceLangId+','+destLangId+')' +
+            ' and p.langId in(' + sourceLangId + ',' + destLangId + ')' +
             ' order by length(title)' +
             ' limit 10';
 
@@ -22,10 +22,10 @@ module.exports = {
         sourceLangId = params.sourceLangId;
         destLangId = params.destLangId;
         stmt = 'select p.phraseId,p.langId,p.genderId,p.title,p.isMultiWord,p.isExtracted,' +
-            ' levenshtein(\''+word+'\',title) similarity' +
+            ' levenshtein(\'' + word + '\',title) similarity' +
             ' from phrase p ' +
-            ' where UPPER(SOUNDEX(deutscheReplace(title)))=UPPER(SOUNDEX (deutscheReplace(\''+word+'\'))) ' +
-            ' and p.langId in('+sourceLangId+','+destLangId+')' +
+            ' where UPPER(SOUNDEX(deutscheReplace(title)))=UPPER(SOUNDEX (deutscheReplace(\'' + word + '\'))) ' +
+            ' and p.langId in(' + sourceLangId + ',' + destLangId + ')' +
             ' order by similarity limit 10 ';
         console.log(stmt);
 
@@ -84,7 +84,7 @@ module.exports = {
             'where title=? ' +
             // 'and p.isMultiWord = 0' +
             '';
-            params = [title]
+        params = [title]
         return await query(stmt, params).then(function (result) {
             return result;
         })
@@ -151,75 +151,75 @@ module.exports = {
             return result;
         })
     },
-    getLexicalImageList : async function (lexicalId) {
+    getLexicalImageList: async function (lexicalId) {
         stmt = ' ' +
             ' select documentId ' +
             ' from lexicalImage ' +
-            ' where lexicalId = '+lexicalId;
+            ' where lexicalId = ' + lexicalId;
         // console.log(stmt)
         return await query(stmt).then(function (result) {
             return result;
         })
     },
-    getLevelImageList : async function (levelId) {
+    getLevelImageList: async function (levelId) {
         stmt = ' ' +
             ' select lv.levelId,d.docArchiveId,d.docData \n' +
             ' from  \n' +
             '  level lv,     \n' +
             '  LevelLexicalPhrase llp,lexicalPhrase lp,LexicalImage li,docarchive d  \n' +
             '  where lv.levelId = llp.levelId  and llp.lexicalphraseId = lp.lexicalphraseId  \n' +
-            ' and lp.lexicalId = li.lexicalId  and li.documentId=d.DocArchiveId  and lv.levelId = '+levelId;
+            ' and lp.lexicalId = li.lexicalId  and li.documentId=d.DocArchiveId  and lv.levelId = ' + levelId;
         // console.log("getLevelImageList \n\n\n"+stmt)
         return await query(stmt).then(function (result) {
             return result;
         })
     },
-    getPhraseSoundList : async function (phraseId) {
-        if(phraseId==undefined || phraseId==null)
+    getPhraseSoundList: async function (phraseId) {
+        if (phraseId == undefined || phraseId == null)
             return [];
         stmt = ' ' +
             ' select documentId ' +
             ' from PhraseSound ' +
-            ' where phraseId = '+phraseId;
+            ' where phraseId = ' + phraseId;
         // console.log(stmt)
         return await query(stmt).then(function (result) {
             return result;
         })
     },
-    addPhraseSound: async function (phraseId,soundId) {
+    addPhraseSound: async function (phraseId, soundId) {
         stmt = ' INSERT INTO PhraseSound(phraseId,documentId) ' +
             'VALUES (?,?)';
-        params = [phraseId,soundId];
-        return await query(stmt,params).then(function (result) {
+        params = [phraseId, soundId];
+        return await query(stmt, params).then(function (result) {
             return result;
         })
     },
-    addLexicalImage: async function (lexicalId,imageId) {
+    addLexicalImage: async function (lexicalId, imageId) {
         stmt = ' INSERT INTO LexicalImage(lexicalId,documentId) ' +
             'VALUES (?,?)';
-        params = [lexicalId,imageId];
-        return await query(stmt,params).then(function (result) {
+        params = [lexicalId, imageId];
+        return await query(stmt, params).then(function (result) {
             return result;
         })
     },
-    deleteLexicalImage : async function (lexicalId,imageId) {
+    deleteLexicalImage: async function (lexicalId, imageId) {
         stmt = ' ' +
             ' delete from lexicalImage' +
             ' where lexicalId =? ' +
-            ' and documentId = ? ' ;
-        params = [lexicalId,imageId];
+            ' and documentId = ? ';
+        params = [lexicalId, imageId];
         // console.log(stmt,params)
-        return await query(stmt,params).then(function (result) {
+        return await query(stmt, params).then(function (result) {
             return result;
         })
     },
-    deletePhraseSound : async function (phraseId,soundId) {
+    deletePhraseSound: async function (phraseId, soundId) {
         stmt = ' ' +
             ' delete from PhraseSound' +
             ' where phraseId =? ' +
-            ' and documentId = ? ' ;
-        params = [phraseId,soundId];
-        return await query(stmt,params).then(function (result) {
+            ' and documentId = ? ';
+        params = [phraseId, soundId];
+        return await query(stmt, params).then(function (result) {
             return result;
         })
     },
@@ -245,8 +245,6 @@ module.exports = {
         })
     },
     getLevelLexicalPhraseList: async function (levelId) {
-
-
         stmt = '' +
             'SELECT lp.lexicalId,llp.levelLexicalPhraseId,llp.levelId,llp.lexicalPhraseId,llp.itemJSON,p.phraseId,p.title \n' +
             '             FROM levelLexicalPhrase llp\n' +
@@ -260,12 +258,30 @@ module.exports = {
             return result;
         })
     },
+    getLevelLexicalPhraseSoundList: async function (levelId) {
+        stmt = ' select lp.lexicalId,lp.phraseId,CONCAT(\'[\',GROUP_CONCAT(ps.DOCUMENTID),\']\') soundList\n' +
+            ' from \n' +
+            ' lexicalPhrase lp \n' +
+            '   left join phrasesound ps on ps.PHRASEID = lp.PHRASEID\n' +
+            '    where \n' +
+            '    lexicalId in \n' +
+            '    (\n' +
+            '   select LEXICALID \n' +
+            '        from lexicalphrase \n' +
+            '   where LEXICALPHRASEID \n' +
+            '       in (select LEXICALPHRASEID from levellexicalphrase where levelId=?))\n' +
+            'group by lp.lexicalId';
+        params = [levelId]
+        return await query(stmt,params).then(function (result) {
+            return result;
+        })
+    },
     updateLevelLexicalJson: async function (params) {
         stmt = '' +
             ' update LevelLexicalPhrase set ' +
             ' ItemJSON = ? ' +
             ' where LevelLexicalPhraseId = ?';
-        return await query(stmt,params).then(function (result) {
+        return await query(stmt, params).then(function (result) {
             return result;
         })
     },
@@ -280,10 +296,10 @@ module.exports = {
     },
     getOriginLexicalPhrase: async function (lexicalId, phraseId) {
         stmt = 'select lp.lexicalPhraseId,l.lexicalId,lp.phraseId from lexical l,lexicalPhrase lp ' +
-        'where ' +
-        'l.LEXICALID = lp.LEXICALID ' +
-        'and l.lexicalId = ? ' +
-        'and lp.phraseId = ? ';
+            'where ' +
+            'l.LEXICALID = lp.LEXICALID ' +
+            'and l.lexicalId = ? ' +
+            'and lp.phraseId = ? ';
         params = [lexicalId, phraseId];
         return await query(stmt, params).then(function (result) {
             return result;
@@ -320,7 +336,7 @@ module.exports = {
             ' select ' +
             ' llp.levelLexicalPhraseId,llp.levelId,llp.lexicalPhraseId,llp.itemJSON ' +
             ' from levellexicalphrase llp' +
-            ' where levelLexicalPhraseId = '+levelLexicalPhraseId;
+            ' where levelLexicalPhraseId = ' + levelLexicalPhraseId;
 
         return await query(stmt).then(function (result) {
             return result;
@@ -387,17 +403,17 @@ module.exports = {
             return result;
         })
     },
-    addPhrase: async function (title, languageId,userId) {
+    addPhrase: async function (title, languageId, userId) {
         isMultiple = 1;
         // stmt = 'INSERT INTO phrase(langId, title, isMultiWord,creatorUserId) ' +
         //     ' VALUES (?,?,?,?)';
         // params = [languageId, title, isMultiple,userId];
-        stmt = ""+
+        stmt = "" +
             " INSERT INTO phrase(langId, title, isMultiWord,creatorUserId) " +
             // " VALUES (isPersian('"+title+"',"+languageId+"),?,?,?)";
             " VALUES (?,?,?,?)";
 
-        params = [languageId,title, isMultiple,userId];
+        params = [languageId, title, isMultiple, userId];
         console.log(stmt)
         // console.log(params)
         return await query(stmt, params).then(function (result) {

@@ -61,6 +61,7 @@ angular.module('myApp').controller('dictionaryController',
 
 
         $rootScope.selectPhrase = function (phrase) {
+            console.log("selectPhrase",phrase)
             $scope.current.selectedPhrase = phrase;
             $scope.current.viewerData.selectedLexicalPhrase = null;
             $rootScope.$broadcast("phraseSoundChanged",null);
