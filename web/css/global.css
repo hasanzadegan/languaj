@@ -240,3 +240,14 @@ body{
     top:200px;
 }
 
+.topicImage {
+    height: 100px !important;
+    background: #00cad1;
+}
+.appImg {
+    filter: none;
+}
+
+.topicImg {
+    fill: #00cad1 !important;
+}

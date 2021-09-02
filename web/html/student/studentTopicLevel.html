@@ -42,24 +42,29 @@
             </div>
         </div>
     </div>
-
     <div ng-repeat="lesson in current.student.selectedCourse.lessonList" flex="100">
         <div >{{lesson.title}}</div>
         <div layout="row" layout-wrap="" flex="100">
             <div ng-repeat="topic in lesson.topicListObj" layout-wrap="" layout="row" layout-padding="" flex="50">
                 <md-button class="topicBox{{topic.locked}}"
                            ng-click="getStudentTopicLevelList(topic,topic.review+1)" ng-disabled="topic.locked">
-                    <div flex="100" layout="row" layout-align="center center">
-                        <div>{{topic.title}}</div>
-                        <div
-                                ng-if="Math.floor(topic.review/5)>0"
-                                layout-align="center center" layout="row"
-                        style="color:white;background: #00acb1;width: 15px;height: 15px;margin: 2px;border-radius: 5px"
-                        >{{Math.floor(topic.review/5)>0?Math.floor(topic.review/5):''}}</div>
+                    <div flex="100" layout="row" layout-align="center center" layout-wrap="">
+                        <div flex="100" layout="row" layout-align="center center">
+                            <div>{{topic.title}}</div>
+                            <div
+                                    ng-if="Math.floor(topic.review/5)>0"
+                                    layout-align="center center" layout="row"
+                                    style="color:white;background: #00acb1;width: 15px;height: 15px;margin: 2px;border-radius: 5px"
+                            >{{Math.floor(topic.review/5)>0?Math.floor(topic.review/5):''}}</div>
+                        </div>
+                        <div flex="100" layout-padding="">
+                            <img class="appImg topicImg" style="fill:red !important;"
+                                    src="/api/media/{{topic.imageId}}" height="90px"/>
+                        </div>
                     </div>
                     <md-icon ng-show="topic.locked">lock</md-icon>
                     <!--                <md-icon ng-show="topic.achievedTopicId" style="color:green">check </md-icon>-->
-                    <div layout="row" layout-align="center center">
+                    <div layout="row" layout-align="center center" layout-padding="">
                         <img class="appImg"
                              ng-src="img/app/progress/progress_{{topic.review==null?0:topic.review%5}}.svg"/>
                     </div>

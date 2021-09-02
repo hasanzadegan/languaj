@@ -12,12 +12,16 @@
                             <div flex="100" layout-padding=""
                                  ng-show="!topic.editMode"
                                  ng-dblclick="topic.editMode=!topic.editMode"
-                                 title="{{topic}}" layout-wrap="">
+                                 title="{{topic}}" layout-wrap="" layout="row">
                                 <md-button class="md-icon-button"
                                            ng-click="setTopic(topic)">
                                     <md-icon md-svg-src="svg/action/editTopic.svg"></md-icon>
                                 </md-button>
-                                {{topic.title}}
+                                <div ng-click="changeTopic(topic)">{{topic.title}}</div>
+                                    <img
+                                            class="appImg"
+                                            ng-if="topic.imageId"
+                                            src="/api/media/{{topic.imageId}}" height="32px"/>
                             </div>
                             <div flex="100"
                                  layout-padding=""

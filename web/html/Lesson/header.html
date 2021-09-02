@@ -8,53 +8,55 @@
                 {{current.profile.firstName +' '
                 +current.profile.lastName}}
             </div>
-        </div>
-
-        <small style="padding-left: 10px;font-weight: lighter;font-size: 10px" layout="row">
-            <div flex="20" layout="row" ng-show="current.selectedCourse">
-                <div>
-                    <md-menu flex="10">
-                        <md-button ng-click="$mdMenu.open()">
-                            <div class="flagBar Flag{{current.selectedCourse.sourceLangId}}"></div>
-                        </md-button>
-                        <md-menu-content width="4" ng-mouseleave="$mdMenu.close()">
-                            <md-menu-item layout="row" ng-repeat="lang in langList" layout-padding=""
-                                          ng-click="updateCourseLang(
+            <div>
+                <div flex="20" layout="row" ng-show="current.selectedCourse">
+                    <div>
+                        <md-menu flex="10">
+                            <md-button ng-click="$mdMenu.open()">
+                                <div class="flagBar Flag{{current.selectedCourse.sourceLangId}}"></div>
+                            </md-button>
+                            <md-menu-content width="4" ng-mouseleave="$mdMenu.close()">
+                                <md-menu-item layout="row" ng-repeat="lang in langList" layout-padding=""
+                                              ng-click="updateCourseLang(
                                           current.selectedCourse,
                                           lang.langId,
                                           current.selectedCourse.destLangId)">
-                                <md-button>
-                                    {{lang.title}}
-                                </md-button>
-                            </md-menu-item>
-                        </md-menu-content>
-                    </md-menu>
-                </div>
-                <div>
-                    <md-menu flex="10">
-                        <md-button ng-click="$mdMenu.open()">
-                            <div class="flagBar Flag{{current.selectedCourse.destLangId}}"></div>
-                        </md-button>
-                        <md-menu-content width="4" ng-mouseleave="$mdMenu.close()">
-                            <md-menu-item layout="row" ng-repeat="lang in langList" layout-padding=""
-                                          ng-click="updateCourseLang(
+                                    <md-button>
+                                        {{lang.title}}
+                                    </md-button>
+                                </md-menu-item>
+                            </md-menu-content>
+                        </md-menu>
+                    </div>
+                    <div>
+                        <md-menu flex="10">
+                            <md-button ng-click="$mdMenu.open()">
+                                <div class="flagBar Flag{{current.selectedCourse.destLangId}}"></div>
+                            </md-button>
+                            <md-menu-content width="4" ng-mouseleave="$mdMenu.close()">
+                                <md-menu-item layout="row" ng-repeat="lang in langList" layout-padding=""
+                                              ng-click="updateCourseLang(
                                           current.selectedCourse,
                                           current.selectedCourse.sourceLangId,
                                           lang.langId)">
-                                <md-button>
-                                    {{lang.title}}
-                                </md-button>
-                            </md-menu-item>
-                        </md-menu-content>
-                    </md-menu>
+                                    <md-button>
+                                        {{lang.title}}
+                                    </md-button>
+                                </md-menu-item>
+                            </md-menu-content>
+                        </md-menu>
+                    </div>
                 </div>
             </div>
+        </div>
+        <small style="padding-left: 10px;font-weight: lighter;font-size: 10px" layout="row">
             <md-button flex
+                       style="font-size: 8px !important;"
                        ngclipboard
                        data-clipboard-text="{{__path+'/web/student.html?course='+current.selectedCourse.courseCode+'&ref='+current.profile.ref}}"
                        flex=""
             >
-                <md-icon md-svg-src="img/app/clipboard.svg" style="max-height: 20px !important;"></md-icon>
+                <md-icon md-svg-src="img/app/share.svg" style="max-height: 20px !important;"></md-icon>
                 {{__path+'/web/student.html?course='+current.selectedCourse.courseCode+'&ref='+current.profile.ref}}
             </md-button>
         </small>
@@ -73,15 +75,12 @@
                 <md-icon>clear</md-icon>
             </md-button>
         </div>
-        <div flex="100" layout="row" class="headTitle md-button" ng-click="showCourseList('courseSetting')">
-
-            <md-button class="md-icon-button" flex="10" >
+        <div flex="100" layout="row" class="headTitle md-button" >
+            <md-button class="md-icon-button" flex="10" ng-click="showCourseList('courseSetting')">
                 <md-icon>chevron_left</md-icon>
             </md-button>
             <div title="{{current.selectedCourse}}">{{current.selectedCourse.title}}</div>
             <div layout-padding="">/</div>
-
-<!--            <div ng-click="setPropertyPage('courseSetting')" layout="row">-->
             <div layout="row">
                 <div>
                     {{current.selectedCourse.selectedLesson.title}}
@@ -91,6 +90,22 @@
                     {{current.selectedCourse.selectedLesson.selectedTopic.title}}
                 </div>
             </div>
+            <div>
+                <md-button ng-click="showTopicImage=!showTopicImage" >
+                   <img
+                           ng-if="current.selectedCourse.selectedLesson.selectedTopic.imageId"
+                           src="/api/media/{{current.selectedCourse.selectedLesson.selectedTopic.imageId}}" height="32px"/>
+
+                    <md-icon
+                            ng-if="!current.selectedCourse.selectedLesson.selectedTopic.imageId"
+                            src="/api/media/{{current.selectedCourse.selectedLesson.selectedTopic.imageId}}" >
+                    </md-icon>
+                </md-button>
+            </div>
+        </div>
+        <div flex="100" class="topicImage" ng-if="!showTopicImage" layout-padding="">
+                <input type="file" id="file1" name="file" multiple ng-files="uploadTopicImage($files)"/>
+                <img ng-src="/api/media/{{img}}" width="90px" ng-click="uplaodFiles(img)"/>
         </div>
 
         <div ng-show="current.selectedCourse.selectedLesson.selectedTopic">

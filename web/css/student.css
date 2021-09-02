@@ -1248,5 +1248,7 @@ md-progress-linear.md-default-theme .md-container, md-progress-linear .md-contai
 }
 
 .topNormal {
-    font-size: 1.4rem;color:#314867;
+    font-size: 1rem;
+    color:#314867;
+    font-weight: bold;
 }

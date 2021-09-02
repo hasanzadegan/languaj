@@ -3,6 +3,7 @@ angular.module('myApp').controller('headerController', function ($rootScope, $sc
                                                                  StorageService,
                                                                  LessonService,
                                                                  LevelService,
+                                                                 ArchiveService,
                                                                  $q, $path) {
 
     $scope.impersonate = function (teacher) {
@@ -38,16 +39,29 @@ angular.module('myApp').controller('headerController', function ($rootScope, $sc
         });
     }
 
-    // $scope.showTeach = function () {
-    //     $scope.current.showTeach = false;
-    //
-    //     path = "gramatic";
-    //     $rootScope.setLevelTypePath(path);
-    //     $rootScope.setViewerPath(path);
-    //
-    //     $scope.current.teachIsShow = false;
-    //     StorageService.setData($scope.current)
-    // }
+
+    $scope.uploadTopicImage = function ($files) {
+        var f = $files[0];
+        var reader = new FileReader();
+        reader.onload = (function (theFile) {
+            return function (e) {
+                var binaryData = e.target.result;
+                var base64String = window.btoa(binaryData);
+                docData = "data:" + f.type + ";base64," + base64String;
+                fileData = {docData: docData}
+                ArchiveService.saveDoc(fileData).then(result => {
+                    topic = $scope.current.selectedCourse.selectedLesson.selectedTopic;
+                    topic.imageId = result.insertId;
+                    params = [topic.title, topic.orderr,topic.imageId,topic.topicId];
+                    LevelService.updateTopic(params).then(result=>{
+                        console.log("LevelService.updateTopic",result)
+                        $scope.current.selectedCourse.selectedLesson.selectedTopic.imageId = topic.imageId;
+                    });
+                })
+            };
+        })(f);
+        reader.readAsBinaryString(f);
+    };
 
     $scope.hideTeach = function () {
         $scope.current.teachIsShow = false;

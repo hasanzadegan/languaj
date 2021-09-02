@@ -7,7 +7,7 @@ angular.module('myApp').controller('topicController',
             });
         }
         $scope.updateTopic = function updateTopic(topic) {
-            params = [topic.title, topic.orderr,topic.topicId];
+            params = [topic.title, topic.orderr,topic.imageId,topic.topicId];
             console.log(params)
             LevelService.updateTopic(params).then(result => {
                 topic.editMode = false;
@@ -25,12 +25,18 @@ angular.module('myApp').controller('topicController',
             });
         }
 
-        $scope.setTopic = function (topic, $index) {
-            // $scope.setPropertyPage('topic');
+        $scope.setTopic = function (topic) {
             $scope.current.selectedCourse.selectedLesson.selectedTopic = topic;
             $rootScope.$broadcast("topicChanged", topic.topicId);
             StorageService.setConfig($scope.config);
             $scope.current.showCourseSetting = false;
             StorageService.setData($scope.current);
         }
+
+        $scope.changeTopic = function (topic) {
+            $scope.current.selectedCourse.selectedLesson.selectedTopic = topic;
+            $rootScope.$broadcast("topicChanged", topic.topicId);
+            StorageService.setData($scope.current);
+        }
+
     });

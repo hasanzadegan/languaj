@@ -81,7 +81,7 @@ module.exports = {
     updateTopic: async function (params) {
         console.log(params);
         stmt = '' +
-            ' update topic set title = ?, orderr = ?' +
+            ' update topic set title = ?, orderr = ?,imageId=?' +
             ' where  topicId = ?';
         return await query(stmt, params).then(function (result) {
             return result;
@@ -140,7 +140,8 @@ module.exports = {
             '\'title\', t.title,\n' +
             '\'achievedTopicId\',atp.topicId,\n' +
             '\'review\',atp.review,\n' +
-            '\'topicId\',t.topicId\n' +
+            '\'topicId\',t.topicId,\n' +
+            '\'imageId\',t.imageId\n' +
             ')),\']\')topicList \n' +
             ' from \n' +
             ' course c,lesson l ,' +
@@ -173,7 +174,7 @@ module.exports = {
     },
     getTopicList: async function (lessonId) {
         stmt = '' +
-            ' select topicId,title,isActive,orderr ' +
+            ' select topicId,title,isActive,orderr,imageId ' +
             ' from topic ' +
             ' where lessonId = ? ' +
             ' order by IFNULL(orderr,99999999)';
