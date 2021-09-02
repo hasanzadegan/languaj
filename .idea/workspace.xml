@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="student-angular" />
+    <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/student/src/app/modules/login/login.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
+            <state relative-caret-position="340">
+              <caret line="102" column="12" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -222,15 +224,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="course-list" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="languaj" type="462c0819:PsiDirectoryNode" />
-              <item name="student" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -240,7 +233,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="topic-list" type="462c0819:PsiDirectoryNode" />
+              <item name="topic-view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
@@ -375,28 +368,7 @@
       <workItem from="1629906209562" duration="2603000" />
       <workItem from="1629912235165" duration="7827000" />
       <workItem from="1629928951581" duration="9211000" />
-      <workItem from="1630400554691" duration="5762000" />
-    </task>
-    <task id="LOCAL-00082" summary="order for topic">
-      <created>1628416255592</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1628416255592</updated>
-    </task>
-    <task id="LOCAL-00083" summary="dictionary load bug">
-      <created>1628489320407</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1628489320407</updated>
-    </task>
-    <task id="LOCAL-00084" summary="find phrase debuncing">
-      <created>1628492689579</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1628492689579</updated>
+      <workItem from="1630400554691" duration="6055000" />
     </task>
     <task id="LOCAL-00085" summary="Order:&#10;hide direct&#10;load problem">
       <created>1628574776349</created>
@@ -720,11 +692,32 @@
       <option name="project" value="LOCAL" />
       <updated>1630592650272</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="student-angular">
+      <created>1630592839070</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1630592839070</updated>
+    </task>
+    <task id="LOCAL-00132" summary="student-angular">
+      <created>1630592960951</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1630592960951</updated>
+    </task>
+    <task id="LOCAL-00133" summary="student-angular">
+      <created>1630593022551</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1630593022551</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="442982000" />
+    <option name="totallyTimeSpent" value="443275000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1265,8 +1258,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/student/src/app/modules/login/login.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
+        <state relative-caret-position="340">
+          <caret line="102" column="12" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="12" />
         </state>
       </provider>
     </entry>
