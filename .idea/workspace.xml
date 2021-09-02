@@ -3,79 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/student.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/student.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/word/word.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/word/word.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/.browserslistrc" beforeDir="false" afterPath="$PROJECT_DIR$/student/.browserslistrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/student/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/student/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/student/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/student/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/e2e/protractor.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/student/e2e/protractor.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/e2e/src/app.e2e-spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/student/e2e/src/app.e2e-spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/e2e/src/app.po.ts" beforeDir="false" afterPath="$PROJECT_DIR$/student/e2e/src/app.po.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/e2e/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/student/e2e/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/student/karma.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/student/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/student/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/student/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/app.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/student/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/student/src/app/app.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/student/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/student/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/course-list/course-list.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/course-list/course-list.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/course-list/course-list.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/course-list/course-list.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/level-list/level-list.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/level-list/level-list.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/level-list/level-list.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/level-list/level-list.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/level-type/multi/multi.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/level-type/multi/multi.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/level-type/multi/multi.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/level-type/multi/multi.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/level/level.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/level/level.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/level/level.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/level/level.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/topic-list/topic-list.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/topic-list/topic-list.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/topic-list/topic-list.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/app/topic-list/topic-list.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/student/src/environments/environment.prod.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/student/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/favicon-16x16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/favicon-Android-196.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/favicon-Web-128.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/favicon-Web-16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/favicon-Web-192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/favicon-Web-32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/favicon-Web-96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/favicon-iOS-120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/favicon-iOS-152.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/favicon-iOS-167.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/favicon-iOS-180.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/student/src/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/student/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/student/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/student/src/polyfills.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/src/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/student/src/test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/student/tsconfig.app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/student/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/student/tsconfig.spec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/student/tslint.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/Dashboard/LevelDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/Dashboard/LevelDashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/property/dictionary.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/property/dictionary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/property/lexical.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/property/lexical.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/version.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/version.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/viewer/all.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/viewer/all.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/viewer/starter.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/viewer/starter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/service/LevelService.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/service/LevelService.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -97,11 +24,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/student/src/app/modules/login/login.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="115" selection-start-line="115" selection-end-line="115" />
+            <state relative-caret-position="342">
+              <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/student/src/app/modules/topic-list/topic-list.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/student/src/app/modules/course-list/course-list.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -306,7 +251,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="course-list" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="languaj" type="462c0819:PsiDirectoryNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="topic-list" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
@@ -441,14 +395,7 @@
       <workItem from="1629906209562" duration="2603000" />
       <workItem from="1629912235165" duration="7827000" />
       <workItem from="1629928951581" duration="9211000" />
-      <workItem from="1630400554691" duration="5070000" />
-    </task>
-    <task id="LOCAL-00080" summary="bugFix : course link">
-      <created>1628413526593</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1628413526593</updated>
+      <workItem from="1630400554691" duration="5574000" />
     </task>
     <task id="LOCAL-00081" summary="order for topic">
       <created>1628416207855</created>
@@ -786,11 +733,18 @@
       <option name="project" value="LOCAL" />
       <updated>1629715553120</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="student-angular">
+      <created>1630592369954</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1630592369955</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="442290000" />
+    <option name="totallyTimeSpent" value="442794000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -803,8 +757,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2524785" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2524785" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -816,7 +771,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4976867" weight="0.4490085" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49966952" visible="true" weight="0.15439093" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49966952" visible="true" weight="0.15439093" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50231326" side_tool="true" weight="0.4490085" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" />
@@ -891,7 +846,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
-    <MESSAGE value="student in angular" />
     <MESSAGE value="bugFix : setTopic" />
     <MESSAGE value="bugFix : course link" />
     <MESSAGE value="order for topic" />
@@ -916,7 +870,8 @@
     <MESSAGE value="levelId for check" />
     <MESSAGE value="better UI" />
     <MESSAGE value="gender for ALL" />
-    <option name="LAST_COMMIT_MESSAGE" value="gender for ALL" />
+    <MESSAGE value="student-angular" />
+    <option name="LAST_COMMIT_MESSAGE" value="student-angular" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -970,21 +925,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/html/LevelType/all.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/layout/simple-header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#md-progress-linear#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-button#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/html/viewer/viewer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1331,8 +1271,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/student/src/app/modules/login/login.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        <state relative-caret-position="342">
+          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/app/modules/topic-list/topic-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/app/modules/course-list/course-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
         </state>
       </provider>
     </entry>
