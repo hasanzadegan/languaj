@@ -1,0 +1,23 @@
+<div class="container global-background" fxLayout="column">
+  <!-------------- Header ---------------->
+  <nav *ngIf="state !== 6" fxFlex="50px" class="header" fxLayout="row" fxLayoutAlign="space-between center">
+    <a href="javascript:window.history.back()" class="back-btn">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+      Back</a>
+    <span>Leksion 1</span>
+    <div fxLayout="row">
+      <div class="battery" [style.background-position]="batteryState()"></div>
+    </div>
+  </nav>
+
+
+  <!--------------- Content ----------------->
+  <div fxFlex="100" [ngSwitch]="state">
+    <app-intro (state)="changeState()" *ngSwitchCase="1"></app-intro>
+    <app-spell (battery)="batteryMinus()" (state)="changeState()" *ngSwitchCase="2"></app-spell>
+    <app-order (battery)="batteryMinus()" (state)="changeState()" *ngSwitchCase="3"></app-order>
+    <app-multi (battery)="batteryMinus()" (state)="changeState()" *ngSwitchCase="4"></app-multi>
+    <app-pair (battery)="batteryMinus()" (state)="changeState()" *ngSwitchCase="5"></app-pair>
+    <app-achivement (state)="changeState()" *ngSwitchCase="6"></app-achivement>
+  </div>
+</div>

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="student-angular" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -15,38 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/html/Dashboard/LevelDashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="104" selection-start-line="29" selection-start-column="104" selection-end-line="29" selection-end-column="104" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/student/src/app/modules/login/login.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/student/src/app/modules/topic-list/topic-list.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/student/src/app/modules/course-list/course-list.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+            <state relative-caret-position="17">
+              <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -147,7 +118,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/js/viewer/pair.js" />
         <option value="$PROJECT_DIR$/web/css/style.css" />
         <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/web/html/property/courseSetting.html" />
@@ -198,6 +168,7 @@
         <option value="$PROJECT_DIR$/web/manifest.json" />
         <option value="$PROJECT_DIR$/web/js/app.js" />
         <option value="$PROJECT_DIR$/api/docArchive/docArchive.js" />
+        <option value="$PROJECT_DIR$/student/src/app/modules/login/login.component.html" />
       </list>
     </option>
   </component>
@@ -252,6 +223,15 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="course-list" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="languaj" type="462c0819:PsiDirectoryNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
@@ -395,14 +375,7 @@
       <workItem from="1629906209562" duration="2603000" />
       <workItem from="1629912235165" duration="7827000" />
       <workItem from="1629928951581" duration="9211000" />
-      <workItem from="1630400554691" duration="5574000" />
-    </task>
-    <task id="LOCAL-00081" summary="order for topic">
-      <created>1628416207855</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1628416207856</updated>
+      <workItem from="1630400554691" duration="5762000" />
     </task>
     <task id="LOCAL-00082" summary="order for topic">
       <created>1628416255592</created>
@@ -740,11 +713,18 @@
       <option name="project" value="LOCAL" />
       <updated>1630592369955</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="student-angular">
+      <created>1630592650272</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1630592650272</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="442794000" />
+    <option name="totallyTimeSpent" value="442982000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1262,17 +1242,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/Dashboard/LevelDashboard.html">
+    <entry file="file://$PROJECT_DIR$/student/src/app/modules/course-list/course-list.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="104" selection-start-line="29" selection-start-column="104" selection-end-line="29" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student/src/app/modules/login/login.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
+        <state relative-caret-position="221">
+          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1283,10 +1256,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/student/src/app/modules/course-list/course-list.component.html">
+    <entry file="file://$PROJECT_DIR$/web/html/Dashboard/LevelDashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        <state relative-caret-position="493">
+          <caret line="29" column="104" selection-start-line="29" selection-start-column="104" selection-end-line="29" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/src/app/modules/login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
         </state>
       </provider>
     </entry>

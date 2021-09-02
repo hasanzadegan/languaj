@@ -1,0 +1,114 @@
+<!------------------- Header ---------------------->
+<mat-toolbar class="toolbar" fxLayoutAlign="center center">
+  <span fxFlex.gt-sm="20" fxFlex.lt-sm="70" fxLayoutAlign="end center" class="title">Languaj.com</span>
+
+  <div fxFlex="80" fxShow.lt-md="false" fxLayoutAlign="space-around center">
+
+    <div fxLayoutGap="15px" style="color: #fff">
+      <button mat-button>HOME</button>
+      <button mat-button>TEACHER</button>
+      <button mat-button>PRODUCER</button>
+      <button mat-button>MARKETER</button>
+    </div>
+    <!--------- Languages Flags ------------->
+    <div fxLayout="row" fxLayoutGap="10px">
+      <div class="flags"></div>
+      <div style="background-position: 0 -25px;" class="flags"></div>
+      <div style="background-position: 0 -49px;" class="flags"></div>
+    </div>
+
+  </div>
+
+  <!--------------- Mobile Mode Menu --------------->
+  <div fxShow.gt-sm="false" fxFlex="30" fxLayoutAlign="end center">
+    <button mat-icon-button [matMenuTriggerFor]="menu"
+            aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>HOME</button>
+      <button mat-menu-item>TEACHER</button>
+      <button mat-menu-item>PRODUCER</button>
+      <button mat-menu-item>MARKETER</button>
+      <hr>
+      <div mat-menu-item fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+        <div class="flags"></div>
+        <div style="background-position: 0 -25px;" class="flags"></div>
+        <div style="background-position: 0 -49px;" class="flags"></div>
+      </div>
+    </mat-menu>
+  </div>
+
+</mat-toolbar>
+
+<!----------------- Banner ---------------->
+<section class="banner" fxLayoutAlign.gt-sm="center center" fxLayoutAlign.lt-md="center">
+  <div fxFlex.gt-sm="80" fxLayout="column" fxLayoutAlign.gt-sm="space-evenly start"
+       fxLayoutAlign.lt-md="space-evenly center">
+    <div fxFlex="20"></div>
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+      <span class="title">LEARN LIKE CHILDREN</span>
+      <p>Do not worry about making mistakes</p>
+    </div>
+    <button routerLink="../courses" mat-raised-button color="accent">Sign with google</button>
+  </div>
+</section>
+
+<!--------------- Content ---------------->
+<section fxLayoutAlign="center start" class="content">
+  <div fxFlex="80" fxLayout="column" fxLayoutGap="50px">
+    <p class="item">What is benefit for a learner?</p>
+
+    <div fxFlex="80" fxLayout.gt-sm="row" fxLayout.lt-sm="column" fxLayoutGap="50px"
+         fxLayoutAlign.gt-sm="center start">
+
+      <div fxFlex.gt-sm="20" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="20px">
+        <p class="item-title">Decrease cost</p>
+        <span fxFlex="50" class="item-details">language contents are reusable so cost of them decreased.</span>
+      </div>
+
+      <div fxFlex.gt-sm="20" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="20px">
+        <p class="item-title">Learn deep</p>
+        <span fxFlex="50"
+              class="item-details">repeat and repeat. courses created with this concept.so this help to learn deep.</span>
+      </div>
+
+      <div fxFlex.gt-sm="20" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="20px">
+        <p class="item-title">Use waste time</p>
+        <span fxFlex="50" class="item-details">you are not limited to place learn every time and everywhere everything is on your mobile.</span>
+      </div>
+
+    </div>
+
+    <p class="item">What is languaj.com?</p>
+    <span class="item-details">languaj.com is an IT platform for easy creation of language contents by teachers as language courses. each courses can share easily and used with language learners. They are consist of small peace of lessons and tests which mixed together called quizlet. phrases repeated in different types of quizlet. as a learner don't worry about making mistakes. just go on and learn like children.</span>
+
+    <p class="item">How to courses created and published?</p>
+    <div fxFlex="80" fxLayout.gt-sm="row" fxLayout.lt-sm="column" fxLayoutGap="50px"
+         fxLayoutAlign.gt-sm="center center">
+
+      <div fxFlex.gt-sm="20" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="30px">
+        <img height="200px" src="http://languaj.com/web/site/img/teacher.svg" alt="">
+        <span class="item-details">A producer collect needs for creating a course.</span>
+      </div>
+
+      <div fxFlex.gt-sm="20" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="30px">
+        <img height="200px" src="http://languaj.com/web/site/img/producer.svg" alt="">
+        <span
+          class="item-details">A teacher create content for ordered course.</span>
+      </div>
+
+      <div fxFlex.gt-sm="20" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="30px">
+        <img height="200px" src="http://languaj.com/web/site/img/marketer.svg" alt="">
+        <span class="item-details">marketers can find suitable target market.</span>
+      </div>
+
+    </div>
+
+    <p class="item">What is languaj.com plan for quality assurance?</p>
+    <span class="item-details">teachers that have access to teacher section have teaching certificate and producers are limited to this teachers. also we have a supervision
+      team for checking courses accuracy. also there is a feedback element in each quizlet and each people can report problem in content.</span>
+
+  </div>
+
+</section>

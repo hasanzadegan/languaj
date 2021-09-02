@@ -1,0 +1,48 @@
+.toolbar {
+  background-color: rgba(0, 0, 0, 0.13);
+  position: fixed;
+  z-index: 1;
+}
+
+.height{
+  height: 100%;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+
+.flags {
+  background: url("http://languaj.com/web/img/icon/flags1.svg");
+  height: 25px;
+  width: 31px;
+  background-size: 31px;
+  cursor: pointer;
+}
+
+.banner {
+  height: 380px;
+  background-color: #F46789;
+  color: #fff;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.item {
+  display: list-item;
+}
+
+.item-title {
+  font-size: 30px;
+  height: 50px;
+}
+
+.item-details {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #7e8491;
+}

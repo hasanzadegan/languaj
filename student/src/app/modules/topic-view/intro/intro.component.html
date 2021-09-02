@@ -1,0 +1,34 @@
+<div class="container" fxLayoutAlign="center center">
+  <div fxLayout="column" fxFlex="70" fxFlex.lt-md="90" fxLayoutGap="30px">
+
+
+    <div fxFlex="30">
+      <div fxLayoutAlign.lt-md="space-between end">
+        <div fxFlex="50" fxLayout="row no-wrap" fxLayoutAlign="start center" fxLayoutGap="5px">
+          <mat-icon>play_circle_outline</mat-icon>
+          <span style="font-size: 12px">Review new words</span>
+        </div>
+        <div fxFlex="50" fxLayoutAlign="end">
+          <img fxFlex="30" fxFlex.lt-md="70" src="../../../../assets/img/man-bed.svg" alt="">
+        </div>
+      </div>
+    </div>
+
+
+    <div fxFlex="60" fxLayoutAlign="center start">
+      <div fxLayout="column" fxFlex="100" fxFlex.gt-md="70" fxLayoutAlign="start center" fxLayoutGap="10%"
+           class="card-global">
+        <div fxFlex="20" class="title-global">Mann</div>
+        <div fxFlex="60" fxLayoutAlign="center">
+          <img fxFlex="50" fxFlex.gt-md="80" src="../../../../assets/img/man.svg" alt="man">
+        </div>
+        <div fxFlex="20">مرد</div>
+      </div>
+    </div>
+
+
+    <div fxFlex="10" fxLayoutAlign="center start">
+      <button (click)="state.emit()" fxFlex="100" fxFlex.gt-md="70" mat-raised-button color="accent">I Got It</button>
+    </div>
+  </div>
+</div>
