@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/img/upload.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dbScripts/scripts.sql" beforeDir="false" afterPath="$PROJECT_DIR$/_dbScripts/scripts.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/global.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/html/Lesson/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/Lesson/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/Lesson/level.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/Lesson/level.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/student/studentTopicLevel.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/student/studentTopicLevel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/version.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/version.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/html/Lesson/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="113" column="16" selection-start-line="113" selection-start-column="16" selection-end-line="113" selection-end-column="16" />
+            <state relative-caret-position="204">
+              <caret line="84" column="72" selection-start-line="84" selection-start-column="72" selection-end-line="84" selection-end-column="72" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#div#0;n#!!top" />
                 <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" />
@@ -36,16 +28,17 @@
                 <element signature="n#style#0;n#md-button#0;n#small#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#md-icon#0;n#md-button#0;n#small#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#div#1;n#div#0;n#div#0;n#!!top" />
+                <element signature="n#div#3;n#div#2;n#div#0;n#div#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/html/Lesson/level.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="112">
+              <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -89,7 +82,6 @@
       <find>.getLessonTopicList</find>
       <find>topicImage</find>
       <find>fill:</find>
-      <find>showCourseList('courseSetting')</find>
       <find>lock</find>
       <find>topicB</find>
       <find>marketer.</find>
@@ -100,6 +92,7 @@
       <find>ng-files=&quot;uploadTopicImage($files)&quot;</find>
       <find>add Q</find>
       <find>ng-click=&quot;setLevel($event,level)&quot;</find>
+      <find>showCourseList('courseSetting')</find>
     </findStrings>
     <replaceStrings>
       <replace>current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLevelItem</replace>
@@ -197,7 +190,6 @@
         <option value="$PROJECT_DIR$/web/html/Lesson/Topic.html" />
         <option value="$PROJECT_DIR$/web/css/style.css" />
         <option value="$PROJECT_DIR$/web/img/topic/angery.svg" />
-        <option value="$PROJECT_DIR$/web/html/Lesson/header.html" />
         <option value="$PROJECT_DIR$/web/css/global.css" />
         <option value="$PROJECT_DIR$/web/html/student/studentTopicLevel.html" />
         <option value="$PROJECT_DIR$/web/site/home.html" />
@@ -206,6 +198,7 @@
         <option value="$PROJECT_DIR$/_dbScripts/scripts.sql" />
         <option value="$PROJECT_DIR$/web/js/version.js" />
         <option value="$PROJECT_DIR$/web/html/Lesson/level.html" />
+        <option value="$PROJECT_DIR$/web/html/Lesson/header.html" />
       </list>
     </option>
   </component>
@@ -380,21 +373,8 @@
       <workItem from="1630400554691" duration="6140000" />
       <workItem from="1630595753203" duration="12513000" />
       <workItem from="1630754070453" duration="311000" />
-      <workItem from="1630762201780" duration="1455000" />
-    </task>
-    <task id="LOCAL-00087" summary="add gallery&#10;better sideMenu&#10;better load lexical image">
-      <created>1628718643064</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1628718643065</updated>
-    </task>
-    <task id="LOCAL-00088" summary="add gallery&#10;better sideMenu&#10;better load lexical image">
-      <created>1628720517435</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1628720517435</updated>
+      <workItem from="1630762201780" duration="1725000" />
+      <workItem from="1630830797409" duration="195000" />
     </task>
     <task id="LOCAL-00089" summary="add gallery&#10;better sideMenu&#10;better load lexical image">
       <created>1628921038991</created>
@@ -725,11 +705,25 @@
       <option name="project" value="LOCAL" />
       <updated>1630610242011</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="bugfix:show review">
+      <created>1630829650714</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1630829650715</updated>
+    </task>
+    <task id="LOCAL-00137" summary="bugfix:show review">
+      <created>1630829741428</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1630829741428</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="457639000" />
+    <option name="totallyTimeSpent" value="458104000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -744,7 +738,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25973153" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26308724" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Project Explorer" order="3" />
@@ -759,7 +753,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4976867" weight="0.4490085" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49966952" visible="true" weight="0.48016998" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49966952" weight="0.48016998" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50231326" side_tool="true" weight="0.4490085" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" />
@@ -837,7 +831,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
-    <MESSAGE value="bugFix : setTopic" />
     <MESSAGE value="bugFix : course link" />
     <MESSAGE value="order for topic" />
     <MESSAGE value="dictionary load bug" />
@@ -862,7 +855,8 @@
     <MESSAGE value="better UI" />
     <MESSAGE value="gender for ALL" />
     <MESSAGE value="student-angular" />
-    <option name="LAST_COMMIT_MESSAGE" value="student-angular" />
+    <MESSAGE value="bugfix:show review" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix:show review" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1242,21 +1236,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/Lesson/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="113" column="16" selection-start-line="113" selection-start-column="16" selection-end-line="113" selection-end-column="16" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#small#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#style#0;n#md-button#0;n#small#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-icon#0;n#md-button#0;n#small#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/version.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1266,8 +1245,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/html/Lesson/level.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state relative-caret-position="112">
+          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/Lesson/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="84" column="72" selection-start-line="84" selection-start-column="72" selection-end-line="84" selection-end-column="72" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#small#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#md-button#0;n#small#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-icon#0;n#md-button#0;n#small#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#3;n#div#2;n#div#0;n#div#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

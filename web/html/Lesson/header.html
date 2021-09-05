@@ -76,12 +76,13 @@
             </md-button>
         </div>
         <div flex="100" layout="row" class="headTitle md-button" >
+
             <md-button class="md-icon-button" flex="10" ng-click="showCourseList('courseSetting')">
                 <md-icon>chevron_left</md-icon>
             </md-button>
-            <div title="{{current.selectedCourse}}">{{current.selectedCourse.title}}</div>
-            <div layout-padding="">/</div>
-            <div layout="row">
+            <div title="{{current.selectedCourse}}" ng-click="showCourseList('courseSetting')">{{current.selectedCourse.title}}</div>
+            <div layout-padding="" ng-click="showCourseList('courseSetting')">/</div>
+            <div layout="row" ng-click="showCourseList('courseSetting')">
                 <div>
                     {{current.selectedCourse.selectedLesson.title}}
                 </div>
@@ -90,6 +91,7 @@
                     {{current.selectedCourse.selectedLesson.selectedTopic.title}}
                 </div>
             </div>
+
             <div>
                 <md-button ng-click="showTopicImage=!showTopicImage" >
                    <img
