@@ -98,12 +98,12 @@
 
                     <md-icon
                             ng-if="!current.selectedCourse.selectedLesson.selectedTopic.imageId"
-                            src="/api/media/{{current.selectedCourse.selectedLesson.selectedTopic.imageId}}" >
+                     md-svg-src="img/upload.svg">
                     </md-icon>
                 </md-button>
             </div>
         </div>
-        <div flex="100" class="topicImage" ng-if="!showTopicImage" layout-padding="">
+        <div flex="100" class="topicImage" ng-if="showTopicImage" layout-padding="">
                 <input type="file" id="file1" name="file" multiple ng-files="uploadTopicImage($files)"/>
                 <img ng-src="/api/media/{{img}}" width="90px" ng-click="uplaodFiles(img)"/>
         </div>

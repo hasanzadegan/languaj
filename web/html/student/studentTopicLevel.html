@@ -50,7 +50,8 @@
                            ng-click="getStudentTopicLevelList(topic,topic.review+1)" ng-disabled="topic.locked">
                     <div flex="100" layout="row" layout-align="center center" layout-wrap="">
                         <div flex="100" layout="row" layout-align="center center">
-                            <div>{{topic.title}}</div>
+                            <div>{{topic.title}}                            <md-icon ng-show="topic.locked">lock</md-icon>
+                            </div>
                             <div
                                     ng-if="Math.floor(topic.review/5)>0"
                                     layout-align="center center" layout="row"
@@ -58,11 +59,9 @@
                             >{{Math.floor(topic.review/5)>0?Math.floor(topic.review/5):''}}</div>
                         </div>
                         <div flex="100" layout-padding="">
-                            <img class="appImg topicImg" style="fill:red !important;"
-                                    src="/api/media/{{topic.imageId}}" height="90px"/>
+                            <img class="appImg topicImg{{topic.locked}}" src="/api/media/{{topic.imageId}}" height="90px"/>
                         </div>
                     </div>
-                    <md-icon ng-show="topic.locked">lock</md-icon>
                     <!--                <md-icon ng-show="topic.achievedTopicId" style="color:green">check </md-icon>-->
                     <div layout="row" layout-align="center center" layout-padding="">
                         <img class="appImg"

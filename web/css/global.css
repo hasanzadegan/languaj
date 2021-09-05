@@ -177,7 +177,7 @@ body{
     width: 100%;min-height: 180px
 }
 .topicBoxtrue{
-    background: #F8F8F8;
+    background: #F8F8F8 !important;
     border:solid 1px #B0AFAF;
     border-radius: 10px;
     box-shadow:0 3px 3px rgba(10, 10, 10, .1);
@@ -242,12 +242,14 @@ body{
 
 .topicImage {
     height: 100px !important;
-    background: #00cad1;
 }
 .appImg {
     filter: none;
 }
 
-.topicImg {
-    fill: #00cad1 !important;
+.topicImgfalse {
+}
+
+.topicImgtrue {
+    filter: grayscale(100%) !important;
 }

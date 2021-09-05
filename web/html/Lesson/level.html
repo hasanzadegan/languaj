@@ -1,6 +1,20 @@
 <div flex="100">
 
     <div flex="100" layout-wrap ng-show="current.selectedCourse.selectedLesson.selectedTopic" class="levelResult">
+        <div layout="row" >
+            <md-button class="md-icon-button" ng-click="current.editMode = !current.editMode ">
+                <md-icon md-svg-src="svg/action/check.svg" ng-show="current.editMode"></md-icon>
+                <md-icon md-svg-src="svg/action/checknull.svg" ng-hide="current.editMode"></md-icon>
+            </md-button>
+            <div ng-repeat="item in [1,2,3,4,5]" >
+                <div ng-if="current.review ==item">
+                    <md-button class="redB review" ng-click="selectReview(item)">{{item}}</md-button>
+                </div>
+                <div ng-if="current.review !=item" >
+                    <md-button class="review" ng-click="selectReview(item)">{{item}}</md-button>
+                </div>
+            </div>
+        </div>
         <md-list flex="100" layout-wrap>
             <div flex="=100"
                  ng-repeat="level in current.selectedCourse.selectedLesson.selectedTopic.levelList | filter:{review:current.review}"
