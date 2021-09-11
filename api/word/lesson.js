@@ -152,7 +152,7 @@ module.exports = {
             ' and l.courseId=' + courseId +
             teacherCondition +
             ' group by l.lessonId';
-        console.log(params,stmt);
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>44  ",  stmt);
         return await query(stmt).then(function (result) {
             return result;
         })

@@ -18,8 +18,7 @@ angular.module('myApp').controller('allController',
                 levelItem = $scope.current.viewerData.levelLexicalPhraseList[cnt];
                 $scope.playItem($event, levelItem, 200).then(result => {
                     soundList = $scope.soundList[levelItem.lexicalId];
-                    console.log("soundList",soundList)
-                    if (soundList.length> 0) {
+                    if (soundList && soundList.length> 0) {
                         $scope.playItem($event, {soundId: soundList[0]}).then(result => {
                             $scope.current.cnt += 1;
                             $scope.func.serialPlay($event, $scope.current.cnt);
