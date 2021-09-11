@@ -1,3 +1,4 @@
+const global = require('../routes/_global');
 const mysql = require('mysql');
 const dbConfig = require('../helpers/config');
 var pool = mysql.createPool(dbConfig.databaseOptions);
