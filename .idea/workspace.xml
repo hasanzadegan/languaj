@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/helpers/query.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/helpers/query.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/index4200.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/index4200.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/Dashboard/LevelDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/Dashboard/LevelDashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/version.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/version.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,30 +17,53 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../conf/nginx.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="884">
+              <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+            <state relative-caret-position="544">
+              <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/index4200.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="112" selection-start-line="6" selection-start-column="112" selection-end-line="6" selection-end-column="112" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/helpers/query.js">
+        <entry file="file://$PROJECT_DIR$/web/html/Dashboard/LevelDashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+            <state relative-caret-position="418">
+              <caret line="92" selection-start-line="92" selection-end-line="92" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-button#0;n#div#1;n#md-tab-body#0;n#md-tab#2;n#md-tabs#0;n#div#2;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/routes/_global.js">
+        <entry file="file://$PROJECT_DIR$/web/js/version.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-517">
-              <caret column="34" selection-start-column="34" selection-end-column="34" />
+            <state>
+              <caret column="27" selection-start-column="27" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -55,11 +79,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getStudentTopicLevelList</find>
-      <find>topicBox</find>
-      <find>getReviewLevelList</find>
-      <find>Gesundheit und Krankheit</find>
-      <find>topicListObj =</find>
       <find>/api/userLessonTopicList</find>
       <find>getLessonTopicList</find>
       <find>.getLessonTopicList</find>
@@ -85,6 +104,11 @@
       <find>logger</find>
       <find>$window</find>
       <find>global.logger</find>
+      <find>jwt.</find>
+      <find>jwt</find>
+      <find>jwt.verify</find>
+      <find>current.viewerData.selectedLevelLexicalPhrase.itemJSONObj.title</find>
+      <find>gen</find>
     </findStrings>
     <replaceStrings>
       <replace>current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLevelItem</replace>
@@ -140,7 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/html/property/image.html" />
         <option value="$PROJECT_DIR$/web/html/student/studentProfile.html" />
         <option value="$PROJECT_DIR$/web/html/student/studentCourse.html" />
         <option value="$PROJECT_DIR$/web/html/viewer/starter.html" />
@@ -160,12 +183,10 @@
         <option value="$PROJECT_DIR$/web/js/property/lexical.js" />
         <option value="$PROJECT_DIR$/web/html/viewer/all.html" />
         <option value="$PROJECT_DIR$/web/js/viewer/starter.js" />
-        <option value="$PROJECT_DIR$/web/html/Dashboard/LevelDashboard.html" />
         <option value="$PROJECT_DIR$/api/routes/student.js" />
         <option value="$PROJECT_DIR$/web/service/LevelService.js" />
         <option value="$PROJECT_DIR$/web/js/main.js" />
         <option value="$PROJECT_DIR$/api/word/word.js" />
-        <option value="$PROJECT_DIR$/../../../conf/nginx.conf" />
         <option value="$PROJECT_DIR$/web/js/pages/lessonDashboard.js" />
         <option value="$PROJECT_DIR$/web/js/home.js" />
         <option value="$PROJECT_DIR$/web/manifest.json" />
@@ -184,52 +205,30 @@
         <option value="$PROJECT_DIR$/web/login/index.html" />
         <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/_dbScripts/scripts.sql" />
-        <option value="$PROJECT_DIR$/web/js/version.js" />
         <option value="$PROJECT_DIR$/web/html/Lesson/level.html" />
         <option value="$PROJECT_DIR$/web/html/Lesson/header.html" />
         <option value="$PROJECT_DIR$/api/word/lesson.js" />
         <option value="$PROJECT_DIR$/web/js/viewer/all.js" />
         <option value="$PROJECT_DIR$/api/index.js" />
         <option value="$PROJECT_DIR$/api/helpers/query.js" />
+        <option value="$PROJECT_DIR$/../../../conf/nginx.conf" />
+        <option value="$PROJECT_DIR$/api/index4200.js" />
+        <option value="$PROJECT_DIR$/web/js/version.js" />
+        <option value="$PROJECT_DIR$/web/html/Dashboard/LevelDashboard.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="5" />
-    <option name="width" value="1000" />
-    <option name="height" value="690" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1100" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="languaj" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="languaj" type="462c0819:PsiDirectoryNode" />
-              <item name="_dbScripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="languaj" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="languaj" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -254,6 +253,32 @@
               <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="img" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="languaj" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="languaj" type="462c0819:PsiDirectoryNode" />
+              <item name="_dbScripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="languaj" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="languaj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="languaj" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -360,14 +385,10 @@
       <workItem from="1630762201780" duration="1725000" />
       <workItem from="1630830797409" duration="840000" />
       <workItem from="1631170240972" duration="1256000" />
-      <workItem from="1631191677558" duration="2010000" />
-    </task>
-    <task id="LOCAL-00093" summary="levenshtein">
-      <created>1628924025042</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1628924025042</updated>
+      <workItem from="1631191677558" duration="2653000" />
+      <workItem from="1631520218059" duration="5612000" />
+      <workItem from="1631959903416" duration="1207000" />
+      <workItem from="1631961542027" duration="491000" />
     </task>
     <task id="LOCAL-00094" summary="levenshtein">
       <created>1628924403185</created>
@@ -705,11 +726,18 @@
       <option name="project" value="LOCAL" />
       <updated>1631338408838</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="bugfix: log error">
+      <created>1631339441196</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1631339441196</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="462015000" />
+    <option name="totallyTimeSpent" value="469968000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -724,7 +752,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27114093" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28322148" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Project Explorer" order="3" />
@@ -824,7 +852,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
-    <MESSAGE value="find phrase debuncing" />
     <MESSAGE value="Order:&#10;hide direct&#10;load problem" />
     <MESSAGE value="bugfix: null user" />
     <MESSAGE value="add gallery&#10;better sideMenu&#10;better load lexical image" />
@@ -849,7 +876,8 @@
     <MESSAGE value="bugfix:show course setting" />
     <MESSAGE value="bugfix:all soundlist" />
     <MESSAGE value="bugfix:all soundlist&#10;log error" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix:all soundlist&#10;log error" />
+    <MESSAGE value="bugfix: log error" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix: log error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -903,27 +931,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="40" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/service/TeachService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="5" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
@@ -1005,13 +1012,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/Dashboard/LevelDashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="104" selection-start-line="29" selection-start-column="104" selection-end-line="29" selection-end-column="104" />
         </state>
       </provider>
     </entry>
@@ -1183,13 +1183,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/version.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="27" selection-start-column="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/routes/lesson.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1214,13 +1207,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="128" column="32" lean-forward="true" selection-start-line="128" selection-start-column="32" selection-end-line="128" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/routes/course.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1238,17 +1224,10 @@
     <entry file="file://$PROJECT_DIR$/api/config/key.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/_global.js">
+    <entry file="file://$PROJECT_DIR$/web/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-517">
-          <caret column="34" selection-start-column="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+        <state relative-caret-position="90">
+          <caret line="104" column="32" lean-forward="true" selection-start-line="104" selection-start-column="32" selection-end-line="104" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1256,6 +1235,60 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/routes/_global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/routes/security.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="51" selection-start-line="51" selection-end-line="53" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../conf/nginx.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/index4200.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="112" selection-start-line="6" selection-start-column="112" selection-end-line="6" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/version.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/Dashboard/LevelDashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-button#0;n#div#1;n#md-tab-body#0;n#md-tab#2;n#md-tabs#0;n#div#2;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
