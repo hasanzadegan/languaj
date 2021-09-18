@@ -14,7 +14,6 @@ module.exports = async (stmt, params) => {
                 }
                 connection.query(stmt, params, function (err, data) {
                     if (err) {
-                        log("query error : ", stmt,'\n\n\n', params);
                         reject(stmt + "\n\n" + params + "\n\n" + err);
                         return;
                     } else {
