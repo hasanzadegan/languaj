@@ -334,7 +334,7 @@ app.controller('AppCtrl', function ($rootScope, $scope, $http, $window, $ocLazyL
     $scope.getUserMistakeStatus = function () {
         LessonService.getUserMistakeStatus().then(result => {
             $scope.userMistake = result;
-            console.log("getUserMistakeStatus", result);
+            // console.log("getUserMistakeStatus", result);
 
             if (result.remainLife <= 0 && result.diff > 0) {
                 $scope.backToList();
