@@ -65,44 +65,48 @@
 <div flex="100" layout="column">
     <div flex="90" style="overflow-y: auto;max-height: 100%">
         <div layout="row" flex="100" layout-wrap="" layout-padding="">
+<!--            <div ng-repeat="levelLexicalPhrase in current.viewerData.levelLexicalPhraseList"-->
+<!--                 ng-show="!current.showOne"-->
+<!--                 class="itemBox"-->
+<!--                 layout-padding=""-->
+<!--                 style="margin: 5px"-->
+<!--                 flex="30" layout="row" class="all" layout-wrap="" layout-align="center center">-->
+<!--                <div flex="100" layout="row" layout-align="center center"-->
+<!--                     class="gender{{levelLexicalPhrase.itemJSONObj.wordList[0].genderId}}"-->
+<!--                     style="{{$index==current.cnt?'font-weight:bold':''}};" ng-hide="levelLexicalPhrase.itemJSONObj.hideText">-->
+<!--                    {{levelLexicalPhrase.itemJSONObj.title}}-->
+<!--                </div>-->
+<!--                <md-button-->
+<!--                        ng-click="playItem($event,levelLexicalPhrase.itemJSONObj.lexicalPhrase)"-->
+<!--                        class="box imgGender{{levelLexicalPhrase.itemJSONObj.wordList[0].genderId}}">-->
+<!--                    <img ng-src="{{'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId}}">-->
+<!--                </md-button>-->
+<!--                <div flex="100" layout="row" layout-align="center center"-->
+<!--                     style="'font-weight:bold':''" ng-hide="levelLexicalPhrase.itemJSONObj.hideText">-->
+<!--                    {{levelLexicalPhrase.itemJSONObj.lexicalPhrase.title}}-->
+<!--                </div>-->
+<!--            </div>-->
             <div ng-repeat="levelLexicalPhrase in current.viewerData.levelLexicalPhraseList"
-                 ng-show="!current.showOne"
-                 class="itemBox"
-                 layout-padding=""
-                 style="margin: 5px"
-                 flex="30" layout="row" class="all" layout-wrap="" layout-align="center center">
-                <div flex="100" layout="row" layout-align="center center"
-                     class="gender{{levelLexicalPhrase.itemJSONObj.wordList[0].genderId}}"
-                     style="{{$index==current.cnt?'font-weight:bold':''}};" ng-hide="levelLexicalPhrase.itemJSONObj.hideText">
-                    {{levelLexicalPhrase.itemJSONObj.title}}
-                </div>
-                <md-button
-                        ng-click="playItem($event,levelLexicalPhrase.itemJSONObj.lexicalPhrase)"
-                        class="box imgGender{{levelLexicalPhrase.itemJSONObj.wordList[0].genderId}}">
-                    <img ng-src="{{'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId}}">
-                </md-button>
-                <div flex="100" layout="row" layout-align="center center"
-                     style="'font-weight:bold':''" ng-hide="levelLexicalPhrase.itemJSONObj.hideText">
-                    {{levelLexicalPhrase.itemJSONObj.lexicalPhrase.title}}
-                </div>
-            </div>
-            <div ng-repeat="levelLexicalPhrase in current.viewerData.levelLexicalPhraseList"
-                 ng-show="current.showOne && $index==current.cnt"
+                 ng-show="$index==1 || current.showOne && $index==current.cnt"
                  flex="100" layout="column"  class="all" layout-wrap="" >
 
-                <div class="itemBox heartbeat imgGender{{levelLexicalPhrase.itemJSONObj.wordList[0].genderId}}">
-                    <div flex="100" layout="row" layout-align="center center"
+                <div class="itemBox heartbeat imgGender{{levelLexicalPhrase.itemJSONObj.wordList[0].genderId}}"
+                     style="min-height: 70vh !important;"
+                     layout="column"
+                >
+                    <div flex="10" layout="row" layout-align="center center"
                          class="gender{{levelLexicalPhrase.itemJSONObj.wordList[0].genderId}}"
                          ng-hide="levelLexicalPhrase.itemJSONObj.hideText">
                         {{levelLexicalPhrase.itemJSONObj.title}}
                     </div>
-                    <div layout="row" flex="100" layout-align="center center">
+                    <div layout="row" flex="80" layout-align="center center">
                         <img
+                                style="height: 100%"
                                 ng-src="{{'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId}}"
                                 ng-click="playItem($event,levelLexicalPhrase.itemJSONObj.lexicalPhrase)">
 
                     </div>
-                    <div flex="100" layout="row" layout-align="center center"
+                    <div flex="10" layout="row" layout-align="center center"
                          layout-padding=""
                          ng-hide="levelLexicalPhrase.itemJSONObj.hideText"
                     >{{levelLexicalPhrase.itemJSONObj.lexicalPhrase.title}}</div>
