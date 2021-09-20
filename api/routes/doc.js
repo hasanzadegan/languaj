@@ -3,8 +3,8 @@ const docArchive = require('../docArchive/docArchive');
 
 module.exports = function(app){
     app.get("/api/media/:id", function (req, res) {
+        console.log("/api/media/",req.params.id);
         if(req.params.id){
-            console.log("/api/media/",req.params.id);
             imageArchive.getImage(req.params.id).then(result => {
                 if (result.docData) {
                     var img = Buffer.from(result.docData.split(',')[1], 'base64');
