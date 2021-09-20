@@ -77,10 +77,10 @@ angular.module('myApp').controller('levelDashboardController', function ($rootSc
                 LevelService.deleteLevelLexicalPhrase(levelLexicalPhrase.levelLexicalPhraseId).then(result => {
                     $rootScope.$broadcast('levelChanged', $scope.current.viewerData.levelId);
                 });
-            } else {
-                alert("press ctrl key for delete");
-            }
-        }
+} else {
+    alert("press ctrl key for delete");
+}
+}
 
         BaeService.getValidityType().then(result => {
             $scope.current.validityTypeList = result;

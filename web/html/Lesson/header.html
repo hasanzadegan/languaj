@@ -110,11 +110,18 @@
                 <img ng-src="/api/media/{{img}}" width="90px" ng-click="uplaodFiles(img)"/>
         </div>
 
-        <div ng-show="current.selectedCourse.selectedLesson.selectedTopic">
+        <div ng-show="current.selectedCourse.selectedLesson.selectedTopic" layout="row" flex="100">
             <md-button ng-show="!current.showTeach" ng-click="addLevel('newLevel')">
                 <md-icon>add_box</md-icon>
                 Add Quizlet
             </md-button>
+            <div flex=""></div>
+            <div layout="row">
+                <input ng-model="current.directLevelId" type="number" maxlength="5" style="width: 50px;height: 30px">
+                <md-button class="md-icon-button" ng-click="directSearchLevel($event)">
+                    <md-icon>search</md-icon>
+                </md-button>
+            </div>
         </div>
     </div>
 </div>

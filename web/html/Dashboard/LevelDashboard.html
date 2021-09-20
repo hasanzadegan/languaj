@@ -1,7 +1,6 @@
 <div oc-lazy-load="['js/pages/levelDashboard.js']">
     <div ng-controller="levelDashboardController" layout="row" layout-wrap>
         <div ng-include="'html/property/level.html?v='+currentVersion"></div>
-
         <div flex="100" ng-if="current.viewerData.levelTypeId===12 && current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId>0"
              layout-padding="" flex="100">
             <div flex="100" ng-include="current.levelType"></div>
@@ -10,7 +9,6 @@
         </div>
 
         <div flex="100" ng-if="current.viewerData.levelTypeId!==12 && current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.levelId>0">
-
             <div class="directLevelItem"  layout="row" flex="100" layout-wrap="" layout-padding=""
                  ng-show="current.selectedCourse.selectedLesson.selectedTopic">
                 <textarea flex="100" ng-model="current.directText" ></textarea>

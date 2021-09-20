@@ -99,7 +99,16 @@ angular.module('myApp').controller('headerController', function ($rootScope, $sc
         });
     }
 
-
+    $scope.directSearchLevel = function($event){
+        LessonService.getLevelById($scope.current.directLevelId).then(result=>{
+            if(result.length>0){
+                level = result[0];
+                $scope.current.selectedCourse.selectedLesson.selectedTopic.selectedLevel = level;
+                $rootScope.$broadcast('levelDataChanged', level);
+                $scope.refreshIFrame();
+            }
+        })
+    }
     //
     // if($scope.current.teachIsShow)
     //     $scope.showTeach();
