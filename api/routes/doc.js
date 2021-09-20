@@ -18,6 +18,7 @@ module.exports = function(app){
             } else {
             }
         }).catch(err => {
+            console.log("/api/media/ error : ",err);
             res.send('');
         });
     });
