@@ -19,7 +19,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/html/viewer/all.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
+            <state relative-caret-position="295">
               <caret line="81" column="68" lean-forward="true" selection-start-line="81" selection-end-line="82" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -69,20 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/html/viewer/multi.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+            <state relative-caret-position="458">
+              <caret line="68" column="34" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -125,7 +116,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>logger</find>
       <find>$window</find>
       <find>global.logger</find>
       <find>jwt.</find>
@@ -155,6 +145,7 @@
       <find>imageA</find>
       <find>/api/media/</find>
       <find>topic.imageId</find>
+      <find>itemBox</find>
     </findStrings>
     <replaceStrings>
       <replace>current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLevelItem</replace>
@@ -439,21 +430,7 @@
       <workItem from="1631959903416" duration="1207000" />
       <workItem from="1631961542027" duration="3289000" />
       <workItem from="1631964869434" duration="97000" />
-      <workItem from="1632137836345" duration="11354000" />
-    </task>
-    <task id="LOCAL-00108" summary="bugFix:courseList">
-      <created>1629283208847</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1629283208847</updated>
-    </task>
-    <task id="LOCAL-00109" summary="sideMenu">
-      <created>1629283572673</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1629283572673</updated>
+      <workItem from="1632137836345" duration="11746000" />
     </task>
     <task id="LOCAL-00110" summary="sideMenu">
       <created>1629284102725</created>
@@ -784,11 +761,25 @@
       <option name="project" value="LOCAL" />
       <updated>1632225278758</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="bugfix:multi">
+      <created>1632225558987</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1632225558987</updated>
+    </task>
+    <task id="LOCAL-00158" summary="bugfix:multi">
+      <created>1632225657478</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1632225657478</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="484217000" />
+    <option name="totallyTimeSpent" value="484609000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -803,7 +794,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29127517" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29127517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Project Explorer" order="3" />
@@ -1298,21 +1289,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/viewer/all.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="81" column="68" lean-forward="true" selection-start-line="81" selection-end-line="82" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1327,10 +1303,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/viewer/all.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="81" column="68" lean-forward="true" selection-start-line="81" selection-end-line="82" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/html/viewer/multi.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+        <state relative-caret-position="458">
+          <caret line="68" column="34" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
         </state>
       </provider>
     </entry>
