@@ -2,6 +2,7 @@
     <div ng-controller="multiController"></div>
 </div>
 <div flex="100" layout="column">
+
     <!--    question section-->
     <div flex="20" layout="row" layout-align="center center" layout-padding="">
         <div flex="100" ng-repeat="levelLexicalPhrase in current.viewerData.levelLexicalPhraseList"
@@ -21,7 +22,6 @@
                             style="height: 8vh"
                             ng-src="{{'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId}}">
                 </md-button>
-
 
             </div>
         </div>
@@ -65,12 +65,14 @@
                     {{levelLexicalPhrase.itemJSONObj.title}}
                 </div>
                 <div flex="80" layout="row" layout-padding="" layout-align="center center">
-                    <img
-                            height="100%"
-                            ng-class="current.viewerDataLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
+                    <div>
+                        <img
+                                height="100%"
+                                ng-class="current.viewerDataLexicalPhrase.levelLexicalPhraseId===levelLexicalPhrase.levelLexicalPhraseId?
                         current.viewerDataLexicalPhrase.itemJSONObj.animation:''"
-                            ng-src="{{levelLexicalPhrase.itemJSONObj.imageId?'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId:
+                                ng-src="{{levelLexicalPhrase.itemJSONObj.imageId?'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId:
                         'img/app/megaphone.svg'}}">
+                    </div>
                 </div>
             </div>
         </div>

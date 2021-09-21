@@ -59,7 +59,7 @@
                             >{{Math.floor(topic.review/5)>0?Math.floor(topic.review/5):''}}</div>
                         </div>
                         <div flex="100" layout-padding="">
-                            <img class="appImg topicImg{{topic.locked}}" src="/api/media/{{topic.imageId}}" height="90px"/>
+                            <img class="appImg topicImg{{topic.locked}}" ng-src="/api/media/{{topic.imageId}}" height="90px"/>
                         </div>
                     </div>
                     <!--                <md-icon ng-show="topic.achievedTopicId" style="color:green">check </md-icon>-->

@@ -3,10 +3,12 @@ const docArchive = require('../docArchive/docArchive');
 
 module.exports = function(app){
     app.get("/api/media/:id", function (req, res) {
-        console.log("/api/media/",req.params.id);
-        if(req.params.id!=null || req.params.id!=undefined){
+        if(req.params.id){
+            console.log("/api/media/",req.params.id);
             imageArchive.getImage(req.params.id).then(result => {
-                if (result.docData) {
+                if(!result)
+                    res.end(null)
+                else if (result.docData) {
                     var img = Buffer.from(result.docData.split(',')[1], 'base64');
                     res.writeHead(200, {
                         'Content-Type': result.docData.split(',')[0].split('data:')[1].split(';')[0],
@@ -16,14 +18,11 @@ module.exports = function(app){
                         'Content-Length': img.length
                     });
                     res.end(img);
-                } else {
                 }
             }).catch(err => {
                 console.log("/api/media/ error : ",err);
                 res.send('');
             });
-        }else {
-            res.send('');
         }
 
     });
