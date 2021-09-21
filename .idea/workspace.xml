@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/doc.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/doc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/student/studentTopicLevel.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/student/studentTopicLevel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/viewer/multi.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/viewer/multi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/version.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/version.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -85,8 +80,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/html/viewer/multi.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="75" selection-start-line="75" selection-end-line="75" />
+            <state relative-caret-position="241">
+              <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -443,14 +438,7 @@
       <workItem from="1631959903416" duration="1207000" />
       <workItem from="1631961542027" duration="3289000" />
       <workItem from="1631964869434" duration="97000" />
-      <workItem from="1632137836345" duration="10997000" />
-    </task>
-    <task id="LOCAL-00106" summary="bugFix:courseList">
-      <created>1629186746619</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1629186746619</updated>
+      <workItem from="1632137836345" duration="11075000" />
     </task>
     <task id="LOCAL-00107" summary="bugFix:courseList">
       <created>1629283178456</created>
@@ -788,11 +776,18 @@
       <option name="project" value="LOCAL" />
       <updated>1632146223071</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="bugfix:multi">
+      <created>1632225207314</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1632225207314</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="483860000" />
+    <option name="totallyTimeSpent" value="483938000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -907,7 +902,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
-    <MESSAGE value="add gallery&#10;better sideMenu&#10;better load lexical image" />
     <MESSAGE value="bugfix:lexical image" />
     <MESSAGE value="levenshtein" />
     <MESSAGE value="bugfix:js cache lexical" />
@@ -932,7 +926,8 @@
     <MESSAGE value="bugfix: log error" />
     <MESSAGE value="direct search level by id" />
     <MESSAGE value="bugfix:all" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix:all" />
+    <MESSAGE value="bugfix:multi" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix:multi" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1333,8 +1328,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/html/viewer/multi.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        <state relative-caret-position="241">
+          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
         </state>
       </provider>
     </entry>
