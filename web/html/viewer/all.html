@@ -77,10 +77,12 @@
                     {{levelLexicalPhrase.itemJSONObj.title}}
                 </div>
                 <md-button
-                        ng-click="playItem($event,levelLexicalPhrase.itemJSONObj.lexicalPhrase)"
+                        ng-click="playItem($event,levelLexicalPhrase.itemJSONObj)"
                         class="box imgGender{{levelLexicalPhrase.itemJSONObj.wordList[0].genderId}}">
                     <img ng-src="{{'/api/media/'+levelLexicalPhrase.itemJSONObj.imageId}}">
                 </md-button>
+                {{levelLexicalPhrase.itemJSONObj.title}}
+
                 <div flex="100" layout="row" layout-align="center center"
                      style="'font-weight:bold':''" ng-hide="levelLexicalPhrase.itemJSONObj.hideText">
                     {{levelLexicalPhrase.itemJSONObj.lexicalPhrase.title}}

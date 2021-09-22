@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="bugfix:multi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/viewer/all.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/viewer/all.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/version.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/version.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/html/viewer/all.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="81" column="68" lean-forward="true" selection-start-line="81" selection-end-line="82" />
+            <state relative-caret-position="261">
+              <caret line="79" column="80" selection-start-line="79" selection-start-column="80" selection-end-line="79" selection-end-column="80" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -68,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/html/viewer/multi.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="66" column="16" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
+            <state relative-caret-position="151">
+              <caret line="64" column="60" lean-forward="true" selection-start-line="64" selection-start-column="60" selection-end-line="64" selection-end-column="60" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
@@ -91,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="337" lean-forward="true" selection-start-line="337" selection-end-line="337" />
+            <state relative-caret-position="178">
+              <caret line="423" column="34" lean-forward="true" selection-start-line="423" selection-start-column="34" selection-end-line="423" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -248,14 +250,14 @@
         <option value="$PROJECT_DIR$/web/js/pages/levelDashboard.js" />
         <option value="$PROJECT_DIR$/web/js/header/header.js" />
         <option value="$PROJECT_DIR$/web/html/Lesson/header.html" />
-        <option value="$PROJECT_DIR$/web/html/viewer/all.html" />
         <option value="$PROJECT_DIR$/web/js/viewer/all.js" />
-        <option value="$PROJECT_DIR$/web/js/main.js" />
         <option value="$PROJECT_DIR$/api/routes/doc.js" />
         <option value="$PROJECT_DIR$/web/html/student/studentTopicLevel.html" />
         <option value="$PROJECT_DIR$/web/test.html" />
-        <option value="$PROJECT_DIR$/web/js/version.js" />
         <option value="$PROJECT_DIR$/web/html/viewer/multi.html" />
+        <option value="$PROJECT_DIR$/web/js/version.js" />
+        <option value="$PROJECT_DIR$/web/html/viewer/all.html" />
+        <option value="$PROJECT_DIR$/web/js/main.js" />
       </list>
     </option>
   </component>
@@ -447,21 +449,7 @@
       <workItem from="1631959903416" duration="1207000" />
       <workItem from="1631961542027" duration="3289000" />
       <workItem from="1631964869434" duration="97000" />
-      <workItem from="1632137836345" duration="13329000" />
-    </task>
-    <task id="LOCAL-00113" summary="bugfix:teach">
-      <created>1629287292904</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1629287292904</updated>
-    </task>
-    <task id="LOCAL-00114" summary="bugfix:teach">
-      <created>1629287646608</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1629287646608</updated>
+      <workItem from="1632137836345" duration="14303000" />
     </task>
     <task id="LOCAL-00115" summary="bugfix:teach">
       <created>1629287780027</created>
@@ -792,11 +780,25 @@
       <option name="project" value="LOCAL" />
       <updated>1632303224790</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="bugfix:multi">
+      <created>1632303266381</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1632303266381</updated>
+    </task>
+    <task id="LOCAL-00163" summary="bugfix:multi">
+      <created>1632303330211</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1632303330211</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="486192000" />
+    <option name="totallyTimeSpent" value="487166000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1261,20 +1263,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/LevelType/all.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/viewer/all.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="15" column="57" lean-forward="true" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="337" lean-forward="true" selection-start-line="337" selection-end-line="337" />
         </state>
       </provider>
     </entry>
@@ -1313,6 +1305,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/viewer/multi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="64" column="60" lean-forward="true" selection-start-line="64" selection-start-column="60" selection-end-line="64" selection-end-column="60" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/LevelType/all.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/version.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1322,8 +1329,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/html/viewer/all.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="81" column="68" lean-forward="true" selection-start-line="81" selection-end-line="82" />
+        <state relative-caret-position="261">
+          <caret line="79" column="80" selection-start-line="79" selection-start-column="80" selection-end-line="79" selection-end-column="80" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -1335,15 +1342,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/viewer/multi.html">
+    <entry file="file://$PROJECT_DIR$/web/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="66" column="16" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="178">
+          <caret line="423" column="34" lean-forward="true" selection-start-line="423" selection-start-column="34" selection-end-line="423" selection-end-column="34" />
         </state>
       </provider>
     </entry>
