@@ -59,8 +59,11 @@
                                     style="color:white;background: #00acb1;width: 15px;height: 15px;margin: 2px;border-radius: 5px"
                             >{{Math.floor(topic.review/5)>0?Math.floor(topic.review/5):''}}</div>
                         </div>
-                        <div flex="100" layout-padding="">
+                        <div flex="100" layout-padding="" ng-if="topic.imageId">
                             <img class="appImg topicImg{{topic.locked}}" ng-src="/api/media/{{topic.imageId}}" height="90px"/>
+                        </div>
+                        <div flex="100" layout-padding="" ng-if="!topic.imageId">
+                            <img src="img/app/book.svg" class="appImg topicImg{{topic.locked}}" width="70px">
                         </div>
                     </div>
                     <!--                <md-icon ng-show="topic.achievedTopicId" style="color:green">check </md-icon>-->
