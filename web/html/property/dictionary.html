@@ -40,6 +40,11 @@
                                        style="text-align: left !important;"
                                        layout-padding ng-click="selectPhrase(phrase)">
                                 {{phrase.title}}
+                                <span style="color: #00cccc">
+                                    <span ng-if="phrase.genderId==1">m</span>
+                                    <span ng-if="phrase.genderId==2">f</span>
+                                    <span ng-if="phrase.genderId==3">n</span>
+                                </span>
                             </md-button>
                             <div ng-show="config.editMode[phrase.phraseId]">
                                 <input ng-model="phrase.title" ng-blur="updatePhraseTitle(phrase);">
@@ -54,6 +59,7 @@
                     </md-list>
                 </div>
             </div>
+
 
             <div flex="100" layout="row" layout-wrap="" layout-padding="">
                 <md-button class="md-icon-button" ng-click="selectFullPhrase()">
