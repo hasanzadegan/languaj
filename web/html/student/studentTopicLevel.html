@@ -45,7 +45,7 @@
     <div ng-repeat="lesson in current.student.selectedCourse.lessonList" flex="100">
         <div >{{lesson.title}}</div>
         <div layout="row" layout-wrap="" flex="100">
-            <div ng-repeat="topic in lesson.topicListObj" layout-wrap="" layout="row" layout-padding="" flex="50">
+            <div ng-repeat="topic in lesson.topicListObj" layout-wrap="" layout="row" layout-padding="" flex="50" flex-xs="100">
                 <md-button class="topicBox{{topic.locked}}"
                            ng-click="getStudentTopicLevelList(topic,topic.review+1)" ng-disabled="topic.locked">
                     <div flex="100" layout="row" layout-align="center center" layout-wrap="">
