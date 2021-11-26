@@ -1,3 +1,6 @@
+body{
+    /*background: #03a9f4 !important;*/
+}
 .life{
     height: 24px;
     width: 125px;
@@ -1244,7 +1247,7 @@ md-progress-linear.md-default-theme .md-container, md-progress-linear .md-contai
     font-weight: lighter;
 }
 .topBold {
-    font-size: 1.3rem;font-weight: bold;
+    font-size: 1.1rem;font-weight: bold;
 }
 
 .topNormal {

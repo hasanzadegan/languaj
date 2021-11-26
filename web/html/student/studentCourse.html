@@ -6,19 +6,19 @@
              flex="45" flex-xs="100" layout="row"
              layout-wrap="" style="padding:6px !important;" class="md-button" ng-click="setCourse(course)">
             <div class="itemBox" layout="row" flex="100" layout-wrap="" dir="ltr">
-                <div flex="100" layout="row" style="">
-                    <div>
+                <div class="topNormal" flex="100">
+                    {{course.title}}
+                </div>
+                <div layout="row" layout-align="start center">
+                    <div style="zoom: 0.7">
                         <div class="flags Flag{{course.destLangId}}"></div>
                     </div>
-                    <div flex="5"></div>
-                    <div class="topNormal">
-                        {{course.title}}
-                    </div>
+                    <div layout-padding="">Includes 34 topics</div>
                 </div>
                 <div layout="row" flex="100">
-                    <div>Includes 34 topics</div>
                 </div>
                 <div layout="row" flex="100">
+
                     <img ng-src="{{course.imageUrl}}" style="border-radius: 40px;height: 30px;"
                          class="appImg">
                     <div flex="5"></div>

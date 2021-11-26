@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="bugfix:all speak on click">
-      <change afterPath="$PROJECT_DIR$/web/html/property/soundRecord.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/app/soundRecord.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/property/soundRecord.js" afterDir="false" />
+    <list default="true" id="f5217624-1b97-42aa-ac94-30ec63ac3559" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/Dashboard/sideMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/Dashboard/sideMenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/property/dictionary.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/property/dictionary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/viewer/all.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/viewer/all.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/viewer/multi.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/viewer/multi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/version.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/version.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/teacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/student.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/student.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/student/studentCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/student/studentCourse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/student/studentTopicLevel.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/student/studentTopicLevel.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,16 +19,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/html/viewer/multi.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="69" column="73" selection-start-line="69" selection-start-column="73" selection-end-line="69" selection-end-column="73" />
+            <state relative-caret-position="148">
+              <caret line="57" column="22" lean-forward="true" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/html/student/studentTopicLevel.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/html/student/studentCourse.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/student.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/css/global.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="173" column="17" lean-forward="true" selection-start-line="173" selection-start-column="17" selection-end-line="173" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -50,16 +95,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>directLevelId</find>
-      <find>directSearchLevel</find>
-      <find>/api/media</find>
-      <find>getImage</find>
-      <find>getUserMistakeStatus&quot;</find>
-      <find>{topic.imageId}}</find>
-      <find>where docArchiveId</find>
-      <find>.getImage</find>
-      <find>imageA</find>
-      <find>/api/media/</find>
       <find>topic.imageId</find>
       <find>itemBox</find>
       <find>Acceptance list</find>
@@ -80,6 +115,16 @@
       <find>der</find>
       <find>group_co</find>
       <find>max-width: 70%;</find>
+      <find>ng-click=&quot;getStudentTopicLevelList(topic,topic.review+1)&quot;</find>
+      <find>ng-click=&quot;getStudentTopicLevelList</find>
+      <find>padding-left: 10px;font-family: Arial !important;</find>
+      <find>life</find>
+      <find>topicBoxfalse</find>
+      <find>topNormal</find>
+      <find>setCourse</find>
+      <find>class=&quot;itemBox</find>
+      <find>sha</find>
+      <find>bo</find>
     </findStrings>
     <replaceStrings>
       <replace>current.selectedCourse.selectedLesson.selectedTopic.selectedLevel.selectedLevelItem</replace>
@@ -135,7 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/html/viewer/header/charachter.html" />
         <option value="$PROJECT_DIR$/web/js/viewer/viewer.js" />
         <option value="$PROJECT_DIR$/web/layout/simple-header.html" />
         <option value="$PROJECT_DIR$/api/routes/course.js" />
@@ -149,7 +193,6 @@
         <option value="$PROJECT_DIR$/web/js/app.js" />
         <option value="$PROJECT_DIR$/api/docArchive/docArchive.js" />
         <option value="$PROJECT_DIR$/student/src/app/modules/login/login.component.html" />
-        <option value="$PROJECT_DIR$/web/css/student.css" />
         <option value="$PROJECT_DIR$/web/js/property/topic.js" />
         <option value="$PROJECT_DIR$/web/html/Lesson/Topic.html" />
         <option value="$PROJECT_DIR$/web/css/style.css" />
@@ -171,7 +214,6 @@
         <option value="$PROJECT_DIR$/web/html/Lesson/header.html" />
         <option value="$PROJECT_DIR$/web/js/viewer/all.js" />
         <option value="$PROJECT_DIR$/api/routes/doc.js" />
-        <option value="$PROJECT_DIR$/web/html/student/studentTopicLevel.html" />
         <option value="$PROJECT_DIR$/web/test.html" />
         <option value="$PROJECT_DIR$/web/html/property/gallery.html" />
         <option value="$PROJECT_DIR$/web/html/property/soundRecord.html" />
@@ -179,13 +221,16 @@
         <option value="$PROJECT_DIR$/web/js/main.js" />
         <option value="$PROJECT_DIR$/web/teacher.html" />
         <option value="$PROJECT_DIR$/web/js/property/soundRecord.js" />
-        <option value="$PROJECT_DIR$/web/css/global.css" />
         <option value="$PROJECT_DIR$/api/word/word.js" />
         <option value="$PROJECT_DIR$/web/html/property/dictionary.html" />
         <option value="$PROJECT_DIR$/web/html/viewer/all.html" />
         <option value="$PROJECT_DIR$/web/js/version.js" />
         <option value="$USER_HOME$/Desktop/test.html" />
         <option value="$PROJECT_DIR$/web/html/viewer/multi.html" />
+        <option value="$PROJECT_DIR$/web/html/student/studentTopicLevel.html" />
+        <option value="$PROJECT_DIR$/web/html/student/studentCourse.html" />
+        <option value="$PROJECT_DIR$/web/css/student.css" />
+        <option value="$PROJECT_DIR$/web/css/global.css" />
       </list>
     </option>
   </component>
@@ -361,21 +406,7 @@
       <workItem from="1637130798593" duration="585000" />
       <workItem from="1637649695014" duration="303000" />
       <workItem from="1637947900356" duration="30000" />
-      <workItem from="1637952416245" duration="50000" />
-    </task>
-    <task id="LOCAL-00116" summary="remainLife visualised">
-      <created>1629373603785</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1629373603786</updated>
-    </task>
-    <task id="LOCAL-00117" summary="achievement visualised">
-      <created>1629375310490</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1629375310490</updated>
+      <workItem from="1637952416245" duration="5787000" />
     </task>
     <task id="LOCAL-00118" summary="singleLevel and teacher Iframe viewer">
       <created>1629483586493</created>
@@ -706,11 +737,25 @@
       <option name="project" value="LOCAL" />
       <updated>1632304259642</updated>
     </task>
-    <option name="localTasksCounter" value="165" />
+    <task id="LOCAL-00165" summary="bugfix:all speak on click">
+      <created>1637952502277</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1637952502278</updated>
+    </task>
+    <task id="LOCAL-00166" summary="bugfix:list of topics flexXS -&gt;100">
+      <created>1637952744879</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1637952744879</updated>
+    </task>
+    <option name="localTasksCounter" value="167" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="501241000" />
+    <option name="totallyTimeSpent" value="506978000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -740,7 +785,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4976867" weight="0.4490085" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49966952" weight="0.388102" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49966952" visible="true" weight="0.388102" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50231326" side_tool="true" weight="0.4490085" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" />
@@ -825,7 +870,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
-    <MESSAGE value="levenshtein" />
     <MESSAGE value="bugfix:js cache lexical" />
     <MESSAGE value="bugfix:cache gallery" />
     <MESSAGE value="userMistake scripts" />
@@ -850,7 +894,8 @@
     <MESSAGE value="bugfix:all" />
     <MESSAGE value="bugfix:multi" />
     <MESSAGE value="bugfix:all speak on click" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix:all speak on click" />
+    <MESSAGE value="bugfix:list of topics flexXS -&gt;100" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix:list of topics flexXS -&gt;100" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -904,27 +949,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/service/LevelService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="66" column="8" lean-forward="true" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/login/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/property/topic.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -1086,13 +1110,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/student/studentTopicLevel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/viewer/all.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1198,13 +1215,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/global.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/routes/dictionary.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1242,13 +1252,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/html/viewer/multi.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="69" column="73" selection-start-line="69" selection-start-column="73" selection-end-line="69" selection-end-column="73" />
+        <state relative-caret-position="148">
+          <caret line="57" column="22" lean-forward="true" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/property/courseSetting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/student/studentTopicLevel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/student/studentCourse.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/student.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/global.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="173" column="17" lean-forward="true" selection-start-line="173" selection-start-column="17" selection-end-line="173" selection-end-column="17" />
         </state>
       </provider>
     </entry>
