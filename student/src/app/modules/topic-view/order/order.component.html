@@ -1,0 +1,28 @@
+<div class="container" fxLayout="row" fxLayoutAlign="center center">
+  <div fxFlex="70" fxFlex.lt-md="90" fxLayout="column">
+
+    <div fxFlex="30" fxLayout="row" fxLayoutAlign="space-between end">
+      <img fxFlex="30" fxFlex.lt-md="70" src="../../../../assets/img/woman-cleaning.svg" alt="woman">
+      <span fxFlex="50" style="text-align: right">مرد و زن</span>
+    </div>
+
+    <div fxFlex="40">
+      <div class="drag-end example-list" cdkDropList cdkDropListOrientation="horizontal"
+           #doneList="cdkDropList" fxLayout="row wrap" fxLayoutGap="10px" fxLayoutAlign="start center"
+           [cdkDropListData]="done" [cdkDropListConnectedTo]="[todoList]" (cdkDropListDropped)="drop($event)">
+        <div class="example-box card-global" *ngFor="let item of done" cdkDrag>{{item}}</div>
+      </div>
+    </div>
+
+
+    <div fxFlex="40">
+      <div class="drag-end example-list" cdkDropList
+           #todoList="cdkDropList" fxLayout="row wrap" fxLayoutGap="10px" fxLayoutAlign="start center"
+           [cdkDropListData]="todo" [cdkDropListConnectedTo]="[doneList]" (cdkDropListDropped)="drop($event)">
+        <div class="example-box card-global" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+      </div>
+    </div>
+
+    <button mat-raised-button color="accent" (click)="check()">Check</button>
+  </div>
+</div>

@@ -34,6 +34,9 @@ app.listen(port);
 
 
 console.log("languaj.com started in "+new Date()+" ...");
+log = require("log-to-file")
+log("languaj.com started in "+new Date()+" ...");
+
 
 
 

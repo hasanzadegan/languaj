@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="25.05" viewBox="0 0 32 25.05">
+  <g id="teacherView" transform="translate(0 -2.95)">
+    <g id="Group_28" data-name="Group 28">
+      <path id="Path_106" data-name="Path 106" d="M31,26a.945.945,0,0,1-1-1V12a1,1,0,0,1,2,0V25A.945.945,0,0,1,31,26Z"/>
+    </g>
+    <g id="Group_29" data-name="Group 29">
+      <path id="Path_107" data-name="Path 107" d="M16,21a.9.9,0,0,1-.5-.1l-15-8a1.06,1.06,0,0,1,0-1.8l15-8a.75.75,0,0,1,.9,0l15,8a1.06,1.06,0,0,1,0,1.8l-15,8C16.3,21,16.2,21,16,21Z"/>
+    </g>
+    <path id="Path_108" data-name="Path 108" d="M17.4,22.6A2.3,2.3,0,0,1,16,23a2.3,2.3,0,0,1-1.4-.4L6,18.1V22c0,3.1,4.9,6,10,6s10-2.9,10-6V18.1Z"/>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "",
+    "description": "",
+    "version": "1.0"
+  },
+  "produces": ["application/json"],
+  "host": "localhost:8080",
+  "basePath": "/",
+  "paths": {
+    "/api/userCourseList": {
+      "get": {
+        "x-swagger-router-controller": "middleware-name1",
+        "operationId": "swagTest",
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    }
+  }
+}

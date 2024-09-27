@@ -1,0 +1,56 @@
+<div oc-lazy-load="['js/viewer/article.js']">
+    <div ng-controller="articleController" layout="row" layout-wrap
+         style="height: 85vh;">
+
+        <div class="simpleSpacer" ng-include="'html/viewer/header/simple.html'"></div>
+        <div style="height: 80vh;" layout-padding="" layout-wrap="" flex="100">
+            <div  flex="100" layout="row" layout-wrap="" layout-align="center center">
+                <div ng-repeat="word in wordList" layout="row">
+                    <div ng-show="word.POSTypeId!==5" layout-padding="">{{word.title}}</div>
+                    <div ng-show="word.POSTypeId===5" >
+                        <div class="articleIndex">{{word.cnt}}</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div ng-repeat="word in articleList" layout="row" flex="100" layout-wrap="">
+                <div flex="100" layout-padding="" >
+                    <div class="articleIndex">{{$index+1}}</div>
+                </div>
+
+                <div flex="100">
+                    <div ng-repeat="kasus in current.kasusList | filter:{kasusId:word.kasusId}" layout-wrap="" layout="row">
+                        <div ng-repeat="pronoun in kasus.pronounListObj" flex="30" layout-wrap="">
+                            <md-button class="md-raised" ng-click="setWordAnswer(word,pronoun,$index)" flex="100">
+                                <div style="{{qustionList[word.phraseWordId].index===$index?'color:rgb(255,64,129) !important':''}}">
+                                    {{pronoun.title}}
+                                </div>
+                            </md-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+<!--        <div style="height:75vh" flex="100" layout="row" layout-wrap="" layout-align="center center">-->
+<!--            <div ng-repeat="word in wordList" layout="row" >-->
+<!--                <div ng-show="word.POSTypeId!==5" layout-padding="">{{word.title}}</div>-->
+<!--                <div ng-show="word.POSTypeId===5" class="infinitiveBox" >-->
+<!--                    -->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+
+
+        <div style="height: 10vh" layout-align="center center" flex="100">
+            <div flex="100" layout="row" layout-align="center center">
+                <md-button class="md-accent md-raised checkButton" ng-click="checkAnswer(true)">
+                    check
+                </md-button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<h5>Question</h5>
+<div flex="100" layout="row">
+    <md-autocomplete md-no-cache="true" flex="10"
+                     md-search-text="searchWordData"
+                     ng-model-options="{debounce: 100}"
+                     md-selected-item-change="addWordData(wordData)"
+                     placeholder="question"
+                     md-item-text="wordData.VoiceText"
+                     md-items="wordData in queryWordData(searchWordData)"
+                     layout="row">
+        <span>{{wordData.VoiceText}}</span>
+    </md-autocomplete>
+    <md-input-container flex="90">
+        <input ng-model="selectedLevelLexicalPhrase.wordDataText.VoiceText"/>
+    </md-input-container>
+</div>

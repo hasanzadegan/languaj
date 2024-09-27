@@ -1,0 +1,25 @@
+<div class="container" fxLayoutAlign="center center">
+  <div fxLayout="column" fxFlex="70" fxFlex.lt-md="90" fxLayoutGap="20px">
+
+    <div fxLayout="row" fxLayoutAlign="space-between end">
+      <img fxFlex="50" fxFlex.gt-md="20" src="../../../../assets/img/man-basket.svg" alt="">
+      <span>Orderen Sie zu.</span>
+    </div>
+
+    <div fxFlex="60" fxLayoutGap="2%" fxLayout="row">
+      <div fxFlex="49" fxLayout="column" fxLayoutGap="10px">
+        <div class="card-global" (click)="select(card)"
+             [ngClass]="(card.select === 1) ? 'select' : (card.select ===2) ? 'wrong' : ''" *ngFor="let card of obj">
+          <span>{{card.title}}</span>
+        </div>
+      </div>
+      <div fxFlex="49" fxLayout="column" fxLayoutGap="10px">
+        <div class="card-global" (click)="select(card)"
+             [ngClass]="(card.select === 1) ? 'select' : (card.select ===2) ? 'wrong' : ''" *ngFor="let card of obj">
+          <span>{{card.mean}}</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

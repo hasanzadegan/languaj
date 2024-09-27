@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="58" height="10" viewBox="0 0 58 10">
+  <g id="progress" transform="translate(-45 -117)">
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(45 117)" fill="#ffcc01" stroke="#707070" stroke-width="1">
+      <circle cx="5" cy="5" r="5" stroke="none"/>
+      <circle cx="5" cy="5" r="4.5" fill="none"/>
+    </g>
+    <g id="Ellipse_1-2" data-name="Ellipse 1" transform="translate(57 117)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="5" cy="5" r="5" stroke="none"/>
+      <circle cx="5" cy="5" r="4.5" fill="none"/>
+    </g>
+    <g id="Ellipse_1-3" data-name="Ellipse 1" transform="translate(69 117)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="5" cy="5" r="5" stroke="none"/>
+      <circle cx="5" cy="5" r="4.5" fill="none"/>
+    </g>
+    <g id="Ellipse_1-4" data-name="Ellipse 1" transform="translate(81 117)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="5" cy="5" r="5" stroke="none"/>
+      <circle cx="5" cy="5" r="4.5" fill="none"/>
+    </g>
+    <g id="Ellipse_1-5" data-name="Ellipse 1" transform="translate(93 117)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="5" cy="5" r="5" stroke="none"/>
+      <circle cx="5" cy="5" r="4.5" fill="none"/>
+    </g>
+  </g>
+</svg>

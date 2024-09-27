@@ -1,0 +1,40 @@
+<div oc-lazy-load="['js/viewer/teacher.js']">
+    <div ng-controller="teacherController" layout="row" layout-wrap flex="100">
+        <div flex="100" layout-padding="" ng-show="showSearchTeacher" layout="row">
+            <input ng-model="teacherSearch" flex="100" placeholder="search teacher or course">
+        </div>
+        <div layout="row" flex="100">
+            <div flex="95" flex-xs="90" class="hScroll80" style="border-bottom: solid 1px rgba(0,0,0,0.12)" layout="row" flex="100">
+                <div layout="row" flex="100" class="teacherList">
+                    <md-button ng-repeat="teacher in current.teacherList|filter:teacherSearch"
+                               ng-click="selectTeacher(teacher)">
+                        <img ng-src="{{teacher.imageUrl}}"
+                             class="nounFilter"
+                             title="{{teacher.firstName}} {{teacher.lastName}}"
+                             style="height: 50px;border-radius: 50px;{{current.selectedTeacher.userId===teacher.userId?'border:solid 3px #445':''}}">
+                    </md-button>
+                </div>
+            </div>
+            <div flex="5" flex-xs="10">
+                <md-button class="md-icon-button" ng-click="showSearchTeacher=!showSearchTeacher">
+                    <md-icon>search</md-icon>
+                </md-button>
+            </div>
+        </div>
+
+        <div class="hScroll">
+            <div layout="row" flex="100">
+                <div ng-repeat="course in current.selectedTeacher.courseListObj" flex="33">
+                    <md-button
+                            layout="row"
+                            ng-class="current.selectedCourse.courseId==course.courseId?'md-accent':''"
+                            class="md-raised coursList"
+                            layout-align="center center"
+                            ng-click="getCourseLessonList(course,$event)">
+                        {{course.title}}
+                    </md-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

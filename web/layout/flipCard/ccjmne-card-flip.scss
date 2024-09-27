@@ -1,0 +1,123 @@
+$card-transition-duration: .3s !default;
+$card-perspective: 2000px !default;
+
+
+@mixin card-flip-front-along($axis: 'Y') {
+  &.flipped-add {
+    animation: card-flip-front-along-#{$axis} $card-transition-duration ease-out forwards;
+  }
+
+  &.flipped-remove {
+    animation: card-flip-front-along-#{$axis} $card-transition-duration ease-in forwards reverse;
+  }
+
+  @keyframes card-flip-front-along-#{$axis} {
+    @if $axis == 'X' {
+      0% {
+        transform: rotateX(0);
+      }
+
+      50%,
+      100% {
+        transform: rotateX(-90deg);
+      }
+    }
+
+    @if $axis == 'Y' {
+      0% {
+        transform: rotateY(0);
+      }
+
+      50%,
+      100% {
+        transform: rotateY(-90deg);
+      }
+    }
+  }
+}
+
+@mixin card-flip-back-along($axis: 'Y') {
+
+  &.flipped-add {
+    animation: card-flip-back-along-#{$axis} $card-transition-duration ease-out forwards;
+  }
+
+  &.flipped-remove {
+    animation: card-flip-back-along-#{$axis} $card-transition-duration ease-in forwards reverse;
+  }
+
+  @keyframes card-flip-back-along-#{$axis} {
+    @if $axis == 'X' {
+      0%,
+      50% {
+        transform: rotateX(90deg);
+      }
+
+      100% {
+        transform: rotateX(0);
+      }
+    }
+
+    @if $axis == 'Y' {
+      0%, 50% {
+        transform: rotateY(90deg);
+      }
+
+      100% {
+        transform: rotateY(0);
+      }
+    }
+  }
+}
+
+ccjmne-card-flip {
+  display: block;
+
+  .card-flip {
+    position: relative;
+    perspective: $card-perspective;
+  }
+
+  .card-flip-face {
+    display: block;
+  }
+
+  .card-flip-front {
+    &.flip-along-x {
+      @include card-flip-front-along('X');
+    }
+
+    &.flip-along-y {
+      @include card-flip-front-along('Y');
+    }
+
+    &.flipped:not(.ng-animate) {
+      visibility: hidden;
+    }
+  }
+
+  .card-flip-back {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    card-flip-back {
+      flex-grow: 1;
+    }
+
+    &.flip-along-x {
+      @include card-flip-back-along('X');
+    }
+
+    &.flip-along-y {
+      @include card-flip-back-along('Y');
+    }
+
+    &:not(.flipped):not(.ng-animate) {
+      visibility: hidden;
+    }
+  }
+}

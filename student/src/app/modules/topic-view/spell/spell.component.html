@@ -1,0 +1,39 @@
+<div class="container" fxLayoutAlign="center center">
+  <div fxLayout="column" fxFlex="70" fxFlex.lt-md="90" fxLayoutGap="30px">
+
+    <div fxFlex="30">
+      <div fxLayoutAlign="space-between end">
+        <div fxFlex="50">
+          <span class="font-color">Spell</span>
+        </div>
+        <div fxFlex="50" fxLayoutAlign="end">
+          <img fxFlex="30" fxFlex.lt-md="70" src="../../../../assets/img/spell.svg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!------------------ Spell Items ------------------->
+    <div fxLayout="column" fxLayoutGap="20px" fxFlex="70">
+
+      <form [formGroup]="form" fxFlex="20" class="card-global" fxLayout="row" fxLayoutAlign="center start"
+            [ngClass]="cardStatus === 2 ? 'true' : cardStatus === 3 ? 'wrong' : ''">
+        <div fxFlex="90" fxLayoutGap="8px" fxLayout="column">
+          <span style="text-align: right">{{obj.persian}}</span>
+          <div fxLayoutGap="10px" fxLayout="row">
+            <span fxLayout="row" *ngFor="let item of obj.question; let i = index">
+              <span *ngIf="item !== null">{{item}}</span>
+              <span *ngIf="item === null">
+                <input (keyup)="check(obj.title)" [formControlName]="i" class="input" type="text" maxlength="1"></span>
+            </span>
+          </div>
+          <span class="true-word">
+            <span *ngIf="cardStatus === 3">{{obj.title}}</span>
+          </span>
+        </div>
+      </form>
+
+
+    </div>
+
+  </div>
+</div>

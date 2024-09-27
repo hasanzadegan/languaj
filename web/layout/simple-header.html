@@ -1,0 +1,25 @@
+<md-progress-linear style="height: 3px" value="{{current.progress}}" ng-show="current.progress>0"></md-progress-linear>
+<div flex="100" layout="row" layout-padding="" class="simpleHeader" layout-wrap="">
+    <md-button  ng-click="backToList()" flex="25" style="color:#314867">
+        <md-icon md-svg-src="img/app/back.svg"></md-icon>
+        back
+    </md-button>
+    <div flex="" layout-align="center center" layout="row">
+        <md-button ng-click="func.prvLevel()">
+            <md-icon md-svg-src="img/app/smallLeftArrow.svg"></md-icon>
+        </md-button>
+        <div class="topBold">
+            {{current.student.selectedCourse.selectedTopic.title}}
+        </div>
+        <div layout-padding="" style="color:gray" layout="row">{{current.viewerData.levelId}}</div>
+        <md-button ng-click="func.nextLevel()">
+            <md-icon md-svg-src="img/app/smallRightArrow.svg"></md-icon>
+        </md-button>
+    </div>
+    <div flex="25" layout-padding="">
+        <div>
+            <div class="life life{{userMistake.remainLife*10}}"></div>
+        </div>
+    </div>
+
+</div>

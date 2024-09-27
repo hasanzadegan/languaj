@@ -1,0 +1,13 @@
+<div oc-lazy-load="'/js/POSType/noun.js'">
+    <div ng-controller="nounController">
+        <div ng-repeat="kasus in current.articleList">
+            <div class="subtitle">{{kasus.title}}</div>
+            <div layout="row" layout-wrap >
+                <div ng-repeat="item in kasus.articleObj" flex="25"
+                class="{{item.genderId===current.selectedPhrase.selectedPhraseWord.genderId?'selected':''}}">
+                    {{item.title}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

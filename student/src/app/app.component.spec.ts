@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'languaj-student'`, () => {
+  it(`should have as title 'Languaj'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('student');
+    expect(app.title).toEqual('Languaj');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('languaj-student app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('Languaj app is running!');
   });
 });

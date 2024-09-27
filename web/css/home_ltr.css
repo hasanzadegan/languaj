@@ -1,0 +1,87 @@
+/*@font-face {*/
+/*    font-family: Arial;*/
+/*    !*font-style: normal;*!*/
+/*    src: url('fonts/roboto/Roboto-black.ttf'),*/
+/*    url('fonts/roboto/Roboto-bold.ttf'),*/
+/*    url('fonts/roboto/Roboto-light.ttf'),*/
+/*    url('fonts/roboto/Roboto-medium.ttf'),*/
+/*    url('fonts/roboto/Roboto-Thin.ttf');*/
+/*}*/
+body{
+    font-family: Arial;
+}
+
+.header{
+    height: 70px;
+    position: sticky;
+}
+
+.banner {
+    height: 330px;
+}
+
+@media (max-width: 500px) {
+
+}
+
+.header1 {
+    background: rgba(0,0,0,0.2);
+}
+.header2 {
+    background: rgba(0,0,0,0.1);
+    color:white;
+}
+
+.slogon1 {
+    color: #fff;
+    font-size: 35px;
+    font-weight:700;
+}
+.slogon2 {
+    color: #fff;
+    font-size: 23px;
+    font-weight:300;
+}
+
+.signIn{
+    background: #FFC000;
+    color: #2B3647;
+    font-weight:400;
+    font-size: 18px;
+    width: 210px;
+    height: 50px;
+    border:solid 0px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+
+.signIn:hover{
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.3) ;
+    color:white;
+}
+
+.md-button{
+    font-weight:400;
+    font-size: 18px;
+}
+
+
+.itemTitle {
+    font-weight:600;
+    font-size: 20px;
+}
+
+.bTitle {
+    font-weight:600;
+    font-size: 32px;
+}
+
+.itemDesc {
+    font-weight:100;
+    font-size: 20px;
+    color: #5a6a98;
+}
+
+.selected{
+    color: #000 !important;
+}

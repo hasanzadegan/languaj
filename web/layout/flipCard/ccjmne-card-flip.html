@@ -1,0 +1,6 @@
+<div class="card-flip">
+    <ng-transclude ng-transclude-slot="front" class="card-flip-face card-flip-front flip-along-{{flipAlong || 'Y' | lowercase}}"
+      ng-class="{flipped: flipped}"></ng-transclude>
+    <ng-transclude ng-transclude-slot="back" class="card-flip-face card-flip-back flip-along-{{flipAlong || 'Y' | lowercase}}"
+      ng-class="{flipped: flipped}"></ng-transclude>
+</div>
